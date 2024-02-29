@@ -1,0 +1,15 @@
+:where(html) {
+  --border-size-1: 1px;
+  --border-size-2: 2px;
+  --border-size-3: 3px;
+  --border-size-4: 4px;
+  --border-size-5: 5px;
+  --radius-1: 0.125rem; /* 2px */
+  --radius-2: 0.25rem; /* 4px */
+  --radius-3: 0.375rem; /* 6px */
+  --radius-4: 0.5rem; /* 8px */
+  --radius-5: 0.75rem; /* 12px */
+  --radius-6: 1rem; /* 16px */
+  --radius-7: 1.5rem; /* 24px */
+  --radius-round: 1e5px;
+}

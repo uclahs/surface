@@ -1,0 +1,28 @@
+/**
+ * @file
+ * Spacing utility classes.
+ */
+
+.space-x-0 > * + * {
+  margin-left: 0;
+}
+
+.mb-0 {
+  margin-block-end: 0;
+}
+
+.mb-2 {
+  margin-block-end: 0.5rem; /* 8px */
+}
+
+.mb-5 {
+  margin-block-end: 1.25rem; /* 20px */
+}
+
+.mb-10 {
+  margin-block-end: 2.5rem; /* 40px */
+}
+
+.mb-15 {
+  margin-block-end: 3.75rem; /* 60px */
+}

@@ -1,0 +1,20 @@
+name: Storybook
+type: theme
+description: 'A Storybook + Vite demo.'
+alt text: 'Screenshot of Surface, Drupal front-end theme.'
+package: Core
+core_version_requirement: ^8.9 || ^9 || ^10
+base theme: false
+
+libraries:
+  - storybook/global
+
+regions:
+  header: Header
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content_above: Content Above
+  content: Content
+  content_below: Content Below
+  footer: Footer
+  theme: Theme

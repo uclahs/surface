@@ -1,0 +1,18 @@
+.chip {
+  display: inline-block;
+  padding: 0.25rem;
+}
+
+.chip--color-primary {
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.chip--color-secondary {
+  background-color: red;
+  color: white;
+}
+
+.chip--dismissed {
+  display: none;
+}

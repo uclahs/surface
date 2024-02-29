@@ -1,0 +1,21 @@
+name: Chip
+props:
+  type: object
+  required:
+    - color
+  properties:
+    # Can the chip be dismissed by clicking on it?
+    dismissable:
+      type: boolean
+      title: Dismissable
+      description: If true users can dismiss the chip by clicking on it.
+    # One of 'primary', or 'secondary'.
+    color:
+      type: string
+      title: Color
+      description: "Background color to use for the chip, one of 'primary' or 'secondary'."
+slots:
+  # Content to display in the chip.
+  chip_content:
+      title: Content
+      description: Content of the chip

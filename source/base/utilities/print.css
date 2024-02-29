@@ -1,0 +1,96 @@
+@media print {
+  * {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  @page {
+    margin: 2cm;
+    size: a3;
+  }
+
+  nav {
+    display: none;
+  }
+
+  iframe {
+    display: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    orphans: 3;
+    page-break-after: avoid;
+    widows: 3;
+
+    &::after {
+      display: inline-block;
+    }
+  }
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  a {
+    &,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &[href]::after {
+      content: " <" attr(href) ">";
+      font-family: var(--font-body);
+      font-size: 10pt;
+      font-weight: normal;
+      text-transform: lowercase;
+    }
+
+    &[href^="javascript:"]::after,
+    &[href^="mailto:"]::after,
+    &[href^="tel:"]::after,
+    &[href^="#"]::after,
+    &[href*="?"]::after {
+      content: "";
+    }
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  blockquote {
+    page-break-inside: avoid;
+  }
+
+  pre {
+    page-break-inside: avoid;
+    white-space: pre-wrap;
+  }
+
+  li {
+    page-break-inside: avoid;
+  }
+
+  thead,
+  td,
+  th {
+    display: table-header-group;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}

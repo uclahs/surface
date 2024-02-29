@@ -1,0 +1,27 @@
+:where(html) {
+  /* Primary Brand Colors */
+  --ucla-blue: hsl(206, 63%, 42%);
+  --ucla-yellow: hsl(49 100% 50%);
+
+  /* Secondary Brand Colors */
+  --midnight-joshua-tree: hsl(202 100% 18%);
+  --silver-lake-reservoir: hsl(202 100% 26%);
+  --chumash-soil: hsl(44 100% 59%);
+  --santa-monica-sunset: hsl(41 100% 55%);
+  --topanga-creek: hsl(211 67% 73%);
+  --grove-fountain: hsl(212 95% 93%);
+  --burbank-blue: hsl(179 50% 52%);
+  --la-winter: hsl(196 73% 84%);
+  --southbay-waves: hsl(191 82% 41%);
+
+  /* Tertiary Brand Colors */
+  --venice-canal: hsl(186 68% 32%);
+  --avocado-toast: hsl(173 43% 68%);
+  --super-bloom: hsl(56 100% 74%);
+  --escondido-falls: hsl(193 77% 65%);
+  --downtown-dusk: hsl(280 31% 81%);
+  --santa-barbara-sand: hsl(45 31% 95%);
+  --midnight-observatory: hsl(202 100% 12%);
+  --malibu-dolphin: hsl(205 6% 42%);
+  --silver-screen: hsl(207 11% 81%);
+}

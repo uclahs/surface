@@ -1,0 +1,29 @@
+extends:
+  - stylelint-config-standard
+plugins:
+  - stylelint-order
+  - stylelint-selector-pseudo-class-lvhfa
+rules:
+  alpha-value-notation: percentage
+  color-function-notation: null
+  declaration-empty-line-before: never
+  declaration-block-no-redundant-longhand-properties: null
+  hue-degree-notation: number
+  import-notation: string
+  no-descending-specificity: null
+  no-duplicate-selectors: true
+  order/order:
+    - - type: at-rule
+        hasBlock: false
+      - custom-properties
+      - declarations
+    - unspecified: ignore
+      disableFix: true
+  order/properties-alphabetical-order: error
+  plugin/selector-pseudo-class-lvhfa: true
+  selector-class-pattern: null
+  value-keyword-case:
+    - lower
+    - camelCaseSvgKeywords: true
+      ignoreProperties:
+        - /^--font/

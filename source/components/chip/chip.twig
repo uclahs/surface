@@ -1,0 +1,11 @@
+{% set classes = [
+  'chip',
+  'chip--color-' ~ color,
+  modifier ? modifier : '',
+]|join(' ')|trim %}
+
+<div {{ add_attributes({ class: classes }) }}>
+  {% block chip_content %}
+    {{ content }}
+  {% endblock %}
+</div>

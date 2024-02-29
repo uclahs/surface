@@ -1,0 +1,25 @@
+<section class="pl-fonts">
+  {% for title, list in fonts %}
+    <div class="just-for-gap">
+      <div class="heading">{{ title|capitalize }}</div>
+      {% for item in list %}
+        {% set font_family = 'font-family: ' ~ item.family ~ '; ' %}
+        {% set font_style = 'font-style: ' ~ item.style ~ '; ' %}
+        {% set font_weight = 'font-weight: ' ~ item.weight ~ ';' %}
+        {% set preview_style = font_family ~ font_style ~ font_weight %}
+
+        <article class="font-demo">
+          <div class="font-preview" style="{{ preview_style }}">AaBbCc</div>
+          <div class="font-meta">
+            <div class="font-meta__alpha" style="{{ preview_style }}">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz<br/>1234567890(,.;:?!$&*)</div>
+            <div class="font-meta__preview">
+              <div><span class="font-meta__label">Family:</span> {{ item.family }}</div>
+              <div><span class="font-meta__label">Style:</span> {{ item.style|capitalize }}</div>
+              <div><span class="font-meta__label">Weight:</span> {{ item.weight }}</div>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</section>

@@ -1,0 +1,17 @@
+<section class="pl-sizes">
+  <article class="size-demo">
+    <div><h4>Size</h4></div>
+    <div><h4>REM</h4></div>
+    <div><h4>PX</h4></div>
+    <div><h4>Example</h4></div>
+
+    {% for item in spacing %}
+      <div>{{ item.size }}</div>
+      <div>{{ item.rem }}</div>
+      <div>{{ item.px }}</div>
+      <div>
+        <div style="block-size: 1rem; inline-size:{{ item.rem }}; background-color: var(--gray-300);"></div>
+      </div>
+    {% endfor %}
+  </article>
+</section>

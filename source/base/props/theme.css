@@ -1,0 +1,27 @@
+:where([data-theme="surface"]) {
+  --font-body: helvetica, sans-serif;
+  --font-heading: helvetica, sans-serif;
+  --blockquote-border-color: var(--ucla-blue);
+  --blockquote-color: var(--ucla-blue);
+}
+
+:where([data-theme="dgsom"]) {
+  --font-body: trade-gothic-next, sans-serif;
+  --font-heading: p22-mackinac-pro, serif;
+  --blockquote-border-color: var(--midnight-joshua-tree);
+  --blockquote-color: var(--ucla-blue);
+}
+
+:where([data-theme="labs"]) {
+  --font-body: helvetica, sans-serif;
+  --font-heading: helvetica, sans-serif;
+  --blockquote-border-color: var(--ucla-blue);
+  --blockquote-color: var(--ucla-blue);
+}
+
+:where([data-theme="labs-dynamic"]) {
+  --font-body: trade-gothic-next, sans-serif;
+  --font-heading: p22-mackinac-pro, serif;
+  --blockquote-border-color: var(--midnight-joshua-tree);
+  --blockquote-color: var(--ucla-blue);
+}

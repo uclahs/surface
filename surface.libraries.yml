@@ -1,0 +1,5 @@
+global:
+  version: VERSION
+  css:
+    base:
+      dist/css/global.css: {}
