@@ -47,6 +47,7 @@
     "stylelint-selector-pseudo-class-lvhfa": "^3.1.1",
     "twig-drupal-filters": "^3.2.0",
     "vite-plugin-checker": "^0.6.4",
+    "vite-plugin-static-copy": "^1.0.1",
     "vite-plugin-twig-drupal": "^1.2.1"
   },
   "dependencies": {

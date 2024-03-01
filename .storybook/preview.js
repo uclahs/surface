@@ -3,8 +3,8 @@ import { useEffect } from '@storybook/preview-api';
 import twigDrupal from 'twig-drupal-filters';
 import twigAddAttributes from 'add-attributes-twig-extension';
 import './drupal.js';
-import '../dist/global.css';
-import '../dist/utilties.css';
+import '../dist/css/global.css';
+import '../dist/css/utilties.css';
 
 function setupTwig(twig) {
   twig.cache();
