@@ -22,24 +22,21 @@ export const decorators = [
   },
 ];
 
-export const preview = {
+const preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
-    layout: 'fullscreen',
     options: {
       storySort: {
-        method: 'alphabetical',
-        order: [
-          'Base',
-          'Layouts',
-          'Elements',
-          'Components',
-          'Collections',
-          'Pages',
-          'Theme',
-        ],
-        includeName: true,
+        order: [ 'Examples', 'Base', 'Elements', 'Layouts', 'Components', 'Collections', 'Pages', 'Theme', '*'],
       },
     },
   },
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
 };
+
+export default preview;
