@@ -1,0 +1,17 @@
+version: 0.2
+
+
+phases:
+  install: # Install AWS cli, kubectl (needed for Helm) and Helm
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - sudo amazon-linux-extras install epel -y
+      - npm ci
+  build:
+    on-failure: ABORT
+    commands:
+      - npm run build-storybook
+  post_build:
+    commands:
+      - aws s3 sync . s3://regression.dgit.ucla.edu --delete --include "storybook-static/*"
