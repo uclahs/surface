@@ -4,6 +4,8 @@ import yml from '@modyfi/vite-plugin-yaml';
 import { join } from 'node:path';
 import checker from 'vite-plugin-checker';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
+import path from 'path';
+import { glob } from 'glob';
 
 export default defineConfig({
   plugins: [
@@ -41,20 +43,15 @@ export default defineConfig({
     emptyOutDir: true,
     outDir: "./dist",
     rollupOptions: {
-      input: {
-        global: './source/base/global.css',
-        utilties: './source/base/utilities.css',
-        button: './source/examples/button/button.css',
-        chip: './source/examples/chip/chip.css',
-      },
+      input: glob.sync(path.resolve(__dirname, 'source/examples/**/*.{css,js}')),
       output: {
         assetFileNames: ({name}) => {
-          if (/\.(gif|jpe?g|png|svg|webp)$/.test(name ?? '')){
-              return 'images/[name][extname]';
-          }
-
           if (/\.css$/.test(name ?? '')) {
               return 'css/[name][extname]';
+          }
+
+          if (/\.js$/.test(name ?? '')) {
+              return 'js/[name][extname]';
           }
 
           // default value
