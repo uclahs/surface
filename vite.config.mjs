@@ -18,11 +18,12 @@ export default defineConfig({
       },
     }),
     twig({
+      // Twig namespaces for including components.
       namespaces: {
         base: join(__dirname, './source/base'),
-        collections: join(__dirname, './source/collections'),
-        components: join(__dirname, './source/components'),
         elements: join(__dirname, './source/elements'),
+        components: join(__dirname, './source/components'),
+        collections: join(__dirname, './source/collections'),
         layouts: join(__dirname, './source/layouts'),
         pages: join(__dirname, './source/pages'),
         theme: join(__dirname, './source/theme'),
@@ -43,21 +44,24 @@ export default defineConfig({
     emptyOutDir: true,
     outDir: "./dist",
     rollupOptions: {
+      // Setting the input directory to be able to capture all CSS and JS files
+      // that exist for each individual component.
       input: glob.sync(path.resolve(__dirname, 'source/examples/**/*.{css,js}')),
       output: {
+        // Processes all CSS and JS files and individually compile them and
+        // minify them`.
         assetFileNames: ({name}) => {
           if (/\.css$/.test(name ?? '')) {
+              // CSS files get copied into `dist/css`.
               return 'css/[name][extname]';
-          }
-
-          if (/\.js$/.test(name ?? '')) {
-              return 'js/[name][extname]';
           }
 
           // default value
           // ref: https://rollupjs.org/guide/en/#outputassetfilenames
           return '[name][extname]';
         },
+        // JS files get copied into `dist/js`.
+        entryFileNames: 'js/[name].js',
       },
     },
     sourcemap: true,
