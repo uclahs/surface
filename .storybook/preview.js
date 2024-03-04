@@ -4,7 +4,7 @@ import twigDrupal from 'twig-drupal-filters';
 import twigAddAttributes from 'add-attributes-twig-extension';
 import './drupal.js';
 import '../dist/css/global.css';
-import '../dist/css/utilties.css';
+import '../dist/css/utilities.css';
 
 function setupTwig(twig) {
   twig.cache();

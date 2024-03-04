@@ -30,11 +30,11 @@ export default defineConfig({
       },
     }),
     yml(),
-    // Copy static assets such as images from `source` to `dist/images`
+    // Copy static images from `source` to `dist/images`
     viteStaticCopy({
       targets: [
         {
-          src: './source/examples/**/*.{gif,png,jpg,jpeg,svg,webp}',
+          src: './source/examples/**/*.{png,jpg,jpeg,svg,webp}',
           dest: 'images'
         }
       ]
@@ -48,19 +48,8 @@ export default defineConfig({
       // that exist for each individual component.
       input: glob.sync(path.resolve(__dirname, 'source/examples/**/*.{css,js}')),
       output: {
-        // Processes all CSS and JS files and individually compile them and
-        // minify them`.
-        assetFileNames: ({name}) => {
-          if (/\.css$/.test(name ?? '')) {
-              // CSS files get copied into `dist/css`.
-              return 'css/[name][extname]';
-          }
-
-          // default value
-          // ref: https://rollupjs.org/guide/en/#outputassetfilenames
-          return '[name][extname]';
-        },
-        // JS files get copied into `dist/js`.
+        // Outputs CSS and JS into their respective directories within `dist`..
+        assetFileNames: 'css/[name].css',
         entryFileNames: 'js/[name].js',
       },
     },
