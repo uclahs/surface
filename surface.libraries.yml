@@ -3,3 +3,4 @@ global:
   css:
     base:
       dist/css/global.css: {}
+      dist/css/utilities.css: {}
