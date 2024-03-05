@@ -1,13 +1,13 @@
-name: Storybook
+name: Surface
 type: theme
-description: 'A Storybook + Vite demo.'
+description: 'A clean, accessible, and flexible Drupal front-end theme.'
 alt text: 'Screenshot of Surface, Drupal front-end theme.'
 package: Core
 core_version_requirement: ^8.9 || ^9 || ^10
 base theme: false
 
 libraries:
-  - storybook/global
+  - surface/global
 
 regions:
   header: Header

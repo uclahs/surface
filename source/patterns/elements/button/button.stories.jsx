@@ -5,7 +5,7 @@ import data from './button.yml';
 import './button.css';
 
 const settings = {
-  title: 'Examples/Button',
+  title: 'Elements/Button',
 };
 
 const Button = {

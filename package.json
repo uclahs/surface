@@ -37,6 +37,8 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
+    "glob": "^10.3.10",
+    "path": "^0.12.7",
     "postcss-advanced-variables": "^3.0.1",
     "postcss-import": "^16.0.1",
     "postcss-nested": "^6.0.1",
@@ -48,6 +50,7 @@
     "stylelint-selector-pseudo-class-lvhfa": "^3.1.1",
     "twig-drupal-filters": "^3.2.0",
     "vite-plugin-checker": "^0.6.4",
+    "vite-plugin-static-copy": "^1.0.1",
     "vite-plugin-twig-drupal": "^1.2.1"
   },
   "dependencies": {

@@ -3,8 +3,8 @@ import { useEffect } from '@storybook/preview-api';
 import twigDrupal from 'twig-drupal-filters';
 import twigAddAttributes from 'add-attributes-twig-extension';
 import './drupal.js';
-import '../dist/global.css';
-import '../dist/utilties.css';
+import '../dist/css/global.css';
+import '../dist/css/utilities.css';
 
 function setupTwig(twig) {
   twig.cache();
@@ -26,7 +26,7 @@ const preview = {
   parameters: {
     options: {
       storySort: {
-        order: [ 'Examples', 'Base', 'Elements', 'Layouts', 'Components', 'Collections', 'Pages', 'Theme', '*'],
+        order: [ 'Base', 'Elements', 'Components', 'Collections', 'Layouts', 'Pages', 'Theme', '*'],
       },
     },
   },

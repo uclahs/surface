@@ -6,7 +6,7 @@ export default create({
   // Branding
   brandTitle: 'UCLA Health',
   brandUrl: 'https://medschool.ucla.edu/',
-  brandImage: 'logo.svg',
+  brandImage: './dist/images/logo.svg',
   brandTarget: '_self',
   fontBase: '"Helvetica", sans-serif',
   fontCode: 'monospace',
