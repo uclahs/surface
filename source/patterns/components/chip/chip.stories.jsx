@@ -6,7 +6,7 @@ import './chip.css';
 import './chip.cjs';
 
 export default {
-  title: 'Examples/Chip',
+  title: 'Components/Chip',
   tags: ['autodocs'],
 };
 

@@ -11,22 +11,22 @@ export default defineConfig({
   plugins: [
     checker({
       eslint: {
-        lintCommand: 'eslint "./source/**/*.{js,jsx}"',
+        lintCommand: 'eslint "./source/patterns/**/*.{js,jsx}"',
       },
       stylelint: {
-        lintCommand: 'stylelint "./source/**/*.css"',
+        lintCommand: 'stylelint "./source/patterns/**/*.css"',
       },
     }),
     twig({
       // Twig namespaces for including components.
       namespaces: {
         base: join(__dirname, './source/base'),
-        elements: join(__dirname, './source/elements'),
-        components: join(__dirname, './source/components'),
-        collections: join(__dirname, './source/collections'),
-        layouts: join(__dirname, './source/layouts'),
-        pages: join(__dirname, './source/pages'),
-        theme: join(__dirname, './source/theme'),
+        elements: join(__dirname, './source/patterns/elements'),
+        components: join(__dirname, './source/patterns/components'),
+        collections: join(__dirname, './source/patterns/collections'),
+        layouts: join(__dirname, './source/patterns/layouts'),
+        pages: join(__dirname, './source/patterns/pages'),
+        theme: join(__dirname, './source/patterns/theme'),
       },
     }),
     yml(),
@@ -34,7 +34,7 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: './source/examples/**/*.{png,jpg,jpeg,svg,webp}',
+          src: './source/**/*.{png,jpg,jpeg,svg,webp}',
           dest: 'images'
         }
       ]
@@ -44,9 +44,12 @@ export default defineConfig({
     emptyOutDir: true,
     outDir: "./dist",
     rollupOptions: {
-      // Setting the input directory to be able to capture all CSS and JS files
-      // that exist for each individual component.
-      input: glob.sync(path.resolve(__dirname, 'source/examples/**/*.{css,js}')),
+      // Recursively globbing through all CSS and JS files
+      // within the source directory.
+      input: [
+        ...glob.sync(path.resolve(__dirname, 'source/base/*.css')),
+        ...glob.sync(path.resolve(__dirname, 'source/patterns/**/*.{css,js}')),
+      ],
       output: {
         // Outputs CSS and JS into their respective directories within `dist`..
         assetFileNames: 'css/[name].css',

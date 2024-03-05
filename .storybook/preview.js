@@ -26,7 +26,7 @@ const preview = {
   parameters: {
     options: {
       storySort: {
-        order: [ 'Examples', 'Base', 'Elements', 'Layouts', 'Components', 'Collections', 'Pages', 'Theme', '*'],
+        order: [ 'Base', 'Elements', 'Components', 'Collections', 'Layouts', 'Pages', 'Theme', '*'],
       },
     },
   },
