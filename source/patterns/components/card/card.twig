@@ -1,0 +1,80 @@
+{{ attach_library('surface/card') }}
+
+{# Import icons macro. #}
+{# {% import '@components/icons/macro.twig' as icons %} #}
+
+<article class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  {% if img_src %}
+    <div class="card__image">
+      {% include "@elements/image/image.twig" with {
+          'src': img_src,
+          'alt': img_alt,
+        } only
+      %}
+      {# Short date badge. #}
+      {% if short_date_month %}
+        {% include "@elements/date-badge/date-badge.twig" with {
+            'modifier': 'date-badge--small',
+            'month': short_date_month,
+            'day': short_date_day,
+          } only
+        %}
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="card__content">
+    {% if event_type %}
+      {% include "@elements/eyebrow/eyebrow.twig" with {
+        'text': event_type,
+        } only
+      %}
+    {% endif %}
+
+    {% if title_text %}
+      {% include "@elements/title/title.twig" with {
+        'modifier': 'card__title',
+        'level': title_level,
+        'text': title_text,
+        'url': title_url,
+        } only
+      %}
+    {% endif %}
+
+    {% if organization %}
+      <div class="card__organization">
+        {# {{ icons.get('pin') }} #}
+        <span>{{ organization }}</span>
+      </div>
+    {% endif %}
+
+    <div class="card__date--wrapper">
+      {% include '@elements/date/date.twig' with {
+        'modifier': date_modifier,
+        'date': date,
+        } only
+      %}
+
+
+      {# For articles, display the readtime field. #}
+      {% if readtime %}
+        {% include '@elements/readtime/readtime.twig' with {
+          'readtime': readtime
+        } %}
+      {% endif %}
+    </div>
+
+    {# If there are upcoming instances of an event, display `+ more dates`
+    next to the event date to show users this is a recurring event. #}
+    {% if more_dates %}
+      {% include "@elements/button/button.twig" with {
+          'modifier': 'button--link card__more-dates',
+          'text': '+ more dates',
+          'url': more_dates_url,
+        } only
+      %}
+    {% endif %}
+
+  </div>
+</article>

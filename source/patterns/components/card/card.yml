@@ -1,0 +1,25 @@
+---
+modifier: ''
+img_src: '../dist/images/4-3.svg'
+img_alt: 'Image placeholder text'
+
+title_level: 3
+title_modifier: 'content-card__title'
+title_text: 'Leaders in the Field Seminar featuring Dr. Marcel van den Brink'
+title_url: '#'
+
+date_modifier: 'date--small'
+date: 'October 31, 2023'
+
+short_date_modifier: ''
+short_date_month: 'Oct'
+short_date_day: '31'
+
+# The 'more_dates' key is used in Patternlab as a way to add conditional for
+# displaying the '+ more dates' text on cards that are recuring.
+more_dates: true
+more_dates_url: '#'
+
+organization: 'Davig Geffen School of Medicine'
+event_type: 'Virtual'
+readtime: 5 min read

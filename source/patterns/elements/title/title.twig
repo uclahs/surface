@@ -1,0 +1,9 @@
+<h{{ level|default('2') }} class="heading{{ modifier ? ' ' ~ modifier }}">
+  {% if url %}
+    <a href="{{ url }}" class="heading__link">
+      {{ text }}
+    </a>
+  {% else %}
+    {{ text }}
+  {% endif %}
+</h{{ level|default('2') }}>

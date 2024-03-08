@@ -1,0 +1,9 @@
+{{ attach_library('surface/eyebrow') }}
+
+<div class="eyebrow{{ ' ' ~ modifier }}">
+  {% if url %}
+    <a href="{{ url }}" class="eyebrow__link">{{ text }}</a>
+  {% else %}
+    <span class="eyebrow__text">{{ text }}</span>
+  {% endif %}
+</div>
