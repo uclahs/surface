@@ -1,5 +1,8 @@
 import parse from 'html-react-parser';
 
+// TODO: Compile all components' styles into a single stylesheet
+// to ensure all styles are available on any component.  This is only for
+// Storybook purposes.
 import '../../elements/button/button.css';
 import '../../elements/date/date.css';
 import '../../elements/date-badge/date-badge.css';
