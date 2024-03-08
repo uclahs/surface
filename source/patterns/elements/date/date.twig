@@ -1,9 +1,6 @@
 {{ attach_library('surface/date') }}
 
-{# Import icons macro. #}
-{# {% import '@components/icons/macro.twig' as icons %} #}
-
 <div class="date{{ modifier ? ' ' ~ modifier }}">
-  {# {{ icons.get('calendar') }} #}
+  {# TODO: Add Calendar SVG image. #}
   <span>{{ date|default(now|date('F d, Y')) }}</span>
 </div>
