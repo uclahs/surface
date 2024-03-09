@@ -7,6 +7,10 @@ const settings = {
   title: 'Elements/Title',
   tags: ['autodocs'],
   args: { ...data },
+  argTypes: {
+    level: {control: 'select', options: ['1','2','3','4','5','6']},
+    url: {control: 'boolean'},
+  }
 };
 
 // Plain text title story.

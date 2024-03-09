@@ -9,6 +9,9 @@ const settings = {
   tags: ['autodocs'],
   // Adding args here so they are available to all the stories.
   args: { ...data },
+  argTypes: {
+    url: {control: 'boolean'},
+  }
 };
 
 // Default button story.

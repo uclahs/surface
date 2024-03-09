@@ -16,7 +16,7 @@
   width: var(--size-20);
 
 
-  &.date-badge__light {
+  &.date-badge--light {
     background-color: var(--white);
     color: var(--ucla-blue);
   }
