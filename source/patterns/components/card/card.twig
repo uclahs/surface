@@ -1,25 +1,20 @@
 {{ attach_library('surface/card') }}
 
-{# Import icons macro. #}
-{# {% import '@components/icons/macro.twig' as icons %} #}
-
 <article class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
   {% if image %}
     <div class="card__image">
-      {% include "@elements/image/image.twig" with {
-          'image': image,
-        } only
-      %}
+      {{ image }}
       {# Short date badge. #}
-      {% if short_date_month %}
+      {% if date_short %}
         {% include "@elements/date-badge/date-badge.twig" with {
             'modifier': 'date-badge--small',
-            'month': short_date_month,
-            'day': short_date_day,
+            'month': date_short.month,
+            'day': date_short.day,
           } only
         %}
       {% endif %}
+
     </div>
   {% endif %}
 
@@ -36,22 +31,22 @@
 
     {% if title %}
       {% include "@elements/title/title.twig" with {
-        'title': title,
+        'title': title
         } only
       %}
     {% endif %}
 
     {% if organization %}
       <div class="card__organization">
-        {# {{ icons.get('pin') }} #}
+        {% include '@assets/icons/pin.svg' %}
         <span>{{ organization }}</span>
       </div>
     {% endif %}
 
     <div class="card__date--wrapper">
       {% include '@elements/date/date.twig' with {
-        'modifier': date_modifier,
-        'date': date,
+        'modifier': date.modifier,
+        'date': date.date,
         } only
       %}
 
@@ -71,11 +66,10 @@
           'button': {
             'modifier': 'button--link card__more-dates',
             'text': '+ more dates',
-            'url': more_dates_url,
+            'url': title.url
           }
         } only
       %}
     {% endif %}
-
   </div>
 </article>

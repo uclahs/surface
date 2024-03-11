@@ -1,6 +1,6 @@
 {{ attach_library('surface/date') }}
 
 <div class="date{{ modifier ? ' ' ~ modifier }}">
-  {# TODO: Add Calendar SVG image. #}
+  {% include "@assets/icons/calendar.svg" %}
   <span>{{ date|default(now|date('F d, Y')) }}</span>
 </div>

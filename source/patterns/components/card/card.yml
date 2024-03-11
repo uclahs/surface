@@ -9,12 +9,14 @@ title:
   text: 'Leaders in the Field Seminar featuring Dr. Marcel van den Brink'
   url: 'https://medschool.ucla.edu'
 
-date_modifier: 'date--small'
-date: 'October 31, 2024'
+date:
+  modifier: 'date--small'
+  date: 'October 31, 2024'
 
-short_date_modifier: ''
-short_date_month: 'Oct'
-short_date_day: '31'
+date_short:
+  modifier: 'date-badge--small'
+  month: 'Oct'
+  day: '31'
 
 # The 'more_dates' key is used in Storybook as a way to add conditional for
 # displaying the '+ more dates' text on cards that are recuring.
