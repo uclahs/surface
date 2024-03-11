@@ -7,7 +7,6 @@ import './button.css';
 const settings = {
   title: 'Elements/Button',
   tags: ['autodocs'],
-  // Adding args here so they are available to all the stories.
   args: { ...data },
 };
 
