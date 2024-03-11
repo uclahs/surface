@@ -1,5 +1,7 @@
 module.exports = {
   plugins: [
+    require('postcss-import-ext-glob'),
+    require('postcss-import'),
     require('@csstools/postcss-global-data')({
       files: ['./source/base/props/media.css'],
     }),

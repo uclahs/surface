@@ -49,6 +49,7 @@ export default defineConfig({
       input: [
         ...glob.sync(path.resolve(__dirname, 'source/base/*.css')),
         ...glob.sync(path.resolve(__dirname, 'source/patterns/**/*.{css,js}')),
+        ...glob.sync(path.resolve(__dirname, 'source/assets/css/*.css')),
       ],
       output: {
         // Outputs CSS and JS into their respective directories within `dist`..
