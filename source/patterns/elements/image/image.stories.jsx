@@ -6,42 +6,39 @@ import data from './image.yml';
 export default {
   title: 'Elements/Image',
   tags: ['autodocs'],
-  render: () => parse(image(data)),
+  render: (args) => parse(image(args)),
 };
 
 export const Image = {
   name: 'Square',
   args: {
     ...data,
-    src: '../dist/images/16-9.svg',
+    image: '<img src="../dist/images/1-1.svg" alt="placeholder text" />',
   },
 };
 
 
 export const Portrait = {
-  ...Image,
-  args: {
-    ...Image.args,
-    src: '../dist/images/2-3.svg',
-  },
   name: '2:3',
+  args: {
+    ...data,
+    image: '<img src="../dist/images/2-3.svg" alt="placeholder text" />',
+  },
 };
 
 export const Rectangular32 = {
-  render: () => parse(image(data)),
-  args: {
-    ...Image.args,
-      src: '../dist/images/3-2.svg',
-  },
   name: '3:2',
+  args: {
+    ...data,
+    image: '<img src="../dist/images/3-2.svg" alt="placeholder text" />',
+  },
 };
 
 export const Rectangular43 = {
   name: '4:3',
-  render: () => parse(image(data)),
   args: {
-    ...Image.args,
-      src: '../dist/images/4-3.svg',
+    ...data,
+    image: '<img src="../dist/images/4-3.svg" alt="placeholder text" />',
   },
 };
 
@@ -49,7 +46,7 @@ export const Rectangular169 = {
   name: '16:9',
   render: () => parse(image(data)),
   args: {
-    ...Image.args,
-      src: '../dist/images/16-9.svg',
+    ...data,
+    image: '<img src="../dist/images/16-9.svg" alt="placeholder text" />',
   },
 };

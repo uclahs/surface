@@ -7,16 +7,19 @@ const settings = {
   title: 'Elements/Title',
   tags: ['autodocs'],
   args: { ...data },
-  argTypes: {
-    level: {control: 'select', options: ['1','2','3','4','5','6']},
-    url: {control: 'boolean'},
-  }
 };
 
 // Plain text title story.
 const Title = {
   render: (args) => parse(markup(args)),
-  args: { ...data },
+  args: {
+    ...data,
+    title: {
+      level: 1,
+      modifier: '',
+      text: 'A vibrant, supportive culture is essential to advancing our mission to heal humankind.',
+    }
+  },
 };
 
 // Linked title story.
@@ -24,8 +27,13 @@ const Linked = {
   name: 'Title as a link',
   ...Title,
   args: {
-    ...Title.args,
-    url: 'https://medschool.ucla.edu',
+    ...data,
+    title: {
+      level: 1,
+      modifier: '',
+      text: 'A vibrant, supportive culture is essential to advancing our mission to heal humankind.',
+      url: 'https://medschool.ucla.edu',
+    }
   },
 };
 

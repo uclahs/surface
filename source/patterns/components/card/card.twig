@@ -5,11 +5,10 @@
 
 <article class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
   {{- attributes ? attributes|without(class) -}}>
-  {% if img_src %}
+  {% if image %}
     <div class="card__image">
       {% include "@elements/image/image.twig" with {
-          'src': img_src,
-          'alt': img_alt,
+          'image': image,
         } only
       %}
       {# Short date badge. #}
@@ -27,17 +26,17 @@
   <div class="card__content">
     {% if event_type %}
       {% include "@elements/eyebrow/eyebrow.twig" with {
-        'text': event_type,
+          'eyebrow': {
+            'modifier': '',
+            'text': event_type,
+          }
         } only
       %}
     {% endif %}
 
-    {% if title_text %}
+    {% if title %}
       {% include "@elements/title/title.twig" with {
-        'modifier': 'card__title',
-        'level': title_level,
-        'text': title_text,
-        'url': title_url,
+        'title': title,
         } only
       %}
     {% endif %}
@@ -69,9 +68,11 @@
     next to the event date to show users this is a recurring event. #}
     {% if more_dates %}
       {% include "@elements/button/button.twig" with {
-          'modifier': 'button--link card__more-dates',
-          'text': '+ more dates',
-          'url': more_dates_url,
+          'button': {
+            'modifier': 'button--link card__more-dates',
+            'text': '+ more dates',
+            'url': more_dates_url,
+          }
         } only
       %}
     {% endif %}

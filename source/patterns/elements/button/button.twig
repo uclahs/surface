@@ -1,9 +1,15 @@
-{% if url %}
-  <a href="{{ url }}" class="button{{ modifier ? ' ' ~ modifier }}">
-    {{ text }}
+{% if button.url %}
+  <a href="{{ button.url }}" class="button{{ ' ' ~ button.modifier|default('button--link') }}">
+    {{ button.text }}
+    {# {% if button.icon %}
+      {{ icons.get(button.icon|lower|trim) }}
+    {% endif %} #}
   </a>
 {% else %}
-  <button class="button{{ modifier ? ' ' ~ modifier }}">
-    {{ text }}
+  <button class="button{{ ' ' ~ button.modifier }}">
+    {{ button.text }}
+    {# {% if button.icon %}
+      {{ icons.get(button.icon|lower|trim) }}
+    {% endif %} #}
   </button>
 {% endif %}

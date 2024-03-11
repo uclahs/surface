@@ -1,4 +1,5 @@
 ---
-modifier: ''
-text: 'This is a label'
-url: '#'
+eyebrow:
+  modifier: ''
+  text: 'This is a label'
+  url: '#'

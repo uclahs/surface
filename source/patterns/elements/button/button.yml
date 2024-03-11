@@ -1,5 +1,6 @@
 ---
-icon: ''
-modifier: ''
-text: 'Button'
-url: ''
+button:
+  icon: ''
+  modifier: ''
+  url: ''
+  text: 'Hi, I am a button'

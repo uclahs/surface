@@ -1,12 +1,13 @@
 ---
 modifier: ''
-img_src: '../dist/images/4-3.svg'
-img_alt: 'Image placeholder text'
+image: |-
+  <img src="../dist/images/3-2.svg" alt="placeholder text" />
 
-title_level: 3
-title_modifier: 'content-card__title'
-title_text: 'Leaders in the Field Seminar featuring Dr. Marcel van den Brink'
-title_url: '#'
+title:
+  level: 1
+  modifier: 'content-card__title'
+  text: 'Leaders in the Field Seminar featuring Dr. Marcel van den Brink'
+  url: 'https://medschool.ucla.edu'
 
 date_modifier: 'date--small'
 date: 'October 31, 2024'
@@ -15,7 +16,7 @@ short_date_modifier: ''
 short_date_month: 'Oct'
 short_date_day: '31'
 
-# The 'more_dates' key is used in Patternlab as a way to add conditional for
+# The 'more_dates' key is used in Storybook as a way to add conditional for
 # displaying the '+ more dates' text on cards that are recuring.
 more_dates: true
 more_dates_url: '#'

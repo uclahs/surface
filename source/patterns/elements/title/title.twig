@@ -1,9 +1,9 @@
-<h{{ level|default('2') }} class="heading{{ modifier ? ' ' ~ modifier }}">
-  {% if url %}
-    <a href="{{ url }}" class="heading__link">
-      {{ text }}
+<h{{ title.level|default('2') }} class="heading{{ title.modifier ? ' ' ~ title.modifier }}">
+  {% if title.url %}
+    <a href="{{ title.url }}" class="heading__link">
+      {{ title.text }}
     </a>
   {% else %}
-    {{ text }}
+    {{ title.text }}
   {% endif %}
-</h{{ level|default('2') }}>
+</h{{ title.level|default('2') }}>

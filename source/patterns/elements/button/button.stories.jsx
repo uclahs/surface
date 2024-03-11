@@ -9,9 +9,6 @@ const settings = {
   tags: ['autodocs'],
   // Adding args here so they are available to all the stories.
   args: { ...data },
-  argTypes: {
-    url: {control: 'boolean'},
-  }
 };
 
 // Default button story.
@@ -26,8 +23,10 @@ const Primary = {
   name: 'Primary button',
   args: {
     ...Button.args,
-    modifier: 'button--primary',
-    text: 'Primary button',
+    button: {
+      modifier: 'button--primary',
+      text: 'Primary button',
+    },
   },
 };
 
@@ -37,8 +36,10 @@ const Secondary = {
   name: 'Secondary button',
   args: {
     ...Button.args,
-    modifier: 'button--secondary',
-    text: 'Secondary button',
+    button: {
+      modifier: 'button--secondary',
+      text: 'Secondary button',
+    },
   },
 };
 
@@ -47,8 +48,10 @@ const Outlined = {
   name: 'Outlined button',
   args: {
     ...Button.args,
-    modifier: 'button--outlined',
-    text: 'Outlined button',
+    button: {
+      modifier: 'button--outlined',
+      text: 'Outlined button',
+    },
   },
 };
 
@@ -57,9 +60,11 @@ const Link = {
   name: 'Link button',
   args: {
     ...Button.args,
-    modifier: 'button--link',
-    text: 'Link button',
-    url: 'https://medschool.ucla.edu',
+    button: {
+      modifier: 'button--link',
+      text: 'Button as a link',
+      url: 'https://medschool.ucla.edu',
+    },
   },
 };
 
