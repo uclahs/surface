@@ -1,0 +1,3 @@
+/* Imports all component's individual stylesheets into a single
+stylesheet called all.css for Storybook purposes only */
+@import-glob "../../patterns/**/*.css";

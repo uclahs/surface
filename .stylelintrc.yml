@@ -4,6 +4,7 @@ plugins:
   - stylelint-order
   - stylelint-selector-pseudo-class-lvhfa
 rules:
+  at-rule-no-unknown: null
   alpha-value-notation: percentage
   color-function-notation: null
   declaration-empty-line-before: never
