@@ -1,3 +1,5 @@
 ---
-url: ''
-text: 'Hi, I am a button'
+button:
+  modifier: ''
+  url: ''
+  text: 'Hi, I am a button'

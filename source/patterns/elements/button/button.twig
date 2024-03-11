@@ -1,1 +1,9 @@
-<a href="{{ url }}" class="button">{{ text }}</a>
+{% if button.url %}
+  <a href="{{ button.url }}" class="button{{ ' ' ~ button.modifier|default('button--link') }}">
+    {{ button.text }}
+  </a>
+{% else %}
+  <button class="button{{ ' ' ~ button.modifier }}">
+    {{ button.text }}
+  </button>
+{% endif %}

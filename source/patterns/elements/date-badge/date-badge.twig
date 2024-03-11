@@ -1,0 +1,6 @@
+{{ attach_library('surface/date-badge') }}
+
+<div class="date-badge{{ modifier ? ' ' ~ modifier }}">
+  <time class="date-badge__month" datetime="{{ month }}">{{ month }}</time>
+  <time class="date-badge__day" datetime="{{ day }}">{{ day }}</time>
+</div>

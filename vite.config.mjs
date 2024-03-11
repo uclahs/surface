@@ -20,6 +20,7 @@ export default defineConfig({
     twig({
       // Twig namespaces for including components.
       namespaces: {
+        assets: join(__dirname, './source/assets'),
         base: join(__dirname, './source/base'),
         elements: join(__dirname, './source/patterns/elements'),
         components: join(__dirname, './source/patterns/components'),
