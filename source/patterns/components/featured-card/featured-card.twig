@@ -19,12 +19,12 @@
     {% endif %}
 
     {% include '@elements/title/title.twig' with {
-        'heading': title,
+        'title': title,
       } only
     %}
     {% if subtitle %}
       {% include '@elements/title/title.twig' with {
-          'heading': subtitle,
+          'title': subtitle,
         } only
       %}
     {% endif %}
