@@ -30,7 +30,7 @@ featured:
   cta:
     disabled: ''
     modifier: 'button--secondary'
-    text: 'View the full event'
+    text: 'Read the full article'
     url: '#'
   event_type: ''
   more_dates: false
@@ -51,7 +51,7 @@ items:
       date: 'October 31, 2023'
     date_short: ''
 
-    # The 'more_dates' key is used in Patternlab as a way to add conditional for
+    # The 'more_dates' key is used in Storybook as a way to add conditional for
     # displaying the '+ more dates' text on cards that are recuring.
     more_dates: false
     organization: ''
@@ -71,7 +71,7 @@ items:
       date: 'October 31, 2023'
     date_short: ''
 
-    # The 'more_dates' key is used in Patternlab as a way to add conditional for
+    # The 'more_dates' key is used in Storybook as a way to add conditional for
     # displaying the '+ more dates' text on cards that are recuring.
     more_dates: false
     organization: ''
@@ -91,7 +91,7 @@ items:
       date: 'October 31, 2023'
     date_short: ''
 
-    # The 'more_dates' key is used in Patternlab as a way to add conditional for
+    # The 'more_dates' key is used in Storybook as a way to add conditional for
     # displaying the '+ more dates' text on cards that are recuring.
     more_dates: false
     organization: ''
@@ -111,7 +111,7 @@ items:
       date: 'October 31, 2023'
     date_short: ''
 
-    # The 'more_dates' key is used in Patternlab as a way to add conditional for
+    # The 'more_dates' key is used in Storybook as a way to add conditional for
     # displaying the '+ more dates' text on cards that are recuring.
     more_dates: false
     organization: ''

@@ -1,12 +1,7 @@
 {{ attach_library('surface/featured-card') }}
 
-{% set classes = [
-  'featured-card',
-  modifier ? modifier,
-  attributes ? attributes.class,
-]|join(' ')|trim %}
-
-<article class="{{ classes }}" {{ attributes ? attributes|without('class') }}>
+<article class="featured-card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
   <div class="featured-card__image">
     {{ image }}
   </div>

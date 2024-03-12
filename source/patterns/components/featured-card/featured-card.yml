@@ -17,7 +17,7 @@ date:
   date: 'October 31, 2023 | 12:30 PM – 1:30 PM'
 cta:
   disabled: ''
-  modifier: 'button button--secondary'
+  modifier: 'button--secondary'
   text: 'View the full event'
   url: '#'
 event_type:

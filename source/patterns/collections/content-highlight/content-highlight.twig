@@ -1,12 +1,7 @@
 {{ attach_library('surface/content-highlight') }}
 
-{% set classes = [
-  'content-highlight',
-  modifier ? modifier,
-  attributes ? attributes.class,
-]|join(' ')|trim %}
-
-<section class="{{ classes }}" {{ attributes ? attributes|without('class') }}>
+<section class="content-highlight{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
   {% if 'dgsom' in theme %}
     <span class="component-waves" aria-hidden="true">
       {% include "@assets/images/content-highlight-top.svg" %}
