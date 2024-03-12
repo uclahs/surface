@@ -15,16 +15,16 @@ const settings = {
   render: args => parse(highlight(args)),
 };
 
-const EventHighlight = {
+const Events = {
   name: 'Event Highlight',
   args: { ...data },
 };
 
-const ArticleHighlight = {
+const Articles = {
   name: 'Article Highlight',
   args: { ...dataArticle },
   render: args => parse(highlight(args)),
 };
 
 export default settings;
-export { EventHighlight, ArticleHighlight };
+export { Articles, Events };

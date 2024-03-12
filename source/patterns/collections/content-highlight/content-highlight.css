@@ -80,7 +80,7 @@
   }
 }
 
-.content-highlight__heading {
+.content-highlight__title {
   font-family: var(--font-heading);
   font-size: var(--font-size-8);
   font-weight: var(--font-weight-600);

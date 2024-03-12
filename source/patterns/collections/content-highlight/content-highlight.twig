@@ -26,10 +26,14 @@
           {% endif %}
 
           {% if see_more %}
-            {% include "@elements/button/button.twig" with {
+            {% embed "@elements/button/button.twig" with {
                 'button': see_more,
               }
             %}
+            {% block button_icon %}
+              {% include "@assets/icons/arrow-right.svg" ignore missing %}
+            {% endblock %}
+            {% endembed %}
           {% endif %}
         </header>
       {% endif %}

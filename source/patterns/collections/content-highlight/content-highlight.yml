@@ -26,16 +26,16 @@ featured:
     url: ''
   date:
     modifier: ''
-    date: 'October 31, 2023'
+    date: 'October 31, 2023 | 12:30 PM – 1:30 PM'
   cta:
     disabled: ''
     modifier: 'button--secondary'
     text: 'View the full event'
     url: '#'
-  event_type: ''
-  more_dates: false
-  organization: ''
-  readtime: 5 min read
+  event_type: 'Virtual'
+  more_dates: true
+  organization: 'David Geffen School of Medicine'
+  readtime: ''
 
 items:
   -
@@ -48,15 +48,18 @@ items:
       url: '#'
     date:
       modifier: 'date--small'
-      date: 'October 31, 2023'
-    date_short: ''
+      date: 'September 27, 2024 | 12:30 PM – 1:30 PM'
+    date_short:
+      modifier: 'date-badge--small'
+      month: 'Sep'
+      day: '27'
 
     # The 'more_dates' key is used in Patternlab as a way to add conditional for
     # displaying the '+ more dates' text on cards that are recuring.
-    more_dates: false
-    organization: ''
-    event_type: ''
-    readtime: 5 min read
+    more_dates: true
+    organization: 'David Geffen School of Medicine'
+    event_type: 'In-Person'
+    readtime: ''
 
   -
     modifier: 'content-card__article'
@@ -68,15 +71,18 @@ items:
       url: '#'
     date:
       modifier: 'date--small'
-      date: 'October 31, 2023'
-    date_short: ''
+      date: 'March 16, 2024 | 12:30 PM – 1:30 PM'
+    date_short:
+      modifier: 'date-badge--small'
+      month: 'Mar'
+      day: '16'
 
     # The 'more_dates' key is used in Patternlab as a way to add conditional for
     # displaying the '+ more dates' text on cards that are recuring.
-    more_dates: false
-    organization: ''
-    event_type: ''
-    readtime: 5 min read
+    more_dates: true
+    organization: 'David Geffen School of Medicine'
+    event_type: 'Hybrid'
+    readtime: ''
 
   -
     modifier: 'content-card__article'
@@ -88,15 +94,18 @@ items:
       url: '#'
     date:
       modifier: 'date--small'
-      date: 'October 31, 2023'
-    date_short: ''
+      date: 'January 6, 2025 | 12:30 PM – 1:30 PM'
+    date_short:
+      modifier: 'date-badge--small'
+      month: 'Jan'
+      day: '6'
 
     # The 'more_dates' key is used in Patternlab as a way to add conditional for
     # displaying the '+ more dates' text on cards that are recuring.
-    more_dates: false
-    organization: ''
-    event_type: ''
-    readtime: 5 min read
+    more_dates: true
+    organization: 'David Geffen School of Medicine'
+    event_type: 'Virtual'
+    readtime: ''
 
   -
     modifier: 'content-card__article'
@@ -108,12 +117,15 @@ items:
       url: '#'
     date:
       modifier: 'date--small'
-      date: 'October 31, 2023'
-    date_short: ''
+      date: 'July 6, 2025 | 12:30 PM – 1:30 PM'
+    date_short:
+      modifier: 'date-badge--small'
+      month: 'Jul'
+      day: '6'
 
     # The 'more_dates' key is used in Patternlab as a way to add conditional for
     # displaying the '+ more dates' text on cards that are recuring.
-    more_dates: false
-    organization: ''
-    event_type: ''
-    readtime: 5 min read
+    more_dates: true
+    organization: 'David Geffen School of Medicine'
+    event_type: 'In-Person'
+    readtime: ''

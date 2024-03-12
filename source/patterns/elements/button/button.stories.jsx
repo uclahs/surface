@@ -54,6 +54,19 @@ const Outlined = {
   },
 };
 
+const withIcon = {
+  ...Button,
+  name: 'Button with Icon',
+  args: {
+    ...Button.args,
+    button: {
+      icon: 'arrow-right',
+      modifier: 'button--outlined',
+      text: 'Button with Icon',
+    },
+  },
+};
+
 const Link = {
   ...Button,
   name: 'Link button',
@@ -68,4 +81,4 @@ const Link = {
 };
 
 export default settings;
-export { Button, Primary, Secondary, Outlined, Link };
+export { Button, Primary, Secondary, Outlined, withIcon, Link };
