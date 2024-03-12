@@ -1,0 +1,159 @@
+/**
+ * @file
+ * Content highlight component which is used by Article and Event
+ * content types.
+ */
+
+/* Data attributes to change component's background based on theme. */
+:where([data-theme="surface"]) {
+  --content-highlight-bg: var(--ucla-blue);
+}
+
+:where([data-theme="dgsom"]) {
+  --content-highlight-bg: var(--midnight-joshua-tree);
+}
+
+:where([data-theme="labs"]) {
+  --content-highlight-bg: var(--malibu-dolphin);
+  --button-bg: var(--ucla-blue);
+  --button-color: var(--white);
+  --button-bg-hover: var(--silver-lake-reservoir);
+}
+
+:where([data-theme="labs-dynamic"]) {
+  --content-highlight-bg: var(--malibu-dolphin);
+  --button-bg: var(--ucla-blue);
+  --button-color: var(--white);
+  --button-bg-hover: var(--silver-lake-reservoir);
+}
+
+.content-highlight {
+  /* Based on the production site (medschool.ucla.edu), the main content section
+  max-width is 1376px.  Setting the same here for when component is viewed in Patternlab. */
+  .pl & {
+    margin: 0 auto;
+    max-width: var(--size-max-content-width);
+  }
+}
+
+.content-highlight__container {
+  background-color: var(--white);
+  padding: var(--size-10);
+
+  /* If component is added in a one column layout, add blue background. */
+  .layout--onecol & {
+    background-color: var(--content-highlight-bg, var(--ucla-blue));
+  }
+}
+
+.content-highlight__content {
+  .is-full-width & {
+    margin-inline: var(--size-4);
+
+    @media (--tablet) {
+      margin-inline: auto;
+      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
+    }
+
+    @media (--laptop) {
+      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
+    }
+
+    @media (--desktop) {
+      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
+    }
+  }
+}
+
+.content-highlight__featured {
+  margin-block-start: var(--size-8);
+}
+
+.content-highlight__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (--tablet) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.content-highlight__heading {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-8);
+  font-weight: var(--font-weight-600);
+
+  .layout--onecol & {
+    color: var(--white);
+  }
+}
+
+.content-highlight__link {
+  color: var(--ucla-blue);
+  font-size: var(--font-size-3);
+
+  /* If a highlight title is not provided, we still want the link to display
+  on the right side.  Flexbox's margin auto lets us do this. */
+  margin-inline-start: auto;
+
+  .layout--onecol & {
+    color: var(--white);
+  }
+}
+
+/* Create grid for component cards. */
+.content-highlight__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-8);
+  justify-content: center;
+  padding-block: var(--size-8);
+
+  @media (--mobile) {
+    justify-content: flex-start;
+  }
+
+  /* Changes text size of '+ more dates' inside the cards. */
+  .event-card__more-dates {
+    font-size: var(--font-size-sm);
+  }
+
+  .content-card {
+    flex: 1 1 var(--size-50);
+    max-width: var(--size-80);
+  }
+
+  /* Hides the 4th card when the content highlight is added to a two column
+  layout with a split of 70/30 or 30/70. */
+  .layout--twocol-30-70 &,
+  .layout--twocol-70-30 & {
+    > article:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+.content-card__event {
+  .content-card__date--wrapper {
+    align-items: initial;
+    flex-direction: column;
+  }
+
+  .readtime {
+    margin-block-start: var(--size-3);
+  }
+}
+
+.content-highlight__top,
+.content-highlight__bottom {
+  display: none;
+
+  @media (--tablet) {
+    .layout--onecol & {
+      display: block;
+      width: 100%;
+    }
+  }
+}
