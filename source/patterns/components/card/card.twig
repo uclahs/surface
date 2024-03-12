@@ -5,8 +5,8 @@
   {% if image %}
     <div class="card__image">
       {{ image }}
-      {# Short date badge. #}
-      {% if date_short %}
+      {# Short date badge only displays if the content is an event. #}
+      {% if date_short and event_type %}
         {% include "@elements/date-badge/date-badge.twig" with {
             'modifier': 'date-badge--small',
             'month': date_short.month,

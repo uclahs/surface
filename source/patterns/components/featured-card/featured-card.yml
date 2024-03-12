@@ -1,0 +1,29 @@
+---
+modifier: ''
+image: |-
+  <img src="../dist/images/3-2.svg" alt="placeholder text" width="768" height="512" />
+title:
+  modifier: 'featured-content__title'
+  level: 3
+  text: 'UCLA Health HIMS Forum: Amendment and Addendum HS 9415'
+  url: '#'
+subtitle:
+  modifier: 'featured-content__subtitle'
+  level: 4
+  text: 'Join the HIMS Director and Management Team for updates on patient record integrity.'
+  url: ''
+date:
+  modifier: ''
+  date: 'October 31, 2023 | 12:30 PM – 1:30 PM'
+cta:
+  disabled: ''
+  modifier: 'button button--secondary'
+  text: 'View the full event'
+  url: '#'
+event_type:
+  modifier: 'featured-content__type'
+  text: 'In-Person'
+  url: ''
+more_dates: true
+organization: 'David Geffen School of Medicine'
+readtime: ''
