@@ -1,0 +1,95 @@
+{{ attach_library('surface/content-highlight') }}
+
+<section class="content-highlight{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  {% if 'dgsom' in theme %}
+    <span class="component-waves" aria-hidden="true">
+      {% include "@assets/images/content-highlight-top.svg" %}
+    </span>
+  {% endif %}
+
+  {% if 'labs-dynamic' in theme %}
+    <span class="component-waves" aria-hidden="true">
+      {% include "@assets/images/article-highlight-top.svg" %}
+    </span>
+  {% endif %}
+
+  <div class="content-highlight__container">
+    <div class="content-highlight__content">
+      {% if title or see_more %}
+        <header class="content-highlight__header">
+          {% if title %}
+            {% include "@elements/title/title.twig" with {
+                'title': title,
+              } only
+            %}
+          {% endif %}
+
+          {% if see_more %}
+            {% embed "@elements/button/button.twig" with {
+                'button': see_more,
+              }
+            %}
+            {% block button_icon %}
+              {% include "@assets/icons/arrow-right.svg" ignore missing %}
+            {% endblock %}
+            {% endembed %}
+          {% endif %}
+        </header>
+      {% endif %}
+
+      {% if featured %}
+        <article class="content-highlight__featured">
+          {% block featured %}
+            {% include '@components/featured-card/featured-card.twig' with {
+              'modifier': '',
+              'event_type': featured.event_type,
+              'title': featured.title,
+              'subtitle': featured.subtitle,
+              'image': featured.image,
+              'date': featured.date,
+              'more_dates': featured.more_dates,
+              'organization': featured.organization,
+              'cta': featured.cta,
+              'readtime': featured.readtime,
+              } only
+            %}
+          {% endblock %}
+        </article>
+      {% endif %}
+
+
+      <div class="content-highlight__items">
+        {% block cards %}
+          {% for item in items %}
+            {% include "@components/card/card.twig" with {
+              'attributes': attributes,
+              'modifier': item.modifier,
+              'event_type': item.event_type,
+              'image': item.image,
+              'title': item.title,
+              'organization': item.organization,
+              'date': item.date,
+              'date_short': item.date_short,
+              'more_dates': item.more_dates,
+              'readtime': item.readtime,
+              } only
+            %}
+          {% endfor %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+
+  {% if 'dgsom' in theme %}
+    <span class="component-waves" aria-hidden="true">
+      {% include "@assets/images/content-highlight-bottom.svg" %}
+    </span>
+  {% endif %}
+
+  {% if 'labs-dynamic' in theme %}
+    <span class="component-waves" aria-hidden="true">
+      {% include "@assets/images/article-highlight-bottom.svg" %}
+    </span>
+  {% endif %}
+</section>

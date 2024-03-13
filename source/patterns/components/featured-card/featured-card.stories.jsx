@@ -15,16 +15,16 @@ const settings = {
   render: args => parse(featuredCard(args)),
 };
 
-const Default = {
-  name: 'Featured Event',
-  args: { ...dataEvent },
-};
-
 const Article = {
   name: 'Featured Article',
   args: { ...dataArticle },
   render: args => parse(featuredCard(args)),
 };
 
+const Event = {
+  name: 'Featured Event',
+  args: { ...dataEvent },
+};
+
 export default settings;
-export { Default, Article };
+export { Article, Event };

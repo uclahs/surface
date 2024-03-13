@@ -45,7 +45,7 @@
   justify-content: center;
   max-inline-size: var(--size-mobile);
 
-  .button {
+  .button--secondary {
     margin-block-start: var(--size-4);
   }
 

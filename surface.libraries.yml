@@ -4,3 +4,40 @@ global:
     base:
       dist/css/global.css: {}
       dist/css/utilities.css: {}
+    component:
+      dist/css/button.css: {}
+
+card:
+  css:
+    component:
+      dist/css/card.css: {}
+
+content-highlight:
+  css:
+    component:
+      dist/css/content-highlight.css: {}
+
+date:
+  css:
+    component:
+      dist/css/date.css: {}
+
+date-badge:
+  css:
+    component:
+      dist/css/date-badge.css: {}
+
+eyebrow:
+  css:
+    component:
+      dist/css/eyebrow.css: {}
+
+featured-card:
+  css:
+    component:
+      dist/css/featured-card.css: {}
+
+readtime:
+  css:
+    component:
+      dist/css/readtime.css: {}
