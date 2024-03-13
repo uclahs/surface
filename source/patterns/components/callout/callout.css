@@ -1,0 +1,165 @@
+/**
+ * @file
+ * Callout styles.
+ */
+
+.callout {
+  display: flex;
+  flex-direction: column;
+
+  /* Horizontal layout */
+  &.is-horizontal {
+    gap: var(--size-4);
+
+    @media (--laptop) {
+      flex-direction: row-reverse;
+
+      .callout__image {
+        flex-shrink: 0;
+        width: 50%;
+      }
+    }
+
+    .callout__text {
+      width: 100%;
+
+      @media (--laptop) {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+      }
+    }
+
+    .callout__wrapper {
+      max-width: 65ch;
+    }
+  }
+
+  /* Horizontal in reversed order */
+  &.is-reversed {
+    @media (--laptop) {
+      flex-direction: row;
+    }
+  }
+
+  /* Quote version */
+  &.is-quote {
+    .callout__text {
+      @media (--laptop) {
+        margin-block-start: calc(var(--size-20) * -1);
+        margin-inline: auto;
+        width: 90%;
+      }
+    }
+
+    .callout__wrapper {
+      background-color: var(--white);
+      position: relative;
+      z-index: var(--layer-1);
+    }
+
+    /* Quote horizontal. */
+    &.is-horizontal {
+      .callout__text {
+        margin-block-start: 0;
+        width: 100%;
+      }
+
+      @media (--laptop) {
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+
+        .callout__image {
+          flex-shrink: 0;
+          width: 50%;
+        }
+
+        .callout__text {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-block-start: 0;
+          width: 50%;
+        }
+
+        .callout__wrapper {
+          background-color: var(--white);
+          margin-inline-end: calc(40% * -1);
+          max-width: 65ch;
+          z-index: var(--layer-1);
+        }
+      }
+
+      /* Quote horizontal reversed */
+      &.is-reversed {
+        @media (--laptop) {
+          flex-direction: row;
+        }
+
+        .callout__wrapper {
+          @media (--laptop) {
+            margin-inline-end: 0;
+            margin-inline-start: calc(40% * -1);
+          }
+        }
+      }
+    }
+  }
+
+  /* If one-column has background-color `.bg-venice-canal` or `bg-santa-barbara-sand`,
+  change button color to be the same as button--secondary. */
+  .bg-venice-canal.layout--onecol &,
+  .bg-santa-barbara-sand.layout--onecol & {
+    .button {
+      background-color: var(--ucla-yellow);
+      border-color: var(--ucla-yellow);
+      color: var(--midnight-joshua-tree);
+    }
+  }
+}
+
+.callout__wrapper {
+  @media (--laptop) {
+    padding-block: var(--size-6);
+    padding-inline: var(--size-8);
+  }
+}
+
+.callout__title {
+  color: var(--gray-900);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-400);
+  margin-block-end: var(--size-2);
+  max-width: 35ch;
+
+  @media (--laptop) {
+    font-size: var(--font-size-8);
+  }
+
+  /* If one-column layout has background color `bg-venice-canal`,
+  change title text color to white. */
+  .bg-venice-canal.layout--onecol & {
+    color: var(--white);
+  }
+}
+
+.callout__teaser {
+  font-size: var(--font-size-2);
+  margin-block-end: var(--size-4);
+  max-width: 65ch;
+
+  @media (--laptop) {
+    font-size: var(--font-size-3);
+  }
+
+  /* If one-column layout has background color `bg-venice-canal`,
+  change text color to white. */
+  .bg-venice-canal.layout--onecol & {
+    color: var(--white);
+  }
+}

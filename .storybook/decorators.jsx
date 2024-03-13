@@ -12,4 +12,16 @@ const withDarkMode = (Story) => (
   </div>
 );
 
-export { withGlobalWrapper, withDarkMode};
+const SantaBarbaraSandBg = (Story) => (
+  <div className="bg-santa-barbara-sand.layout--onecol" style={{ background: 'hsl(45 31% 95%)', padding: '40px' }}>
+    <Story />
+  </div>
+);
+
+const VeniceCanalBg = (Story) => (
+  <div className="bg-venice-canal.layout--onecol"  style={{ background: 'hsl(186 68% 32%)', padding: '40px' }}>
+    <Story />
+  </div>
+);
+
+export { withGlobalWrapper, withDarkMode, SantaBarbaraSandBg, VeniceCanalBg};
