@@ -14,7 +14,7 @@ ignorePatterns:
   - node_modules/
   - dist/
   - .eslintrc.yml
-  - '*.config.js'
+  - '*.config.cjs'
 rules:
   import/no-extraneous-dependencies:
     - error
