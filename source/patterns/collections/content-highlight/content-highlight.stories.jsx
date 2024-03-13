@@ -12,7 +12,7 @@ const settings = {
   title: 'Collections/Content Highlight',
   tags: ['autodocs'],
   args: { ...data },
-  render: args => parse(highlight(args)),
+  render: (args) => parse(highlight(args)),
 };
 
 const Events = {
@@ -23,7 +23,7 @@ const Events = {
 const Articles = {
   name: 'Article Highlight',
   args: { ...dataArticle },
-  render: args => parse(highlight(args)),
+  render: (args) => parse(highlight(args)),
 };
 
 export default settings;

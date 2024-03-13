@@ -1,5 +1,6 @@
 import Twig from 'twig';
 import { useEffect } from '@storybook/preview-api';
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import twigDrupal from 'twig-drupal-filters';
 import twigAddAttributes from 'add-attributes-twig-extension';
 import './drupal.js';
@@ -17,6 +18,16 @@ function setupTwig(twig) {
 setupTwig(Twig);
 
 export const decorators = [
+  withThemeByDataAttribute({
+    themes: {
+      Surface: 'surface',
+      DGSOM: 'dgsom',
+      Labs: 'labs',
+      'Labs Dynamic': 'labs-dynamic',
+    },
+    defaultTheme: 'surface',
+    attributeName: 'data-theme',
+  }),
   storyFn => {
     useEffect(() => Drupal.attachBehaviors(), []);
     return storyFn();
