@@ -13,13 +13,13 @@ const withDarkMode = (Story) => (
 );
 
 const SantaBarbaraSandBg = (Story) => (
-  <div className="bg-santa-barbara-sand.layout--onecol" style={{ background: 'hsl(45 31% 95%)', padding: '40px' }}>
+  <div className="bg-santa-barbara-sand layout--onecol" style={{ background: '#F6F4EE', padding: '40px' }}>
     <Story />
   </div>
 );
 
 const VeniceCanalBg = (Story) => (
-  <div className="bg-venice-canal.layout--onecol"  style={{ background: 'hsl(186 68% 32%)', padding: '40px' }}>
+  <div className="bg-venice-canal layout--onecol"  style={{ background: '#1A7E89', padding: '40px' }}>
     <Story />
   </div>
 );
