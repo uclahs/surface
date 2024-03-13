@@ -15,7 +15,7 @@ const config = {
     options: {},
   },
   docs: {
-    autodocs: true,
+    autodocs: false,
   },
   staticDirs: ['../dist'],
 };
