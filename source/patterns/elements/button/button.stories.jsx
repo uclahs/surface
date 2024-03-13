@@ -29,7 +29,6 @@ const Primary = {
   },
 };
 
-
 const Secondary = {
   ...Button,
   name: 'Secondary button',

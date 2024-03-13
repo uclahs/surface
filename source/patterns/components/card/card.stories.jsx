@@ -11,13 +11,13 @@ const settings = {
 
 const Default = {
   name: 'Event card',
-  render: args => parse(card(args)),
+  render: (args) => parse(card(args)),
   args: { ...data },
 };
 
 const Article = {
   name: 'Article card',
-  render: args => parse(card(args)),
+  render: (args) => parse(card(args)),
   args: {
     ...data,
     event_type: '',

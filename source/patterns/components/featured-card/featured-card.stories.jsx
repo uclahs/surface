@@ -12,7 +12,7 @@ const settings = {
   title: 'Components/Featured Card',
   tags: ['autodocs'],
   args: { ...dataEvent },
-  render: args => parse(featuredCard(args)),
+  render: (args) => parse(featuredCard(args)),
 };
 
 const Default = {
@@ -23,7 +23,7 @@ const Default = {
 const Article = {
   name: 'Featured Article',
   args: { ...dataArticle },
-  render: args => parse(featuredCard(args)),
+  render: (args) => parse(featuredCard(args)),
 };
 
 export default settings;

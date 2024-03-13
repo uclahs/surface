@@ -17,7 +17,6 @@ export const Image = {
   },
 };
 
-
 export const Portrait = {
   name: '2:3',
   args: {
