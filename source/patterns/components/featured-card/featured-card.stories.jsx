@@ -12,13 +12,13 @@ const settings = {
   title: 'Components/Featured Card',
   tags: ['autodocs'],
   args: { ...dataEvent },
-  render: args => parse(featuredCard(args)),
+  render: (args) => parse(featuredCard(args)),
 };
 
 const Article = {
   name: 'Featured Article',
   args: { ...dataArticle },
-  render: args => parse(featuredCard(args)),
+  render: (args) => parse(featuredCard(args)),
 };
 
 const Event = {

@@ -6,4 +6,10 @@ const withGlobalWrapper = (Story) => (
   </div>
 );
 
-export { withGlobalWrapper };
+const withDarkMode = (Story) => (
+  <div style={{ background: '#2874af', padding: '40px' }}>
+    <Story />
+  </div>
+);
+
+export { withGlobalWrapper, withDarkMode};

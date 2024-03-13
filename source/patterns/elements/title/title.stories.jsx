@@ -18,7 +18,7 @@ const Title = {
       level: 1,
       modifier: '',
       text: 'A vibrant, supportive culture is essential to advancing our mission to heal humankind.',
-    }
+    },
   },
 };
 
@@ -33,7 +33,7 @@ const Linked = {
       modifier: '',
       text: 'A vibrant, supportive culture is essential to advancing our mission to heal humankind.',
       url: 'https://medschool.ucla.edu',
-    }
+    },
   },
 };
 

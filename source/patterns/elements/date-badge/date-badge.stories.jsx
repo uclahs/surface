@@ -1,6 +1,6 @@
 import parse from 'html-react-parser';
-import React from 'react';
 
+import { withDarkMode } from '../../../../.storybook/decorators.jsx';
 import badge from './date-badge.twig';
 import data from './date-badge.yml';
 import './date-badge.css';
@@ -22,13 +22,7 @@ const BadgeLight = {
     ...data,
     modifier: 'date-badge--light',
   },
-  decorators: [
-    (BadgeLight) => (
-      <div style={{ background: '#2874af', padding: '40px' }}>
-        <BadgeLight />
-      </div>
-    ),
-  ],
+  decorators: [withDarkMode],
 };
 
 export default settings;
