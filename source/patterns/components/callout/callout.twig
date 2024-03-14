@@ -1,12 +1,7 @@
 {{ attach_library('surface/callout') }}
 
-{% set classes = [
-  'callout',
-  'container',
-  modifier ? modifier,
-]|join(' ')|trim %}
-
-<article {{ add_attributes({ 'class': classes }) }}{{ attributes ? attributes|without('class') }}>
+<article class="callout container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
   <div class="callout__image">
     {{ image }}
 	</div>

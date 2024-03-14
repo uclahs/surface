@@ -32,6 +32,11 @@ date-badge:
     component:
       dist/css/date-badge.css: {}
 
+event-card:
+  css:
+    component:
+      dist/css/event-card.css: {}
+
 eyebrow:
   css:
     component:
