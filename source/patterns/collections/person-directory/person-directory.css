@@ -8,11 +8,6 @@
     margin-block-start: var(--size-2);
   }
 
-  /* For Patternlab demo purposes only. */
-  .pl-demo & {
-    padding-block: var(--size-15);
-  }
-
   /* Person cards layout is set to grid by default.
   Per requirements, alignment of cards is left-aligned to ensure spacing
   between cards is consistent in cases when there are only two or three cards. */
