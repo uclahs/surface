@@ -36,14 +36,14 @@ export default defineConfig({
       targets: [
         {
           src: './source/**/*.{png,jpg,jpeg,svg,webp}',
-          dest: 'images'
-        }
-      ]
-    })
+          dest: 'images',
+        },
+      ],
+    }),
   ],
   build: {
     emptyOutDir: true,
-    outDir: "./dist",
+    outDir: './dist',
     rollupOptions: {
       // Recursively globbing through all CSS and JS files
       // within the source directory.
