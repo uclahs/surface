@@ -47,6 +47,7 @@
   /* Quote version */
   &.is-quote {
     .callout__text {
+
       @media (--laptop) {
         margin-block-start: calc(var(--size-20) * -1);
         margin-inline: auto;
@@ -57,6 +58,7 @@
     .callout__wrapper {
       background-color: var(--white);
       max-width: 70ch;
+      padding-block: var(--size-6);
       position: relative;
       z-index: var(--layer-1);
     }
@@ -125,7 +127,6 @@
 
 .callout__wrapper {
   @media (--laptop) {
-    padding-block: var(--size-6);
     padding-inline: var(--size-8);
   }
 }
