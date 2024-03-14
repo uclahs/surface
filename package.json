@@ -14,9 +14,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm run build && npm run storybook",
     "build": "vite build",
+    "watch": "vite build --watch",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "npm run build && storybook build -o storybook",
     "test-storybook": "test-storybook",
+    "start": "npm run watch & npm run storybook",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "stylelint": "stylelint './components/**/*.css'"
   },
