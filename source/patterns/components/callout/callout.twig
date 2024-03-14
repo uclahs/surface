@@ -1,0 +1,36 @@
+{{ attach_library('surface/callout') }}
+
+{% set classes = [
+  'callout',
+  'container',
+  modifier ? modifier,
+]|join(' ')|trim %}
+
+<article {{ add_attributes({ 'class': classes }) }}{{ attributes ? attributes|without('class') }}>
+  <div class="callout__image">
+    {{ image }}
+	</div>
+	<div class="callout__text">
+		<div class="callout__wrapper">
+      {% if title %}
+        {% include "@elements/title/title.twig" with {
+            "title": title,
+          } only
+        %}
+      {% endif %}
+
+			{% if teaser %}
+        <div class="callout__teaser prose">
+          {{ teaser }}
+        </div>
+      {% endif %}
+
+      {% if cta %}
+        {% include "@elements/button/button.twig" with {
+            "button": cta,
+          } only
+        %}
+      {% endif %}
+		</div>
+	</div>
+</article>
