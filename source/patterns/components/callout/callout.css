@@ -47,7 +47,6 @@
   /* Quote version */
   &.is-quote {
     .callout__text {
-
       @media (--laptop) {
         margin-block-start: calc(var(--size-20) * -1);
         margin-inline: auto;

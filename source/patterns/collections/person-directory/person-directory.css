@@ -1,0 +1,76 @@
+/**
+ * @file
+ * Person directory listing styles.
+ */
+
+.person-directory {
+  & + & {
+    margin-block-start: var(--size-2);
+  }
+
+  /* Person cards layout is set to grid by default.
+  Per requirements, alignment of cards is left-aligned to ensure spacing
+  between cards is consistent in cases when there are only two or three cards. */
+  .person-directory__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-8);
+    justify-content: flex-start;
+  }
+
+  /* List layout is set to list. */
+  &.is-list {
+    .person-directory__items {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
+
+.person-directory__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-8);
+  font-weight: var(--font-weight-400);
+  line-height: var(--leading-none);
+  margin-block-end: var(--size-8);
+
+  /* If Venice Canal background color exists, change title text color to white. */
+  .bg-venice-canal.layout--onecol & {
+    color: var(--white);
+  }
+}
+
+.person-directory__items {
+  /* List view styles for the cards. */
+  .is-list & {
+    .person-card {
+      max-inline-size: 100%;
+    }
+
+    @media (--mobile-sm) {
+      /* Starting at 300px and in list view only, the person card text
+      (Name and title) will flip so they display to the right
+      of the person image. Below 300px the card uses its default layout. */
+      .person-card__link {
+        display: flex;
+        width: 100%;
+      }
+    }
+
+    .person-card__image {
+      /* In mobile, and on the list view only, the person image will be fixed
+      at about 200px for better layout of cards. */
+      @media (--mobile-sm) {
+        width: var(--size-50); /* ~ 200px */
+      }
+    }
+  }
+}
+
+/* Person card in list mode changes its layout to horizontal. */
+.person-directory__item {
+  .is-list & {
+    display: flex;
+  }
+}

@@ -1,0 +1,10 @@
+---
+modifier: ''
+name:
+  level: 3
+  modifier: 'person-card__name'
+  text: 'Jennifer Santana'
+  url: 'https://medschool.ucla.edu'
+title: 'Person Professional Title'
+image: |-
+    <img src="../dist/images/1-1.svg" alt="Placeholder image" width="250px" height="250px" />

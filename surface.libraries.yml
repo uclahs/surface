@@ -42,6 +42,16 @@ featured-card:
     component:
       dist/css/featured-card.css: {}
 
+person-card:
+  css:
+    component:
+      dist/css/person-card.css: {}
+
+person-directory:
+  css:
+    component:
+      dist/css/person-directory.css: {}
+
 readtime:
   css:
     component:

@@ -40,9 +40,3 @@
     margin-inline-start: 0;
   }
 }
-
-/* Adds background color and padding for visibility purposes only. */
-.pl-demo .date--light {
-  background-color: var(--ucla-blue);
-  padding: var(--size-4);
-}
