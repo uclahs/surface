@@ -17,6 +17,11 @@ card:
     component:
       dist/css/card.css: {}
 
+call-to-action:
+  css:
+    component:
+      dist/css/call-to-action.css: {}
+
 content-highlight:
   css:
     component:

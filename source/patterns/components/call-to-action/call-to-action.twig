@@ -1,0 +1,9 @@
+{{ attach_library('surface/call-to-action') }}
+
+<article class="call-to-action container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  <div class="call-to-action__container">
+    <div class="call-to-action__title">{{ title }}</div>
+    <a class="button button--primary" href="{{ url }}">{{ url_title }}</a>
+  </div>
+</div>
