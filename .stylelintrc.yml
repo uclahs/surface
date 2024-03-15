@@ -22,6 +22,7 @@ rules:
       disableFix: true
   order/properties-alphabetical-order: error
   plugin/selector-pseudo-class-lvhfa: true
+  property-no-vendor-prefix: null
   selector-class-pattern: null
   value-keyword-case:
     - lower

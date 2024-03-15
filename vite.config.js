@@ -6,6 +6,7 @@ import checker from 'vite-plugin-checker';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import path from 'path';
 import { glob } from 'glob';
+import { watchAndRun } from 'vite-plugin-watch-and-run';
 
 export default defineConfig({
   plugins: [
@@ -17,8 +18,8 @@ export default defineConfig({
         lintCommand: 'stylelint "./source/patterns/**/*.css"',
       },
     }),
+    // Twig namespaces for including components.
     twig({
-      // Twig namespaces for including components.
       namespaces: {
         assets: join(__dirname, './source/assets'),
         base: join(__dirname, './source/base'),
@@ -30,6 +31,7 @@ export default defineConfig({
         theme: join(__dirname, './source/patterns/theme'),
       },
     }),
+    // YML for including data.
     yml(),
     // Copy static images from `source` to `dist/images`
     viteStaticCopy({
@@ -40,6 +42,22 @@ export default defineConfig({
         },
       ],
     }),
+    watchAndRun([
+      {
+        name: 'css',
+        watchKind: ['add', 'change'],
+        watch: path.resolve('source/patterns/**/*.css'),
+        run: 'vite build',
+        delay: 300,
+      },
+      {
+        name: 'js',
+        watchKind: ['add', 'change'],
+        watch: path.resolve('source/patterns/**/*.js'),
+        run: 'vite build',
+        delay: 300,
+      },
+    ]),
   ],
   build: {
     emptyOutDir: true,

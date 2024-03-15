@@ -5,22 +5,22 @@
  */
 
 /* Data attributes to change component's background based on theme. */
-:where([data-theme="surface"]) {
+:where([data-theme='surface']) {
   --content-highlight-bg: var(--ucla-blue);
 }
 
-:where([data-theme="dgsom"]) {
+:where([data-theme='dgsom']) {
   --content-highlight-bg: var(--midnight-joshua-tree);
 }
 
-:where([data-theme="labs"]) {
+:where([data-theme='labs']) {
   --content-highlight-bg: var(--malibu-dolphin);
   --button-bg: var(--ucla-blue);
   --button-color: var(--white);
   --button-bg-hover: var(--silver-lake-reservoir);
 }
 
-:where([data-theme="labs-dynamic"]) {
+:where([data-theme='labs-dynamic']) {
   --content-highlight-bg: var(--malibu-dolphin);
   --button-bg: var(--ucla-blue);
   --button-color: var(--white);

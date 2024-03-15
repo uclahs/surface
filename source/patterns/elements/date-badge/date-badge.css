@@ -15,7 +15,6 @@
   text-transform: uppercase;
   width: var(--size-20);
 
-
   &.date-badge--light {
     background-color: var(--white);
     color: var(--ucla-blue);
