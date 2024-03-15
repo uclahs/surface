@@ -1,0 +1,11 @@
+---
+modifier: ''
+type: 'Person'
+image: '<img src="../../dist/images/1-1.svg" alt="Placeholder image" width="200" height="200" />'
+name:
+  level: 3
+  modifier: 'l-person-listing__name'
+  text: 'Chelsea Shover'
+  url: '#'
+title: 'Principal Financial Analyst - Controls and Compliance'
+teaser: 'Chelsea Shover, an assistant professor in residence at the David Geffen School of Medicine at UCLA, has been named a trailblazer by the National Institutes of Health HEAL Initiative for her research on addiction.'

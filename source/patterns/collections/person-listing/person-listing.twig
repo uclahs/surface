@@ -1,0 +1,39 @@
+{{ attach_library('surface/person-listing') }}
+
+{% set classes = [
+  'person-listing',
+  modifier ? modifier : '',
+]|join(' ')|trim %}
+
+<article {{ add_attributes({ 'class': classes }) }}>
+  {# Placeholder for outputting 'Person' as the type of content
+  in the search page. This is only done in the general search results page,
+  not the people search page. #}
+  {% if type %}
+    <div class="person-listing__type">
+      {{ type }}
+    </div>
+  {% endif %}
+
+  <div class="person-listing__wrapper">
+    <div class="person-listing__image">
+      {{ image }}
+    </div>
+    <div class="person-listing__content">
+      {% include "@elements/title/title.twig" with {
+          'title': name,
+        } only
+      %}
+
+      {% if title %}
+        <p class="person-listing__title">{{ title }}</p>
+      {% endif %}
+
+      {% if teaser %}
+        <div class="person-listing__teaser prose">
+          {{ teaser }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</article>
