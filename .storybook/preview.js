@@ -28,7 +28,7 @@ export const decorators = [
     defaultTheme: 'surface',
     attributeName: 'data-theme',
   }),
-  storyFn => {
+  (storyFn) => {
     useEffect(() => Drupal.attachBehaviors(), []);
     return storyFn();
   },
@@ -83,8 +83,19 @@ const preview = {
   parameters: {
     options: {
       storySort: {
-        order: [ 'Getting started',['Intro'],'Base', 'Elements', 'Components', 'Collections', 'Layouts', 'Pages', 'Theme', '*'],
-        includeName: true
+        order: [
+          'Getting started',
+          ['Intro'],
+          'Base',
+          'Elements',
+          'Components',
+          'Collections',
+          'Layouts',
+          'Pages',
+          'Theme',
+          '*',
+        ],
+        includeName: true,
       },
     },
     viewport: { viewports: customViewports },

@@ -1,9 +1,9 @@
 root: true
 extends:
-- airbnb-base
-- plugin:prettier/recommended
+  - airbnb-base
+  - plugin:prettier/recommended
 plugins:
-- prettier
+  - prettier
 env:
   browser: true
   commonjs: true
@@ -24,15 +24,15 @@ ignorePatterns:
 rules:
   strict: 0
   import/no-extraneous-dependencies: 0
-  prettier/prettier: error
+  prettier/prettier: 0
 settings:
   import/ignore:
-  - \.(css)$
+    - \.(css)$
   import/resolver:
     node:
       extensions:
-      - .js
-      - .jsx
+        - .js
+        - .jsx
       moduleDirectory:
-      - node_modules
-      - source/
+        - node_modules
+        - source/

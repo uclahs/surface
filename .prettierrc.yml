@@ -1,6 +1,3 @@
-arrowParens: always
-semi: true
 singleQuote: true
-trailingComma: "all"
-tabWidth: 2
-useTabs: false
+trailingComma: all
+jsxBracketSameLine: true
