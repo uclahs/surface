@@ -2,7 +2,6 @@ extends:
   - stylelint-config-standard
 plugins:
   - stylelint-order
-  - stylelint-prettier
   - stylelint-selector-pseudo-class-lvhfa
 rules:
   at-rule-no-unknown: null
@@ -23,7 +22,6 @@ rules:
       disableFix: true
   order/properties-alphabetical-order: error
   plugin/selector-pseudo-class-lvhfa: true
-  prettier/prettier: true
   property-no-vendor-prefix: null
   selector-class-pattern: null
   value-keyword-case:

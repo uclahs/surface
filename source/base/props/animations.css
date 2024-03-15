@@ -20,7 +20,7 @@
   --animation-bounce: bounce 2s var(--ease-squish-2) infinite;
   --animation-pulse: pulse 2s var(--ease-out-3) infinite;
 
-/* Transitions */
+  /* Transitions */
   --transition-soft-linear: all 0.15s linear;
 }
 
