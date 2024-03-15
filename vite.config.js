@@ -6,6 +6,7 @@ import checker from 'vite-plugin-checker';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import path from 'path';
 import { glob } from 'glob';
+import { watchAndRun } from 'vite-plugin-watch-and-run';
 
 export default defineConfig({
   plugins: [
@@ -40,6 +41,15 @@ export default defineConfig({
         },
       ],
     }),
+    watchAndRun([
+      {
+        name: 'css',
+        watchKind: ['add', 'change'],
+        watch: path.resolve('source/patterns/**/*.css'),
+        run: 'vite build',
+        delay: 300,
+      },
+    ]),
   ],
   build: {
     emptyOutDir: true,

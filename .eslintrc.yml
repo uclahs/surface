@@ -1,12 +1,18 @@
+root: true
+extends:
+- airbnb-base
+- plugin:prettier/recommended
+plugins:
+- prettier
 env:
   browser: true
   commonjs: true
   es2021: true
-plugins:
-  - prettier
-extends:
-  - airbnb-base
-  - plugin:prettier/recommended
+globals:
+  expect: true
+  it: true
+  describe: true
+  Drupal: true
 parserOptions:
   ecmaVersion: latest
   sourceType: module
@@ -14,14 +20,19 @@ ignorePatterns:
   - node_modules/
   - dist/
   - .eslintrc.yml
-  - '*.config.cjs'
+  - '*.config.js'
 rules:
-  import/no-extraneous-dependencies:
-    - error
-    - devDependencies: true
-  indent:
-    - error
-    - 2
-  linebreak-style:
-    - error
-    - unix
+  strict: 0
+  import/no-extraneous-dependencies: 0
+  prettier/prettier: error
+settings:
+  import/ignore:
+  - \.(css)$
+  import/resolver:
+    node:
+      extensions:
+      - .js
+      - .jsx
+      moduleDirectory:
+      - node_modules
+      - source/

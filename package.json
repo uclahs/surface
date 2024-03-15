@@ -20,7 +20,7 @@
     "test-storybook": "test-storybook",
     "start": "npm run watch & npm run storybook",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "stylelint": "stylelint './components/**/*.css'"
+    "stylelint": "stylelint './source/patterns/**/*.css'"
   },
   "devDependencies": {
     "@csstools/postcss-global-data": "^2.1.1",
@@ -51,11 +51,13 @@
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-order": "^6.0.4",
+    "stylelint-prettier": "^5.0.0",
     "stylelint-selector-pseudo-class-lvhfa": "^3.1.1",
     "twig-drupal-filters": "^3.2.0",
     "vite-plugin-checker": "^0.6.4",
     "vite-plugin-static-copy": "^1.0.1",
-    "vite-plugin-twig-drupal": "^1.2.1"
+    "vite-plugin-twig-drupal": "^1.2.1",
+    "vite-plugin-watch-and-run": "^1.7.0"
   },
   "dependencies": {
     "@storybook/addon-a11y": "^8.0.0",

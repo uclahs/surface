@@ -94,7 +94,7 @@
   }
 }
 
-  /* Styles organization name by setting text and icon clor to yellow. */
+/* Styles organization name by setting text and icon clor to yellow. */
 .featured-card__organization-name {
   align-items: center;
   color: var(--ucla-blue);

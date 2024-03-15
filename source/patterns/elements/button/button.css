@@ -3,9 +3,8 @@
  * Button styles.
  */
 
-/* Exclude the initial button styles if the classes `prose` or `button--link`
-exist in the element. */
-.button:not(:where([class~="prose"] *, .button--link)) {
+/* Exclude the initial button styles if the classes `prose` or `button--link` exist in the element. */
+.button:not(:where([class~='prose'] *, .button--link)) {
   align-items: center;
   appearance: none;
   background-color: var(--gray-300);
@@ -37,12 +36,15 @@ exist in the element. */
   }
 
   &:focus {
-    box-shadow: 0 0 var(--white), 0 0 0 2px var(--gray-400), 0 0 var(--white);
+    box-shadow:
+      0 0 var(--white),
+      0 0 0 2px var(--gray-400),
+      0 0 var(--white);
     outline: 2px solid transparent;
     outline-offset: 2px;
   }
 
-  &[aria-expanded="true"] {
+  &[aria-expanded='true'] {
     &:focus::after {
       border-color: var(--gray-300);
     }
@@ -95,7 +97,10 @@ exist in the element. */
   }
 
   &:focus {
-    box-shadow: 0 0 var(--white), 0 0 0 2px var(--ucla-blue), 0 0 var(--white);
+    box-shadow:
+      0 0 var(--white),
+      0 0 0 2px var(--ucla-blue),
+      0 0 var(--white);
   }
 
   &:active {
@@ -123,7 +128,10 @@ exist in the element. */
   }
 
   &:focus {
-    box-shadow: 0 0 var(--white), 0 0 0 2px var(--ucla-yellow), 0 0 var(--white);
+    box-shadow:
+      0 0 var(--white),
+      0 0 0 2px var(--ucla-yellow),
+      0 0 var(--white);
   }
 
   &:active {
@@ -154,7 +162,10 @@ exist in the element. */
   }
 
   &:focus {
-    box-shadow: 0 0 var(--white), 0 0 0 2px var(--white), 0 0 var(--white);
+    box-shadow:
+      0 0 var(--white),
+      0 0 0 2px var(--white),
+      0 0 var(--white);
   }
 
   & svg {
@@ -180,7 +191,10 @@ exist in the element. */
   }
 
   &:focus {
-    box-shadow: 0 0 var(--white), 0 0 0 2px var(--white), 0 0 var(--white);
+    box-shadow:
+      0 0 var(--white),
+      0 0 0 2px var(--white),
+      0 0 var(--white);
   }
 
   & svg {
@@ -207,7 +221,10 @@ exist in the element. */
   }
 
   &:focus {
-    box-shadow: 0 0 var(--white), 0 0 0 2px var(--white), 0 0 var(--white);
+    box-shadow:
+      0 0 var(--white),
+      0 0 0 2px var(--white),
+      0 0 var(--white);
   }
 
   & svg {

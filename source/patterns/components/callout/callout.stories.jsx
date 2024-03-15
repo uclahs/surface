@@ -1,7 +1,7 @@
 import parse from 'html-react-parser';
 
 // Imports decorators for background colors.
-import { SantaBarbaraSandBg, VeniceCanalBg } from '../../../../.storybook/decorators.jsx';
+import { SantaBarbaraSandBg, VeniceCanalBg } from '../../../../.storybook/decorators';
 
 import callout from './callout.twig';
 import data from './callout.yml';
@@ -75,4 +75,13 @@ const VeniceCanal = {
 };
 
 export default settings;
-export { Stacked, Horizontal, Reversed, Quote, QuoteHorizontal, HorizontalReversed, SantaBarbaraSand, VeniceCanal };
+export {
+  Stacked,
+  Horizontal,
+  Reversed,
+  Quote,
+  QuoteHorizontal,
+  HorizontalReversed,
+  SantaBarbaraSand,
+  VeniceCanal,
+};
