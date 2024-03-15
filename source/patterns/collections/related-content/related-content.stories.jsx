@@ -1,18 +1,25 @@
 import parse from 'html-react-parser';
 
-import person from './related-content.twig';
+import related from './related-content.twig';
 import data from './related-content.yml';
+import eventsData from './related-content-events.yml';
 
 const settings = {
   title: 'Collections/Related content',
-  render: (args) => parse(person(args)),
+  render: (args) => parse(related(args)),
   args: { ...data },
 };
 
-const RelatedContent = {
+const Articles = {
   name: 'Related content',
   args: { ...data },
 };
 
+const Events = {
+  ...Articles,
+  name: 'Related content',
+  args: { ...eventsData },
+};
+
 export default settings;
-export { RelatedContent };
+export { Articles, Events };
