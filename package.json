@@ -20,7 +20,6 @@
     "test-storybook": "test-storybook",
     "start": "npm run watch & npm run storybook",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "prettier": "prettier --loglevel warn --write './source/**/*.js' './source/**/*.jsx' './source/**/*.json' './source/**/*.css' './source/**/*.twig' './source/**/*.md' './source/**/*.yml'",
     "stylelint": "stylelint './source/patterns/**/*.css'"
   },
   "devDependencies": {
