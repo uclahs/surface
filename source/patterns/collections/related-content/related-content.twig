@@ -1,0 +1,57 @@
+{{ attach_library('surface/related-content') }}
+
+{% set classes = [
+  'related-content',
+  modifier ? modifier : '',
+  attributes ? attributes.class,
+]|join(' ')|trim %}
+
+<section {{ add_attributes({ 'class': classes }) }}>
+  <div class="related-content__inner">
+    {% if title or see_more %}
+      <header class="related-content__header">
+        {% if title %}
+          {% include "@elements/title/title.twig" with {
+              'title': title,
+            } only
+          %}
+        {% endif %}
+
+        {% if see_more %}
+          <div class="related-content__more-link-wrapper">
+            {% embed "@elements/button/button.twig" with {
+                'button': see_more,
+              } only
+            %}
+            {% block button_icon %}
+              {% include '@assets/icons/arrow-right.svg' %}
+            {% endblock %}
+            {% endembed %}
+          </div>
+        {% endif %}
+      </header>
+    {% endif %}
+
+    {% if items %}
+      <div class="related-content__items">
+        {% block cards %}
+          {% for item in items %}
+            {% include "@components/card/card.twig" with {
+              'attributes': attributes,
+              'modifier': item.modifier,
+              'event_type': item.event_type,
+              'image': item.image,
+              'title': item.title,
+              'organization': item.organization,
+              'date': item.date,
+              'date_short': item.date_short,
+              'more_dates': item.more_dates,
+              'readtime': item.readtime,
+              } only
+            %}
+          {% endfor %}
+        {% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</section>
