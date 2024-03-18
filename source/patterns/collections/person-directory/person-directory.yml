@@ -15,7 +15,7 @@ items:
       url: 'https://medschool.ucla.edu'
     title: 'Person professional title'
     image: |-
-        <img src="../dist/images/1-1.svg" alt="Alternate text">
+        <img src="images/1-1.svg" alt="Alternate text">
   -
     modifier: 'person-directory__item'
     name:
@@ -25,7 +25,7 @@ items:
       url: 'https://medschool.ucla.edu'
     title: 'Person professional title'
     image: |-
-        <img src="../dist/images/1-1.svg" alt="Alternate text">
+        <img src="images/1-1.svg" alt="Alternate text">
   -
     modifier: 'person-directory__item'
     name:
@@ -35,7 +35,7 @@ items:
       url: 'https://medschool.ucla.edu'
     title: 'Person professional title'
     image: |-
-        <img src="../dist/images/1-1.svg" alt="Alternate text">
+        <img src="images/1-1.svg" alt="Alternate text">
   -
     modifier: 'person-directory__item'
     name:
@@ -45,7 +45,7 @@ items:
       url: 'https://medschool.ucla.edu'
     title: 'Person professional title'
     image: |-
-        <img src="../dist/images/1-1.svg" alt="Alternate text">
+        <img src="images/1-1.svg" alt="Alternate text">
   -
     modifier: 'person-directory__item'
     name:
@@ -55,7 +55,7 @@ items:
       url: 'https://medschool.ucla.edu'
     title: 'Person professional title'
     image: |-
-        <img src="../dist/images/1-1.svg" alt="Alternate text">
+        <img src="images/1-1.svg" alt="Alternate text">
   -
     modifier: 'person-directory__item'
     name:
@@ -65,4 +65,4 @@ items:
       url: 'https://medschool.ucla.edu'
     title: 'Person professional title'
     image: |-
-        <img src="../dist/images/1-1.svg" alt="Alternate text">
+        <img src="images/1-1.svg" alt="Alternate text">

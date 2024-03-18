@@ -21,8 +21,7 @@ export default defineConfig({
     // Twig namespaces for including components.
     twig({
       namespaces: {
-        assets: join(__dirname, './source/assets'),
-        base: join(__dirname, './source/base'),
+        base: join(__dirname, './source/patterns/base'),
         elements: join(__dirname, './source/patterns/elements'),
         components: join(__dirname, './source/patterns/components'),
         collections: join(__dirname, './source/patterns/collections'),
@@ -37,7 +36,7 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: './source/**/*.{png,jpg,jpeg,svg,webp}',
+          src: './source/patterns/**/images/*.{png,jpg,jpeg,svg,webp}',
           dest: 'images',
         },
       ],
@@ -45,15 +44,22 @@ export default defineConfig({
     watchAndRun([
       {
         name: 'css',
-        watchKind: ['add', 'change'],
+        watchKind: ['add', 'change', 'unlink'],
         watch: path.resolve('source/patterns/**/*.css'),
         run: 'vite build',
         delay: 300,
       },
       {
         name: 'js',
-        watchKind: ['add', 'change'],
+        watchKind: ['add', 'change', 'unlink'],
         watch: path.resolve('source/patterns/**/*.js'),
+        run: 'vite build',
+        delay: 300,
+      },
+      {
+        name: 'images',
+        watchKind: ['add', 'change', 'unlink'],
+        watch: path.resolve('source/patterns/**/images/*.{png,jpg,jpeg,svg,webp}'),
         run: 'vite build',
         delay: 300,
       },
@@ -61,17 +67,14 @@ export default defineConfig({
   ],
   build: {
     emptyOutDir: true,
-    outDir: './dist',
+    outDir: 'dist',
     rollupOptions: {
-      // Recursively globbing through all CSS and JS files
-      // within the source directory.
+      // Recursively globbing through all css/js files within the source directory.
       input: [
-        ...glob.sync(path.resolve(__dirname, 'source/base/*.css')),
         ...glob.sync(path.resolve(__dirname, 'source/patterns/**/*.{css,js}')),
-        ...glob.sync(path.resolve(__dirname, 'source/assets/css/*.css')),
       ],
       output: {
-        // Outputs CSS and JS into their respective directories within `dist`..
+        // Outputs assets into their respective directories within `dist`..
         assetFileNames: 'css/[name].css',
         entryFileNames: 'js/[name].js',
       },

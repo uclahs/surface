@@ -6,7 +6,7 @@ import twigAddAttributes from 'add-attributes-twig-extension';
 import './drupal.js';
 import '../dist/css/global.css';
 import '../dist/css/utilities.css';
-import '../dist/css/all.css';
+import '../dist/css/styles.css';
 
 function setupTwig(twig) {
   twig.cache();
