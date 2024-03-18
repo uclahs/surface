@@ -75,13 +75,4 @@ const VeniceCanal = {
 };
 
 export default settings;
-export {
-  Stacked,
-  Horizontal,
-  Reversed,
-  Quote,
-  QuoteHorizontal,
-  HorizontalReversed,
-  SantaBarbaraSand,
-  VeniceCanal,
-};
+export { Stacked, Horizontal, Reversed, Quote, QuoteHorizontal, HorizontalReversed, SantaBarbaraSand, VeniceCanal };

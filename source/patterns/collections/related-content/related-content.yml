@@ -14,7 +14,7 @@ see_more:
 items:
   -
     modifier: 'content-card__article'
-    image: '<img src="../../dist/images/3-2.svg" alt="Placeholder image" width="720" height="480" />'
+    image: '<img src="images/3-2.svg" alt="Placeholder image" width="720" height="480" />'
     title:
       modifier: 'content-card__title'
       level: 3
@@ -34,7 +34,7 @@ items:
 
   -
     modifier: 'content-card__article'
-    image: '<img src="../../dist/images/3-2.svg" alt="Placeholder image" width="720" height="480" />'
+    image: '<img src="images/3-2.svg" alt="Placeholder image" width="720" height="480" />'
     title:
       modifier: 'content-card__title'
       level: 3
@@ -54,7 +54,7 @@ items:
 
   -
     modifier: 'content-card__article'
-    image: '<img src="../../dist/images/3-2.svg" alt="Placeholder image" width="720" height="480" />'
+    image: '<img src="images/3-2.svg" alt="Placeholder image" width="720" height="480" />'
     title:
       modifier: 'content-card__title'
       level: 3
@@ -74,7 +74,7 @@ items:
 
   -
     modifier: 'content-card__article'
-    image: '<img src="../../dist/images/3-2.svg" alt="Placeholder image" width="720" height="480" />'
+    image: '<img src="images/3-2.svg" alt="Placeholder image" width="720" height="480" />'
     title:
       modifier: 'content-card__title'
       level: 3
