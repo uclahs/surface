@@ -83,18 +83,7 @@ const preview = {
   parameters: {
     options: {
       storySort: {
-        order: [
-          'Getting started',
-          ['Intro'],
-          'Base',
-          'Elements',
-          'Components',
-          'Collections',
-          'Layouts',
-          'Pages',
-          'Theme',
-          '*',
-        ],
+        order: [ 'Getting started',['Intro'], 'Base', 'Elements', 'Components', 'Collections', 'Layouts', 'Pages', 'Theme', '*' ],
         includeName: true,
       },
     },
