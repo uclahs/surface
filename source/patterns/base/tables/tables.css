@@ -35,8 +35,8 @@ table {
     color: var(--ucla-blue);
 
     &:hover {
-      color: var(--silver-lake-reservoir);
       border-bottom: 1px solid var(--silver-lake-reservoir);
+      color: var(--silver-lake-reservoir);
     }
 
     &:focus {

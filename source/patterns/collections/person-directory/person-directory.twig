@@ -1,7 +1,7 @@
 {{ attach_library('surface/person-directory') }}
 
 <section class="person-directory container {{ modifier ? ' ' ~ modifier }}" {{ attributes ? attributes|without('class') }}>
-  {% if heading %}
+  {% if title %}
     {% include "@elements/title/title.twig" with {
       'title': title,
       } only
