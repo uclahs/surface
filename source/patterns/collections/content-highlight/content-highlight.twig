@@ -4,13 +4,19 @@
   {{- attributes ? attributes|without(class) -}}>
   {% if 'dgsom' in theme %}
     <span class="component-waves" aria-hidden="true">
-      {% include "@assets/images/content-highlight-top.svg" %}
+      <svg aria-hidden="true" class="content-highlight__top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 319">
+        <polygon class="fill-midnight-joshua-tree" points="0 308.75 2000 91.75 2000 319.04 0 319 0 308.75"/>
+        <polygon class="fill-southbay-waves" points="0 308.75 0 66.75 1818 111.5 0 308.75"/>
+      </svg>
     </span>
   {% endif %}
 
   {% if 'labs-dynamic' in theme %}
     <span class="component-waves" aria-hidden="true">
-      {% include "@assets/images/article-highlight-top.svg" %}
+      <svg aria-hidden="true" class="article-highlight__top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 504.58">
+        <polygon class="fill-avocado-toast" points="0 487.41 0 0 3636 90.66 0 487.41"/>
+        <polygon class="fill-malibu-dolphin" points="0 485.74 4000 50 4000 504.58 0 504.5 0 485.74"/>
+      </svg>
     </span>
   {% endif %}
 
@@ -31,7 +37,9 @@
               }
             %}
             {% block button_icon %}
-              {% include "@assets/icons/arrow-right.svg" ignore missing %}
+              <svg aria-hidden="true" class="svg-inline icon icon--arrow-right" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="currentColor" d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path>
+              </svg>
             {% endblock %}
             {% endembed %}
           {% endif %}
@@ -58,7 +66,6 @@
         </article>
       {% endif %}
 
-
       <div class="content-highlight__items">
         {% block cards %}
           {% for item in items %}
@@ -83,13 +90,19 @@
 
   {% if 'dgsom' in theme %}
     <span class="component-waves" aria-hidden="true">
-      {% include "@assets/images/content-highlight-bottom.svg" %}
+      <svg aria-hidden="true" class="content-highlight__bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 319">
+        <polygon class="fill-midnight-joshua-tree" points="2000 10.29 0 227.29 0 0 2000 .04 2000 10.29"/>
+        <polygon class="fill-ucla-blue" points="1110 106.85 2000 164.39 2000 10.29 1110 106.85"/>
+      </svg>
     </span>
   {% endif %}
 
   {% if 'labs-dynamic' in theme %}
     <span class="component-waves" aria-hidden="true">
-      {% include "@assets/images/article-highlight-bottom.svg" %}
+      <svg aria-hidden="true" class="article-highlight__bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 454.58">
+        <polygon class="fill-santa-monica-sunset" points="2214.42 213.35 4000 328.78 4000 20.12 2214.42 213.35"/>
+        <polygon class="fill-malibu-dolphin" points="4000 20.58 0 454.58 0 0 4000 .08 4000 20.58"/>
+      </svg>
     </span>
   {% endif %}
 </section>

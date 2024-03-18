@@ -1,7 +1,7 @@
 ---
 modifier: ''
 image: |-
-  <img src="../dist/images/3-2.svg" alt="placeholder text" width="768" height="512" />
+  <img src="images/3-2.svg" alt="placeholder text" width="768" height="512" />
 title:
   modifier: 'featured-content__title'
   level: 3

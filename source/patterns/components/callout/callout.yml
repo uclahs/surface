@@ -1,7 +1,7 @@
 ---
 modifier: ''
 image: |-
-  '<img src="../dist/images/3-2.svg" alt="Placeholder image" width="768" height="512" />'
+  <img src="images/3-2.svg" alt="Placeholder image" width="768" height="512" />
 title:
   modifier: 'callout__title'
   level: 3
