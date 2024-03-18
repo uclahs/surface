@@ -1,0 +1,93 @@
+---
+modifier: 'related-content--articles'
+title:
+  modifier: 'related-content__title'
+  level: 2
+  text: 'Latest Articles'
+  url: ''
+see_more:
+  icon: 'arrow-right'
+  modifier: 'button--link related-content__link'
+  text: 'View all articles'
+  url: '#'
+
+items:
+  -
+    modifier: 'content-card__article'
+    image: '<img src="../../dist/images/3-2.svg" alt="Placeholder image" width="720" height="480" />'
+    title:
+      modifier: 'content-card__title'
+      level: 3
+      text: 'Leaders in the Field Seminar'
+      url: '#'
+    date:
+      modifier: 'date--small'
+      date: 'October 31, 2023'
+    date_short: ''
+
+    # The 'more_dates' key is used in Patternlab as a way to add conditional for
+    # displaying the '+ more dates' text on cards that are recuring.
+    more_dates: false
+    organization: ''
+    event_type: ''
+    readtime: 5 min read
+
+  -
+    modifier: 'content-card__article'
+    image: '<img src="../../dist/images/3-2.svg" alt="Placeholder image" width="720" height="480" />'
+    title:
+      modifier: 'content-card__title'
+      level: 3
+      text: 'Meet Dr. Marcel van den Brink today'
+      url: '#'
+    date:
+      modifier: 'date--small'
+      date: 'October 31, 2023'
+    date_short: ''
+
+    # The 'more_dates' key is used in Patternlab as a way to add conditional for
+    # displaying the '+ more dates' text on cards that are recuring.
+    more_dates: false
+    organization: ''
+    event_type: ''
+    readtime: 5 min read
+
+  -
+    modifier: 'content-card__article'
+    image: '<img src="../../dist/images/3-2.svg" alt="Placeholder image" width="720" height="480" />'
+    title:
+      modifier: 'content-card__title'
+      level: 3
+      text: 'Leaders in the Field Seminar featuring Dr. Marcel van den Brink'
+      url: '#'
+    date:
+      modifier: 'date--small'
+      date: 'October 31, 2023'
+    date_short: ''
+
+    # The 'more_dates' key is used in Patternlab as a way to add conditional for
+    # displaying the '+ more dates' text on cards that are recuring.
+    more_dates: false
+    organization: ''
+    event_type: ''
+    readtime: 5 min read
+
+  -
+    modifier: 'content-card__article'
+    image: '<img src="../../dist/images/3-2.svg" alt="Placeholder image" width="720" height="480" />'
+    title:
+      modifier: 'content-card__title'
+      level: 3
+      text: 'Leaders in the Field Seminar featuring Dr. Marcel van den Brink'
+      url: '#'
+    date:
+      modifier: 'date--small'
+      date: 'October 31, 2023'
+    date_short: ''
+
+    # The 'more_dates' key is used in Patternlab as a way to add conditional for
+    # displaying the '+ more dates' text on cards that are recuring.
+    more_dates: false
+    organization: ''
+    event_type: ''
+    readtime: 5 min read

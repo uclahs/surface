@@ -1,0 +1,102 @@
+/**
+ * @file
+ * Related content component which is used by Article and Event
+ * content types.
+ */
+
+:where([data-theme="dgsom"]) {
+  --related-content-bg-color: var(--ucla-blue);
+
+  /* Using about 200px of margin at the bottom to compensate for almost the same
+  amount of negative margin in the footer to allow for the curved image. */
+  --related-content-padding-bottom: var(--size-50); /* 200px */
+}
+
+:where([data-theme="labs-dynamic"]) {
+  --related-content-bg-color: var(--ucla-blue);
+  --related-content-padding-bottom: var(--size-50); /* 200px */
+}
+
+.related-content {
+  background-color: var(--related-content-bg-color, var(--ucla-blue));
+  padding: var(--size-10);
+  padding-block-end: var(--related-content-padding-bottom);
+}
+
+.related-content__inner {
+  margin: 0 auto;
+  max-inline-size: var(--size-container);
+}
+
+.related-content__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (--tablet) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.related-content__title {
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-8);
+  font-weight: var(--font-weight-600);
+}
+
+/* Create grid for component cards. */
+.related-content__items {
+  display: grid;
+  grid-gap: var(--size-8);
+
+  /* min() with 100% prevents overflow in extra narrow spaces */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size-72)), 1fr));
+  justify-items: center;
+  padding-block: var(--size-8);
+  width: 100%;
+}
+
+.content-card__event {
+  .content-card__date--wrapper {
+    align-items: initial;
+    flex-direction: column;
+  }
+
+  .readtime {
+    margin-block-start: var(--size-3);
+  }
+}
+
+.related-content__more-link-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+
+  svg {
+    display: inline-block;
+    height: 1rem;
+    margin-inline-start: var(--size-05);
+    width: 1rem;
+
+    path {
+      color: var(--white);
+    }
+  }
+
+  .button--link {
+    color: var(--white);
+    font-size: var(--font-size-3);
+  }
+}
+
+.related-content__top,
+.related-content__bottom {
+  display: none;
+
+  @media (--tablet) {
+    display: block;
+    width: 100%;
+  }
+}
