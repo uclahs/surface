@@ -1,0 +1,25 @@
+.spacer-1 {
+  margin-block-end: var(--size-5);
+}
+
+.spacer-2 {
+  margin-block-end: var(--size-10);
+}
+
+.spacer-3 {
+  margin-block-end: var(--size-15);
+}
+
+.spacer-4 {
+  margin-block-end: var(--size-20);
+}
+
+.spacer-5 {
+  margin-block-end: var(--size-25);
+}
+
+.display-as-columns {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}

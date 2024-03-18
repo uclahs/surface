@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Background utility classes.
+ */
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-ucla-blue {
+  background-color: var(--ucla-blue);
+}
+
+.bg-midnight-joshua-tree {
+  background-color: var(--midnight-joshua-tree);
+}
+
+.bg-gradient-linear-ucla-blue {
+  background-image: linear-gradient(to right,var(--sky-900), var(--ucla-blue));
+}

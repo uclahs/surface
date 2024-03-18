@@ -1,0 +1,17 @@
+.has-octagon-outline::before {
+  aspect-ratio: 1;
+  background-color: var(--ucla-yellow);
+  clip-path: polygon(100% 50%, 85.36% 85.36%, 50% 100%, 14.64% 85.36%, 0% 50%, 14.64% 14.64%, 50% 0%, 85.36% 14.64%, 100% 50%, calc(85.36% - 1.41px) calc(14.64% - -1.41px), calc(50% - -0px) calc(0% - -2px), calc(14.64% - -1.41px) calc(14.64% - -1.41px), calc(0% - -2px) calc(50% - 0px), calc(14.64% - -1.41px) calc(85.36% - 1.41px), calc(50% - 0px) calc(100% - 2px), calc(85.36% - 1.41px) calc(85.36% - 1.41px), calc(100% - 2px) calc(50% - 0px), calc(85.36% - 1.41px) calc(14.64% - -1.41px));
+  content: "";
+  display: block;
+  width: 120px;
+}
+
+.has-octagon-solid::before {
+  aspect-ratio: 1;
+  background-color: var(--ucla-yellow);
+  clip-path: polygon(100% 50%, 85.36% 85.36%, 50% 100%, 14.64% 85.36%, 0% 50%, 14.64% 14.64%, 50% 0%, 85.36% 14.64%);
+  content: "";
+  display: block;
+  width: 120px;
+}

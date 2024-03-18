@@ -1,0 +1,30 @@
+/**
+ * @file
+ * Layout utility classes.
+ */
+
+.is-full-width {
+  inset-inline: 50%;
+  margin-inline: -50vw;
+  position: relative;
+  width: 100vw;
+
+  .lp-builder & {
+    inset-inline: auto;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .paragraph--type--sf-table {
+    margin-inline: auto;
+    max-inline-size: var(--size-container);
+    padding-block: var(--size-8);
+    padding-inline: var(--size-8);
+  }
+}
+
+/* Experimental */
+.full-width-bg {
+  box-shadow: 0 0 0 100vmax #000;
+  clip-path: inset(0 -100vmax);
+}

@@ -1,2 +1,2 @@
-@import "props/index";
-@import "utilities/reset";
+@import "../../props/utilities/reset";
+@import "../../props/index";

@@ -1,0 +1,477 @@
+/**
+ * @file
+ * Prose styles.
+*/
+
+.prose {
+  font-size: var(--font-size-2);
+  line-height: var(--leading-relaxed);
+
+  :where(p):not(:where([class~="not-prose"] *)) {
+    margin-block: var(--size-6);
+
+    &:first-child {
+      margin-block-start: 0;
+    }
+
+    &:last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  :where([class~="lead"]):not(:where([class~="not-prose"] *)) {
+    color: var(--gray-600);
+    font-size: var(--font-size-5);
+
+    &:first-child {
+      margin-block-start: 0;
+    }
+  }
+
+  :where(blockquote):not(:where([class~="not-prose"] *)) {
+    border-left-color: var(--blockquote-border-color);
+    border-left-width: 1px;
+    color: var(--blockquote-color);
+    font-style: italic;
+    font-weight: var(--font-weight-400);
+    margin-block: var(--size-8);
+    max-width: 100%;
+    padding-block: var(--size-4);
+    padding-inline-start: var(--size-6);
+    quotes: "\201C""\201D""\2018""\2019";
+    width: 85ch;
+
+    :where(em) {
+      font-size: var(--font-size-1);
+      font-style: normal;
+      font-weight: var(--font-weight-400);
+    }
+  }
+
+  :where(h1):not(:where([class~="not-prose"] *)) {
+    color: var(--gray-900);
+    font-size: var(--font-size-9);
+    font-weight: var(--font-weight-400);
+    line-height: var(--leading-none);
+    margin-block-end: var(--size-8);
+
+    @media (--tablet) {
+      font-size: var(--font-size-10);
+    }
+  }
+
+  :where(h2):not(:where([class~="not-prose"] *)) {
+    color: var(--gray-900);
+    font-size: var(--font-size-7);
+    font-weight: var(--font-weight-400);
+    line-height: var(--leading-snug);
+    margin-block-end: var(--size-6);
+    margin-block-start: var(--size-12);
+
+    @media (--tablet) {
+      font-size: var(--font-size-8);
+    }
+  }
+
+  :where(h3):not(:where([class~="not-prose"] *)) {
+    color: var(--gray-900);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-400);
+    line-height: var(--leading-relaxed);
+    margin-block-end: var(--size-3);
+    margin-block-start: var(--size-8);
+
+    @media (--tablet) {
+      font-size: var(--font-size-6);
+    }
+  }
+
+  :where(h4):not(:where([class~="not-prose"] *)) {
+    color: var(--gray-900);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-400);
+    margin-block-end: var(--size-2);
+    margin-block-start: var(--size-6);
+  }
+
+  :where(a):not(:where(.button, .link, [class~="not-prose"] *)) {
+    border-bottom: 1px solid transparent;
+    color: var(--ucla-blue);
+    font-weight: var(--font-weight-400);
+
+    &:hover {
+      border-bottom: 1px solid var(--silver-lake-reservoir);
+      color: var(--silver-lake-reservoir);
+    }
+
+    &:focus {
+      box-shadow: 0 0 var(--white), 0 0 0 2px var(--ucla-blue), 0 0 var(--white);
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+  }
+
+  :where(img):not(:where([class~="not-prose"] *)) {
+    margin-block-end: var(--size-10);
+  }
+
+  :where(video):not(:where([class~="not-prose"] *)) {
+    margin-block-end: var(--size-10);
+  }
+
+  :where(figure):not(:where([class~="not-prose"] *)) {
+    margin-block-end: var(--size-10);
+
+    > * {
+      margin-block: 0;
+    }
+  }
+
+  :where(figcaption):not(:where([class~="not-prose"] *)) {
+    color: var(--gray-500);
+    margin-block-start: var(--size-4);
+  }
+
+  :where(code):not(:where([class~="not-prose"] *)) {
+    color: var(--gray-900);
+    font-weight: var(--font-weight-600);
+
+    &::after {
+      content: "`";
+    }
+
+    &::before {
+      content: "`";
+    }
+  }
+
+  :where(h2 code):not(:where([class~="not-prose"] *)) {
+    font-size: var(--font-size-8);
+  }
+
+  :where(h3 code):not(:where([class~="not-prose"] *)) {
+    font-size: var(--font-size-6);
+  }
+
+  :where(pre):not(:where([class~="not-prose"] *)) {
+    background-color: var(--gray-800);
+    border-radius: var(--radius-4);
+    color: var(--gray-100);
+    font-weight: var(--font-weight-400);
+    line-height: var(--leading-loose);
+    margin-block: var(--size-9);
+    overflow-x: auto;
+    padding-block: var(--size-5);
+    padding-inline: var(--size-6);
+
+    > code {
+      background-color: inherit;
+      color: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+
+      &::after,
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  :where(ol):not(:where([class~="not-prose"] *)) {
+    list-style-type: decimal;
+    margin-block: var(--size-6);
+    padding-inline-start: var(--size-8);
+  }
+
+  :where(ul):not(:where([class~="not-prose"] *)) {
+    list-style-type: disc;
+    margin-block: var(--size-6);
+    padding-inline-start: var(--size-8);
+  }
+
+  :where(li):not(:where([class~="not-prose"] *)) {
+    margin-block: var(--size-3);
+  }
+
+  :where(ol > li):not(:where([class~="not-prose"] *)) {
+    padding-inline-start: var(--size-2);
+
+    &::marker {
+      color: var(--gray-400);
+      font-weight: var(--font-weight-400);
+    }
+  }
+
+  :where(ul > li):not(:where([class~="not-prose"] *)) {
+    padding-inline-start: var(--size-2);
+
+    &::marker {
+      color: var(--gray-400);
+      font-weight: var(--font-weight-400);
+    }
+  }
+
+  :where(> ul > li p):not(:where([class~="not-prose"] *)) {
+    margin-block: var(--size-4);
+  }
+
+  :where(> ul > li > *:first-child):not(:where([class~="not-prose"] *)) {
+    margin-block-start: var(--size-4);
+  }
+
+  :where(> ul > li > *:last-child):not(:where([class~="not-prose"] *)) {
+    margin-block-end: var(--size-4);
+  }
+
+  :where(> ol > li > *:first-child):not(:where([class~="not-prose"] *)) {
+    margin-block-start: var(--size-4);
+  }
+
+  :where(> ol > li > *:last-child):not(:where([class~="not-prose"] *)) {
+    margin-block-end: var(--size-4);
+  }
+
+  :where(ul ul, ul ol, ol ul, ol ol):not(:where([class~="not-prose"] *)) {
+    margin-block: var(--size-4);
+  }
+
+  :where(hr):not(:where([class~="not-prose"] *)) {
+    border-top-color: var(--gray-300);
+    border-top-width: 1px;
+    margin-block: var(--size-14);
+  }
+
+  :where(hr + *):not(:where([class~="not-prose"] *)) {
+    margin-block-start: 0;
+  }
+
+  :where(h2 + *):not(:where([class~="not-prose"] *)) {
+    margin-block-start: 0;
+  }
+
+  :where(h3 + *):not(:where([class~="not-prose"] *)) {
+    margin-block-start: 0;
+  }
+
+  :where(h4 + *):not(:where([class~="not-prose"] *)) {
+    margin-block-start: 0;
+  }
+
+  :where(.button):not(:where([class~="not-prose"] *)) {
+    align-items: center;
+    appearance: none;
+    background-color: var(--ucla-blue);
+    border-color: var(--ucla-blue);
+    border-radius: 0;
+    border-width: 1px;
+    color: var(--white);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--font-system);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-700);
+    justify-content: center;
+    line-height: var(--leading-none);
+    margin-block: var(--size-4);
+    margin-inline-end: var(--size-2);
+    padding-block: var(--size-4);
+    padding-inline: var(--size-6);
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.15s linear;
+    white-space: nowrap;
+    width: fit-content;
+
+    &:visited {
+      background-color: var(--ucla-blue);
+      color: var(--white);
+    }
+
+    &:hover {
+      background-color: var(--silver-lake-reservoir);
+      border-color: var(--silver-lake-reservoir);
+      color: var(--white);
+    }
+
+    &:focus {
+      box-shadow: 0 0 var(--white), 0 0 0 2px var(--ucla-blue), 0 0 var(--white);
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+
+    &:active {
+      background-color: var(--silver-lake-reservoir);
+      color: var(--white);
+    }
+  }
+
+  :where(.button--secondary):not(:where([class~="not-prose"] *)) {
+    background-color: var(--ucla-yellow);
+    border-color: var(--ucla-yellow);
+    color: var(--gray-900);
+
+    &:visited {
+      background-color: var(--ucla-yellow);
+      color: var(--gray-900);
+    }
+
+    &:hover {
+      background-color: var(--chumash-soil);
+      border-color: var(--chumash-soil);
+      color: var(--gray-900);
+    }
+
+    &:focus {
+      box-shadow: 0 0 var(--white), 0 0 0 2px var(--ucla-yellow), 0 0 var(--white);
+    }
+
+    &:active {
+      background-color: var(--chumash-soil);
+      color: var(--gray-900);
+    }
+  }
+
+  :where(.media--view-mode-box-1-1):not(:where([class~="not-prose"] *)) {
+    img {
+      aspect-ratio: var(--ratio-box);
+    }
+  }
+
+  :where(.media--view-mode-photo-3-2):not(:where([class~="not-prose"] *)) {
+    img {
+      aspect-ratio: var(--ratio-photo);
+    }
+  }
+
+  :where(.media--view-mode-portrait-3-4):not(:where([class~="not-prose"] *)) {
+    img {
+      aspect-ratio: var(--ratio-portrait);
+    }
+  }
+
+  :where(.media--view-mode-landscape-4-3):not(:where([class~="not-prose"] *)) {
+    img {
+      aspect-ratio: var(--ratio-landscape);
+    }
+  }
+
+  :where(.media--view-mode-widescreen-16-9):not(:where([class~="not-prose"] *)) {
+    img {
+      aspect-ratio: var(--ratio-widescreen);
+    }
+  }
+
+  :where(.media--view-mode-cinemascope-21-9):not(:where([class~="not-prose"] *)) {
+    img {
+      aspect-ratio: var(--ratio-cinemascope);
+    }
+  }
+
+  :where(ul[class~="list"]):not(:where([class~="not-prose"] *)) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  :where(ul[class~="list--highlight"]):not(:where([class~="not-prose"] *)) {
+    border-left-color: var(--ucla-blue);
+    border-left-width: var(--size-1);
+
+    > li {
+      &::marker {
+        color: var(--ucla-blue);
+      }
+    }
+  }
+
+  :where(ul[class~="list--link"]):not(:where([class~="not-prose"] *)) {
+    list-style-type: none;
+    padding-inline-end: var(--size-6);
+
+    > li {
+      margin-block: 0;
+      padding-inline-start: 0;
+
+      a {
+        border-bottom-color: var(--ucla-blue);
+        border-bottom-width: 1px;
+        display: flex;
+        padding-block: var(--size-2);
+        padding-inline: var(--size-2);
+        transition: all 0.15s linear;
+
+        &:hover {
+          background-color: var(--silver-lake-reservoir);
+          border-bottom-color: var(--silver-lake-reservoir);
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  :where(ol[class~="lower-roman"]):not(:where([class~="not-prose"] *)) {
+    list-style-type: lower-roman;
+  }
+
+  :where(ol[class~="upper-roman"]):not(:where([class~="not-prose"] *)) {
+    list-style-type: upper-roman;
+  }
+
+  :where(ol[class~="lower-alpha"]):not(:where([class~="not-prose"] *)) {
+    list-style-type: lower-alpha;
+  }
+
+  :where(ol[class~="upper-alpha"]):not(:where([class~="not-prose"] *)) {
+    list-style-type: upper-alpha;
+  }
+
+  :where(a[class~="link"]):not(:where([class~="not-prose"] *)) {
+    align-items: center;
+    color: var(--ucla-blue);
+    display: flex;
+    flex-direction: row;
+    font-weight: var(--font-weight-600);
+    justify-content: space-between;
+    padding-block: var(--size-4);
+    padding-inline: var(--size-6);
+    transition: all 0.15s linear;
+
+    &::after {
+      background-color: var(--ucla-blue);
+      background-size: cover;
+      content: "";
+      display: inline-block;
+      height: 18px;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      width: 18px;
+    }
+
+    &:hover {
+      background-color: var(--silver-lake-reservoir);
+      color: var(--white);
+
+      &::after {
+        background-color: var(--white);
+      }
+    }
+  }
+
+  :where(a[class~="link--download"]):not(:where([class~="not-prose"] *)) {
+    &::after {
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='currentColor' d='M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  :where(a[class~="link--external"]):not(:where([class~="not-prose"] *)) {
+    &::after {
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='currentColor' d='M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  :where(strong *):not(:where([class~="not-prose"] *)) {
+    font-weight: var(--font-weight-700);
+  }
+}

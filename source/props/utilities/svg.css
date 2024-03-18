@@ -1,0 +1,41 @@
+/**
+ * @file
+ * SVG utility classes.
+ */
+
+.fill-none {
+  fill: none;
+}
+
+.fill-current {
+  fill: currentColor;
+}
+
+.fill-ucla-blue {
+  fill: var(--ucla-blue);
+}
+
+.fill-midnight-joshua-tree {
+  fill: var(--midnight-joshua-tree);
+}
+
+.fill-southbay-waves {
+  fill: var(--southbay-waves);
+}
+
+.fill-avocado-toast {
+  fill: var(--avocado-toast);
+}
+
+.fill-santa-monica-sunset {
+  fill: var(--santa-monica-sunset);
+}
+
+.fill-malibu-dolphin {
+  fill: var(--malibu-dolphin);
+}
+
+.fill-topanga-creek {
+  fill: var(--topanga-creek);
+}
+

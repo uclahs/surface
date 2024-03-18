@@ -1,0 +1,36 @@
+/**
+ * @file
+ * Text utility classes.
+ */
+
+.text-inherit {
+  color: inherit;
+}
+
+.text-current {
+  color: currentColor;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
