@@ -5,7 +5,6 @@ import data from './card.yml';
 
 const settings = {
   title: 'Components/Card',
-  tags: ['autodocs'],
   args: { ...data },
 };
 

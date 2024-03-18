@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Container utility class for containing max widths of components.
+ */
+
+/* The `.container` utility class allows for selectors which use this class
+to expand full width holding a left/right padding of 16px until they reach 1376px in width.
+After this point, the padding is removed and the selectors will not expand
+any wider and they will be center-aligned to the page. */
+.container {
+  margin-inline: auto;
+  max-inline-size: var(--size-max-content-width); /* 1376px */
+  padding-inline: var(--size-4);
+
+  @media (--desktop) {
+    padding-inline: var(--size-8);
+  }
+
+  @media (--desktop-large) { /* 1440px */
+    padding-inline: 0;
+  }
+}

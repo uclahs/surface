@@ -3,7 +3,7 @@ module.exports = {
     require('postcss-import-ext-glob'),
     require('postcss-import'),
     require('@csstools/postcss-global-data')({
-      files: ['./source/patterns/base/props/media.css'],
+      files: ['./source/props/media.css'],
     }),
     require('postcss-advanced-variables')(),
     require('postcss-nested')(),

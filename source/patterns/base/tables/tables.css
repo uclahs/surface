@@ -9,24 +9,6 @@ table {
   vertical-align: top;
   width: 100%;
 
-  .layout--onecol & {
-    margin-inline: var(--size-4);
-    max-inline-size: calc(100% - var(--size-4) * 2);
-
-    @media (--tablet) {
-      margin-inline: auto;
-      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
-    }
-
-    @media (--laptop) {
-      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
-    }
-
-    @media (--desktop) {
-      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
-    }
-  }
-
   caption {
     color: var(--gray-500);
     font-size: var(--font-size-0);
@@ -35,6 +17,18 @@ table {
     padding-block: var(--size-3);
     padding-inline: var(--size-6);
     text-align: left;
+
+    /* If the Venice Canal background is present, the caption text color
+    changes to white. */
+    .bg-venice-canal.layout--onecol & {
+      color: var(--white);
+    }
+
+    /* If the Santa Barbar Sand background is present, the caption text color
+    changes to dark blue. */
+    .bg-santa-barbara-sand.layout--onecol & {
+      color: var(--midnight-observatory);
+    }
   }
 
   :where(a) {
@@ -50,6 +44,13 @@ table {
       outline: 2px solid transparent;
       outline-offset: 2px;
     }
+  }
+
+  /* For Patternlab demo purposes only. */
+  .pl-demo & {
+    border-collapse: separate;
+    border-spacing: 1px;
+    padding-block: var(--size-15) !important;
   }
 }
 
@@ -133,8 +134,20 @@ td {
   thead {
     background-color: var(--ucla-blue);
 
+    /* The table header colors changes to yellow when the Venice Canal
+    background color is present. */
+    .bg-venice-canal.layout--onecol & {
+      background-color: var(--chumash-soil);
+    }
+
     th {
       color: var(--white);
+
+      /* The header's text color changes to dark blue when the Venice Canal
+      background color is present. */
+      .bg-venice-canal.layout--onecol & {
+        color: var(--midnight-observatory);
+      }
     }
   }
 
@@ -142,6 +155,12 @@ td {
     tr {
       background-color: var(--gray-100);
       border-bottom-color: var(--gray-200);
+
+      /* When the Santa Barbara Sand background color is present,
+      the table row's background color is lighten a little. */
+      .bg-santa-barbara-sand.layout--onecol & {
+        background-color: var(--gray-50);
+      }
     }
   }
 
