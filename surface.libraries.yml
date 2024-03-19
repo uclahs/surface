@@ -100,3 +100,8 @@ readtime:
   css:
     component:
       dist/css/readtime.css: {}
+
+site-header:
+  css:
+    component:
+      dist/css/mobile-button.css: {}
