@@ -106,3 +106,8 @@ site-header:
   css:
     component:
       dist/css/mobile-button.css: {}
+
+text:
+  css:
+    component:
+      dist/css/text.css: {}
