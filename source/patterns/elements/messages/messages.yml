@@ -1,0 +1,6 @@
+---
+type: ''
+heading: 'Message'
+messages:
+  -
+    'This is a message about <em class="placeholder">something</em> that has been updated. <a href="#">This is a link</a>.'

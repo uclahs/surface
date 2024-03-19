@@ -3,7 +3,6 @@ import parse from 'html-react-parser';
 import { withDarkMode } from '../../../../.storybook/decorators';
 import badge from './date-badge.twig';
 import data from './date-badge.yml';
-import './date-badge.css';
 
 const settings = {
   title: 'Elements/Date Badge',

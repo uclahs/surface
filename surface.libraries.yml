@@ -74,6 +74,13 @@ media-quote:
     component:
       dist/css/media-quote.css: {}
 
+messages:
+  css:
+    component:
+      dist/css/messages.css: {}
+  js:
+    dist/js/message.js: {}
+
 person-card:
   css:
     component:
