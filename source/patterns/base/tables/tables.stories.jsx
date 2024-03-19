@@ -22,6 +22,15 @@ const Primary = {
   },
 };
 
+const Stripped = {
+  name: 'Table Primary',
+  render: (args) => parse(tables(args)),
+  args: {
+    ...data,
+    modifier: 'table--primary table--striped',
+  },
+};
+
 const Borderless = {
   name: 'Table without border',
   render: (args) => parse(tables(args)),
@@ -32,4 +41,4 @@ const Borderless = {
 };
 
 export default settings;
-export { Base, Primary, Borderless };
+export { Base, Primary, Stripped, Borderless };

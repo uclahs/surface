@@ -62,6 +62,11 @@ featured-card:
     component:
       dist/css/featured-card.css: {}
 
+media-quote:
+  css:
+    component:
+      dist/css/media-quote.css: {}
+
 person-card:
   css:
     component:
@@ -71,6 +76,11 @@ person-directory:
   css:
     component:
       dist/css/person-directory.css: {}
+
+quote:
+  css:
+    component:
+      dist/css/quote.css: {}
 
 readtime:
   css:

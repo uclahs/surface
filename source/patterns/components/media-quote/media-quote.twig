@@ -1,0 +1,18 @@
+{{ attach_library('surface/media-quote') }}
+
+<article class="media-quote container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  <div class="media-quote__container">
+    <div class="media-quote__image">
+      {{ image }}
+    </div>
+    <div class="media-quote__text">
+      <div class="media-quote__wrapper">
+        <blockquote>
+          <p>{{ quote }}</p>
+          <p>{{ author }}</p>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</article>
