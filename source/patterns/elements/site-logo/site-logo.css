@@ -1,0 +1,47 @@
+/**
+ * @file
+ * Branding styles.
+ */
+
+.site-branding {
+  display: inline-block;
+
+  &:focus {
+    box-shadow: 0 0 var(--white), 0 0 0 2px var(--gray-400), 0 0 var(--white);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+  @media (--laptop) {
+    padding-inline-end: var(--size-4);
+    width: max-content;
+  }
+
+  img {
+    max-inline-size: 100%;
+    min-inline-size: 200px;
+    width: 70%;
+
+    @media (--tablet) {
+      max-inline-size: 350px;
+      width: 100%;
+    }
+  }
+
+  .title {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-600);
+  }
+}
+
+.site-branding--footer {
+  margin-block-end: var(--size-6);
+
+  img {
+    width: 100%;
+  }
+}
+
+.site-branding--horizontal {
+  max-inline-size: 250px;
+}

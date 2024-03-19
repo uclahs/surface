@@ -1,0 +1,51 @@
+/**
+ * @file
+ * Site alert styles.
+*/
+
+:where([data-theme="dgsom"]) {
+  --site-alert-bg-color: var(--ucla-blue);
+}
+
+:where([data-theme="labs-dynamic"]) {
+  --site-alert-bg-color: var(--ucla-blue);
+}
+
+.site-alert {
+  background-color: var(--site-alert-bg-color, var(--midnight-joshua-tree));
+  color: var(--white);
+}
+
+.site-alert__content {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-height: 56px;
+  padding-block: var(--size-4);
+
+  svg {
+    flex-shrink: 0;
+    margin-inline-end: var(--size-3);
+    width: var(--size-6);
+  }
+}
+
+.site-alert__text {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  font-size: var(--font-size-1);
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
+  a {
+    overflow-wrap: break-word;
+    text-decoration: underline;
+
+    &:focus {
+      box-shadow: 0 0 var(--white), 0 0 0 2px var(--white), 0 0 var(--white);
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+  }
+}

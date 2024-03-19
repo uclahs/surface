@@ -1,0 +1,5 @@
+---
+is_demo: true
+modifier: 'site-branding--footer'
+logo: '../../dist/images/logo-inverse.svg'
+site_name: ''
