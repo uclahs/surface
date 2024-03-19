@@ -1,5 +1,8 @@
 import parse from 'html-react-parser';
 
+// Imports decorators for background colors.
+import { SantaBarbaraSandBg, VeniceCanalBg } from '../../../../.storybook/decorators';
+
 import alert from './alert.twig';
 import data from './alert.yml';
 
@@ -32,5 +35,19 @@ const Error = {
   },
 };
 
+const SantaBarbaraSand = {
+  ...Success,
+  name: 'With Santa Barbara Sand Background',
+  args: { ...data },
+  decorators: [SantaBarbaraSandBg],
+};
+
+const VeniceCanal = {
+  ...Success,
+  name: 'With Venice Canal Background',
+  args: { ...data },
+  decorators: [VeniceCanalBg],
+};
+
 export default settings;
-export { Success, Warning, Error };
+export { Success, Warning, Error, SantaBarbaraSand, VeniceCanal };

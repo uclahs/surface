@@ -12,6 +12,11 @@ alert:
     component:
       dist/css/alert.css: {}
 
+breadcrumb:
+  css:
+    component:
+      dist/css/breadcrumb.css: {}
+
 callout:
   css:
     component:
