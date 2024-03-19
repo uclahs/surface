@@ -1,0 +1,44 @@
+/**
+ * @file
+ * Text styles.
+ * See also Prose styling for all text elements.
+ */
+
+.text {
+  display: flow-root;
+
+  /* For Patternlab demo purposes only. */
+  .pl-demo & {
+    padding-block: var(--size-15);
+  }
+
+  /* Venice Canal background color. */
+  .bg-venice-canal.layout--onecol & {
+    color: var(--white);
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a:not(.button),
+    li::marker {
+      color: var(--white);
+    }
+
+    a:not(.button) {
+      text-decoration: underline;
+    }
+
+    blockquote {
+      border-inline-start-color: var(--chumash-soil);
+    }
+  }
+
+  /* Santa Barbara Sand background color. */
+  .bg-santa-barbara-sand.layout--onecol & {
+    li::marker {
+      color: var(--midnight-observatory);
+    }
+  }
+}

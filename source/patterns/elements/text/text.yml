@@ -1,0 +1,22 @@
+---
+modifier: ''
+wysiwyg: |-
+  <p><em>You haven’t created any frontpage content yet.</em></p>
+  <h2>Congratulations and welcome to the Drupal community!</h2>
+  <p>Drupal is an open source platform for building amazing digital experiences. It’s made, used, taught, documented, and marketed by the <a href="https://www.drupal.org/community">Drupal community</a>. Our community is made up of people from around the world with a shared set of <a href="https://www.drupal.org/about/values-and-principles">values</a>, collaborating together in a respectful manner. As we like to say:</p>
+  <blockquote>Come for the code, stay for the community.</blockquote>
+  <h2>Get Started</h2>
+  <p>There are a few ways to get started with Drupal:</p>
+  <ol>
+    <li><a href="https://www.drupal.org/docs/user_guide/en/index.html">User Guide:</a> Includes installing, administering, site building, and maintaining the content of a Drupal website.</li>
+    <li><a href="/node/add">Create Content:</a> Want to get right to work? Start adding content. <strong>Note:</strong> the information on this page will go away once you add content to your site. Read on and bookmark resources of interest.</li>
+    <li><a href="https://www.drupal.org/docs/extending-drupal">Extend Drupal:</a> Drupal’s core software can be extended and customized in remarkable ways. Install additional functionality and change the look of your site using addons contributed by our community.</li>
+  </ol>
+  <h2>Next Steps</h2>
+  <p>Bookmark these links to our active Drupal community groups and support resources.</p>
+  <ul>
+    <li><a href="https://groups.drupal.org/global-training-days">Global Training Days:</a> Helpful information for evaluating Drupal as a framework and as a career path. Taught in your local language.</li>
+    <li><a href="https://www.drupal.org/community/events">Upcoming Events:</a> Learn and connect with others at conferences and events held around the world.</li>
+    <li><a href="https://www.drupal.org/community">Community Page:</a> List of key Drupal community groups with their own content.</li>
+    <li>Get support and chat with the Drupal community on <a href="https://www.drupal.org/slack">Slack</a> or <a href="https://www.drupal.org/drupalchat">DrupalChat</a>. When you’re looking for a solution to a problem, go to <a href="https://drupal.stackexchange.com/">Drupal Answers on Stack Exchange</a>.</li>
+  </ul>

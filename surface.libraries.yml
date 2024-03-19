@@ -8,6 +8,7 @@ global:
       dist/css/button.css: {}
       dist/css/field.css: {}
       dist/css/links.css: {}
+      dist/css/skip-link.css: {}
 
 alert:
   css:
@@ -18,6 +19,11 @@ breadcrumb:
   css:
     component:
       dist/css/breadcrumb.css: {}
+
+button-group:
+  css:
+    component:
+      dist/css/button-group.css: {}
 
 byline:
   css:
@@ -100,3 +106,13 @@ readtime:
   css:
     component:
       dist/css/readtime.css: {}
+
+site-header:
+  css:
+    component:
+      dist/css/mobile-button.css: {}
+
+text:
+  css:
+    component:
+      dist/css/text.css: {}
