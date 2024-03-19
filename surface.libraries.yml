@@ -7,6 +7,11 @@ global:
     component:
       dist/css/button.css: {}
 
+alert:
+  css:
+    component:
+      dist/css/alert.css: {}
+
 callout:
   css:
     component:
