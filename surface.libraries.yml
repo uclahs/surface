@@ -67,6 +67,11 @@ person-directory:
     component:
       dist/css/person-directory.css: {}
 
+quote:
+  css:
+    component:
+      dist/css/quote.css: {}
+
 readtime:
   css:
     component:
