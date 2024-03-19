@@ -20,6 +20,11 @@ breadcrumb:
     component:
       dist/css/breadcrumb.css: {}
 
+button-group:
+  css:
+    component:
+      dist/css/button-group.css: {}
+
 byline:
   css:
     component:

@@ -1,0 +1,61 @@
+/**
+ * @file
+ * Button group styles.
+ */
+
+.button-group {
+  margin-block-end: var(--size-5);
+}
+
+.button-group__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @media (--tablet) {
+    flex-direction: row;
+  }
+}
+
+.button-group__link {
+  align-items: center;
+  background-color: var(--gray-200);
+  border: 1px solid var(--gray-300);
+  color: var(--gray-900);
+  display: flex;
+  flex-grow: 1;
+  font-size: var(--font-size-0);
+  height: var(--size-14);
+  letter-spacing: 1px;
+  padding-block: 0;
+  padding-inline: var(--size-6);
+  text-decoration: none;
+  transition: background-color 0.2s;
+
+  &:focus {
+    outline: 3px solid var(--ucla-blue);
+    outline-offset: -3px;
+  }
+
+  &:hover {
+    background-color: var(--gray-100);
+  }
+
+  &.active,
+  &.is-active {
+    color: var(--gray-900);
+    font-weight: var(--font-weight-600);
+    position: relative;
+
+    &::after {
+      border-block-start: 6px solid var(--ucla-blue);
+      content: "";
+      height: auto;
+      inset-block-end: -1px;
+      inset-inline-start: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+}
