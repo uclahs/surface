@@ -1,0 +1,18 @@
+/**
+ * @file
+ * Copyright styles.
+ */
+
+.copyright {
+  color: var(--white);
+  display: flex;
+  font-size: var(--font-size-0);
+  grid-column: 1 / 7;
+  order: 1;
+  text-transform: uppercase;
+
+  @media (--laptop) {
+    grid-column: 1 / 6;
+    order: 0;
+  }
+}
