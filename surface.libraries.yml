@@ -17,6 +17,11 @@ breadcrumb:
     component:
       dist/css/breadcrumb.css: {}
 
+byline:
+  css:
+    component:
+      dist/css/byline.css: {}
+
 callout:
   css:
     component:
