@@ -8,6 +8,7 @@ global:
       dist/css/button.css: {}
       dist/css/field.css: {}
       dist/css/links.css: {}
+      dist/css/skip-link.css: {}
 
 alert:
   css:
