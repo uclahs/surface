@@ -75,10 +75,25 @@ featured-card:
     component:
       dist/css/featured-card.css: {}
 
+feed:
+  css:
+    theme:
+      dist/css/feed-icon.css: {}
+
 media-quote:
   css:
     component:
       dist/css/media-quote.css: {}
+
+media:
+  css:
+    component:
+      dist/css/media.css: {}
+
+menu-quicklinks:
+  css:
+    component:
+      dist/css/menu-quicklinks.css: {}
 
 messages:
   css:
@@ -86,6 +101,11 @@ messages:
       dist/css/messages.css: {}
   js:
     dist/js/message.js: {}
+
+pager:
+  css:
+    component:
+      dist/css/pager.css: {}
 
 person-card:
   css:
@@ -107,10 +127,22 @@ readtime:
     component:
       dist/css/readtime.css: {}
 
+site-footer:
+  css:
+    component:
+      dist/css/menu-social.css: {}
+
 site-header:
   css:
     component:
       dist/css/mobile-button.css: {}
+      dist/css/site-alert.css: {}
+      dist/css/site-logo.css: {}
+
+tags:
+  css:
+    theme:
+      dist/css/tags.css: {}
 
 text:
   css:

@@ -1,0 +1,15 @@
+{% if is_demo %}
+  <div style="background-color: var(--midnight-joshua-tree); padding-inline: 8px; padding-block-start: 8px;">
+{% endif %}
+
+<a href="{{ path('<front>') }}" rel="home" class="site-branding{{ modifier ? ' ' ~ modifier }}">
+  {% if logo %}
+    <img src="{{ logo }}" alt="{{ 'Home'|t }}" />
+  {% else %}
+    <span class="title">{{ site_name }}</span>
+  {% endif %}
+</a>
+
+{% if is_demo %}
+  </div>
+{% endif %}

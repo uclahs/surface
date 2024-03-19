@@ -1,0 +1,23 @@
+---
+is_demo: true
+items:
+  - title: 'Quick Link 1'
+    url: '#'
+    in_active_trail: false
+    below: false
+  - title: 'Quick Link 2'
+    url: '#'
+    in_active_trail: false
+    below: false
+  - title: 'Quick Link 3'
+    url: '#'
+    in_active_trail: false
+    below: false
+  - title: 'Quick Link 4'
+    url: '#'
+    in_active_trail: false
+    below: false
+  - title: 'Quick Link 5'
+    url: '#'
+    in_active_trail: false
+    below: false

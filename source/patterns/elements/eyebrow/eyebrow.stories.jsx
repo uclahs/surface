@@ -5,7 +5,6 @@ import data from './eyebrow.yml';
 
 const settings = {
   title: 'Elements/Eyebrow',
-  tags: ['autodocs'],
 };
 
 const Eyebrow = {

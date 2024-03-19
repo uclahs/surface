@@ -1,0 +1,55 @@
+/**
+ * @file
+ * Styles for pagination.
+ */
+
+.pager {
+  border-top: 1px solid var(--gray-100);
+  margin-block-start: var(--size-12);
+  padding-block-start: var(--size-12);
+}
+
+.pager__items {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.pager__item {
+  align-items: center;
+  display: flex;
+  margin-inline: var(--size-2);
+}
+
+.pager__link {
+  align-items: center;
+  block-size: var(--size-12);
+  color: var(--ucla-blue);
+  display: flex;
+  font-size: var(--font-size-5);
+  inline-size: var(--size-12);
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--gray-100);
+  }
+
+  &:focus {
+    outline: solid 2px var(--ucla-blue);
+    outline-offset: 2px;
+  }
+
+  &.is-active {
+    background-color: var(--ucla-blue);
+    color: var(--white);
+  }
+
+  & svg {
+    color: var(--gray-500);
+    display: block;
+    font-size: inherit;
+    height: 1em;
+    width: 1em;
+  }
+}

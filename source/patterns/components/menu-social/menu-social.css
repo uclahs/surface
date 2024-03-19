@@ -1,0 +1,52 @@
+/**
+ * @file
+ * Social menu styling.
+ */
+
+/* Adding theme specific background colors for demo purposes. */
+:where([data-theme="dgsom"]) {
+  --site-secondary-bg-color: var(--midnight-joshua-tree);
+}
+
+:where([data-theme="labs-dynamic"]) {
+  --site-secondary-bg-color: var(--midnight-joshua-tree);
+}
+
+.menu-social {
+  align-items: center;
+  display: flex;
+  gap: var(--size-5);
+  margin-block-end: var(--size-4);
+
+  /* Adds background color in Patternlab only. */
+  .pl-demo & {
+    background-color: var(--site-secondary-bg-color, var(--ucla-blue));
+  }
+
+  .menu__item {
+    margin-block-end: var(--size-2);
+    margin-block-start: var(--size-1);
+  }
+
+  .menu__link {
+    align-items: center;
+    appearance: button;
+    background-color: transparent;
+    background-image: none;
+    color: var(--white);
+    display: flex;
+    font-size: var(--font-size-7);
+    justify-content: center;
+
+    &:focus {
+      box-shadow: 0 0 var(--white), 0 0 0 2px var(--white), 0 0 var(--white);
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+
+    svg {
+      height: 1em;
+      width: 1em;
+    }
+  }
+}
