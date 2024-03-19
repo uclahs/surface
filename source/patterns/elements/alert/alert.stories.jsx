@@ -3,31 +3,51 @@ import parse from 'html-react-parser';
 // Imports decorators for background colors.
 import { SantaBarbaraSandBg, VeniceCanalBg } from '../../../../.storybook/decorators';
 
-import quote from './media-quote.twig';
-import data from './media-quote.yml';
+import alert from './alert.twig';
+import data from './alert.yml';
 
 const settings = {
-  title: 'Components/Media quote',
+  title: 'Elements/Alert',
   args: { ...data },
-  render: (args) => parse(quote(args)),
 };
 
-const Quote = {
-  name: 'Media quote',
+const Success = {
+  name: 'Success alert',
+  render: (args) => parse(alert(args)),
   args: { ...data },
+};
+
+const Warning = {
+  ...Success,
+  name: 'Warning alert',
+  args: {
+    ...data,
+    modifier: 'alert--warning',
+  },
+};
+
+const Error = {
+  ...Success,
+  name: 'Error alert',
+  args: {
+    ...data,
+    modifier: 'alert--error',
+  },
 };
 
 const SantaBarbaraSand = {
+  ...Success,
   name: 'With Santa Barbara Sand Background',
   args: { ...data },
   decorators: [SantaBarbaraSandBg],
 };
 
 const VeniceCanal = {
+  ...Success,
   name: 'With Venice Canal Background',
   args: { ...data },
   decorators: [VeniceCanalBg],
 };
 
 export default settings;
-export { Quote, SantaBarbaraSand, VeniceCanal };
+export { Success, Warning, Error, SantaBarbaraSand, VeniceCanal };

@@ -1,0 +1,174 @@
+/**
+ * @file
+ * Messages styles.
+ */
+
+.block-system-messages-block {
+  position: fixed;
+  right: 10px;
+  top: 100px;
+  transition: all 0.25s ease;
+  width: 80%;
+  z-index: 502;
+
+  @media (--mobile) {
+    width: 50%;
+  }
+
+  @media (--laptop) {
+    width: 50%;
+  }
+
+  @media (--desktop) {
+    width: 30%;
+  }
+}
+
+.messages:not(.no-fade) {
+  display: none;
+}
+
+.messages.fade:not(.no-fade) {
+  animation: var(--animation-fade-out) forwards;
+  animation-delay: 5s;
+  animation-duration: 2s;
+  display: block;
+}
+
+.messages__container {
+  align-items: center;
+  background-color: var(--santa-barbara-sand);
+  border-color: var(--gray-300);
+  border-radius: var(--radius-2);
+  border-width: 1px;
+  color: var(--gray-900);
+  display: flex;
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-500);
+  padding-block: var(--size-6);
+  padding-inline: var(--size-4);
+
+  & * {
+    color: inherit;
+  }
+}
+
+.messages__header {
+  display: flex;
+  flex-shrink: 0;
+  margin-inline-end: var(--size-4);
+
+  > svg {
+    block-size: 24px;
+    inline-size: 24px;
+  }
+}
+
+.messages__title {
+  color: inherit;
+}
+
+.messages__content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: auto;
+}
+
+.messages__close {
+  align-items: center;
+  border-radius: var(--radius-4);
+  display: inline-flex;
+  margin: calc(var(--size-2) * -1);
+  padding: var(--size-2);
+  position: relative;
+
+  &:hover {
+    background-color: var(--gray-200);
+  }
+
+  &:focus {
+    box-shadow: 0 0 var(--white), 0 0 0 2px var(--blue-400), 0 0 var(--white);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+  > svg {
+    block-size: 20px;
+    color: var(--gray-600);
+    inline-size: 20px;
+    pointer-events: none;
+  }
+}
+
+/* Error messages */
+.messages--error {
+  .messages__container {
+    background-color: var(--red-100);
+    border-color: var(--red-300);
+    color: var(--red-900);
+  }
+
+  .messages__close {
+    &:hover {
+      background-color: var(--red-200);
+    }
+
+    > svg {
+      color: var(--red-500);
+    }
+  }
+}
+
+.messages--warning {
+  .messages__container {
+    background-color: var(--yellow-100);
+    border-color: var(--yellow-300);
+    color: var(--yellow-900);
+  }
+
+  .messages__close {
+    &:hover {
+      background-color: var(--yellow-200);
+    }
+
+    > svg {
+      color: var(--yellow-500);
+    }
+  }
+}
+
+.messages--status {
+  .messages__container {
+    background-color: var(--green-100);
+    border-color: var(--green-300);
+    color: var(--green-900);
+  }
+
+  .messages__close {
+    &:hover {
+      background-color: var(--green-200);
+    }
+
+    > svg {
+      color: var(--green-500);
+    }
+  }
+}
+
+.messages--info {
+  .messages__container {
+    background-color: var(--blue-100);
+    border-color: var(--blue-300);
+    color: var(--blue-900);
+  }
+
+  .messages__close {
+    &:hover {
+      background-color: var(--blue-200);
+    }
+
+    > svg {
+      color: var(--blue-500);
+    }
+  }
+}

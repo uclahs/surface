@@ -6,6 +6,23 @@ global:
       dist/css/utilities.css: {}
     component:
       dist/css/button.css: {}
+      dist/css/field.css: {}
+      dist/css/links.css: {}
+
+alert:
+  css:
+    component:
+      dist/css/alert.css: {}
+
+breadcrumb:
+  css:
+    component:
+      dist/css/breadcrumb.css: {}
+
+byline:
+  css:
+    component:
+      dist/css/byline.css: {}
 
 callout:
   css:
@@ -56,6 +73,13 @@ media-quote:
   css:
     component:
       dist/css/media-quote.css: {}
+
+messages:
+  css:
+    component:
+      dist/css/messages.css: {}
+  js:
+    dist/js/message.js: {}
 
 person-card:
   css:
