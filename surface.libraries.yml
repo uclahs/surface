@@ -75,10 +75,20 @@ featured-card:
     component:
       dist/css/featured-card.css: {}
 
+feed:
+  css:
+    theme:
+      dist/css/feed-icon.css: {}
+
 media-quote:
   css:
     component:
       dist/css/media-quote.css: {}
+
+media:
+  css:
+    component:
+      dist/css/media.css: {}
 
 messages:
   css:
