@@ -6,6 +6,7 @@ global:
       dist/css/utilities.css: {}
     component:
       dist/css/button.css: {}
+      dist/css/field.css: {}
 
 alert:
   css:
