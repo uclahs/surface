@@ -52,6 +52,11 @@ featured-card:
     component:
       dist/css/featured-card.css: {}
 
+media-quote:
+  css:
+    component:
+      dist/css/media-quote.css: {}
+
 person-card:
   css:
     component:
