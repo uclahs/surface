@@ -1,11 +1,7 @@
 {{ attach_library('surface/person-listing') }}
 
-{% set classes = [
-  'person-listing',
-  modifier ? modifier : '',
-]|join(' ')|trim %}
-
-<article {{ add_attributes({ 'class': classes }) }}>
+<article class="person-listing{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
   {# Placeholder for outputting 'Person' as the type of content
   in the search page. This is only done in the general search results page,
   not the people search page. #}

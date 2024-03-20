@@ -9,10 +9,8 @@ const settings = {
   render: (args) => parse(card(args)),
 };
 
-const Default = {
+export const PersonCard = {
   name: 'Person card',
-  args: { ...data },
 };
 
 export default settings;
-export { Default };

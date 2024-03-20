@@ -13,23 +13,22 @@ const settings = {
   title: 'Components/Accordion tabs',
 };
 
-const AccordionTabs = {
+export const AccordionTabs = {
   name: 'Accordion tabs',
   render: (args) => parse(tabs(args)),
   args: { ...data },
 };
 
-const SantaBarbaraSand = {
+export const SantaBarbaraSand = {
   ...AccordionTabs,
-  name: 'With Santa Barbara Sand Background',
+  name: 'With Santa Barbara Sand background',
   decorators: [SantaBarbaraSandBg],
 };
 
-const VeniceCanal = {
+export const VeniceCanal = {
   ...AccordionTabs,
-  name: 'With Venice Canal Background',
+  name: 'With Venice Canal background',
   decorators: [VeniceCanalBg],
 };
 
 export default settings;
-export { AccordionTabs, SantaBarbaraSand, VeniceCanal };

@@ -7,14 +7,14 @@ const settings = {
   title: 'Base/Tables',
 };
 
-const Base = {
-  name: 'Base',
+export const Base = {
+  name: 'Base table',
   render: (args) => parse(tables(args)),
   args: { ...data },
 };
 
-const Primary = {
-  name: 'Table Primary',
+export const PrimaryTable = {
+  name: 'Primary table',
   render: (args) => parse(tables(args)),
   args: {
     ...data,
@@ -22,8 +22,8 @@ const Primary = {
   },
 };
 
-const Stripped = {
-  name: 'Table Primary',
+export const StrippedTable = {
+  name: 'Stripped table',
   render: (args) => parse(tables(args)),
   args: {
     ...data,
@@ -31,7 +31,7 @@ const Stripped = {
   },
 };
 
-const Borderless = {
+export const NoBorder = {
   name: 'Table without border',
   render: (args) => parse(tables(args)),
   args: {
@@ -41,4 +41,3 @@ const Borderless = {
 };
 
 export default settings;
-export { Base, Primary, Stripped, Borderless };

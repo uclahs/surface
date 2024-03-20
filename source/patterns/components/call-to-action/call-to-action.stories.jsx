@@ -8,28 +8,26 @@ import data from './call-to-action.yml';
 
 const settings = {
   title: 'Components/Call to action',
-  args: { ...data },
-  render: (args) => parse(cta(args)),
 };
 
-const CTA = {
+export const CTA = {
   name: 'Call to action',
+  render: (args) => parse(cta(args)),
   args: { ...data },
 };
 
-const Light = {
+export const SantaBarbaraSand = {
   ...CTA,
-  name: 'CTA with Santa Barbara Sand Background',
+  name: 'With Santa Barbara Sand background',
   args: { ...data },
   decorators: [SantaBarbaraSandBg],
 };
 
-const Dark = {
+export const VeniceCanal = {
   ...CTA,
-  name: 'CTA with Venice Canal background',
+  name: 'With Venice Canal background',
   args: { ...data },
   decorators: [VeniceCanalBg],
 };
 
 export default settings;
-export { CTA, Light, Dark };

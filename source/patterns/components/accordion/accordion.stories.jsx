@@ -10,23 +10,22 @@ const settings = {
   title: 'Components/Accordion',
 };
 
-const Accordion = {
+export const Accordion = {
   name: 'Accordion',
   render: (args) => parse(accordion(args)),
   args: { ...data },
 };
 
-const SantaBarbaraSand = {
+export const SantaBarbaraSand = {
   ...Accordion,
-  name: 'With Santa Barbara Sand Background',
+  name: 'With Santa Barbara Sand background',
   decorators: [SantaBarbaraSandBg],
 };
 
-const VeniceCanal = {
+export const VeniceCanal = {
   ...Accordion,
-  name: 'With Venice Canal Background',
+  name: 'With Venice Canal background',
   decorators: [VeniceCanalBg],
 };
 
 export default settings;
-export { Accordion, SantaBarbaraSand, VeniceCanal };

@@ -8,16 +8,15 @@ import data from './callout.yml';
 
 const settings = {
   title: 'Components/Callout',
-  args: { ...data },
-  render: (args) => parse(callout(args)),
 };
 
-const Stacked = {
+export const Stacked = {
   name: 'Callout',
+  render: (args) => parse(callout(args)),
   args: { ...data },
 };
 
-const Horizontal = {
+export const Horizontal = {
   ...Stacked,
   name: 'Callout Horizontal',
   args: {
@@ -26,53 +25,52 @@ const Horizontal = {
   },
 };
 
-const Reversed = {
+export const Reversed = {
   ...Stacked,
-  name: 'Callout Horizontal',
+  name: 'Callout Horizontal Reversed',
   args: {
     ...data,
     modifier: 'is-horizontal is-reversed',
   },
 };
 
-const Quote = {
+export const Quote = {
   ...Stacked,
-  name: 'Callout Horizontal',
+  name: 'Callout Quote',
   args: {
     ...data,
     modifier: 'is-quote',
   },
 };
 
-const QuoteHorizontal = {
+export const QuoteHorizontal = {
   ...Stacked,
-  name: 'Callout Horizontal',
+  name: 'Callout Quote Horizontal',
   args: {
     ...data,
     modifier: 'is-quote is-horizontal',
   },
 };
 
-const HorizontalReversed = {
+export const HorizontalReversed = {
   ...Stacked,
-  name: 'Callout Horizontal',
+  name: 'Callout Quote Horizontal Reversed',
   args: {
     ...data,
     modifier: 'is-quote is-horizontal is-reversed',
   },
 };
 
-const SantaBarbaraSand = {
-  name: 'Callout with Santa Barbara Sand Background',
-  args: { ...data },
+export const SantaBarbaraSand = {
+  ...Stacked,
+  name: 'With Santa Barbara Sand background',
   decorators: [SantaBarbaraSandBg],
 };
 
-const VeniceCanal = {
-  name: 'Callout with Venice Canal Background',
-  args: { ...data },
+export const VeniceCanal = {
+  ...Stacked,
+  name: 'With Venice Canal background',
   decorators: [VeniceCanalBg],
 };
 
 export default settings;
-export { Stacked, Horizontal, Reversed, Quote, QuoteHorizontal, HorizontalReversed, SantaBarbaraSand, VeniceCanal };

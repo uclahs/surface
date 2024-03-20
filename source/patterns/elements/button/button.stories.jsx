@@ -6,18 +6,16 @@ import './button.css';
 
 const settings = {
   title: 'Elements/Button',
-  tags: ['autodocs'],
-  args: { ...data },
 };
 
 // Default button story.
-const Button = {
+export const Button = {
   render: (args) => parse(button(args)),
   args: { ...data },
 };
 
 /** Primary button story */
-const Primary = {
+export const Primary = {
   ...Button,
   name: 'Primary button',
   args: {
@@ -29,7 +27,7 @@ const Primary = {
   },
 };
 
-const Secondary = {
+export const Secondary = {
   ...Button,
   name: 'Secondary button',
   args: {
@@ -41,7 +39,7 @@ const Secondary = {
   },
 };
 
-const Outlined = {
+export const Outlined = {
   ...Button,
   name: 'Outlined button',
   args: {
@@ -53,7 +51,7 @@ const Outlined = {
   },
 };
 
-const withIcon = {
+export const withIcon = {
   ...Button,
   name: 'Button with Icon',
   args: {
@@ -66,9 +64,9 @@ const withIcon = {
   },
 };
 
-const Link = {
+export const Link = {
   ...Button,
-  name: 'Link button',
+  name: 'Button as a link',
   args: {
     ...Button.args,
     button: {
@@ -80,4 +78,3 @@ const Link = {
 };
 
 export default settings;
-export { Button, Primary, Secondary, Outlined, withIcon, Link };

@@ -6,20 +6,18 @@ import eventsData from './related-content-events.yml';
 
 const settings = {
   title: 'Collections/Related content',
+};
+
+export const RelatedArticles = {
+  name: 'Related Articles',
   render: (args) => parse(related(args)),
   args: { ...data },
 };
 
-const Articles = {
-  name: 'Related content',
-  args: { ...data },
-};
-
-const Events = {
-  ...Articles,
-  name: 'Related content',
+export const RelatedEvents = {
+  ...RelatedArticles,
+  name: 'Related Events',
   args: { ...eventsData },
 };
 
 export default settings;
-export { Articles, Events };

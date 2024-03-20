@@ -8,26 +8,24 @@ import data from './media-quote.yml';
 
 const settings = {
   title: 'Components/Media quote',
+};
+
+export const Quote = {
+  name: 'Media quote',
   args: { ...data },
   render: (args) => parse(quote(args)),
 };
 
-const Quote = {
-  name: 'Media quote',
-  args: { ...data },
-};
-
-const SantaBarbaraSand = {
-  name: 'With Santa Barbara Sand Background',
-  args: { ...data },
+export const SantaBarbaraSand = {
+  ...Quote,
+  name: 'With Santa Barbara Sand background',
   decorators: [SantaBarbaraSandBg],
 };
 
-const VeniceCanal = {
-  name: 'With Venice Canal Background',
-  args: { ...data },
+export const VeniceCanal = {
+  ...Quote,
+  name: 'With Venice Canal background',
   decorators: [VeniceCanalBg],
 };
 
 export default settings;
-export { Quote, SantaBarbaraSand, VeniceCanal };
