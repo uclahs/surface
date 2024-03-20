@@ -5,12 +5,11 @@ import data from './title.yml';
 
 const settings = {
   title: 'Elements/Title',
-  tags: ['autodocs'],
-  args: { ...data },
 };
 
 // Plain text title story.
-const Title = {
+export const Title = {
+  name: 'Title',
   render: (args) => parse(markup(args)),
   args: {
     ...data,
@@ -23,7 +22,7 @@ const Title = {
 };
 
 // Linked title story.
-const Linked = {
+export const Linked = {
   name: 'Title as a link',
   ...Title,
   args: {
@@ -38,4 +37,3 @@ const Linked = {
 };
 
 export default settings;
-export { Title, Linked };

@@ -1,6 +1,8 @@
 import parse from 'html-react-parser';
 
-import { withDarkMode } from '../../../../.storybook/decorators';
+// Imports decorator to add background to the white social icons.
+import { withBackground } from '../../../../.storybook/decorators';
+
 import social from './menu-social.twig';
 import data from './menu-social.yml';
 
@@ -8,12 +10,11 @@ const settings = {
   title: 'Components/Menu Social',
 };
 
-const Social = {
+export const Social = {
   name: 'Menu social',
   render: (args) => parse(social(args)),
   args: { ...data },
-  decorators: [ withDarkMode ],
+  decorators: [ withBackground ],
 };
 
 export default settings;
-export { Social };

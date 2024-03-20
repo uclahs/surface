@@ -1,6 +1,6 @@
 import parse from 'html-react-parser';
 
-import { withDarkMode } from '../../../../.storybook/decorators';
+import { withBackground } from '../../../../.storybook/decorators';
 import logo from './site-logo.twig';
 import data from './site-logo.yml';
 
@@ -8,15 +8,15 @@ const settings = {
   title: 'Elements/Site logo',
 };
 
-const Logo = {
+export const Logo = {
   name: 'Site logo',
   render: (args) => parse(logo(args)),
   args: { ...data },
 };
 
-const NoLogo = {
+export const NoImage = {
   ...Logo,
-  name: 'Site logo w/o Logo',
+  name: 'Logo without image',
   args: {
     ...data,
     logo: '',
@@ -24,17 +24,16 @@ const NoLogo = {
   },
 };
 
-const SiteLogoFooter = {
+export const SiteLogoFooter = {
   ...Logo,
-  name: 'Site logo in footer',
+  name: 'Logo for the footer',
   args: {
     ...data,
     modifier: 'site-branding--footer',
     logo: 'images/logo-inverse.svg',
     site_name: 'UCLA David Geffen School of Medicine',
   },
-  decorators: [ withDarkMode ],
+  decorators: [ withBackground ],
 };
 
 export default settings;
-export { Logo, NoLogo, SiteLogoFooter  };

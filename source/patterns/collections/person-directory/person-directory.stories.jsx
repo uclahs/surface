@@ -8,35 +8,33 @@ import data from './person-directory.yml';
 
 const settings = {
   title: 'Collections/Person directory',
-  args: { ...data },
+};
+
+export const GridDisplay = {
+  name: 'Person directory - Grid',
   render: (args) => parse(person(args)),
-};
-
-const Grid = {
-  name: 'Person directory',
   args: { ...data },
 };
 
-const List = {
-  name: 'Person directory',
-  ...Grid,
+export const ListDisplay = {
+  ...GridDisplay,
+  name: 'Person directory - List',
   args: {
     ...data,
     modifier: 'is-list',
   },
 };
 
-const Light = {
-  name: 'With Santa Barbara Sand Background',
-  args: { ...data },
+export const SantaBarbaraSand = {
+  ...GridDisplay,
+  name: 'With Santa Barbara Sand background',
   decorators: [SantaBarbaraSandBg],
 };
 
-const Dark = {
-  name: 'With Venice Canal Background',
-  args: { ...data },
+export const VeniceCanal = {
+  ...GridDisplay,
+  name: 'With Venice Canal background',
   decorators: [VeniceCanalBg],
 };
 
 export default settings;
-export { Grid, List, Light, Dark };

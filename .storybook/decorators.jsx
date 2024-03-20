@@ -6,7 +6,7 @@ const withGlobalWrapper = (Story) => (
   </div>
 );
 
-const withDarkMode = (Story) => (
+const withBackground = (Story) => (
   <div style={{ background: '#2874af', padding: '40px' }}>
     <Story />
   </div>
@@ -24,4 +24,4 @@ const VeniceCanalBg = (Story) => (
   </div>
 );
 
-export { withGlobalWrapper, withDarkMode, SantaBarbaraSandBg, VeniceCanalBg};
+export { withGlobalWrapper, withBackground, SantaBarbaraSandBg, VeniceCanalBg};

@@ -10,21 +10,18 @@ import dataArticle from './content-highlight-article.yml';
 
 const settings = {
   title: 'Collections/Content Highlight',
-  tags: ['autodocs'],
   args: { ...data },
   render: (args) => parse(highlight(args)),
 };
 
-const Events = {
-  name: 'Event Highlight',
-  args: { ...data },
-};
-
-const Articles = {
-  name: 'Article Highlight',
+export const ArticlesHighlight = {
+  name: 'Articles Highlight',
   args: { ...dataArticle },
-  render: (args) => parse(highlight(args)),
+};
+
+export const EventsHighlight = {
+  name: 'Events Highlight',
+  args: { ...data },
 };
 
 export default settings;
-export { Articles, Events };

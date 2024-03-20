@@ -19,6 +19,17 @@ accordion:
   dependencies:
     - core/drupal
 
+accordion-tabs:
+  css:
+    component:
+      dist/css/accordion-tabs.css: {}
+  js:
+    https://cdn.jsdelivr.net/npm/a11y-accordion-tabs@1.0.2/a11y-accordion-tabs.min.js : { type: external, minified: true, attributes: { defer: true } }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+
 alert:
   css:
     component:

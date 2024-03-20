@@ -3,13 +3,12 @@ import parse from 'html-react-parser';
 import aspects from './aspects.twig';
 
 const settings = {
-  title: 'Base/Aspects',
+  title: 'Base/Aspect ratios',
 };
 
-const Aspects = {
+export const Aspects = {
   name: 'Aspect ratios',
   render: (args) => parse(aspects(args)),
 };
 
 export default settings;
-export { Aspects };

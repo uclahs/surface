@@ -1,0 +1,34 @@
+{{ attach_library('surface/accordion-tabs') }}
+
+<div class="accordion-tabs js-tabs container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  <ul role="tablist" class="accordion-tabs__list">
+    {% for item in items %}
+      <li class="accordion-tabs__item" role="presentation">
+        <a href="#section{{ item.entity.id.value }}" role="tab" id="tab{{ loop.index }}" aria-controls="section{{ item.entity.id.value }}" aria-selected="true" class="accordion-tabs__link js-tabs-trigger">
+          {{ item.entity.field_sf_title.value }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% for item in items %}
+    <div id="#section{{ item.entity.id.value }}" role="tabpanel" aria-labelledby="tab{{ loop.index }}" class="accordion-tabs__section js-tabs-panel" tabindex="0">
+      <button class="accordion-tabs__header js-accordion-trigger" type="button" aria-expanded="false"  aria-controls="accordion-{{ item.entity.id.value }}" id="accordion-header-{{ item.entity.id.value }}">
+        <span>{{ item.entity.field_sf_title.value }}</span>
+        <svg class="accordion-tabs__icon" viewBox="0 0 20 20">
+          <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="3" x2="17" y2="17"></line>
+            <line x1="17" y1="3" x2="3" y2="17"></line>
+          </g>
+        </svg>
+      </button>
+
+      <div id="accordion-{{ item.entity.id.value }}" class="accordion-tabs__panel content" aria-labeledby="accordion-header-{{ item.entity.id.value }}">
+        <div class="prose">
+          {{ item.entity.field_sf_wysiwyg.value|raw }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -9,10 +9,9 @@ const settings = {
   args: { ...data },
 };
 
-const List = {
+export const PersonListing = {
   name: 'Person listing',
   args: { ...data },
 };
 
 export default settings;
-export { List };

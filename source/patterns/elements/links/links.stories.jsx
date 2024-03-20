@@ -9,19 +9,19 @@ const settings = {
   args: { ...data },
 };
 
-const Links = {
+export const Links = {
   name: 'Links',
 };
 
-const DropButton = {
-  name: 'Links Dropbutton',
+export const DropButton = {
+  name: 'Links drop button',
   args: {
     ...data,
     modifier: 'links--dropbutton',
   },
 };
 
-const LinksWithTitle = {
+export const LinksWithTitle = {
   name: 'Links with Title',
   args: {
     ...data,
@@ -30,4 +30,3 @@ const LinksWithTitle = {
 };
 
 export default settings;
-export { Links, DropButton, LinksWithTitle  };

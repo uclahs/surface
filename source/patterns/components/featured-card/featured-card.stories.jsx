@@ -10,21 +10,19 @@ import dataArticle from './featured-card-article.yml';
 
 const settings = {
   title: 'Components/Featured Card',
-  tags: ['autodocs'],
   args: { ...dataEvent },
   render: (args) => parse(featuredCard(args)),
 };
 
-const Article = {
+export const FeaturedArticle = {
   name: 'Featured Article',
   args: { ...dataArticle },
   render: (args) => parse(featuredCard(args)),
 };
 
-const Event = {
+export const FeaturedEvent = {
   name: 'Featured Event',
   args: { ...dataEvent },
 };
 
 export default settings;
-export { Article, Event };

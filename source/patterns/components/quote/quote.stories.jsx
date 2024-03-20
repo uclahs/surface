@@ -9,11 +9,9 @@ const settings = {
   render: (args) => parse(quote(args)),
 };
 
-const Quote = {
+export const Quote = {
   name: 'Quote',
-  args: { ...data },
 };
 
 
 export default settings;
-export { Quote };

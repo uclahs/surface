@@ -4,8 +4,14 @@
  * content types.
  */
 
+/* Data attributes to change component's background based on theme. */
+:where([data-theme='surface']) {
+  --date-badge-bg-color: var(--midnight-joshua-tree);
+}
+
 :where([data-theme="dgsom"]) {
   --related-content-bg-color: var(--ucla-blue);
+  --date-badge-bg-color: var(--ucla-blue);
 
   /* Using about 200px of margin at the bottom to compensate for almost the same
   amount of negative margin in the footer to allow for the curved image. */
@@ -21,6 +27,11 @@
   background-color: var(--related-content-bg-color, var(--ucla-blue));
   padding: var(--size-10);
   padding-block-end: var(--related-content-padding-bottom);
+
+  /* Changes date badge's background color for better contrast. */
+  .date-badge {
+    background-color: var(--date-badge-bg-color);
+  }
 }
 
 .related-content__inner {

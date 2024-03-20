@@ -5,13 +5,12 @@ import data from './button-group.yml';
 
 const settings = {
   title: 'Components/Buttons Group',
+};
+
+export const ButtonGroup = {
+  name: 'Buttons Group',
   render: (args) => parse(buttons(args)),
   args: { ...data },
 };
 
-const ButtonGroup = {
-  name: 'Buttons Group',
-};
-
 export default settings;
-export { ButtonGroup  };

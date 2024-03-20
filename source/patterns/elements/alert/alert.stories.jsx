@@ -8,16 +8,15 @@ import data from './alert.yml';
 
 const settings = {
   title: 'Elements/Alert',
-  args: { ...data },
 };
 
-const Success = {
+export const Success = {
   name: 'Success alert',
   render: (args) => parse(alert(args)),
   args: { ...data },
 };
 
-const Warning = {
+export const Warning = {
   ...Success,
   name: 'Warning alert',
   args: {
@@ -26,7 +25,7 @@ const Warning = {
   },
 };
 
-const Error = {
+export const Error = {
   ...Success,
   name: 'Error alert',
   args: {
@@ -35,17 +34,16 @@ const Error = {
   },
 };
 
-const SantaBarbaraSand = {
+export const SantaBarbaraSand = {
   ...Success,
-  name: 'With Santa Barbara Sand Background',
+  name: 'With Santa Barbara Sand background',
   decorators: [SantaBarbaraSandBg],
 };
 
-const VeniceCanal = {
+export const VeniceCanal = {
   ...Success,
-  name: 'With Venice Canal Background',
+  name: 'With Venice Canal background',
   decorators: [VeniceCanalBg],
 };
 
 export default settings;
-export { Success, Warning, Error, SantaBarbaraSand, VeniceCanal };

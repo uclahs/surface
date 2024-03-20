@@ -1,12 +1,7 @@
 {{ attach_library('surface/related-content') }}
 
-{% set classes = [
-  'related-content',
-  modifier ? modifier : '',
-  attributes ? attributes.class,
-]|join(' ')|trim %}
-
-<section {{ add_attributes({ 'class': classes }) }}>
+<section class="related-content{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
   <div class="related-content__inner">
     {% if title or see_more %}
       <header class="related-content__header">

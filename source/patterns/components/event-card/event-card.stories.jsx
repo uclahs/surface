@@ -4,15 +4,13 @@ import card from './event-card.twig';
 import data from './event-card.yml';
 
 const settings = {
-  title: 'Components/Event card',
+  title: 'Components/Event list card',
   args: { ...data },
   render: (args) => parse(card(args)),
 };
 
-const Card = {
-  name: 'Event Card',
-  args: { ...data },
+export const Card = {
+  name: 'Event list card',
 };
 
 export default settings;
-export { Card };

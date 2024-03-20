@@ -3,30 +3,31 @@ import parse from 'html-react-parser';
 // Imports decorators for background colors.
 import { SantaBarbaraSandBg, VeniceCanalBg } from '../../../../.storybook/decorators';
 
-import cta from './call-to-action.twig';
-import data from './call-to-action.yml';
+import tabs from './accordion-tabs.twig';
+import data from './accordion-tabs.yml';
+/* eslint import/no-unresolved: "off" */
+/* eslint import/extensions: "off" */
+import 'https://cdn.jsdelivr.net/npm/a11y-accordion-tabs@1.0.2/a11y-accordion-tabs.min.js';
 
 const settings = {
-  title: 'Components/Call to action',
+  title: 'Components/Accordion tabs',
 };
 
-export const CTA = {
-  name: 'Call to action',
-  render: (args) => parse(cta(args)),
+export const AccordionTabs = {
+  name: 'Accordion tabs',
+  render: (args) => parse(tabs(args)),
   args: { ...data },
 };
 
 export const SantaBarbaraSand = {
-  ...CTA,
+  ...AccordionTabs,
   name: 'With Santa Barbara Sand background',
-  args: { ...data },
   decorators: [SantaBarbaraSandBg],
 };
 
 export const VeniceCanal = {
-  ...CTA,
+  ...AccordionTabs,
   name: 'With Venice Canal background',
-  args: { ...data },
   decorators: [VeniceCanalBg],
 };
 

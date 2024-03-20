@@ -7,10 +7,12 @@
 /* Data attributes to change component's background based on theme. */
 :where([data-theme='surface']) {
   --content-highlight-bg: var(--ucla-blue);
+  --date-badge-bg-color: var(--midnight-joshua-tree);
 }
 
 :where([data-theme='dgsom']) {
   --content-highlight-bg: var(--midnight-joshua-tree);
+  --date-badge-bg-color: var(--ucla-blue);
 }
 
 :where([data-theme='labs']) {
@@ -28,11 +30,9 @@
 }
 
 .content-highlight {
-  /* Based on the production site (medschool.ucla.edu), the main content section
-  max-width is 1376px.  Setting the same here for when component is viewed in Patternlab. */
-  .pl & {
-    margin: 0 auto;
-    max-width: var(--size-max-content-width);
+  /* Changes date badge's background color only when it appears inside the Card. */
+  .date-badge {
+    background-color: var(--date-badge-bg-color);
   }
 }
 
