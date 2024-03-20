@@ -2,10 +2,21 @@ import Twig from 'twig';
 import { useEffect } from '@storybook/preview-api';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import twigDrupal from 'twig-drupal-filters';
+
+// Imports custom JS to allow Storybook to understand Drupal behaviors.
 import './drupal.js';
+
+// Imports all global props most of which are css custom properties.
 import '../dist/css/global.css';
+
+// Imports all custom CSS utilities.
 import '../dist/css/utilities.css';
+
+// Imports the CSS for all components combined into a single stylesheet.
 import '../dist/css/styles.css';
+
+// Imports JS for any components that need it combined into a single script file.
+import '../dist/js/scripts.js';
 
 function setupTwig(twig) {
   twig.cache();

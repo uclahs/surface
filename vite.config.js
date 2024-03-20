@@ -72,6 +72,8 @@ export default defineConfig({
       // Recursively globbing through all css/js files within the source directory.
       input: [
         ...glob.sync(path.resolve(__dirname, 'source/patterns/**/*.{css,js}')),
+        // Next line captures the scripts.js file which includes all components' JS.
+        ...glob.sync(path.resolve(__dirname, 'source/patterns/*.js')),
       ],
       output: {
         // Outputs assets into their respective directories within `dist`..
