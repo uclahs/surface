@@ -2,7 +2,6 @@ import Twig from 'twig';
 import { useEffect } from '@storybook/preview-api';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import twigDrupal from 'twig-drupal-filters';
-import twigAddAttributes from 'add-attributes-twig-extension';
 import './drupal.js';
 import '../dist/css/global.css';
 import '../dist/css/utilities.css';
@@ -11,7 +10,6 @@ import '../dist/css/styles.css';
 function setupTwig(twig) {
   twig.cache();
   twigDrupal(twig);
-  twigAddAttributes(twig);
   return twig;
 }
 
@@ -25,7 +23,7 @@ export const decorators = [
       Labs: 'labs',
       'Labs Dynamic': 'labs-dynamic',
     },
-    defaultTheme: 'surface',
+    defaultTheme: 'Surface',
     attributeName: 'data-theme',
   }),
   (storyFn) => {
