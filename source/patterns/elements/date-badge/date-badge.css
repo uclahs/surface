@@ -2,8 +2,17 @@
  * @file
  * Date badge styles.
  */
+
+:where([data-theme="surface"]) {
+  --date-badge-bg-color: var(--midnight-joshua-tree);
+}
+
+:where([data-theme="dgsom"]) {
+  --date-badge-bg-color: var(--ucla-blue);
+}
+
 .date-badge {
-  background-color: var(--ucla-blue);
+  background-color: var(--date-badge-bg-color);
   color: var(--white);
   display: flex;
   flex-direction: column;
