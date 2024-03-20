@@ -5,7 +5,7 @@ plugins:
   - stylelint-selector-pseudo-class-lvhfa
 rules:
   at-rule-no-unknown: null
-  alpha-value-notation: percentage
+  alpha-value-notation: number
   color-function-notation: null
   declaration-empty-line-before: never
   declaration-block-no-redundant-longhand-properties: null

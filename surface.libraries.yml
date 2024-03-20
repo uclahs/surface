@@ -10,6 +10,15 @@ global:
       dist/css/links.css: {}
       dist/css/skip-link.css: {}
 
+accordion:
+  css:
+    component:
+      dist/css/accordion.css: {}
+  js:
+    dist/js/accordion.js: {}
+  dependencies:
+    - core/drupal
+
 alert:
   css:
     component:

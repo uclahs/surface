@@ -1,0 +1,165 @@
+/**
+ * @file
+ * Accordion styles.
+ */
+
+:where([data-theme="dgsom"]) {
+  --accordion-header: var(--font-size-5);
+}
+
+:where([data-theme="labs-dynamic"]) {
+  --accordion-header: var(--font-size-5);
+}
+
+.accordion {
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: var(--shadow-3);
+  }
+
+  & + & {
+    margin-block-start: var(--size-2);
+  }
+
+  /* For Patternlab demo purposes only. */
+  .pl-demo & {
+    padding-block: var(--size-15);
+  }
+
+  /* Based on provided mockups, when background color exists,
+  remove the border radius and box shadow
+  as these styles conflict with the background color. */
+  .bg-santa-barbara-sand.layout--onecol &,
+  .bg-venice-canal.layout--onecol & {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.accordion__header {
+  align-items: center;
+  background-color: var(--gray-100);
+  border-block-end: var(--size-px) solid transparent;
+  display: flex;
+  justify-content: space-between;
+  padding-block: var(--size-4);
+  padding-inline: var(--size-5);
+  text-align: left;
+  width: 100%;
+
+  @media (--mobile) {
+    padding-inline: var(--size-8);
+  }
+
+  span {
+    color: var(--gray-900);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-400);
+
+    @media (--mobile) {
+      font-size: var(--font-size-4);
+    }
+
+    /* Text color changes to white when Santa Barbara Sand background color exists. */
+    .bg-santa-barbara-sand.layout--onecol & {
+      color: var(--white);
+    }
+  }
+
+    /* The background for the accordion's question wrapper changes to Joshua Tree
+    when Santa Barbara Sand background color exists. */
+  .bg-santa-barbara-sand.layout--onecol & {
+    background-color: var(--midnight-joshua-tree);
+  }
+
+  /* Adds bottom border when Venice Canal background color exists. */
+  .bg-venice-canal.layout--onecol & {
+    border-block-end: 1px solid var(--venice-canal);
+  }
+}
+
+.accordion__icon {
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: var(--font-size-3);
+  height: 1em;
+  line-height: 1;
+  max-width: initial;
+  width: 1em;
+
+  .icon__group {
+    stroke-width: 2px;
+    transform-origin: 50% 50%;
+    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    will-change: transform;
+
+      /* The icon color changes to white when Santa Barbara Sand
+      background color exists. */
+    .bg-santa-barbara-sand.layout--onecol & {
+      stroke: var(--white) !important;
+    }
+
+    > * {
+      stroke-dasharray: 20;
+      transform: translateY(4px);
+      transform-origin: 50% 50%;
+      transition: transform 0.3s, stroke-dashoffset 0.3s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+      &:first-child {
+        stroke-dashoffset: 10.15;
+      }
+
+      &:last-child {
+        stroke-dashoffset: 10.15;
+      }
+    }
+  }
+}
+
+.accordion__panel {
+  background-color: var(--white);
+  display: none;
+  padding-block: var(--size-5);
+  padding-inline: var(--size-5);
+  transform: translateZ(0);
+  will-change: height;
+
+  @media (--mobile) {
+    padding-block: var(--size-10);
+    padding-inline: var(--size-10);
+  }
+}
+
+.accordion--open > .accordion__header > .accordion__icon .icon__group {
+  transform: rotate(-90deg);
+}
+
+.accordion--open > .accordion__header > .accordion__icon .icon__group > *:first-child,
+.accordion--open > .accordion__header > .accordion__icon .icon__group *:last-child {
+  stroke-dashoffset: 0;
+  transform: translateY(0);
+}
+
+.accordion--open > .accordion__panel {
+  display: block;
+}
+
+.accordion--open .accordion__panel > * {
+  animation: accordion-animation 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@keyframes accordion-animation {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
