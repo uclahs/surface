@@ -8,7 +8,6 @@ import data from './accordion.yml';
 
 const settings = {
   title: 'Components/Accordion',
-  args: { ...data },
 };
 
 const Accordion = {
