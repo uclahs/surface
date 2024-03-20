@@ -15,12 +15,12 @@ featured:
   modifier: ''
   image: '<img src="images/3-2.svg" alt="Placeholder image" width="768" height="512" />'
   title:
-    modifier: 'featured-content__title'
+    modifier: 'featured-card__title'
     level: 3
     text: 'UCLA Health HIMS Forum: Amendment and Addendum HS 9415'
     url: '#'
   subtitle:
-    modifier: 'featured-content__subtitle'
+    modifier: 'featured-card__subtitle'
     level: 4
     text: 'Join the HIMS Director and Management Team for updates on patient record integrity.'
     url: ''
@@ -32,7 +32,10 @@ featured:
     modifier: 'button--secondary'
     text: 'View the full event'
     url: '#'
-  event_type: 'Virtual'
+  event_type:
+    modifier: 'featured-card__type'
+    text: 'In-Person'
+    url: ''
   more_dates: true
   organization: 'David Geffen School of Medicine'
   readtime: ''
