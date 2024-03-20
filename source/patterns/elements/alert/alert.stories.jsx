@@ -38,14 +38,12 @@ const Error = {
 const SantaBarbaraSand = {
   ...Success,
   name: 'With Santa Barbara Sand Background',
-  args: { ...data },
   decorators: [SantaBarbaraSandBg],
 };
 
 const VeniceCanal = {
   ...Success,
   name: 'With Venice Canal Background',
-  args: { ...data },
   decorators: [VeniceCanalBg],
 };
 
