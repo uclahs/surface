@@ -35,6 +35,11 @@ alert:
     component:
       dist/css/alert.css: {}
 
+article-teaser:
+  css:
+    component:
+      dist/css/article-teaser.css: {}
+
 breadcrumb:
   css:
     component:
@@ -69,6 +74,11 @@ content-highlight:
   css:
     component:
       dist/css/content-highlight.css: {}
+
+cta-banner:
+  css:
+    component:
+      dist/css/cta-banner.css: {}
 
 date:
   css:

@@ -1,0 +1,130 @@
+/**
+ * @file
+ * Article styles.
+ */
+
+.article__grid {
+  @media (--laptop) {
+    display: grid;
+    grid-column-gap: var(--size-10);
+    grid-template-columns: calc(50% - 1rem) 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .article__media {
+    margin-block-end: var(--size-8);
+
+    @media (--laptop) {
+      grid-column: 2/3;
+      grid-row: 1;
+    }
+  }
+
+  .article__content {
+    margin-block-end: var(--size-8);
+
+    @media (--laptop) {
+      grid-column: 1/1;
+      grid-row: 1/4;
+      margin-block-end: 0;
+    }
+  }
+
+  .article__extra {
+    @media (--laptop) {
+      grid-column: 2/3;
+    }
+  }
+}
+
+.article__media {
+  @media (--laptop) {
+    margin-top: calc(var(--size-24) * -1);
+  }
+
+  img {
+    border-radius: var(--radius-1);
+    box-shadow: var(--shadow-3);
+    width: 100%;
+  }
+}
+
+.article__meta {
+  margin-block-end: var(--size-10);
+}
+
+.article__date,
+.article__byline,
+.article__readtime {
+  margin-block-end: var(--size-1);
+
+  svg {
+    display: inline-block;
+    font-size: inherit;
+    vertical-align: -0.125em;
+    width: 1em;
+  }
+
+  span {
+    margin-inline-start: var(--size-1);
+  }
+}
+
+.article__tags,
+.article__people {
+  margin-block: var(--size-10);
+
+  h2 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-500);
+    margin-block-end: var(--size-2);
+  }
+}
+
+.article__people {
+  margin-block-start: var(--size-10);
+
+  h3 {
+    margin-block: 0;
+  }
+}
+
+.article__share {
+  align-items: center;
+  display: flex;
+  margin-block-start: var(--size-10);
+
+  div {
+    display: inline-block;
+    margin-block: 0;
+    margin-inline-end: var(--size-2);
+  }
+
+  ul {
+    display: inline-flex;
+  }
+
+  a {
+    display: inline-flex;
+    font-size: var(--font-size-7);
+    margin-inline: var(--size-2);
+    text-decoration: none;
+  }
+
+  svg {
+    color: var(--gray-900);
+    display: inline-block;
+    font-size: inherit;
+    vertical-align: -0.125em;
+    width: 1em;
+  }
+}
+
+.article__main {
+  padding-block: var(--size-8);
+
+  @media (--laptop) {
+    padding-block-end: var(--size-12);
+  }
+}

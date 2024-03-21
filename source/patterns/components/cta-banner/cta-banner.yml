@@ -1,0 +1,19 @@
+---
+attributes: ''
+modifier: 'bg-gradient-linear-ucla-blue cta-banner--matterport'
+title:
+  modifier: 'cta-banner__title'
+  level: 2
+  text: Discover what UCLA Health has to offer
+  url: ''
+
+teaser: |-
+  <p>Donut wafer jelly danish jelly. Cake donut bonbon marshmallow shortbread jelly-o cotton candy lollipop. Wafer jelly-o liquorice carrot cake apple pie fruitcake shortbread gummies.&nbsp;</p>
+
+cta:
+  modifier: 'button button--secondary'
+  disabled: false
+  url: '#'
+  text: 'Learn more'
+
+image: './images/cta-matterport.png'

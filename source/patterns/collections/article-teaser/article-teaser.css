@@ -1,0 +1,69 @@
+/**
+ * @file
+ * Article teaser styles.
+ */
+
+.article-teaser {
+  @media (--tablet) {
+    display: grid;
+    gap: var(--size-5);
+    grid-template-columns: var(--size-40) 1fr;
+
+    /* If this is the article-listing page, change to only one column layout. */
+    &.article-listing {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.article-teaser__image {
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+  height: var(--size-40); /* Using height to contain box shadow at right heigh */
+  margin-block-end: var(--size-3);
+  overflow: hidden;
+  width: var(--size-40);
+}
+
+.article-teaser__content {
+  /* For consistent margin in all fields. */
+  > * {
+    margin-block-end: var(--size-3);
+  }
+}
+
+.article-teaser__type,
+.article-teaser__category {
+  font-size: var(--font-size-0);
+}
+
+.article-teaser__title {
+  font-size: var(--font-size-5);
+  line-height: var(--leading-tight);
+
+  a {
+    color: var(--ucla-blue);
+
+    &:hover {
+      color: var(--silver-lake-reservoir);
+    }
+  }
+}
+
+.article-teaser__meta {
+  display: flex;
+  flex-direction: column;
+
+  div:last-child {
+    margin-block-start: var(--size-3);
+  }
+
+  @media (--tablet) {
+    flex-direction: row;
+
+    div:last-child {
+      margin-block-start: var(--size-px);
+      margin-inline-start: var(--size-5);
+    }
+  }
+}
