@@ -1,0 +1,46 @@
+{{ attach_library('surface/details') }}
+
+{% set content_wrapper_classes = [
+  'details__wrapper',
+  content_attributes ? content_attributes.class
+]|join(' ')|trim %}
+
+<details class="details{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  {%- if title -%}
+    {% set summary_classes = [
+      'details__summary',
+      required ? 'js-form-required',
+      required ? 'form-required',
+      summary_attributes ? summary_attributes.class
+    ]|join(' ')|trim %}
+
+    <summary class="{{ summary_classes }}" {{ summary_attributes ? summary_attributes|without('class') }}>
+      {%- if required -%}
+        <span class="required-mark"></span>
+      {%- endif -%}
+
+      {% block summary %}
+        {{ title }}
+      {% endblock %}
+    </summary>
+  {%- endif -%}
+
+  <div class="{{ content_wrapper_classes }}" {{ content_attributes ? content_attributes|without('class') }}>
+    {% if errors %}
+      <div class="details__error">{{ errors }}</div>
+    {% endif %}
+
+    {% if description %}
+      <div class="details__description">{{ description }}</div>
+    {% endif %}
+
+    {% block content %}
+      {{ children }}
+    {% endblock %}
+
+    {% if value %}
+      {{ value }}
+    {% endif %}
+  </div>
+</details>

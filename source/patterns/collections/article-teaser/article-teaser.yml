@@ -1,7 +1,7 @@
 ---
 modifier: ''
 image: '<img src="./images/1-1.svg" alt="Placeholder image" width="160" height="160" />'
-category: 'Labs & Research'
+category: 'Article'
 type: ''
 title:
   modifier: 'article-teaser__title'

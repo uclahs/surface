@@ -13,4 +13,14 @@ export const ArticleTeaser = {
   render: (args) => parse(article(args)),
 };
 
+export const ArticleList = {
+  ...ArticleTeaser,
+  name: 'Article list',
+  args: {
+    ...data,
+    modifier: 'article-listing',
+    image: '',
+  },
+};
+
 export default settings;

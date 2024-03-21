@@ -1,0 +1,16 @@
+---
+modifier: ''
+attributes: ''
+required: ''
+summary_attributes: ''
+title: 'Details'
+errors: 'This is an error'
+description: 'This is a description'
+content_attributes: ''
+children: |-
+  <ul>
+    <li><a href="#">Item 1</a></li>
+    <li><a href="#">Item 2</a></li>
+    <li><a href="#">Item 3</a></li>
+  </ul>
+value: ''
