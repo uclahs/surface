@@ -1,0 +1,154 @@
+/**
+ * @file
+ * Collapsible details.
+ */
+
+:where(details) {
+  background: var(--gray-200);
+  border-radius: var(--radius-2);
+  padding-block: var(--size-4);
+  padding-inline: var(--size-6);
+
+  &[open] > summary {
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
+    margin-block-end: var(--size-4);
+  }
+
+  p:last-child {
+    margin-block-end: 0;
+  }
+}
+
+:where(summary) {
+  background: var(--gray-300);
+  border-radius: var(--radius-2);
+  cursor: pointer;
+  display: list-item;
+  font-weight: var(--font-weight-700);
+  margin: calc(var(--size-4) * -1) calc(var(--size-6) * -1);
+  padding: var(--size-4) var(--size-6);
+  touch-action: manipulation;
+}
+
+details.details {
+  border-radius: var(--border-size-2);
+  border-width: 1px;
+  box-shadow: var(--shadow-1);
+  color: inherit;
+  display: block;
+  margin-block: var(--size-2);
+}
+
+/* Details summary styles */
+.details__summary {
+  background-color: var(--gray-200);
+  color: inherit;
+  cursor: pointer;
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-700);
+  hyphens: auto;
+  line-height: normal;
+  list-style: none;
+  padding-block: var(--size-2);
+  padding-inline-end: var(--size-2);
+  padding-inline-start: var(--size-8);
+  position: relative;
+  transition: background-color 0.12s ease-in-out;
+  word-wrap: break-word;
+
+  /* Arrow icon */
+  &::before {
+    border-block-start: solid 2px currentColor;
+    border-inline-end: solid 2px currentColor;
+    content: "";
+    display: block;
+    height: 10px;
+    inset-block-start: 50%;
+    inset-inline-start: var(--size-3);
+    position: absolute;
+    transform: translateY(-50%) rotate(45deg);
+    width: 10px;
+  }
+
+  /* Pseudo-selector to manage focus styles */
+  &::after {
+    border-radius: var(--border-size-2);
+    box-shadow: inset 0 0 0 2px var(--blue-400);
+    content: "";
+    inset: -1px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  /* Hide the marker */
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Disable default outline for summary, since we have own implementation */
+  &:focus {
+    outline: solid 2px transparent;
+    outline-offset: -4px;
+  }
+
+  /* Details summary, hover state */
+  &:hover {
+    background-color: var(--gray-100);
+  }
+
+  /* Details summary, focus and active states */
+  &:focus::after,
+  &:active::after {
+    opacity: 1;
+  }
+}
+
+/* Rotate arrow icon of the details summary, when details expanded */
+.details[open] > .details__summary::before,
+.details[open] > .details__summary .details-title::before {
+  margin-block-start: -2px;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+/* Details content wrapper */
+.details__wrapper {
+  margin: var(--size-2);
+
+  .details {
+    border-color: var(--gray-300);
+  }
+}
+
+/* Error */
+.details__error {
+  color: var(--red-900);
+  font-size: var(--font-size-0);
+  line-height: var(--leading-tight);
+  margin-block-end: var(--size-2);
+}
+
+/* Description */
+.details__description {
+  color: var(--gray-800);
+  font-size: var(--font-size-0);
+  line-height: var(--leading-tight);
+  margin-block-end: var(--size-2);
+}
+
+/* Details Dropbutton */
+.details--dropbutton {
+  width: 35em;
+
+  .details__summary {
+    &::before {
+      inset-inline-end: var(--size-3);
+      inset-inline-start: auto;
+    }
+  }
+}
+
+details.details[data-drupal-selector="edit-field-sf-menu-0-settings-style"] {
+  display: none;
+}

@@ -35,6 +35,11 @@ alert:
     component:
       dist/css/alert.css: {}
 
+article-teaser:
+  css:
+    component:
+      dist/css/article-teaser.css: {}
+
 breadcrumb:
   css:
     component:
@@ -70,6 +75,11 @@ content-highlight:
     component:
       dist/css/content-highlight.css: {}
 
+cta-banner:
+  css:
+    component:
+      dist/css/cta-banner.css: {}
+
 date:
   css:
     component:
@@ -80,10 +90,31 @@ date-badge:
     component:
       dist/css/date-badge.css: {}
 
+details:
+  css:
+    component:
+      dist/css/details.css: {}
+
+event:
+  css:
+    component:
+      dist/css/event.css: {}
+  js:
+    dist/js/event.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+
 event-card:
   css:
     component:
       dist/css/event-card.css: {}
+
+event-listing:
+  css:
+    component:
+      dist/css/event-listing.css: {}
 
 eyebrow:
   css:
@@ -95,10 +126,15 @@ featured-card:
     component:
       dist/css/featured-card.css: {}
 
-feed:
+feed-icon:
   css:
     theme:
       dist/css/feed-icon.css: {}
+
+icon:
+  css:
+    theme:
+      dist/css/icon.css: {}
 
 media-quote:
   css:

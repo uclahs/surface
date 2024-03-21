@@ -1,0 +1,46 @@
+/**
+ * @file
+ * Event listing styles.
+ */
+
+.event-listing {
+  position: relative;
+
+  /* Provides consistent margin to all fields within the article tag. */
+  > * {
+    margin-block-end: var(--size-3);
+  }
+}
+
+.event-listing__type {
+  color: var(--gray-400);
+  font-size: var(--font-size-0);
+
+  .eyebrow__text {
+    margin: 0;
+  }
+}
+
+.event-listing__title {
+  font-size: var(--font-size-5);
+  line-height: var(--leading-tight);
+
+  a {
+    color: var(--ucla-blue);
+    transition-duration: 0.2s;
+    transition-property: color;
+
+    &:hover {
+      color: var(--silver-lake-reservoir);
+    }
+  }
+}
+
+.event-listing__date {
+  margin-block-end: 0;
+
+  /* Hides the calendar icon. */
+  svg {
+    display: none;
+  }
+}

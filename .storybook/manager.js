@@ -3,4 +3,7 @@ import surfaceTheme from './theme';
 
 addons.setConfig({
   theme: surfaceTheme,
+  sidebar: {
+    collapsedRoots: ['elements', 'components', 'collections', 'layouts'],
+  },
 });

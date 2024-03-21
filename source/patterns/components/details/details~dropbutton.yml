@@ -1,0 +1,16 @@
+---
+modifier: 'details--dropbutton'
+attributes: ''
+required: ''
+summary_attributes: ''
+title: 'Dropdown button'
+errors: ''
+description: ''
+content_attributes: ''
+children: |-
+  <ul>
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+  </ul>
+value: ''
