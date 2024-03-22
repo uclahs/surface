@@ -9,6 +9,8 @@ global:
       dist/css/field.css: {}
       dist/css/links.css: {}
       dist/css/skip-link.css: {}
+  dependencies:
+    - surface/fontawesome
 
 accordion:
   css:
@@ -130,6 +132,13 @@ feed-icon:
   css:
     theme:
       dist/css/feed-icon.css: {}
+
+fontawesome:
+  js:
+    'https://kit.fontawesome.com/a0eb0bad75.js': { type: external, minified: true, attributes: { defer: true, crossorigin: anonymous } }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
 
 icon:
   css:
