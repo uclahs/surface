@@ -21,6 +21,7 @@ export const Primary = {
   args: {
     ...Button.args,
     button: {
+      icon: false,
       modifier: 'button--primary',
       text: 'Primary button',
     },
@@ -33,6 +34,7 @@ export const Secondary = {
   args: {
     ...Button.args,
     button: {
+      icon: false,
       modifier: 'button--secondary',
       text: 'Secondary button',
     },
@@ -45,6 +47,7 @@ export const Outlined = {
   args: {
     ...Button.args,
     button: {
+      icon: false,
       modifier: 'button--outlined',
       text: 'Outlined button',
     },
@@ -57,7 +60,7 @@ export const withIcon = {
   args: {
     ...Button.args,
     button: {
-      icon: 'arrow-right',
+      icon: true,
       modifier: 'button--outlined',
       text: 'Button with Icon',
     },
@@ -70,6 +73,7 @@ export const Link = {
   args: {
     ...Button.args,
     button: {
+      icon: true,
       modifier: 'button--link',
       text: 'Button as a link',
       url: 'https://medschool.ucla.edu',

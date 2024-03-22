@@ -4,7 +4,7 @@ import event from './event-listing.twig';
 import data from './event-listing.yml';
 
 const settings = {
-  title: 'Components/Event listing',
+  title: 'Collections/Event listing',
 };
 
 export const EventListing = {
