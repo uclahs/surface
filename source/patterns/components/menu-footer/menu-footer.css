@@ -1,0 +1,46 @@
+/**
+ * @file
+ * Main menu styling.
+ */
+
+.menu-footer {
+  @media (--tablet) {
+    display: grid;
+    grid-column-gap: var(--size-8);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (--laptop) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .menu__item {
+    margin-block-end: var(--size-6);
+    margin-block-start: var(--size-1);
+  }
+
+  h4 {
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-600);
+    margin-block-end: var(--size-5);
+  }
+
+  .menu__subnav {
+    .menu__item {
+      margin-block: var(--size-2);
+    }
+
+    .menu__link {
+      color: var(--white);
+      font-size: var(--font-size-1);
+
+      &:focus {
+        box-shadow: 0 0 var(--white), 0 0 0 2px var(--white), 0 0 var(--white);
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+    }
+  }
+}

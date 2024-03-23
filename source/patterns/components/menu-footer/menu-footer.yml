@@ -1,0 +1,86 @@
+---
+menu: 'columns'
+is_demo: true
+items:
+  - title: 'Learn and Train'
+    url:
+      isRouted: true
+      routeName: '<nolink>'
+    in_active_trail: false
+    below:
+      - title: 'MD Students'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'Residents and Fellows'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'PHD Trainees'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'Postdoctoral'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'Scholars'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'Continuing Education'
+        url: '#'
+        in_active_trail: false
+        below: false
+  - title: 'Get Involved'
+    url:
+      isRouted: true
+      routeName: '<nolink>'
+    in_active_trail: false
+    below:
+      - title: 'Give to DGSOM'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'Work for UCLA Health'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'Volunteer for UCLA'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'Health'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'Report Misconduct'
+        url: '#'
+        in_active_trail: false
+        below: false
+  - title: 'Connect'
+    url:
+      isRouted: true
+      routeName: '<nolink>'
+    in_active_trail: false
+    below:
+      - title: 'Alumni'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'Find an Affinity Group'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'UCLA Directory'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'Maps and Directions'
+        url: '#'
+        in_active_trail: false
+        below: false
+      - title: 'Talk to our Media Team'
+        url: '#'
+        in_active_trail: false
+        below: false
