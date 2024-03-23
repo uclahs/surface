@@ -1,0 +1,23 @@
+{{ attach_library('surface/menu-utility') }}
+
+<ul class="menu menu-utility">
+	<li class="menu__item">
+		<a class="menu__link" href="https://www.bso.ucla.edu/">Emergency</a>
+	</li>
+	<li class="menu__item">
+		<a class="menu__link" href="http://www.ucla.edu/accessibility">Accessibility</a>
+	</li>
+	<li class="menu__item">
+		<a class="menu__link" href="https://www.ucla.edu/terms-of-use">UCLA Privacy Policy</a>
+	</li>
+	<li class="menu__item">
+		<a class="menu__link" href="https://www.uclahealth.org/privacy-notice">UCLA Health Privacy Notice</a>
+	</li>
+  <li class="menu__item">
+    {% if logged_in %}
+      <a class="menu__link" rel="nofolow" href="/user/logout">Logout</a>
+    {% else %}
+      <a class="menu__link" rel="nofolow" href="/user/login">Login</a>
+    {% endif %}
+	</li>
+</ul>
