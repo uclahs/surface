@@ -67,6 +67,7 @@ export default defineConfig({
   ],
   build: {
     emptyOutDir: true,
+    minify: false,
     outDir: 'dist',
     rollupOptions: {
       // Recursively globbing through all css/js files within the source directory.
