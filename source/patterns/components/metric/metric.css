@@ -1,0 +1,38 @@
+/**
+ * @file
+ * Metric styles.
+ */
+
+.metric__container {
+  border-bottom-color: var(--ucla-blue);
+  border-bottom-width: var(--size-1);
+  max-width: 65ch;
+  padding-block-end: var(--size-3);
+
+  /* When background colors exist, the border color changes to yellow. */
+  .bg-santa-barbara-sand.layout--onecol &,
+  .bg-venice-canal.layout--onecol & {
+    border-bottom-color: var(--chumash-soil);
+  }
+
+  /* When Venice Canal background color exists, all text color changes to white. */
+  .bg-venice-canal.layout--onecol & {
+    color: var(--white);
+  }
+}
+
+.metric__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-400);
+  line-height: var(--leading-none);
+  margin-block-end: var(--size-3);
+}
+
+.metric__subtitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-400);
+  line-height: var(--leading-none);
+  margin-block-end: var(--size-2);
+}

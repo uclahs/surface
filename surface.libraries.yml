@@ -167,6 +167,11 @@ messages:
   js:
     dist/js/message.js: {}
 
+metric:
+  css:
+    component:
+      dist/css/metric.css: {}
+
 nav:
   css:
     layout:
