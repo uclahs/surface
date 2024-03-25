@@ -29,7 +29,7 @@ export const SiteLogoFooter = {
   name: 'Logo for the footer',
   args: {
     ...data,
-    modifier: 'site-branding--footer',
+    modifier: 'site-logo--footer',
     logo: 'images/logo-inverse.svg',
     site_name: 'UCLA David Geffen School of Medicine',
   },
