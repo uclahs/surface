@@ -20,72 +20,13 @@
  */
 #}
 {% if is_demo %}
-
-<ul class="menu menu-footer">
-  <li class="menu__item menu__item--nolink">
-    <h4 class="menu__link menu__link--nolink">Learn and Train</h4>
-    <ul class="menu__subnav">
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link">MD Students</a>
-      </li>
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link">Residents and Fellows</a>
-      </li>
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link">PhD Students</a>
-      </li>
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link">Postdoctoral Scholars</a>
-      </li>
-      <li class="menu__item menu__item--link">
-       <a href="#" class="menu__link menu__link--link">Continuing Education</a>
-      </li>
-    </ul>
-  </li>
-  <li class="menu__item menu__item--nolink">
-    <h4 class="menu__link menu__link--nolink">Get Involved</h4>
-    <ul class="menu__subnav">
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link" target="_blank" rel="noopener noreferrer">Give To DGSOM</a>
-      </li>
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link" target="_blank" rel="noopener noreferrer">Work For UCLA Health</a>
-      </li>
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link" target="_blank" rel="noopener noreferrer">Volunteer for UCLA Health</a>
-      </li>
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link">Report Misconduct</a>
-      </li>
-    </ul>
-  </li>
-  <li class="menu__item menu__item--nolink">
-    <h4 class="menu__link menu__link--nolink">Connect</h4>
-    <ul class="menu__subnav">
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link">Alumni</a>
-      </li>
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link">Emergency</a>
-      </li>
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link">Find an Affinity Group</a>
-      </li>
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link" target="_blank" rel="noopener noreferrer">UCLA Directory</a>
-      </li>
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link">Maps And Directions</a>
-      </li>
-      <li class="menu__item menu__item--link">
-        <a href="#" class="menu__link menu__link--link" target="_blank" rel="noopener noreferrer">Talk to Our Media Team</a>
-      </li>
-    </ul>
-  </li>
-</ul>
+  {# For Storybook, render a hard-coded menu as Storybook does not
+  understand the menu macro. #}
+  {% include "@components/menu-footer/menu.twig" %}
 
 {% else %}
 
+  {# For Drupal, render the regular menu using the logic in the menu macro. #}
   {% import _self as menus %}
   {{ menus.menu_links(items, attributes, 0) }}
 
