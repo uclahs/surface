@@ -213,6 +213,12 @@ site-header:
       dist/css/mobile-button.css: {}
       dist/css/site-alert.css: {}
       dist/css/site-logo.css: {}
+      dist/css/menu-main.css: {}
+      dist/css/menu-toggle.css: {}
+  js:
+    dist/js/menu-utils.js: {}
+    dist/js/menu-main.js: {}
+    dist/js/menu-main-second-level.js: {}
 
 tags:
   css:
