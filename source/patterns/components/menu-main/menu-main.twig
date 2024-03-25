@@ -19,11 +19,11 @@
 #}
 
 {% if is_demo %}
-
+  {# In Storybook, render the static menu. #}
   {% include "@components/menu-main/menu.twig" %}
 
 {% else %}
-
+  {# In Drupal render the regular dynamic menu. #}
   {% import _self as menus %}
   {{ menus.menu_links(items, attributes, 0, 'menu-main__item-', data_menu, item_class, link_class, is_demo) }}
 
