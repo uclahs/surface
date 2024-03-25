@@ -4,141 +4,96 @@ The following are the approved icons to be used in our websites.  Icons are cate
 as Solid, Regular, and Brands.  Each category uses a specific prefix when using the
 icons on your components or pages.
 
-## Solid
+## How to use
 
-### How to use
-
-`<i class="fa-solid fa-house"></i>`
+`<i class="fa-solid fa-baby"></i>`
 or
-`<span class="fa-solid fa-house"></span>`
+`<span class="fa-solid fa-baby"></span>`
 
-### Icons list
-
-- house
-- magnifying-glass
-- user
-- check
-- download
-- phone
-- envelope
-- star
-- location-dot
-- arrow-right
-- circle-xmark
-- xmark
-- calendar-days
-- clipboard
-- filter
-- circle-info
-- list
-- book
-- plus
-- minus
-- circle-exclamation
-- eye
-- hand
-- thumbs-up
-- globe
-- briefcase
-- business-time
-- stethoscope
-- info
-- calendar
-- clock
-- circle
-- play
-- square
-- newspaper
-- exclamation
-- brain
-- star-of-life
-- caret-down
-- square-check
-- virus
-- child
-- circle-check
-- baby
-- receipt
-- weight-scale
-- vial
-- venus
-- suitcase-medical
-- stopwatch
-- stomach
-- star-half
-- square-parking
-- spoon
-- spa
-- ribbon
-- mars
-- map-pin
-- map-location-dot
-- map-location
-- map
-- lungs
-- location-arrow
-- leaf-heart
-- house-medical
-- heart-pulse
-- head-side-virus
-- head-side-medical
-- head-side-brain
-- hand-heart
-- dna
-- disease
-- diamond-turn-right
-- clipboard-check
-- circle-play
-- circle-pause
-- circle-parking
-- circle-location-arrow
-- circle-arrow-right
-- chevrons-up
-- chevron-right
-- chevron-left
-- caret-right
-- briefcase-medical
-- asterisk
-
-## Regular
-
-### How to use
-
-`<i class="fa-brands fa-user"></i>`
-or
-`<span class="fa-brands fa-user"></span>`
-
-### Icons list
-
-- user
-- star
-- arrow-right
-- calendar-days
-- calendar
-- stopwatch
-- chevron-right
-- chevron-left
-- angle-right
-
-## Brands
-
-### How to use
-
-`<i class="fa-brands fa-instagram"></i>`
-or
-`<span class="fa-brands fa-instagram"></span>`
-
-### Icons list
-
-- facebook
-- twitter
-- instagram
-- linkedin
-- youtube
-- pinterest
-- square-twitter
-- square-pinterest
-- weixin
-- weibo
-- square-instagram
-- linkedin-in
+| Solid                   | Regular        | Brands              |
+| :---------------------- | :------------- | :------------------ |
+| arrow-right             | angle-right    | facebook            |
+| asterisk                | arrow-right    | instagram           |
+| baby                    | calendar       | linkedin            |
+| book                    | calendar-days  | linkedin-in         |
+| brain                   | chevron-left   | pinterest           |
+| briefcase               | chevron-right  | square-instagram    |
+| briefcase-medical       | star           | square-pinterest    |
+| business-time           | stopwatch      | square-twitter      |
+| calendar                | user           | twitter             |
+| calendar-days           |                | weibo               |
+| caret-down              |                | weixin              |
+| caret-right             |                | youtube             |
+| check                   |                |                     |
+| chevron-left            |                |                     |
+| chevron-right           |                |                     |
+| chevrons-up             |                |                     |
+| child                   |                |                     |
+| circle                  |                |                     |
+| circle-arrow-right      |                |                     |
+| circle-check            |                |                     |
+| circle-exclamation      |                |                     |
+| circle-info             |                |                     |
+| circle-location-arrow   |                |                     |
+| circle-parking          |                |                     |
+| circle-pause            |                |                     |
+| circle-play             |                |                     |
+| circle-xmark            |                |                     |
+| clipboard               |                |                     |
+| clipboard-check         |                |                     |
+| clock                   |                |                     |
+| diamond-turn-right      |                |                     |
+| disease                 |                |                     |
+| dna                     |                |                     |
+| download                |                |                     |
+| envelope                |                |                     |
+| exclamation             |                |                     |
+| eye                     |                |                     |
+| filter                  |                |                     |
+| globe                   |                |                     |
+| hand                    |                |                     |
+| hand-heart              |                |                     |
+| head-side-brain         |                |                     |
+| head-side-medical       |                |                     |
+| head-side-virus         |                |                     |
+| heart-pulse             |                |                     |
+| house                   |                |                     |
+| house-medical           |                |                     |
+| info                    |                |                     |
+| leaf-heart              |                |                     |
+| list                    |                |                     |
+| location-arrow          |                |                     |
+| location-dot            |                |                     |
+| lungs                   |                |                     |
+| magnifying-glass        |                |                     |
+| map                     |                |                     |
+| map-location            |                |                     |
+| map-location-dot        |                |                     |
+| map-pin                 |                |                     |
+| mars                    |                |                     |
+| minus                   |                |                     |
+| newspaper               |                |                     |
+| phone                   |                |                     |
+| play                    |                |                     |
+| plus                    |                |                     |
+| receipt                 |                |                     |
+| ribbon                  |                |                     |
+| spa                     |                |                     |
+| spoon                   |                |                     |
+| square                  |                |                     |
+| square-check            |                |                     |
+| square-parking          |                |                     |
+| star                    |                |                     |
+| star-half               |                |                     |
+| star-of-life            |                |                     |
+| stethoscope             |                |                     |
+| stomach                 |                |                     |
+| stopwatch               |                |                     |
+| suitcase-medical        |                |                     |
+| thumbs-up               |                |                     |
+| user                    |                |                     |
+| venus                   |                |                     |
+| vial                    |                |                     |
+| virus                   |                |                     |
+| weight-scale            |                |                     |
+| xmark                   |                |                     |

@@ -1,0 +1,14 @@
+/**
+ * @file
+ * Nav styles.
+ */
+
+.nav__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-5);
+  margin-block-end: var(--size-8);
+
+  a {
+    font-size: inherit;
+  }
+}

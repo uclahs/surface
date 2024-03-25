@@ -167,6 +167,11 @@ messages:
   js:
     dist/js/message.js: {}
 
+nav:
+  css:
+    layout:
+      dist/css/nav.css: {}
+
 pager:
   css:
     component:
@@ -195,7 +200,12 @@ readtime:
 site-footer:
   css:
     component:
+      dist/css/copyright.css: {}
+      dist/css/menu-footer.css: {}
       dist/css/menu-social.css: {}
+      dist/css/menu-utility.css: {}
+      dist/css/site-credit.css: {}
+      dist/css/site-footer.css: {}
 
 site-header:
   css:

@@ -1,0 +1,7 @@
+---
+title_prefix: ''
+title_suffix: ''
+heading_id: 'menu'
+label: 'Menu'
+content: |-
+  <div style="border: var(--border-size-1) dashed var(--gray-300); color: var(--gray-600); padding: 1rem; max-inline-size: 100%; margin: 0;">Menu goes here</div>
