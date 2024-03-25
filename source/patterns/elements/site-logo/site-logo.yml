@@ -1,4 +1,4 @@
 ---
-modifier: ''
-logo: './images/logo.svg'
+modifier: 'site-logo--extended'
+logo: './images/logo-inverse.svg'
 site_name: ''
