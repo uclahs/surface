@@ -28,8 +28,7 @@
 
 /* Since the link is hidden by default, adding a parent selector here to be able
 to see it in Patternlab. */
-.skip-link.focusable:focus,
-.pl .skip-link {
+.skip-link.focusable:focus {
   height: 40px;
   outline: none;
   position: sticky;

@@ -3,9 +3,11 @@ extends:
 plugins:
   - stylelint-order
   - stylelint-selector-pseudo-class-lvhfa
+ignoreFiles:
+  - './dist/**'
 rules:
   at-rule-no-unknown: null
-  alpha-value-notation: number
+  alpha-value-notation: percentage
   color-function-notation: null
   declaration-empty-line-before: never
   declaration-block-no-redundant-longhand-properties: null

@@ -10,7 +10,7 @@ module.exports = {
     require('postcss-preset-env')({
       stage: 1,
       features: {
-        'custom-media-queries': { preserve: true },
+        'custom-media-queries': { preserve: false },
         'logical-properties-and-values': false,
       },
     }),

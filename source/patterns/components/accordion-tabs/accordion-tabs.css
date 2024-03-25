@@ -186,12 +186,12 @@
 
 @keyframes accordion-tabs-animation {
   from {
-    opacity: 0;
+    opacity: 0%;
     transform: translateY(-10px);
   }
 
   to {
-    opacity: 1;
+    opacity: 100%;
     transform: translateY(0);
   }
 }

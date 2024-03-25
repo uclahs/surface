@@ -45,13 +45,6 @@ table {
       outline-offset: 2px;
     }
   }
-
-  /* For Patternlab demo purposes only. */
-  .pl-demo & {
-    border-collapse: separate;
-    border-spacing: 1px;
-    padding-block: var(--size-15) !important;
-  }
 }
 
 :where(thead) {

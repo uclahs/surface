@@ -161,7 +161,7 @@
 .menu-main--level-2 {
   display: block;
   max-height: 0;
-  opacity: 0;
+  opacity: 0%;
   overflow: hidden;
   padding-block-end: var(--size-4);
   padding-inline-start: var(--size-6);
@@ -173,11 +173,11 @@
     background: var(--white);
     border-left: solid 1px transparent;
     border-top: 9px solid var(--ucla-blue);
-    box-shadow: 0 1px 36px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 1px 36px rgba(0, 0, 0, 80%);
     flex-basis: 100%;
     left: 50%;
     max-height: calc(100vh - 7.875rem);
-    opacity: 0;
+    opacity: 0%;
     padding-block: var(--size-6);
     padding-inline: var(--size-6);
     position: absolute;
@@ -189,11 +189,11 @@
 
   &.is-active-menu-parent {
     max-height: none;
-    opacity: 1;
+    opacity: 100%;
     visibility: visible;
 
     @media (--desktop) {
-      opacity: 1;
+      opacity: 100%;
       transform: translate(-50%, 0);
       visibility: visible;
     }
