@@ -167,6 +167,11 @@ messages:
   js:
     dist/js/message.js: {}
 
+metric:
+  css:
+    component:
+      dist/css/metric.css: {}
+
 nav:
   css:
     layout:
@@ -196,6 +201,11 @@ readtime:
   css:
     component:
       dist/css/readtime.css: {}
+
+search-results:
+  css:
+    component:
+      dist/css/search-results.css: {}
 
 site-footer:
   css:
