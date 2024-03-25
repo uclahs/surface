@@ -202,6 +202,11 @@ readtime:
     component:
       dist/css/readtime.css: {}
 
+search-results:
+  css:
+    component:
+      dist/css/search-results.css: {}
+
 site-footer:
   css:
     component:
