@@ -1,0 +1,52 @@
+{# For storybook purposes only. #}
+{% if is_demo %}
+  <figure class="image-embed{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+    {{ image }}
+  </figure>
+{% endif %}
+
+{# For Drupal. #}
+{% if mid %}
+  {% if 'ratio-box' in attributes.class %}
+    {% set image %}
+      {{ drupal_entity('media', mid, 'box_1_1') }}
+    {% endset %}
+  {% elseif 'ratio-photo' in attributes.class %}
+    {% set image %}
+      {{ drupal_entity('media', mid, 'photo_3_2') }}
+    {% endset %}
+  {% elseif 'ratio-portrait' in attributes.class %}
+    {% set image %}
+      {{ drupal_entity('media', mid, 'portrait_3_4') }}
+    {% endset %}
+  {% elseif 'ratio-landscape' in attributes.class %}
+    {% set image %}
+      {{ drupal_entity('media', mid, 'landscape_4_3') }}
+    {% endset %}
+  {% elseif 'ratio-widescreen' in attributes.class %}
+    {% set image %}
+      {{ drupal_entity('media', mid, 'widescreen_16_9') }}
+    {% endset %}
+  {% elseif 'ratio-cinemascope' in attributes.class %}
+    {% set image %}
+      {{ drupal_entity('media', mid, 'cinemascope_21_9') }}
+    {% endset %}
+  {% else %}
+    {% set image %}
+      {{ drupal_entity('media', mid, 'default') }}
+    {% endset %}
+  {% endif %}
+
+  <figure class="image-embed{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+    {{ image }}
+  </figure>
+{% else %}
+ <div class="image-embed{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+    <div class="prose">
+      <pre>No media exists, please update or delete this component.</pre>
+    </div>
+  </div>
+{% endif %}
