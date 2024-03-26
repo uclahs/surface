@@ -207,6 +207,11 @@ search-results:
     component:
       dist/css/search-results.css: {}
 
+share:
+  css:
+    component:
+      dist/css/share.css: {}
+
 site-footer:
   css:
     component:
