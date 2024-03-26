@@ -243,6 +243,11 @@ site-header:
     dist/js/menu-main.js: {}
     dist/js/menu-main-second-level.js: {}
 
+tabs:
+  css:
+    theme:
+      dist/css/tabs.css: {}
+
 tags:
   css:
     theme:
