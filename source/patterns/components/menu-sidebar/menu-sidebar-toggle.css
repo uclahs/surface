@@ -59,7 +59,7 @@
   }
 
   &[aria-expanded="true"] .icon::after {
-    opacity: 0;
+    opacity: 0%;
   }
 
   /* aria-hidden attribute is removed by JS. Button is non-functional  until JS is enabled. */
