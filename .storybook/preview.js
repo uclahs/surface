@@ -4,7 +4,8 @@ import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import twigDrupal from 'twig-drupal-filters';
 
 // Imports custom JS to allow Storybook to understand Drupal behaviors.
-import './drupal.js';
+import './drupal/drupal';
+import './drupal/once';
 
 // Imports FontAwesome icons from a specific kit.
 import 'https://kit.fontawesome.com/a0eb0bad75.js';

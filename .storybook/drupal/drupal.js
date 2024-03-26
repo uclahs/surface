@@ -1,3 +1,5 @@
+import "./drupalSettings";
+
 // Simple Drupal.behaviors usage for Storybook
 
 window.Drupal = { behaviors: {} };
