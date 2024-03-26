@@ -1,10 +1,10 @@
 ---
-is_demo: true
+menu_name: 'quicklinks'
 items:
   - title: 'Quick Link 1'
     url: '#'
-    in_active_trail: false
-    below: false
+    in_active_trail: true
+    is_active: true
   - title: 'Quick Link 2'
     url: '#'
     in_active_trail: false
