@@ -13,13 +13,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* Based on the production site (medschool.ucla.edu), the main content section
-  max-width is 1376px.  Setting the same here for when component is viewed in Patternlab. */
-  .pl & {
-    margin: 0 auto;
-    max-width: 1376px;
-  }
-
   /* In Articles, the readtime field needs a little spacing. */
   .readtime {
     margin-block-start: var(--size-2);

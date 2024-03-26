@@ -3,17 +3,20 @@ import { useEffect } from '@storybook/preview-api';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import twigDrupal from 'twig-drupal-filters';
 
-// Imports FontAwesome icons from a specific kit.
-import 'https://kit.fontawesome.com/a0eb0bad75.js';
-
 // Imports custom JS to allow Storybook to understand Drupal behaviors.
 import './drupal.js';
+
+// Imports FontAwesome icons from a specific kit.
+import 'https://kit.fontawesome.com/a0eb0bad75.js';
 
 // Imports all global props most of which are css custom properties.
 import '../dist/css/global.css';
 
 // Imports all custom CSS utilities.
 import '../dist/css/utilities.css';
+
+// Imports all Storybook CSS for display.
+import '../dist/css/storybook.css';
 
 // Imports the CSS for all components combined into a single stylesheet.
 import '../dist/css/styles.css';

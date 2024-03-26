@@ -55,10 +55,6 @@
 
   @media (--desktop) {
     display: none;
-
-    .pl & {
-      display: inline-block;
-    }
   }
 
   .line {

@@ -1,12 +1,14 @@
-@import "animations";
+/* Props - Do not sort */
+@import "media";
+@import "fonts";
+@import "sizes";
+@import "easing";
+@import "zindex";
+@import "shadows";
 @import "aspects";
+@import "colors";
+@import "animations";
 @import "borders";
 @import "brand";
-@import "colors";
-@import "easing";
-@import "fonts";
-@import "media";
-@import "shadows";
-@import "sizes";
 @import "theme";
-@import "zindex";
+

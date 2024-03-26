@@ -1,15 +1,15 @@
-@import "backgrounds";
+/* Utility styles - Do not sort. */
 @import "container";
-@import "deprecated";
 @import "grid";
 @import "layout";
-@import "list";
 @import "prose";
-@import "sizing";
+@import "backgrounds";
+@import "list";
 @import "spacing";
+@import "sizing";
 @import "svg";
 @import "text";
 @import "visibility";
 
-/* Styles for Base Storybook elements. */
-@import "scaffolding";
+/* Deprecated styles */
+@import "deprecated";
