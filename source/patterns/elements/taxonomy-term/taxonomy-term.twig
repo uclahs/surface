@@ -1,0 +1,12 @@
+<div class="taxonomy-term container grid grid--medium{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  {{ title_prefix }}
+  {% if name and not page %}
+    <h2><a href="{{ url }}">{{ name }}</a></h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  <div class="content">
+    {{ content }}
+  </div>
+</div>
