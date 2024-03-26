@@ -207,6 +207,19 @@ search-results:
     component:
       dist/css/search-results.css: {}
 
+share:
+  css:
+    component:
+      dist/css/share.css: {}
+
+menu-sidebar:
+  css:
+    component:
+      dist/css/menu-sidebar.css: {}
+      dist/css/menu-sidebar-toggle.css: {}
+  js:
+    dist/js/menu-sidebar.js: {}
+
 site-footer:
   css:
     component:

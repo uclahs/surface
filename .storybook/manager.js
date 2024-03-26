@@ -3,7 +3,8 @@ import surfaceTheme from './theme';
 
 addons.setConfig({
   theme: surfaceTheme,
+  // Collapses Stories roots by default for easier navigation.
   sidebar: {
-    collapsedRoots: ['elements', 'components', 'collections', 'layouts'],
+    collapsedRoots: ['base', 'elements', 'components', 'collections', 'layouts', 'pages'],
   },
 });

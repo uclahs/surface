@@ -1,0 +1,69 @@
+/**
+ * @file
+ * Sidebar toggle styling
+ */
+
+.sidebar-toggle {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  height: var(--size-8);
+  margin-block-start: var(--size-2); /* Visually align button with menu link text. */
+  overflow: hidden;
+  padding-block: 0;
+  padding-inline: 0;
+  position: relative;
+  text-indent: -999px;
+  width: var(--size-8);
+
+  &:focus {
+    outline: auto 2px var(--blue-500);
+    outline-offset: 2px;
+  }
+
+  & .icon {
+    border-radius: 2px;
+    height: 16px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s;
+    width: 16px;
+
+    &::before,
+    &::after {
+      border-top: solid 3px var(--ucla-blue);
+      content: "";
+      height: 0;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: var(--size-4);
+
+      .menu-sidebar--level-2 & {
+        border-top: solid 3px var(--ucla-blue);
+      }
+
+      .menu-sidebar--level-3 & {
+        border-top: solid 3px var(--malibu-dolphin);
+      }
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+      transition: opacity 0.2s;
+    }
+  }
+
+  &[aria-expanded="true"] .icon::after {
+    opacity: 0;
+  }
+
+  /* aria-hidden attribute is removed by JS. Button is non-functional  until JS is enabled. */
+  &[aria-hidden="true"] {
+    pointer-events: none;
+  }
+}
