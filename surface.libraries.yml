@@ -263,6 +263,16 @@ text:
     component:
       dist/css/text.css: {}
 
+translate:
+  css:
+    component:
+      dist/css/translate.css: {}
+  js:
+    dist/js/translate.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
 typewriter:
   css:
     component:
