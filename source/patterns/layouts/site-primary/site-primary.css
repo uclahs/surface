@@ -22,7 +22,7 @@
     padding-block: 0;
   }
 
-  .site-branding {
+  .site-logo {
     grid-column: span 3;
     grid-row: 1;
   }

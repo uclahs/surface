@@ -95,12 +95,6 @@
     visibility: visible;
   }
 
-  /* Visible in Pattern Lab */
-  &.is-pl {
-    opacity: 100%;
-    position: relative;
-  }
-
   .container {
     max-inline-size: 125ch;
   }
