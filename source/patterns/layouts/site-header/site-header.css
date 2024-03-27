@@ -1,0 +1,64 @@
+/**
+ * @file
+ * Site header.
+ */
+
+.site-header {
+  background-color: var(--white);
+  box-shadow: var(--shadow-2);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: var(--layer-30);
+
+  /* Take into account logged in user */
+  .gin--vertical-toolbar & {
+    top: 87px;
+
+    @media (--toolbar) {
+      top: 60px;
+    }
+  }
+}
+
+/* Take into account site alert */
+[data-alert="true"] {
+  .site-header {
+    top: -70px;
+  }
+
+  /* Take into account logged in user */
+  .gin--vertical-toolbar {
+    .site-header {
+      top: 18px;
+
+      @media (--toolbar) {
+        top: -9px;
+      }
+    }
+  }
+}
+
+/* Take into account node preview */
+[data-once="node-preview"] {
+  .site-header {
+    top: 109px;
+
+    @media (--toolbar) {
+      top: 70px;
+    }
+  }
+}
+
+/* Take into account alert and node preview */
+[data-alert="true"][data-once="node-preview"] {
+  .site-header {
+    top: 40px;
+
+    @media (--toolbar) {
+      top: 0;
+    }
+  }
+}

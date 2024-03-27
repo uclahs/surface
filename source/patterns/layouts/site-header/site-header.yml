@@ -1,0 +1,13 @@
+---
+logo: './images/logo.svg'
+data_menu:  'default'
+is_demo: true
+items:
+  - title: 'UCLA Health'
+    url: '#'
+    in_active_trail: false
+    below: false
+  - title: 'Departments'
+    url: '#'
+    in_active_trail: false
+    below: false
