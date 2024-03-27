@@ -1,0 +1,32 @@
+{{ attach_library('surface/tabs') }}
+
+<h2 id="{{ id }}" class="visually-hidden">{{ heading|t }}</h2>
+<nav role="navigation" class="tabs" aria-labelledby="{{ aria }}">
+  <ul class="tabs__list">
+    {% for tab in tabs %}
+      {% set tab_classes = [
+        'tabs__link',
+        tab.active ? 'is-active' : '',
+      ]|join(' ')|trim %}
+
+      <li class="tabs__item{% if tab.active %} is-active{% endif %}">
+        {% block link %}
+          <a href="{{ tab.url|default('#0') }}" class="{{ tab_classes }}">
+            {{ tab.text }}
+            {% if tab.active %}
+            <span class="visually-hidden">{{ (active_label|default('(active)'))|t }}</span>
+            {% endif %}
+          </a>
+        {% endblock %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% for tab_content in tabs_content %}
+    <div class="tabs__content{% if tab_content.hidden %} hidden{% endif %}">
+      {% block content %}
+        {{ tab_content.text }}
+      {% endblock %}
+    </div>
+  {% endfor %}
+</nav>

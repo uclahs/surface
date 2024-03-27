@@ -46,25 +46,6 @@
   }
 }
 
-.content-highlight__content {
-  .is-full-width & {
-    margin-inline: var(--size-4);
-
-    @media (--tablet) {
-      margin-inline: auto;
-      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
-    }
-
-    @media (--laptop) {
-      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
-    }
-
-    @media (--desktop) {
-      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
-    }
-  }
-}
-
 .content-highlight__featured {
   margin-block-start: var(--size-8);
 }
@@ -146,8 +127,7 @@
   }
 }
 
-.content-highlight__top,
-.content-highlight__bottom {
+.content-highlight__wave {
   display: none;
 
   @media (--tablet) {

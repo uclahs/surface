@@ -243,6 +243,16 @@ site-header:
     dist/js/menu-main.js: {}
     dist/js/menu-main-second-level.js: {}
 
+tabs:
+  css:
+    theme:
+      dist/css/tabs.css: {}
+  js:
+    dist/js/tabs.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
 tags:
   css:
     theme:
@@ -252,3 +262,22 @@ text:
   css:
     component:
       dist/css/text.css: {}
+
+translate:
+  css:
+    component:
+      dist/css/translate.css: {}
+  js:
+    dist/js/translate.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
+typewriter:
+  css:
+    component:
+      dist/css/typewriter.css: {}
+  js:
+    dist/js/typewriter.js: {}
+  dependencies:
+    - surface/typewriter-effect
