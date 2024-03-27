@@ -1,9 +1,9 @@
 'use strict';
 
 /* eslint no-param-reassign: "off" */
-/* eslint func-names: "off" */
 /* eslint object-shorthand: "off" */
 /* eslint no-undef: "off" */
+/* eslint func-names: "off" */
 
 ((Drupal, once) => {
   const translateContainer = document.querySelector('[data-drupal-selector="translate-container"]');

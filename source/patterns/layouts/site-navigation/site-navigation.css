@@ -1,0 +1,25 @@
+/**
+ * @file
+ * Site navigation.
+ */
+
+.site-navigation {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+
+  @media (--desktop) {
+    display: block;
+  }
+
+  /* Secondary menu mobile */
+  .menu-secondary {
+    display: block;
+
+    @media (--desktop) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+/**
+ * @file
+ * Main menu styling.
+ */
+
+.menu-secondary {
+  display: none;
+  list-style: none;
+  margin-block: 0;
+  margin-inline-end: 0;
+  margin-inline-start: calc(var(--size-4) * -1);
+
+  @media (--desktop) {
+    display: flex;
+    width: 100%;
+  }
+
+  .menu__link {
+    color: var(--midnight-joshua-tree);
+    display: block;
+    font-size: var(--font-size-2);
+    padding-block: var(--size-2);
+    padding-inline: var(--size-4);
+
+    @media (--desktop) {
+      color: var(--white);
+      font-size: var(--font-size-1);
+    }
+
+    &:hover {
+      @media (--desktop) {
+        color: var(--white);
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 var(--white), 0 0 0 2px var(--ucla-blue), 0 0 var(--white);
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+
+      @media (--desktop) {
+        box-shadow: 0 0 var(--white), 0 0 0 2px var(--white), 0 0 var(--white);
+      }
+    }
+  }
+}

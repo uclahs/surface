@@ -1,0 +1,33 @@
+---
+data_menu: 'default'
+is_demo: false
+items:
+  - title: 'Education'
+    url: '#'
+    in_active_trail: false
+    below: false
+  - title: 'Research'
+    url: '#'
+    in_active_trail: false
+    below: false
+  - title: 'Community and Equity'
+    url: '#'
+    in_active_trail: false
+    below: false
+  - title: 'Faculty and Staff'
+    url: '#'
+    in_active_trail: false
+    below: false
+  - title: 'About'
+    url: '#'
+    in_active_trail: false
+    below: false
+secondary_items:
+  - title: 'UCLA Health'
+    url: '#'
+    in_active_trail: false
+    below: false
+  - title: 'Departments'
+    url: '#'
+    in_active_trail: false
+    below: false
