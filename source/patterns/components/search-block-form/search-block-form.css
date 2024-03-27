@@ -1,0 +1,116 @@
+/**
+ * @file
+ * Search Block form.
+ */
+
+:where([data-theme="dgsom"]) {
+  --search-block-form-svg-color: var(--midnight-joshua-tree);
+  --search-block-form-box-shadow-color: var(--midnight-joshua-tree);
+}
+
+:where([data-theme="labs-dynamic"]) {
+  --search-block-form-svg-color: var(--midnight-joshua-tree);
+  --search-block-form-box-shadow-color: var(--midnight-joshua-tree);
+}
+
+.search-block-form {
+  background-color: var(--gray-900);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  /* Search block form in modal. */
+  .site-search--modal & {
+    background-color: transparent;
+  }
+
+  & input[type="search"] {
+    background-color: transparent;
+    background-image: linear-gradient(var(--ucla-blue), var(--ucla-blue));
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 0% var(--size-2);
+    border: solid 1px transparent;
+    color: var(--white);
+    font-size: var(--font-size-7);
+    height: var(--size-36);
+    padding-inline-end: 0;
+    padding-inline-start: var(--size-8);
+    transition: background-size 0.4s;
+    width: calc(100% + var(--size-8));
+
+    /* Search block form in modal. */
+    .site-search--modal & {
+      background-image: none;
+      border-color: var(--silver-screen);
+      border-radius: var(--size-2);
+      color: var(--midnight-joshua-tree);
+      height: 70px;
+      padding-inline-end: 80px;
+      transition: none;
+      width: 100%;
+    }
+
+    &:focus {
+      background-size: 100% var(--size-2);
+      outline: none;
+
+      /* Search block form in modal. */
+      .site-search--modal & {
+        box-shadow: 0 0 var(--white), 0 0 0 2px var(--search-block-form-box-shadow-color, var(--ucla-blue)), 0 0 var(--white);
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  .form-item {
+    flex-grow: 1;
+    margin: 0;
+  }
+
+  .form-actions {
+    margin-block: 0;
+
+    /* Search block form in modal. */
+    .site-search--modal & {
+      height: 70px;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .site-search__content & {
+    grid-column: 1 / 13;
+  }
+}
+
+.search-block-form__submit {
+  align-items: center;
+  align-self: stretch;
+  border-color: transparent;
+  color: var(--white);
+  display: flex;
+  height: auto;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+
+  /* Search block form in modal. */
+  .site-search--modal & {
+    color: var(--search-block-form-svg-color, var(--ucla-blue));
+  }
+
+  @media (--tablet) {
+    width: 80px;
+  }
+
+  &:focus {
+    outline: solid 4px transparent;
+  }
+
+  svg {
+    width: 24px;
+  }
+}
