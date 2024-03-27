@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import secondary from './site-secondary.twig';
 
 const settings = {
-  title: 'Components/Site secondary',
+  title: 'Layouts/Site secondary',
 };
 
 export const SiteSecondary = {

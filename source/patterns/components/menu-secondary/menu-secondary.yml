@@ -1,5 +1,5 @@
 ---
-is_demo: false
+is_demo: true
 items:
   - title: 'UCLA Health'
     url: '#'
