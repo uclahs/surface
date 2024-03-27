@@ -220,6 +220,11 @@ menu-sidebar:
   js:
     dist/js/menu-sidebar.js: {}
 
+search-block-form:
+  css:
+    component:
+      dist/css/search-block-form.css: {}
+
 site-footer:
   css:
     component:
@@ -233,15 +238,26 @@ site-footer:
 site-header:
   css:
     component:
-      dist/css/mobile-button.css: {}
+      dist/css/site-header.css: {}
       dist/css/site-alert.css: {}
+      dist/css/site-secondary.css: {}
+      dist/css/menu-secondary.css: {}
+      dist/css/site-primary.css: {}
       dist/css/site-logo.css: {}
+      dist/css/site-navigation.css: {}
+      dist/css/mobile-button.css: {}
       dist/css/menu-main.css: {}
       dist/css/menu-toggle.css: {}
   js:
     dist/js/menu-utils.js: {}
     dist/js/menu-main.js: {}
     dist/js/menu-main-second-level.js: {}
+    dist/js/button-search.js: {}
+
+site-search:
+  css:
+    component:
+      dist/css/site-search.css: {}
 
 tags:
   css:
