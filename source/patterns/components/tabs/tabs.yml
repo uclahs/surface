@@ -1,0 +1,22 @@
+---
+id: 'tabs-title'
+heading: 'Tabs'
+aria: 'tabs-title'
+tabs:
+  -
+    text: 'Tab One'
+    active: true
+    content: 'Tab One content'
+  -
+    text: 'Tab Two'
+  -
+    text: 'Tab Three'
+tabs_content:
+  -
+    text: 'Tab One content'
+  -
+    text: 'Tab Two content'
+    hidden: true
+  -
+    text: 'Tab Three content'
+    hidden: true
