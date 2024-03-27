@@ -1,0 +1,51 @@
+/**
+ * @file
+ * Site primary.
+ */
+
+.site-primary {
+  background-color: var(--white);
+}
+
+.site-primary__content {
+  align-items: center;
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  padding-block: var(--size-4);
+  position: relative;
+  width: 100%;
+
+  @media (--desktop) {
+    min-height: 92px;
+    padding-block: 0;
+  }
+
+  .site-branding {
+    grid-column: span 3;
+    grid-row: 1;
+  }
+
+  .mobile-button {
+    grid-column: 4;
+    grid-row: 1;
+
+    @media (--desktop) {
+      grid-column: 0;
+      grid-row: 0;
+    }
+  }
+
+  .site-navigation {
+    grid-column: span 4;
+    grid-row: 2;
+    margin-block-start: var(--size-6);
+
+    @media (--desktop) {
+      grid-column: span 3;
+      grid-row: 1;
+      margin-block-start: 0;
+    }
+  }
+}
