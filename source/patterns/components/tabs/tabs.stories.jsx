@@ -2,6 +2,7 @@ import parse from 'html-react-parser';
 
 import tabs from './tabs.twig';
 import data from './tabs.yml';
+import './tabs';
 
 const settings = {
   title: 'Components/Tabs',

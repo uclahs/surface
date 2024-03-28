@@ -22,9 +22,6 @@ import '../dist/css/storybook.css';
 // Imports the CSS for all components combined into a single stylesheet.
 import '../dist/css/styles.css';
 
-// Imports JS for any components that need it combined into a single script file.
-import '../dist/js/scripts.js';
-
 function setupTwig(twig) {
   twig.cache();
   twigDrupal(twig);

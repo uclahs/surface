@@ -4,20 +4,61 @@ import yml from '@modyfi/vite-plugin-yaml';
 import { join } from 'node:path';
 import checker from 'vite-plugin-checker';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-import path from 'path';
-import { glob } from 'glob';
+import fg from 'fast-glob';
 import { watchAndRun } from 'vite-plugin-watch-and-run';
+import { viteExternalsPlugin } from 'vite-plugin-externals';
 
 export default defineConfig({
   plugins: [
+    viteExternalsPlugin({
+      drupal: 'Drupal',
+      drupalSettings: 'drupalSettings',
+      once: 'once',
+    }),
+    // Linting for js and css.
     checker({
       eslint: {
-        lintCommand: 'eslint "./source/patterns/**/*.{js,jsx}"',
+        lintCommand: 'eslint "source/patterns/**/*.{js,jsx}"',
       },
       stylelint: {
-        lintCommand: 'stylelint "./source/patterns/**/*.css"',
+        lintCommand: 'stylelint "source/patterns/**/*.css"',
       },
     }),
+    // Copy js and images from source to dist
+    viteStaticCopy({
+      targets: [{
+        src: 'source/patterns/**/*.js',
+        dest: 'js',
+      },
+      {
+        src: 'source/patterns/**/*.{png,jpg,jpeg,svg,webp}',
+        dest: 'images',
+      }],
+    }),
+    // Watch for css, js and image changes.
+    watchAndRun([
+      {
+        name: 'css',
+        watchKind: ['add', 'change', 'unlink'],
+        watch: fg.sync('source/patterns/**/*.css', { absolute: true }),
+        run: 'npm run build',
+        delay: 300,
+      },
+      {
+        name: 'js',
+        watchKind: ['add', 'change', 'unlink'],
+        watch: fg.sync('source/patterns/**/*.js', { absolute: true }),
+        run: 'npm run build',
+        delay: 300,
+      },
+      {
+        name: 'images',
+        watchKind: ['add', 'change', 'unlink'],
+        watch: fg.sync('source/patterns/**/images/*.{png,jpg,jpeg,svg,webp}', { absolute: true }),
+        run: 'npm run build',
+        delay: 300,
+      },
+    ]),
     // Twig namespaces for including components.
     twig({
       namespaces: {
@@ -32,54 +73,15 @@ export default defineConfig({
     }),
     // YML for including data.
     yml(),
-    // Copy static images from `source` to `dist/images`
-    viteStaticCopy({
-      targets: [
-        {
-          src: './source/patterns/**/*.{png,jpg,jpeg,svg,webp}',
-          dest: 'images',
-        },
-      ],
-    }),
-    watchAndRun([
-      {
-        name: 'css',
-        watchKind: ['add', 'change', 'unlink'],
-        watch: path.resolve('source/patterns/**/*.css'),
-        run: 'vite build',
-        delay: 300,
-      },
-      {
-        name: 'js',
-        watchKind: ['add', 'change', 'unlink'],
-        watch: path.resolve('source/patterns/**/*.js'),
-        run: 'vite build',
-        delay: 300,
-      },
-      {
-        name: 'images',
-        watchKind: ['add', 'change', 'unlink'],
-        watch: path.resolve('source/patterns/**/images/*.{png,jpg,jpeg,svg,webp}'),
-        run: 'vite build',
-        delay: 300,
-      },
-    ]),
   ],
   build: {
     emptyOutDir: true,
     minify: false,
     outDir: 'dist',
     rollupOptions: {
-      // Recursively globbing through all css/js files within the source directory.
-      input: [
-        ...glob.sync(path.resolve(__dirname, 'source/patterns/**/*.{css,js}')),
-        // Next line captures the scripts.js file which includes all components' JS.
-        ...glob.sync(path.resolve(__dirname, 'source/patterns/*.js')),
-      ],
+      input: fg.sync('source/patterns/**/*.css', { absolute: true }),
       output: {
-        // Outputs assets into their respective directories within `dist`..
         assetFileNames: 'css/[name].css',
-        entryFileNames: 'js/[name].js',
       },
     },
     sourcemap: true,

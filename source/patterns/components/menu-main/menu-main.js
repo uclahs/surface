@@ -1,11 +1,6 @@
-'use strict';
+/* eslint-disable */
 
-/* eslint no-param-reassign: "off" */
-/* eslint func-names: "off" */
-/* eslint object-shorthand: "off" */
-/* eslint no-undef: "off" */
-
-((Drupal) => {
+((Drupal, once) => {
   const menuContainer = document.querySelector('[data-drupal-selector="site-navigation"]');
 
   Drupal.behaviors.surfaceMenu = {
@@ -63,6 +58,7 @@
     // Show menu
     showMenu: () => {
       const mobileButton = document.querySelector('[data-drupal-selector="mobile-button"]');
+      const menuContainer = document.querySelector('[data-drupal-selector="site-navigation"]');
 
       mobileButton.setAttribute('aria-expanded', 'true');
       menuContainer.classList.add('is-active');
@@ -71,9 +67,10 @@
     // Collapse menu
     collapseMenu: () => {
       const mobileButton = document.querySelector('[data-drupal-selector="mobile-button"]');
+      const menuContainer = document.querySelector('[data-drupal-selector="site-navigation"]');
 
       mobileButton.setAttribute('aria-expanded', 'false');
       menuContainer.classList.remove('is-active');
     },
   };
-})(Drupal);
+})(Drupal, once);

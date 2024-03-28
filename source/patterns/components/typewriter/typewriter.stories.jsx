@@ -2,6 +2,8 @@ import parse from 'html-react-parser';
 
 import typewriter from './typewriter.twig';
 import data from './typewriter.yml';
+import './typewriter.core';
+import './typewriter';
 
 const settings = {
   title: 'Components/Typewriter',

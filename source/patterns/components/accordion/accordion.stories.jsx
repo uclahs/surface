@@ -5,6 +5,7 @@ import { SantaBarbaraSandBg, VeniceCanalBg } from '../../../../.storybook/decora
 
 import accordion from './accordion.twig';
 import data from './accordion.yml';
+import './accordion';
 
 const settings = {
   title: 'Components/Accordion',
