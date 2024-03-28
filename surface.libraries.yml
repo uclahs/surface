@@ -9,6 +9,11 @@ global:
       dist/css/field.css: {}
       dist/css/links.css: {}
       dist/css/skip-link.css: {}
+    layout:
+      dist/css/layout.css: {}
+      dist/css/block.css: {}
+      dist/css/main.css: {}
+      dist/css/view.css: {}
   dependencies:
     - surface/fontawesome
 
@@ -123,6 +128,11 @@ eyebrow:
     component:
       dist/css/eyebrow.css: {}
 
+facet-block:
+  css:
+    layout:
+      dist/css/facet-block.css: {}
+
 featured-card:
   css:
     component:
@@ -144,6 +154,16 @@ icon:
   css:
     theme:
       dist/css/icon.css: {}
+
+layout-views-grid-horizontal:
+  css:
+    layout:
+      dist/css/layout-views-grid-horizontal.css: {}
+
+layout-views-grid-vertical:
+  css:
+    layout:
+      dist/css/layout-views-grid-vertical.css: {}
 
 media-quote:
   css:
@@ -177,10 +197,20 @@ nav:
     layout:
       dist/css/nav.css: {}
 
+page:
+  css:
+    component:
+      dist/css/page.css: {}
+
 pager:
   css:
     component:
       dist/css/pager.css: {}
+
+page-listing:
+  css:
+    component:
+      dist/css/page-listing.css: {}
 
 person-card:
   css:
@@ -297,3 +327,18 @@ typewriter:
     dist/js/typewriter.js: {}
   dependencies:
     - surface/typewriter-effect
+
+view-event:
+  css:
+    layout:
+      dist/css/view-event.css: {}
+
+view-grid:
+  css:
+    layout:
+      dist/css/view-grid.css: {}
+
+view-listing:
+  css:
+    layout:
+      dist/css/view-listing.css: {}

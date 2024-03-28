@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Block styles.
+ */
+
+.block__title {
+  color: var(--gray-900);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-2);
+  letter-spacing: 0.02em;
+  line-height: var(--leading-tight);
+  margin-block: 0 var(--size-4);
+}

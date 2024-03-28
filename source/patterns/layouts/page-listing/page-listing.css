@@ -1,0 +1,36 @@
+/**
+ * @file
+ * Page listing styles.
+ */
+
+.page-listing {
+  position: relative;
+}
+
+.page-listing__type {
+  font-size: var(--font-size-0);
+  margin-block-end: var(--size-2);
+}
+
+.page-listing__title {
+  font-size: var(--font-size-5);
+  line-height: var(--leading-tight);
+
+  a {
+    color: var(--ucla-blue);
+    transition-duration: 0.2s;
+    transition-property: color;
+
+    &:hover {
+      color: var(--silver-lake-reservoir);
+    }
+  }
+}
+
+.page-listing__title ~ .page-listing__subtitle {
+  margin-block-start: var(--size-3);
+}
+
+.page-listing__teaser {
+  margin-block-start: var(--size-3);
+}

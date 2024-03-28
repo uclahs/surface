@@ -1,0 +1,19 @@
+/**
+ * @file
+ * View grid styles.
+ */
+
+.view-grid__container {
+  padding-block: var(--size-8);
+  width: 100%;
+}
+
+.view-grid__grid {
+  display: grid;
+  gap: var(--size-8);
+  grid-gap: var(--size-8);
+
+  @media (--tablet) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

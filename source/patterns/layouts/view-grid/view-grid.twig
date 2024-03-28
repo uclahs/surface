@@ -1,0 +1,24 @@
+{% if rows %}
+  {{ attach_library('surface/view-grid') }}
+
+  <div class="view-grid{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+    <div class="view-grid__container">
+      {{ title_prefix }}
+      {% if title %}
+        {{ title }}
+      {% endif %}
+      {{ title_suffix }}
+
+      {% if rows %}
+        <div class="view-grid__grid has--narrow-cards">
+          {{ rows }}
+        </div>
+      {% elseif empty %}
+        <div class="view-grid__empty">
+          {{ empty }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

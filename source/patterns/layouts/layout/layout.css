@@ -1,0 +1,287 @@
+/*
+ * @file
+ * Provides default layout styles for all layout sections and main section.
+ */
+
+.layout {
+  display: grid;
+  gap: var(--size-8);
+  grid-auto-flow: row;
+}
+
+.layout__region {
+  min-width: 0;
+  width: 100%;
+}
+
+/* One Column */
+.layout--onecol {
+  grid-template-columns: 1fr;
+
+  .layout--onecol {
+    margin-inline: var(--size-4);
+
+    @media (--tablet) {
+      margin-inline: auto;
+      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
+    }
+
+    @media (--laptop) {
+      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
+    }
+
+    @media (--desktop) {
+      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
+    }
+  }
+}
+
+/* Two Column */
+.layout--twocol {
+  @media (--tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .layout--onecol & {
+    margin-inline: var(--size-4);
+
+    @media (--tablet) {
+      margin-inline: auto;
+      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
+    }
+
+    @media (--laptop) {
+      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
+    }
+
+    @media (--desktop) {
+      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
+    }
+  }
+}
+
+.layout--twocol-30-70 {
+  @media (--tablet) {
+    grid-template-columns: 3fr 7fr;
+  }
+
+  .layout--onecol & {
+    margin-inline: var(--size-4);
+
+    @media (--tablet) {
+      margin-inline: auto;
+      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
+    }
+
+    @media (--laptop) {
+      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
+    }
+
+    @media (--desktop) {
+      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
+    }
+  }
+}
+
+.layout--twocol-70-30 {
+  @media (--tablet) {
+    grid-template-columns: 7fr 3fr;
+  }
+
+  .layout--onecol & {
+    margin-inline: var(--size-4);
+
+    @media (--tablet) {
+      margin-inline: auto;
+      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
+    }
+
+    @media (--laptop) {
+      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
+    }
+
+    @media (--desktop) {
+      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
+    }
+  }
+}
+
+/* Three Column */
+.layout--threecol {
+  @media (--tablet) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .layout--onecol & {
+    margin-inline: var(--size-4);
+
+    @media (--tablet) {
+      margin-inline: auto;
+      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
+    }
+
+    @media (--laptop) {
+      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
+    }
+
+    @media (--desktop) {
+      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
+    }
+  }
+}
+
+.layout--threecol-25-25-50 {
+  @media (--tablet) {
+    grid-template-columns: 2.5fr 2.5fr 5fr;
+  }
+
+  .layout--onecol & {
+    margin-inline: var(--size-4);
+
+    @media (--tablet) {
+      margin-inline: auto;
+      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
+    }
+
+    @media (--laptop) {
+      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
+    }
+
+    @media (--desktop) {
+      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
+    }
+  }
+}
+
+.layout--threecol-25-50-25 {
+  @media (--tablet) {
+    grid-template-columns: 2.5fr 5fr 2.5fr;
+  }
+
+  .layout--onecol & {
+    margin-inline: var(--size-4);
+
+    @media (--tablet) {
+      margin-inline: auto;
+      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
+    }
+
+    @media (--laptop) {
+      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
+    }
+
+    @media (--desktop) {
+      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
+    }
+  }
+}
+
+.layout--threecol-50-25-25 {
+  @media (--tablet) {
+    grid-template-columns: 5fr 2.5fr 2.5fr;
+  }
+
+  .layout--onecol & {
+    margin-inline: var(--size-4);
+
+    @media (--tablet) {
+      margin-inline: auto;
+      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
+    }
+
+    @media (--laptop) {
+      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
+    }
+
+    @media (--desktop) {
+      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
+    }
+  }
+}
+
+/* Four Column */
+.layout--fourcol {
+  @media (--mobile) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (--tablet) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .layout--onecol & {
+    margin-inline: var(--size-4);
+
+    @media (--tablet) {
+      margin-inline: auto;
+      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
+    }
+
+    @media (--laptop) {
+      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
+    }
+
+    @media (--desktop) {
+      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
+    }
+  }
+}
+
+/* Six Column */
+.layout--sixcol {
+  @media (--tablet) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (--laptop) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .layout--onecol & {
+    margin-inline: var(--size-4);
+
+    @media (--tablet) {
+      margin-inline: auto;
+      max-inline-size: calc(var(--size-tablet) - var(--size-4) * 2);
+    }
+
+    @media (--laptop) {
+      max-inline-size: calc(var(--size-laptop) - var(--size-4) * 2);
+    }
+
+    @media (--desktop) {
+      max-inline-size: calc(var(--size-container) - var(--size-8) * 2);
+    }
+  }
+}
+
+/* Styles for background color options within the layout selection screen. */
+[data-drupal-selector="edit-layout-paragraphs-config-layout-background"] {
+  .form-type--boolean {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Each color option is a radio button. */
+  input[type="radio"] {
+    border-radius: var(--size-1) !important;
+    height: var(--size-20)!important;
+    width: var(--size-20)!important;
+
+    /* Santa Barbara Sand color option. */
+    &[value="bg-santa-barbara-sand"] {
+      background-color: var(--santa-barbara-sand) !important;
+    }
+
+    /* Venice Canal color option. */
+    &[value="bg-venice-canal"] {
+      background-color: var(--venice-canal) !important;
+    }
+  }
+}
+
+/* Main content Layout. */
+.main {
+  position: relative;
+  width: 100%;
+}
