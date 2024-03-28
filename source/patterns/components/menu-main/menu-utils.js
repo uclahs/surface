@@ -1,12 +1,10 @@
-'use strict';
-
-/* eslint no-param-reassign: "off" */
+/* eslint-disable */
 
 ((Drupal) => {
   Drupal.surface = {};
 
   function isDesktopNav() {
-    const navButtons = document.querySelector('[data-drupal-selector="mobile-button"]');
+    var navButtons = document.querySelector('[data-drupal-selector="mobile-button"]');
     return navButtons ? window.getComputedStyle(navButtons).getPropertyValue('display') === 'none' : false;
   }
 

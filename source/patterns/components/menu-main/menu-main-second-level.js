@@ -1,9 +1,4 @@
-'use strict';
-
-/* eslint no-param-reassign: "off" */
-/* eslint func-names: "off" */
-/* eslint no-undef: "off" */
-/* eslint prefer-destructuring: "off" */
+/* eslint-disable */
 
 ((Drupal) => {
   const isDesktopNav = Drupal.surface.isDesktopNav;
@@ -12,7 +7,7 @@
   function toggleSubNav(topLevelMenuItem, toState) {
     const buttonSelector = '[data-drupal-selector="menu-toggle"]';
     const button = topLevelMenuItem.querySelector(buttonSelector);
-    const state = toState !== undefined ? toState : button.getAttribute('aria-expanded') !== 'true';
+    let state = toState !== undefined ? toState : button.getAttribute('aria-expanded') !== 'true';
 
     if (state) {
       if (isDesktopNav()) {
@@ -65,7 +60,7 @@
 
     secondLevelNavMenus.forEach(function (el) {
       const button = el.querySelector('[data-drupal-selector="menu-toggle"]');
-      const state = button.getAttribute('aria-expanded') === 'true';
+      let state = button.getAttribute('aria-expanded') === 'true';
 
       if (state) {
         subNavsAreOpen = true;

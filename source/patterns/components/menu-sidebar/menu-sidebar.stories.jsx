@@ -2,6 +2,7 @@ import parse from 'html-react-parser';
 
 import sidebar from './menu-sidebar.twig';
 import data from './menu-sidebar.yml';
+import './menu-sidebar';
 
 const settings = {
   title: 'Components/Menu sidebar',
