@@ -1,0 +1,15 @@
+<div class="site-container">
+  {% block header %}
+    {{ header }}
+  {% endblock %}
+
+  <main id="main-content" tabindex="-1" role="main" class="main">
+    {% block main %}
+      {{ main }}
+    {% endblock %}
+  </main>
+
+  {% block footer %}
+    {{ footer }}
+  {% endblock %}
+</div>

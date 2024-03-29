@@ -1,0 +1,102 @@
+/**
+ * @file
+ * Responsive styles for views grid vertical layout.
+ */
+
+.views-view-grid--vertical {
+  column-gap: var(--size-4);
+  margin-block-end: calc(-1 * var(--size-4)); /* Offset the bottom row's padding. */
+
+  &.cols-2 {
+    @media (--mobile) {
+      column-count: 2;
+    }
+  }
+
+  &.cols-3 {
+    @media (--mobile) {
+      column-count: 2;
+    }
+
+    @media (--tablet) {
+      column-count: 3;
+    }
+  }
+
+  &.cols-4 {
+    @media (--mobile) {
+      column-count: 2;
+    }
+
+    @media (--tablet) {
+      column-count: 3;
+    }
+
+    @media (--laptop) {
+      column-count: 4;
+    }
+  }
+
+  &.cols-5 {
+    @media (--mobile) {
+      column-count: 2;
+    }
+
+    @media (--tablet) {
+      column-count: 3;
+    }
+
+    @media (--laptop) {
+      column-count: 5;
+    }
+  }
+
+  &.cols-6 {
+    @media (--mobile) {
+      column-count: 2;
+    }
+
+    @media (--tablet) {
+      column-count: 3;
+    }
+
+    @media (--laptop) {
+      column-count: 6;
+    }
+  }
+
+  &.cols-7 {
+    @media (--mobile) {
+      column-count: 2;
+    }
+
+    @media (--tablet) {
+      column-count: 3;
+    }
+
+    @media (--laptop) {
+      column-count: 7;
+    }
+  }
+
+  &.cols-8 {
+    @media (--mobile) {
+      column-count: 2;
+    }
+
+    @media (--tablet) {
+      column-count: 4;
+    }
+
+    @media (--laptop) {
+      column-count: 8;
+    }
+  }
+
+  & .views-view-grid__item {
+    & > * {
+      break-inside: avoid;
+      padding-block-end: var(--size-4);
+    }
+  }
+}

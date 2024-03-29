@@ -1,0 +1,25 @@
+/**
+ * @file
+ * Facet block styles.
+ */
+
+.facet-block {
+  margin-block-end: var(--size-3);
+}
+
+.facet-block__title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-700);
+  margin-block-end: var(--size-3);
+  margin-block-start: var(--size-8);
+}
+
+.facets-soft-limit-link {
+  display: block;
+  font-size: var(--font-size-0);
+  margin-block-start: var(--size-2);
+}
+
+.facet-item {
+  display: flex;
+}

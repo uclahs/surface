@@ -1,0 +1,43 @@
+{{ attach_library('surface/view-listing') }}
+
+<div class="view-listing{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  {% if exposed %}
+    <div class="view-listing__exposed">
+      {{ exposed }}
+    </div>
+  {% endif %}
+
+  <div class="view-listing__grid container">
+    <div class="view-listing__aside">
+      <div class="view-listing__bg">
+        <h2 role="heading">Filter Results</h2>
+        {% if facets %}
+          <div class="view-listing__facets">
+            {{ facets }}
+          </div>
+        {% endif %}
+
+        <a class="button button--primary" href="{{ path }}">
+          Reset Search
+        </a>
+      </div>
+    </div>
+
+    <div class="view-listing__content">
+      {% if rows %}
+        <div class="view-content">
+          {{ rows }}
+        </div>
+      {% elseif empty %}
+        <div class="view-empty">
+          {{ empty }}
+        </div>
+      {% endif %}
+
+      {% if pager %}
+        {{ pager }}
+      {% endif %}
+    </div>
+  </div>
+</div>
