@@ -1,0 +1,24 @@
+{{ attach_library('surface/search-block-form') }}
+
+{% set classes = [
+  'search-block-form',
+  modifier ? modifier,
+  attributes ? attributes.class
+]|join(' ')|trim %}
+
+{% set id = random(1, 100) %}
+
+<form action="{{ action|default('/search') }}" method="get" id="search-block-form--{{ id }}" accept-charset="UTF-8" class="{{ classes }}">
+  <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+    <label for="edit-keywords" class="form-item__label visually-hidden">Search</label>
+    <input title="{{ title|default('Enter the terms you wish to search for.') }}" placeholder="{{ placeholder|default('Search by keyword or phrase.') }}" data-drupal-selector="edit-keys" type="search" id="edit-keywords" name="keywords" value="" size="15" maxlength="128" class="form-search form-element form-element--type-search form-element--api-search">
+  </div>
+  <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--{{ id }}">
+    <button class="search-block-form__submit js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit--{{ id }}" value="Search">
+      <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 23">
+        <path fill="currentColor" d="M21.7,21.3l-4.4-4.4C19,15.1,20,12.7,20,10c0-5.5-4.5-10-10-10S0,4.5,0,10s4.5,10,10,10c2.1,0,4.1-0.7,5.8-1.8l4.5,4.5c0.4,0.4,1,0.4,1.4,0S22.1,21.7,21.7,21.3z M10,18c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S14.4,18,10,18z"></path>
+      </svg>
+      <span class="visually-hidden">Search</span>
+    </button>
+  </div>
+</form>

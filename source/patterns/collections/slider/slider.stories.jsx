@@ -5,7 +5,7 @@ import { SantaBarbaraSandBg, VeniceCanalBg } from '../../../../.storybook/decora
 
 import slider from './slider.twig';
 import data from './slider.yml';
-import '../../../../dist/js/glide.min';
+import '../carousel/glide.min';
 import './slider';
 
 const settings = {
