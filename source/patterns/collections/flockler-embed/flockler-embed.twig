@@ -1,0 +1,23 @@
+{{ attach_library('surface/flockler-embed') }}
+
+<section class="flockler-embed prose container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  {% if title %}
+    {% include "@elements/title/title.twig" with {
+        'title': title,
+      } only
+    %}
+  {% endif %}
+
+  {% if description %}
+    <p>{{ description }}</p>
+  {% endif %}
+
+  {% if flockler_id and script_src %}
+    {# Adding the spaceless filter to remove an empty space in the wrapper div when no title or description
+    is added to the paragraph type. This allows for the inline styles in `paragraph--flockler-embed.html.twig`
+    to add a placeholder string to make the paragraph type editable. #}
+      <div class="flockler-embed__feed" id="{{ flockler_id }}"></div>
+      <script src="{{ script_src }}" async></script>
+  {% endif %}
+</section>

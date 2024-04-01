@@ -152,6 +152,11 @@ feed-icon:
     theme:
       dist/css/feed-icon.css: {}
 
+flockler-embed:
+  css:
+    component:
+      dist/css/flockler-embed.css: {}
+
 fontawesome:
   js:
     'https://kit.fontawesome.com/a0eb0bad75.js': { type: external, minified: true, attributes: { defer: true, crossorigin: anonymous } }

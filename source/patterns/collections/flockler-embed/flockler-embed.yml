@@ -1,0 +1,10 @@
+is_demo: true
+modifier: ''
+title:
+  level: 2
+  modifier: ''
+  text: 'This is my awesome Flockler feed'
+  url: ''
+description: 'Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor.'
+flockler_id: 'flockler-embed-171f6b689460b8d457eaf44e46bb40b8'
+script_src: 'https://plugins.flockler.com/embed/171ea38c61405f637ceffec459e44ed7/171f6b689460b8d457eaf44e46bb40b8'
