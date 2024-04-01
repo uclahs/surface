@@ -1,0 +1,36 @@
+{{ attach_library('surface/slider-item') }}
+
+<li class="slider glide{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+  <div class="slider-item__image">
+    {{ image }}
+    {% if 'has-overlay' in image_overlay %}
+      <div class="slider-item__image-overlay"></div>
+    {% endif %}
+  </div>
+
+  {% if title or 'is-top' in button_placement and url %}
+    <div class="slider-item__top">
+      <div class="slider-item__body">
+        <div class="slider-item__title">
+          <span>{{ title }}</span>
+        </div>
+
+        {% if 'is-top' in button_placement and url %}
+          <a class="button button--secondary" href="{{ url }}">{{ url_title }}</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if wysiwyg or url %}
+    <div class="slider-item__bottom">
+      <div class="slider-item__text">
+        {{ wysiwyg }}
+
+        {% if 'is-top' not in button_placement and url %}
+          <a class="button button--secondary" href="{{ url }}">{{ url_title }}</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+</li>

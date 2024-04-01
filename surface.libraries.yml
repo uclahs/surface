@@ -319,6 +319,15 @@ site-search:
     component:
       dist/css/site-search.css: {}
 
+slider:
+  css:
+    component:
+      dist/css/slider-item.css: {}
+  js:
+    dist/js/slider.js: {}
+  dependencies:
+    - surface/glide
+
 tabs:
   css:
     theme:
