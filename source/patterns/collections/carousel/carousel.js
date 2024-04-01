@@ -1,5 +1,4 @@
 /* eslint-disable */
-'use strict';
 
 ((Drupal) => {
   Drupal.behaviors.surfaceCarousel = {
