@@ -21,8 +21,6 @@ ignorePatterns:
   - dist/
   - .eslintrc.yml
   - '*.config.js'
-  - '*accordion-tabs.min.js'
-  - '*glide.min.js'
 rules:
   strict: 0
   import/no-extraneous-dependencies: 0

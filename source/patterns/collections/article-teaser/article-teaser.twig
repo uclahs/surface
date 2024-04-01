@@ -1,7 +1,6 @@
 {{ attach_library('surface/article-teaser') }}
 
-<article class="article-teaser{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<article class="article-teaser{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {% if image %}
     <div class="article-teaser__image">
       {{ image }}
