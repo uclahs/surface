@@ -9,6 +9,7 @@ global:
       dist/css/field.css: {}
       dist/css/links.css: {}
       dist/css/skip-link.css: {}
+      dist/css/views-exposed-form.css: {}
     layout:
       dist/css/layout.css: {}
       dist/css/block.css: {}
@@ -247,6 +248,11 @@ person-directory:
     component:
       dist/css/person-directory.css: {}
 
+person-header:
+  css:
+    component:
+      dist/css/person-header.css: {}
+
 quote:
   css:
     component:
@@ -314,6 +320,22 @@ site-search:
     component:
       dist/css/site-search.css: {}
 
+slider:
+  js:
+    dist/js/slider.js: {}
+  dependencies:
+    - surface/glide
+
+slider-item:
+  css:
+    theme:
+      dist/css/slider-item.css: {}
+
+slider-item-preview:
+  css:
+    theme:
+      dist/css/slider-item-preview.css: {}
+
 tabs:
   css:
     theme:
@@ -367,3 +389,8 @@ view-listing:
   css:
     layout:
       dist/css/view-listing.css: {}
+
+view-listing-form:
+  css:
+    component:
+      dist/css/view-listing-form.css: {}

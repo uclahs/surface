@@ -1,0 +1,103 @@
+/**
+ * @file
+ * Person header component.  It's meant to be within the page header..
+ *
+ */
+
+.person-header {
+  background-color: transparent;
+  color: var(--white);
+  margin-block-start: var(--size-6);
+  margin-inline: auto;
+  max-width: var(--size-mobile);
+
+  @media (--tablet) {
+    display: grid;
+    gap: var(--size-10);
+
+    /* To avoid text going outside the grid parameters, we're setting specific
+    dimensions and ensure text wraps properly. */
+    grid-template-columns: var(--size-60) calc(100% - 280px);
+    margin-inline: initial;
+    max-width: var(--size-laptop);
+  }
+
+  .pl & {
+    background-color: var(--ucla-blue);
+    padding: var(--size-5);
+  }
+}
+
+.person__name {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-8);
+  font-weight: var(--font-weight-600);
+}
+
+.person__title {
+  text-wrap: balance;
+}
+
+.person__contact {
+  margin-block-start: var(--size-6);
+
+  @media (--mobile) {
+    display: grid;
+    gap: var(--size-2);
+    grid-template-columns: 1fr;
+    width: var(--size-mobile);
+  }
+
+  @media (--laptop) {
+    gap: var(--size-1);
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.person__website {
+  margin-block-start: var(--size-6);
+}
+
+.person__label {
+  display: block;
+  font-weight: var(--font-weight-600);
+}
+
+.person__address {
+  font-style: normal;
+  margin-block-end: var(--size-3);
+  margin-block-start: var(--size-1);
+
+  span {
+    display: block;
+  }
+}
+
+.person__contact--connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.person__phone,
+.person__email {
+  margin-block-end: var(--size-3);
+
+  @media (--laptop) {
+    margin-block-end: 0;
+  }
+
+  a {
+    color: var(--ucla-yellow);
+    font-weight: var(--font-weight-700);
+    white-space: nowrap;
+  }
+}
+
+.person__office-hours {
+  margin-block-end: var(--size-3);
+
+  @media (--laptop) {
+    margin-block-end: 0;
+  }
+}
