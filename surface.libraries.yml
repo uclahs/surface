@@ -247,6 +247,11 @@ person-directory:
     component:
       dist/css/person-directory.css: {}
 
+person-header:
+  css:
+    component:
+      dist/css/person-header.css: {}
+
 quote:
   css:
     component:
