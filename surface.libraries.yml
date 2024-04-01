@@ -320,13 +320,20 @@ site-search:
       dist/css/site-search.css: {}
 
 slider:
-  css:
-    component:
-      dist/css/slider-item.css: {}
   js:
     dist/js/slider.js: {}
   dependencies:
     - surface/glide
+
+slider-item:
+  css:
+    theme:
+      dist/css/slider-item.css: {}
+
+slider-item-preview:
+  css:
+    theme:
+      dist/css/slider-item-preview.css: {}
 
 tabs:
   css:
