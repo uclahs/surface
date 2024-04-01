@@ -9,6 +9,7 @@ global:
       dist/css/field.css: {}
       dist/css/links.css: {}
       dist/css/skip-link.css: {}
+      dist/css/views-exposed-form.css: {}
     layout:
       dist/css/layout.css: {}
       dist/css/block.css: {}
@@ -388,3 +389,8 @@ view-listing:
   css:
     layout:
       dist/css/view-listing.css: {}
+
+view-listing-form:
+  css:
+    component:
+      dist/css/view-listing-form.css: {}
