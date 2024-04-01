@@ -1,0 +1,28 @@
+<header class="page-header{{ modifier ? ' ' ~ modifier }}">
+  <div class="container">
+    <div class="page-header__content">
+
+      {% include '@elements/breadcrumb/breadcrumb.twig' with {
+        'heading': heading,
+        'breadcrumb': breadcrumb,
+      }  %}
+
+      <div class="page-header__text">
+        <h1><span>{{ title }}</span></h1>
+        <p>{{ subtitle }}</p>
+      </div>
+    </div>
+
+    {% if 'page-header--banner' in modifier %}
+      <div class="page-header__media">
+        <div class="media media--type-sf-image-media-type media--view-mode-landscape-16x9">
+          <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+            <img loading="lazy" src="https://picsum.photos/1500/1000" alt="A lecture hall discussion in the biomedical sciences at UCLA"
+              width="1500" height="1001">
+          </div>
+        </div>
+      </div>
+      <div class="page-header__overlay"></div>
+    {% endif %}
+  </div>
+</header>

@@ -1,0 +1,67 @@
+{{ attach_library('surface/carousel') }}
+
+<section class="carousel glide{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  <div class="glide__track carousel__images" data-glide-el="track">
+    <div class="glide__slides">
+      {% block slides %}
+        <img src="https://dummyimage.com/480x270/d6d6d6/fff&text=Slide1" alt="Placeholder alternative text">
+        <img src="https://dummyimage.com/480x270/d6d6d6/fff&text=Slide2" alt="Placeholder alternative text">
+      {% endblock %}
+    </div>
+    {% if 'has-overlay' in attributes.class %}
+      <div class="carousel__overlay"></div>
+    {% endif %}
+  </div>
+
+  {% if title %}
+    <div class="carousel__top">
+      <div class="carousel__body">
+        <div class="carousel__title">
+          <span>{{ title }}</span>
+        </div>
+
+        {% if 'is-top' in attributes.class and url %}
+          <a class="button button--secondary" href="{{ url }}">{{ url_title }}</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if wysiwyg or url %}
+    <div class="carousel__bottom">
+      <div class="carousel__text">
+        {{ wysiwyg }}
+
+        {% if 'is-top' not in attributes.class and url %}
+          <a class="button button--secondary" href="{{ url }}">{{ url_title }}</a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if slide_count > 1 %}
+    <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+        </svg>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+        </svg>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  {% endif %}
+
+  {% if slide_count > 1 %}
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+      {% for i in 0..slide_count - 1 %}
+        <button class="glide__bullet" data-glide-dir="={{ loop.index0 }}"></button>
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>

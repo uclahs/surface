@@ -13,6 +13,7 @@ global:
       dist/css/layout.css: {}
       dist/css/block.css: {}
       dist/css/main.css: {}
+      dist/css/page-header.css: {}
       dist/css/view.css: {}
   dependencies:
     - surface/fontawesome
@@ -67,15 +68,24 @@ callout:
     component:
       dist/css/callout.css: {}
 
+call-to-action:
+  css:
+    component:
+      dist/css/call-to-action.css: {}
+
 card:
   css:
     component:
       dist/css/card.css: {}
 
-call-to-action:
+carousel:
   css:
-    component:
-      dist/css/call-to-action.css: {}
+    theme:
+      dist/css/carousel.css: {}
+  js:
+    dist/js/carousel.js: {}
+  dependencies:
+    - surface/glide
 
 content-highlight:
   css:
@@ -143,12 +153,27 @@ feed-icon:
     theme:
       dist/css/feed-icon.css: {}
 
+flockler-embed:
+  css:
+    component:
+      dist/css/flockler-embed.css: {}
+
 fontawesome:
   js:
     'https://kit.fontawesome.com/a0eb0bad75.js': { type: external, minified: true, attributes: { defer: true, crossorigin: anonymous } }
   dependencies:
     - core/drupal
     - core/drupalSettings
+
+glide:
+  css:
+    component:
+      "https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.css": { type: external, minified: true }
+      dist/css/glide.css: {}
+  js:
+    "https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js": { type: external, minified: true, attributes: { defer: true } }
+  dependencies:
+    - core/drupal
 
 icon:
   css:
