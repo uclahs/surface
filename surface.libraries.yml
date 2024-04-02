@@ -6,6 +6,7 @@ global:
       dist/css/utilities.css: {}
     component:
       dist/css/button.css: {}
+      dist/css/embedded-media.css: {}
       dist/css/field.css: {}
       dist/css/links.css: {}
       dist/css/skip-link.css: {}
