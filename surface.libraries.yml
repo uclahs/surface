@@ -13,8 +13,9 @@ global:
       dist/css/skip-link.css: {}
       dist/css/views-exposed-form.css: {}
     layout:
-      dist/css/layout.css: {}
       dist/css/block.css: {}
+      dist/css/container-inline.module.css: {}
+      dist/css/layout.css: {}
       dist/css/main.css: {}
       dist/css/page-header.css: {}
       dist/css/view.css: {}
