@@ -131,6 +131,11 @@ event-card:
     component:
       dist/css/event-card.css: {}
 
+event-calendar:
+  css:
+    component:
+      dist/css/event-calendar.css: {}
+
 event-listing:
   css:
     component:
