@@ -1,7 +1,6 @@
 {{ attach_library('surface/facet-block') }}
 
-<div class="facet-block{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<div class="facet-block{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {{ title_prefix }}
   {% if label %}
     <h3 class="facet-block__title{{ title_attributes ? ' ' ~ title_attributes }}"

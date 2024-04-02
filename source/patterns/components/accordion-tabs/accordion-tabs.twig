@@ -1,7 +1,6 @@
 {{ attach_library('surface/accordion-tabs') }}
 
-<div class="accordion-tabs js-tabs container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<div class="accordion-tabs js-tabs container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <ul role="tablist" class="accordion-tabs__list">
     {% for item in items %}
       <li class="accordion-tabs__item" role="presentation">

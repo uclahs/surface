@@ -1,15 +1,12 @@
 {{ attach_library('surface/cta-banner') }}
 
-<article class="cta-banner bg-gradient-linear-ucla-blue{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<article class="cta-banner bg-gradient-linear-ucla-blue{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="cta-banner__inner">
     <div class="cta-banner__content prose">
       {% if title %}
-        {%
-          include '@elements/title/title.twig' with {
-            'title': title
-          } only
-        %}
+        {% include '@elements/title/title.twig' with {
+          'title': title
+        } only %}
       {% endif %}
 
       {% if teaser %}
@@ -17,11 +14,9 @@
       {% endif %}
 
       {% if cta %}
-        {%
-          include '@elements/button/button.twig' with {
-            'button': cta,
-          }
-        %}
+        {% include '@elements/button/button.twig' with {
+          'button': cta,
+        } %}
       {% endif %}
 
     </div>

@@ -8,15 +8,16 @@ import data from './date-badge.yml';
 
 const settings = {
   title: 'Elements/Date Badge',
-  render: (args) => parse(badge(args)),
-  args: { ...data },
 };
 
 export const Badge = {
   name: 'Date badge',
+  render: (args) => parse(badge(args)),
+  args: { ...data },
 };
 
 export const BadgeLight = {
+  ...Badge,
   name: 'Light date badge',
   args: {
     ...data,

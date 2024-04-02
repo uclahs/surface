@@ -1,7 +1,6 @@
 {{ attach_library('surface/view-listing') }}
 
-<div class="view-listing{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<div class="view-listing{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {% if exposed %}
     <div class="view-listing__exposed">
       {{ exposed }}

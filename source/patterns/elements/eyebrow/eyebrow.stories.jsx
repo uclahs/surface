@@ -7,7 +7,7 @@ const settings = {
   title: 'Elements/Eyebrow',
 };
 
-const Eyebrow = {
+export const Eyebrow = {
   name: 'Plain text label',
   render: (args) => parse(eyebrow(args)),
   args: {
@@ -20,7 +20,7 @@ const Eyebrow = {
   },
 };
 
-const Linked = {
+export const Linked = {
   name: 'Label as a link',
   render: (args) => parse(eyebrow(args)),
   args: {
@@ -34,4 +34,3 @@ const Linked = {
 };
 
 export default settings;
-export { Eyebrow, Linked };

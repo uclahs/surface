@@ -1,8 +1,5 @@
 {{ attach_library('surface/text') }}
 
-{# No need for a Storybook story of this Element. #}
-
-<div class="text prose container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<div class="text prose container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {{ wysiwyg }}
 </div>

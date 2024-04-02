@@ -3,14 +3,13 @@ import parse from 'html-react-parser';
 import image from './image.twig';
 import data from './image.yml';
 
-export default {
+const settings = {
   title: 'Elements/Image',
-  tags: ['autodocs'],
-  render: (args) => parse(image(args)),
 };
 
 export const Image = {
   name: 'Square',
+  render: (args) => parse(image(args)),
   args: {
     ...data,
     image: '<img src="./images/1-1.svg" alt="placeholder text" />',
@@ -18,6 +17,7 @@ export const Image = {
 };
 
 export const Portrait = {
+  ...Image,
   name: '2:3',
   args: {
     ...data,
@@ -26,6 +26,7 @@ export const Portrait = {
 };
 
 export const Rectangular32 = {
+  ...Image,
   name: '3:2',
   args: {
     ...data,
@@ -34,6 +35,7 @@ export const Rectangular32 = {
 };
 
 export const Rectangular43 = {
+  ...Image,
   name: '4:3',
   args: {
     ...data,
@@ -42,9 +44,12 @@ export const Rectangular43 = {
 };
 
 export const Rectangular169 = {
+  ...Image,
   name: '16:9',
   args: {
     ...data,
     image: '<img src="./images/16-9.svg" alt="placeholder text" />',
   },
 };
+
+export default settings;

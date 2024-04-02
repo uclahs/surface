@@ -7,13 +7,13 @@ const settings = {
   title: 'Elements/Messages',
 };
 
-const Success = {
+export const Success = {
   name: 'Messages',
   render: (args) => parse(messages(args)),
   args: { ...data },
 };
 
-const Info = {
+export const Info = {
   ...Success,
   name: 'Info message',
   args: {
@@ -22,7 +22,7 @@ const Info = {
   },
 };
 
-const Status = {
+export const Status = {
   ...Success,
   name: 'Status message',
   args: {
@@ -31,7 +31,7 @@ const Status = {
   },
 };
 
-const Warning = {
+export const Warning = {
   ...Success,
   name: 'Warning message',
   args: {
@@ -40,7 +40,7 @@ const Warning = {
   },
 };
 
-const Error = {
+export const Error = {
   ...Success,
   name: 'Error message',
   args: {
@@ -50,4 +50,3 @@ const Error = {
 };
 
 export default settings;
-export { Success, Info, Status, Warning, Error  };

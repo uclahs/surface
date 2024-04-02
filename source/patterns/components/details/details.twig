@@ -5,8 +5,7 @@
   content_attributes ? content_attributes.class
 ]|join(' ')|trim %}
 
-<details class="details{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<details class="details{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {%- if title -%}
     {% set summary_classes = [
       'details__summary',

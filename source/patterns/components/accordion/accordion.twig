@@ -1,7 +1,6 @@
 {{ attach_library('surface/accordion') }}
 
-<div class="accordion container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<div class="accordion container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <button class="accordion__header" type="button" aria-expanded="false"  aria-controls="accordion-{{ id }}" id="accordion-header-{{ id }}">
     <span>{{ title }}</span>
     <svg class="accordion__icon" viewBox="0 0 20 20">

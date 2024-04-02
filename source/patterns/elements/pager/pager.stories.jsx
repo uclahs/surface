@@ -5,13 +5,12 @@ import data from './pager.yml';
 
 const settings = {
   title: 'Elements/Pager',
+};
+
+export const Pager = {
+  name: 'Pager',
   render: (args) => parse(pager(args)),
   args: { ...data },
 };
 
-const Pager = {
-  name: 'Pager',
-};
-
 export default settings;
-export { Pager  };

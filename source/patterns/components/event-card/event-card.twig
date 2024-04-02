@@ -1,20 +1,17 @@
 {{ attach_library('surface/event-card') }}
 
-<article class="event-card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<article class="event-card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="event-card__content">
     {% if event_type %}
       {% include "@elements/eyebrow/eyebrow.twig" with {
         'eyebrow': event_type
-        } only
-      %}
+      } only %}
     {% endif %}
 
     {% if title %}
       {% include "@elements/title/title.twig" with {
         'title': title
-        } only
-      %}
+      } only %}
     {% endif %}
 
     {% if meta_description %}
@@ -27,10 +24,9 @@
       {# Short date badge. #}
       {% if date_short_month is not empty or date_short_day is not empty %}
         {% include "@elements/date-badge/date-badge.twig" with {
-            'month': date_short_month,
-            'day': date_short_day,
-          } only
-        %}
+          'month': date_short_month,
+          'day': date_short_day,
+        } only %}
       {% endif %}
 
       <div class="event-card__date--long">
@@ -45,20 +41,18 @@
           {% include '@elements/date/date.twig' with {
             'modifier': date_long.modifier,
             'date': date_long.date,
-            } only
-          %}
+          } only %}
 
           {# If there are upcoming instances of an event, display `+ more dates`
           next to the event date to show users this is a recurring event. #}
           {% if more_dates %}
             {% include "@elements/button/button.twig" with {
-                'button': {
-                  'modifier': 'button--link event-card__more-dates',
-                  'text': '+ more dates',
-                  'url': title.url
-                }
-              } only
-            %}
+              'button': {
+                'modifier': 'button--link event-card__more-dates',
+                'text': '+ more dates',
+                'url': title.url
+              }
+            } only %}
           {% endif %}
         </div>
       </div>

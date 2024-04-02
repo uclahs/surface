@@ -1,7 +1,6 @@
 {{ attach_library('surface/metric') }}
 
-<article class="metric container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<article class="metric container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="metric__container">
     <div class="metric__title">
       {{ title }}

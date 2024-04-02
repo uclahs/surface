@@ -5,12 +5,11 @@ import data from './person-listing.yml';
 
 const settings = {
   title: 'Collections/Person listing',
-  render: (args) => parse(person(args)),
-  args: { ...data },
 };
 
 export const PersonListing = {
   name: 'Person listing',
+  render: (args) => parse(person(args)),
   args: { ...data },
 };
 

@@ -12,8 +12,8 @@ const settings = {
 
 export const Quote = {
   name: 'Media quote',
-  args: { ...data },
   render: (args) => parse(quote(args)),
+  args: { ...data },
 };
 
 export const SantaBarbaraSand = {

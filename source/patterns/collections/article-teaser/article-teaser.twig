@@ -24,8 +24,7 @@
     {% if title %}
       {% include "@elements/title/title.twig" with {
         'title': title
-        } only
-      %}
+      } only %}
     {% endif %}
 
     {% if subtitle %}
@@ -33,7 +32,6 @@
         {{ subtitle }}
       </div>
     {% endif %}
-
 
     <p class="article-teaser__teaser prose">
       {{ teaser }}

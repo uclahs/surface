@@ -1,7 +1,6 @@
 {{ attach_library('surface/featured-card') }}
 
-<article class="featured-card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<article class="featured-card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="featured-card__image">
     {{ image }}
   </div>
@@ -9,19 +8,17 @@
     {% if event_type %}
       {% include "@elements/eyebrow/eyebrow.twig" with {
         'eyebrow': event_type
-        } only
-      %}
+      } only %}
     {% endif %}
 
     {% include '@elements/title/title.twig' with {
-        'title': title,
-      } only
-    %}
+      'title': title,
+    } only %}
+
     {% if subtitle %}
       {% include '@elements/title/title.twig' with {
-          'title': subtitle,
-        } only
-      %}
+        'title': subtitle,
+      } only %}
     {% endif %}
 
     {% if organization %}
@@ -35,20 +32,18 @@
       {% include '@elements/date/date.twig' with {
         'modifier': date.modifier,
         'date': date.date,
-        } only
-      %}
+      } only %}
 
       {# If there are upcoming instances of an event, display `+ more dates`
       next to the event date to show users this is a recurring event. #}
       {% if more_dates %}
         {% include "@elements/button/button.twig" with {
-            'button': {
-              'modifier': 'button--link featured-card__more-dates',
-              'text': '+ more dates',
-              'url': cta.url
-            }
-          } only
-        %}
+          'button': {
+            'modifier': 'button--link featured-card__more-dates',
+            'text': '+ more dates',
+            'url': cta.url
+          }
+        } only %}
       {% endif %}
     </div>
 
@@ -60,8 +55,7 @@
 
     {# Event cta. #}
     {% include '@elements/button/button.twig' with {
-        'button': cta,
-      } only
-    %}
+      'button': cta,
+    } only %}
   </div>
 </article>

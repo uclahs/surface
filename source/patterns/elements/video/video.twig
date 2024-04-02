@@ -1,4 +1,3 @@
-<div class="video container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without('class') -}}>
+<div class="video container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without('class') -}}>
   {{ video }}
 </div>

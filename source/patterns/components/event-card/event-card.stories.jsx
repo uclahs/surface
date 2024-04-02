@@ -5,12 +5,12 @@ import data from './event-card.yml';
 
 const settings = {
   title: 'Components/Event list card',
-  args: { ...data },
-  render: (args) => parse(card(args)),
 };
 
 export const Card = {
   name: 'Event list card',
+  render: (args) => parse(card(args)),
+  args: { ...data },
 };
 
 export default settings;

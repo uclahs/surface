@@ -1,8 +1,7 @@
 {{ attach_library('surface/quote') }}
 {# TODO: Consolidate this component with Media quote. #}
 
-<article class="quote container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<article class="quote container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="quote__container">
     <div class="quote__wrapper">
       <blockquote>
