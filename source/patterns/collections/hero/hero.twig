@@ -1,0 +1,40 @@
+{{ attach_library('surface/hero') }}
+
+<article class="hero{{- modifier ? ' ' ~ modifier -}}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+  <div class="hero__container">
+    <div class="hero__media">
+      {% if 'hero--video' in attributes.class or 'hero--video' in modifier %}
+        <div class="media--type-sf-video-media-type">
+          {{ video }}
+        </div>
+      {% else %}
+        {{ image }}
+      {% endif %}
+    </div>
+    <div class="hero__text">
+      <div class="hero__text-wrapper">
+        {% if title %}
+          <div class="hero__title">
+            <span>{{ title }}</span>
+          </div>
+        {% endif %}
+
+        {% if 'hero--banner' in attributes.class or 'hero--banner' in modifier %}
+          <div class="hero__subtitle">
+            {{ subtitle }}
+          </div>
+        {% endif %}
+
+        <div class="hero__buttons">
+          {% if 'hero--video' in attributes.class or 'hero--video' in modifier %}
+            <a href="{{ video_provider }}" target="_blank" class="button button--secondary glightbox">Play Video</a>
+          {% endif %}
+
+          {% if url %}
+            <a href="{{ url }}" class="button button--secondary">{{ url_title }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

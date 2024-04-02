@@ -188,6 +188,25 @@ glide:
   dependencies:
     - core/drupal
 
+glightbox:
+  css:
+    theme:
+      'https//cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css': { type: external, minified: true }
+  js:
+    'https//cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js': { type: external, minified: true, attributes: { defer: true } }
+    dist/js/glightbox.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+
+hero:
+  css:
+    component:
+      dist/css/hero.css: {}
+  dependencies:
+    - surface/glightbox
+
 icon:
   css:
     theme:
