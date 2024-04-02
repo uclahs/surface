@@ -1,7 +1,6 @@
 {{ attach_library('surface/callout') }}
 
-<article class="callout {{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<article class="callout {{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="callout__image">
     {{ image }}
 	</div>
@@ -9,9 +8,8 @@
 		<div class="callout__wrapper">
       {% if title %}
         {% include "@elements/title/title.twig" with {
-            "title": title,
-          } only
-        %}
+          "title": title,
+        } only %}
       {% endif %}
 
 			{% if teaser %}
@@ -22,9 +20,8 @@
 
       {% if cta %}
         {% include "@elements/button/button.twig" with {
-            "button": cta,
-          } only
-        %}
+          "button": cta,
+        } only %}
       {% endif %}
 		</div>
 	</div>

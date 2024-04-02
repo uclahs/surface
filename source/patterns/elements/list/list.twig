@@ -1,6 +1,5 @@
 {# There is no visual element in Storybook. #}
-<ul class="list{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<ul class="list{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {% for item in list %}
     <li>{{ item.content }}</li>
   {% endfor %}

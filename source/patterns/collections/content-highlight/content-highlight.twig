@@ -1,7 +1,6 @@
 {{ attach_library('surface/content-highlight') }}
 
-<section class="content-highlight{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<section class="content-highlight{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {% if 'dgsom' in theme %}
     <span class="component-waves" aria-hidden="true">
       <svg aria-hidden="true" class="content-highlight__top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 319">
@@ -27,20 +26,18 @@
           {% if title %}
             {% include "@elements/title/title.twig" with {
                 'title': title,
-              } only
-            %}
+              } only %}
           {% endif %}
 
           {% if see_more %}
             {% embed "@elements/button/button.twig" with {
-                'button': see_more,
-              }
-            %}
-            {% block button_icon %}
-              <svg aria-hidden="true" class="svg-inline icon icon--arrow-right" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path fill="currentColor" d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path>
-              </svg>
-            {% endblock %}
+              'button': see_more,
+            } %}
+              {% block button_icon %}
+                <svg aria-hidden="true" class="svg-inline icon icon--arrow-right" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path fill="currentColor" d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"></path>
+                </svg>
+              {% endblock %}
             {% endembed %}
           {% endif %}
         </header>
@@ -60,8 +57,7 @@
               'organization': featured.organization,
               'cta': featured.cta,
               'readtime': featured.readtime,
-              } only
-            %}
+            } only %}
           {% endblock %}
         </article>
       {% endif %}
@@ -80,8 +76,7 @@
               'date_short': item.date_short,
               'more_dates': item.more_dates,
               'readtime': item.readtime,
-              } only
-            %}
+            } only %}
           {% endfor %}
         {% endblock %}
       </div>

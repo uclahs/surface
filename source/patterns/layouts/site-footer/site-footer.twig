@@ -5,8 +5,8 @@
     <div class="site-footer__content grid">
       <div class="site-footer__branding">
         {% block branding %}
-          {% include '@elements/site-logo/site-logo.twig' with {
-            'modifier': 'site-logo--footer site-logo--extended',
+          {% include '@elements/site-branding/site-branding.twig' with {
+            'modifier': 'site-branding--footer site-branding--extended',
             'logo': './images/logo-inverse.svg'
           } %}
 
@@ -16,8 +16,7 @@
             'instagram_url': '#',
             'youtube_url': '#',
             'linkedin_url': '#',
-          } only
-          %}
+          } only %}
 
           {% include '@elements/site-credit/site-credit.twig' with {
             'site_credit': '<p>Geffen Hall<br>885 Tiverton Drive<br>Los Angeles, CA 90095</p>'

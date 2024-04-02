@@ -10,17 +10,17 @@ import dataArticle from './content-highlight-article.yml';
 
 const settings = {
   title: 'Collections/Content Highlight',
-  args: { ...data },
-  render: (args) => parse(highlight(args)),
 };
 
 export const ArticlesHighlight = {
   name: 'Articles Highlight',
+  render: (args) => parse(highlight(args)),
   args: { ...dataArticle },
 };
 
 export const EventsHighlight = {
   name: 'Events Highlight',
+  render: (args) => parse(highlight(args)),
   args: { ...data },
 };
 

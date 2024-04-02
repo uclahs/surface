@@ -1,7 +1,6 @@
 {{ attach_library('surface/event-listing') }}
 
-<article class="event-listing{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<article class="event-listing{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {% if type %}
     <div class="event-listing__type">
       {{ type }}
@@ -11,8 +10,7 @@
   {% if title %}
     {% include "@elements/title/title.twig" with {
       'title': title
-      } only
-    %}
+    } only %}
   {% endif %}
 
   {% if subtitle %}
@@ -30,6 +28,5 @@
   {% include '@elements/date/date.twig' with {
     'modifier': date.modifier,
     'date': date.date,
-    } only
-  %}
+  } only %}
 </article>

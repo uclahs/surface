@@ -10,18 +10,17 @@ import dataArticle from './featured-card-article.yml';
 
 const settings = {
   title: 'Components/Featured Card',
-  args: { ...dataEvent },
-  render: (args) => parse(featuredCard(args)),
 };
 
 export const FeaturedArticle = {
   name: 'Featured Article',
-  args: { ...dataArticle },
   render: (args) => parse(featuredCard(args)),
+  args: { ...dataArticle },
 };
 
 export const FeaturedEvent = {
   name: 'Featured Event',
+  render: (args) => parse(featuredCard(args)),
   args: { ...dataEvent },
 };
 

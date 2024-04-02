@@ -1,7 +1,6 @@
 {{ attach_library('surface/page-listing') }}
 
-<div class="page-listing{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<div class="page-listing{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="page-listing__type">
     {{ type }}
   </div>

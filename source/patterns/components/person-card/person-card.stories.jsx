@@ -5,12 +5,12 @@ import data from './person-card.yml';
 
 const settings = {
   title: 'Components/Person card',
-  args: { ...data },
-  render: (args) => parse(card(args)),
 };
 
 export const PersonCard = {
   name: 'Person card',
+  render: (args) => parse(card(args)),
+  args: { ...data },
 };
 
 export default settings;

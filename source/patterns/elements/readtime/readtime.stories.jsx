@@ -5,15 +5,13 @@ import data from './readtime.yml';
 
 const settings = {
   title: 'Elements/Readtime',
-  tags: ['autodocs'],
-  args: { ...data },
 };
 
 // Plain text title story.
-const Readtime = {
+export const Readtime = {
+  name: 'Readtime',
   render: (args) => parse(readtime(args)),
   args: { ...data },
 };
 
 export default settings;
-export { Readtime };

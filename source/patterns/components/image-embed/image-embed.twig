@@ -1,7 +1,6 @@
 {# For storybook purposes only. #}
 {% if is_demo %}
-  <figure class="image-embed{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+  <figure class="image-embed{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
     {{ image }}
   </figure>
 {% endif %}
@@ -38,13 +37,11 @@
     {% endset %}
   {% endif %}
 
-  <figure class="image-embed{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+  <figure class="image-embed{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
     {{ image }}
   </figure>
 {% else %}
- <div class="image-embed{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+ <div class="image-embed{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
     <div class="prose">
       <pre>No media exists, please update or delete this component.</pre>
     </div>

@@ -1,7 +1,6 @@
 {{ attach_library('surface/media-quote') }}
 
-<article class="media-quote container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<article class="media-quote container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="media-quote__container">
     <div class="media-quote__image">
       {{ image }}

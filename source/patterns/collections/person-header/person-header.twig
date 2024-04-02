@@ -1,7 +1,6 @@
 {{ attach_library('surface/person-header') }}
 
-<section class="person-header{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<section class="person-header{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {% if image %}
     <div class="person__photo">
       {{ image }}
@@ -9,14 +8,13 @@
   {% endif %}
   <div class="person__content">
     {% include "@elements/title/title.twig" with {
-        'title': {
-          'modifier': 'person__name',
-          'text': name,
-          'url': '',
-          'level': 1
-        }
-      } only
-    %}
+      'title': {
+        'modifier': 'person__name',
+        'text': name,
+        'url': '',
+        'level': 1
+      }
+    } only %}
 
     {% if title %}
       <p class="person__title">{{ title }}</p>
@@ -25,9 +23,8 @@
     {% if website %}
       <div class="person__website">
         {% include "@elements/button/button.twig" with {
-            'button': website,
-          } only
-        %}
+          'button': website,
+        } only %}
       </div>
     {% endif %}
 

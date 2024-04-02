@@ -1,7 +1,6 @@
 {{ attach_library('surface/view-event') }}
 
-<article class="view-event{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<article class="view-event{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="view-event__grid container">
     <div class="view-event__aside">
       <div class="view-event__bg">

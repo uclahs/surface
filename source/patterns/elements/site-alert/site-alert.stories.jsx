@@ -7,11 +7,10 @@ const settings = {
   title: 'Elements/Site Alert',
 };
 
-const SiteAlert = {
+export const SiteAlert = {
   name: 'Site Alert',
   render: (args) => parse(siteAlert(args)),
   args: { ...data},
 };
 
 export default settings;
-export { SiteAlert };

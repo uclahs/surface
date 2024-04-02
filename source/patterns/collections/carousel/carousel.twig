@@ -1,7 +1,6 @@
 {{ attach_library('surface/carousel') }}
 
-<section class="carousel glide{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}"
-  {{- attributes ? attributes|without(class) -}}>
+<section class="carousel glide{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="glide__track carousel__images" data-glide-el="track">
     <div class="glide__slides">
       {% block slides %}

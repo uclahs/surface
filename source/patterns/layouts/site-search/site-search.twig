@@ -1,7 +1,6 @@
 {{ attach_library('surface/site-search') }}
 
-<section class="site-search{{ data_search == 'modal' ? ' site-search--modal' }}{{- attributes ? ' ' ~ attributes.class -}}"
-  data-drupal-selector="site-search" id="site-search" role="search">
+<section class="site-search{{ data_search == 'modal' ? ' site-search--modal' }}{{- attributes ? ' ' ~ attributes.class -}}" data-drupal-selector="site-search" id="site-search" role="search">
   <div class="container">
 
     {% if data_search == "default" %}

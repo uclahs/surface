@@ -3,7 +3,7 @@
  * Branding styles.
  */
 
-.site-logo {
+.site-branding {
   display: inline-block;
 
   &:focus {
@@ -34,7 +34,7 @@
   }
 }
 
-.site-logo--footer {
+.site-branding--footer {
   display: inline-block;
   margin-block-end: var(--size-6);
 
@@ -43,6 +43,6 @@
   }
 }
 
-.site-logo--horizontal {
+.site-branding--horizontal {
   max-inline-size: 250px;
 }

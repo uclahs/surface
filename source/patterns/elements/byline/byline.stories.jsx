@@ -5,13 +5,12 @@ import data from './byline.yml';
 
 const settings = {
   title: 'Elements/Byline',
+};
+
+export const Byline = {
+  name: 'Byline',
   render: (args) => parse(byline(args)),
   args: { ...data },
 };
 
-const Byline = {
-  name: 'Byline',
-};
-
 export default settings;
-export { Byline  };
