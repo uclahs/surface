@@ -9,6 +9,7 @@ global:
       dist/css/button.css: {}
       dist/css/embedded-media.css: {}
       dist/css/field.css: {}
+      dist/css/fieldset.css: {}
       dist/css/links.css: {}
       dist/css/page-title.css: {}
       dist/css/skip-link.css: {}
