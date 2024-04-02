@@ -1,0 +1,17 @@
+---
+attributes: ''
+errors: ''
+prefix: ''
+suffix: ''
+required: ''
+type: 'color'
+name: 'color'
+label: '<label for="edit-color" class="form-item__label">Color picker</label>'
+label_display: 'before'
+description:
+  attributes: ''
+  content: ''
+description_display: 'after'
+disabled: false
+title_display: 'after'
+children: '<input type="color" id="edit-color" name="color" value="#1090ff" class="form-color form-element form-element--type-color form-element--api-color">'

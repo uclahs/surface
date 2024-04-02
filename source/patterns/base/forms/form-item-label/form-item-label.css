@@ -1,0 +1,47 @@
+/**
+ * @file
+ * Form item label styles.
+ */
+
+.form-item__label {
+  display: block;
+  font-family: var(--font-system);
+  font-size: var(--font-size-0);
+  font-weight: var(--font-weight-700);
+  line-height: var(--leading-none);
+  margin-block: var(--size-1);
+  padding-block-end: var(--size-1);
+
+  &[for] {
+    cursor: pointer;
+  }
+
+  &.option {
+    display: inline;
+    font-weight: normal;
+  }
+
+  &.is-disabled {
+    color: var(--gray-600);
+    cursor: default;
+  }
+
+  &.form-required::after {
+    background-image: url("../images/required.svg");
+    background-repeat: no-repeat;
+    background-size: 0.5rem 0.5rem;
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    margin-inline: 0.3em;
+    vertical-align: text-top;
+    width: 1rem;
+  }
+}
+
+.form-item__label--multiple-value-form {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin-block: 0;
+}

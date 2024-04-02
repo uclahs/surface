@@ -11,13 +11,19 @@ global:
       dist/css/field.css: {}
       dist/css/fieldset.css: {}
       dist/css/forms.css: {}
+      dist/css/form-boolean.css: {}
+      dist/css/form-item-label.css: {}
+      dist/css/form-item-upload.css: {}
+      dist/css/form-item.css: {}
+      dist/css/form-select.css: {}
+      dist/css/form-text.css: {}
       dist/css/links.css: {}
       dist/css/page-title.css: {}
       dist/css/skip-link.css: {}
       dist/css/views-exposed-form.css: {}
     layout:
       dist/css/block.css: {}
-      dist/css/container-inline.module.css: {}
+      dist/css/container-inline.css: {}
       dist/css/layout.css: {}
       dist/css/main.css: {}
       dist/css/page-header.css: {}

@@ -1,0 +1,17 @@
+---
+attributes: ''
+errors: ''
+prefix: ''
+suffix: ''
+required: ''
+type: 'range'
+name: 'range'
+label: '<label for="edit-range" class="form-item__label">Range</label>'
+label_display: 'before'
+description:
+  attributes: ''
+  content: 'The description for this form field'
+description_display: 'after'
+disabled: false
+title_display: 'after'
+children: '<input type="range" id="edit-range" name="range" class="form-range form-element form-element--type-range form-element--api-range" step="1" min="0" max="100">'

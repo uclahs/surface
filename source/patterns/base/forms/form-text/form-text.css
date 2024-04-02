@@ -1,0 +1,106 @@
+/**
+ * @file
+ * Text input elements.
+ */
+
+[type="color"],
+[type="date"],
+[type="datetime-local"],
+[type="email"],
+[type="file"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+textarea {
+  appearance: none;
+  background-color: var(--white);
+  border-radius: var(--radius-2);
+  border-width: 1px;
+  color: var(--gray-800);
+  max-inline-size: 100%;
+  min-height: var(--size-12);
+  padding-inline: var(--size-4);
+  transition-duration: 0.2s;
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+
+  &:focus {
+    outline: 2px solid var(--gray-300);
+    outline-offset: 2px;
+  }
+
+  &[disabled] {
+    background-color: var(--gray-100);
+    color: var(--gray-500);
+  }
+
+  &.error {
+    border: solid 2px var(--red-900);
+
+    &:focus {
+      outline-color: var(--red-900);
+      outline-offset: -2px;
+    }
+  }
+
+  &.form-element--small {
+    min-height: var(--size-10);
+  }
+
+  &.maxlength {
+    margin-block-end: var(--size-1);
+  }
+}
+
+[type="date"] {
+  &::-webkit-datetime-edit-fields-wrapper {
+    padding-block: 0;
+    padding-inline: 0;
+  }
+}
+
+[type="file"] {
+  flex-shrink: 1;
+  height: auto;
+  max-width: 20rem;
+  padding-inline-start: 0;
+  width: 100%;
+}
+
+input::file-selector-button {
+  align-items: center;
+  background-color: var(--gray-800);
+  border-bottom-left-radius: var(--radius-2);
+  border-top-left-radius: var(--radius-2);
+  border-width: 1px;
+  color: var(--white);
+  cursor: pointer;
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-weight: var(--font-weight-600);
+  height: 2.875rem;
+  margin-inline-end: var(--size-4);
+  padding-inline: var(--size-4);
+  text-transform: uppercase;
+}
+
+[type="color"] {
+  padding: 0;
+  width: var(--size-12);
+}
+
+textarea {
+  cursor: pointer;
+  display: block;
+  letter-spacing: inherit;
+  min-height: var(--size-36);
+  padding-block: var(--size-4);
+  touch-action: manipulation;
+}

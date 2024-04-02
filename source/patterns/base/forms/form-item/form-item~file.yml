@@ -1,0 +1,17 @@
+---
+attributes: ''
+errors: ''
+prefix: ''
+suffix: ''
+required: ''
+type: 'file'
+name: 'file'
+label: '<label for="edit-file" class="form-item__label">Add file</label>'
+label_display: 'before'
+description:
+  attributes: ''
+  content: 'One file only.<br>100 MB limit.<br>Allowed types: png gif jpg jpeg.'
+description_display: 'after'
+disabled: false
+title_display: 'after'
+children: '<input type="file" id="edit-file" name="file" value size="60" maxlength="128" class="form-file form-element form-element--type-file form-element--api-file" accept="image/*">'

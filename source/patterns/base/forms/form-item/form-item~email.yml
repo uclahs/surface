@@ -1,0 +1,17 @@
+---
+attributes: ''
+errors: ''
+prefix: ''
+suffix: ''
+required: ''
+type: 'email'
+name: 'email'
+label: '<label for="edit-email" class="form-item__label">Email</label>'
+label_display: 'before'
+description:
+  attributes: ''
+  content: 'The description for this form field'
+description_display: 'after'
+disabled: false
+title_display: 'after'
+children: '<input type="email" id="edit-email" name="email" size="60" class="form-email form-element form-element--type-email form-element--api-email" placeholder="email@example.com" pattern=".+globex\.com">'

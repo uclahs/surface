@@ -1,0 +1,17 @@
+---
+attributes: ''
+errors: ''
+prefix: ''
+suffix: ''
+required: ''
+type: 'month'
+name: 'month'
+label: '<label for="edit-month" class="form-item__label">Month</label>'
+label_display: 'before'
+description:
+  attributes: ''
+  content: 'The description for this form field'
+description_display: 'after'
+disabled: false
+title_display: 'after'
+children: '<input type="month" id="edit-month" name="month" size="12" class="form-month form-element form-element--type-month form-element--api-month">'

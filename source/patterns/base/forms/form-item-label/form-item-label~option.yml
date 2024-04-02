@@ -1,0 +1,7 @@
+---
+title_display: 'after'
+required: false
+is_disabled: false
+title: 'Form item label'
+attributes:
+  'for="edit-name"'
