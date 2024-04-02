@@ -1,0 +1,17 @@
+---
+attributes: ''
+errors: ''
+prefix: ''
+suffix: ''
+required: ''
+type: 'time'
+name: 'time'
+label: '<label for="edit-time" class="form-item__label">Time</label>'
+label_display: 'before'
+description:
+  attributes: ''
+  content: 'The description for this form field'
+description_display: 'after'
+disabled: false
+title_display: 'after'
+children: '<input type="time" id="edit-time" name="time" size="12" class="form-time form-element form-element--type-time form-element--api-time" placeholder="hh:mm:ss" step="1">'

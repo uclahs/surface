@@ -1,0 +1,17 @@
+---
+attributes: ''
+errors: ''
+prefix: ''
+suffix: ''
+required: ''
+type: 'search'
+name: 'search'
+label: '<label for="edit-search" class="form-item__label">Search</label>'
+label_display: 'before'
+description:
+  attributes: ''
+  content: 'The description for this form field'
+description_display: 'after'
+disabled: false
+title_display: 'after'
+children: '<input type="search" id="edit-search" name="search" value size="60" maxlength="128" class="form-search form-element form-element--type-search form-element--api-search" placeholder="Placeholder">'
