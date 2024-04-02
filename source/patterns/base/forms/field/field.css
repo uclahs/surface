@@ -1,0 +1,39 @@
+/**
+ * @file
+ * Visual styles for fields.
+ */
+
+.field:not(:last-child) {
+  margin-block-end: var(--size-8);
+}
+
+.node--view-mode-teaser .field {
+  margin-block-end: var(--size-4);
+
+  &:last-child {
+    margin-block-end: 0;
+  }
+
+  @media (--laptop) {
+    margin-block-end: var(--size-8);
+  }
+}
+
+.field__label {
+  font-weight: var(--font-weight-700);
+}
+
+.field--label-inline .field__label,
+.field--label-inline .field__items {
+  float: inline-start;
+}
+
+.field--label-inline .field__label,
+.field--label-inline > .field__item,
+.field--label-inline .field__items {
+  padding-inline-end: 0.5em;
+}
+
+.field--label-inline .field__label::after {
+  content: ":";
+}
