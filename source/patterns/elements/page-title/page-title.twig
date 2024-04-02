@@ -1,0 +1,5 @@
+{{ title_prefix }}
+{% if title %}
+  <h1 class="page-title{{- title_attributes ? ' ' ~ title_attributes.class -}}" {{ title_attributes ? title_attributes|without('class') }}>{{ title }}</h1>
+{% endif %}
+{{ title_suffix }}

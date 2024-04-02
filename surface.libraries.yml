@@ -9,6 +9,7 @@ global:
       dist/css/embedded-media.css: {}
       dist/css/field.css: {}
       dist/css/links.css: {}
+      dist/css/page-title.css: {}
       dist/css/skip-link.css: {}
       dist/css/views-exposed-form.css: {}
     layout:

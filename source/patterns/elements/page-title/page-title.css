@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Page title styles.
+*/
+
+.page-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-11);
+  font-weight: var(--font-weight-400);
+  margin-block-end: var(--size-9);
+}
