@@ -1,0 +1,37 @@
+{{ attach_library('surface/gallery') }}
+
+<section class="gallery container{{- modifier ? ' ' ~ modifier -}}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+  {% if 'labs-dynamic' in theme %}
+    <svg class="gallery__top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 504.58">
+      <polygon class="fill-topanga-creek" points="0 487.41 0 0 3636 90.66 0 487.41"/>
+      <polygon class="fill-avocado-toast" points="0 485.74 4000 50 4000 504.58 0 504.5 0 485.74"/>
+    </svg>
+  {% endif %}
+
+  <div class="gallery__container">
+    {% if title %}
+      <div class="gallery__title">{{ title }}</div>
+    {% endif %}
+
+    <div class="gallery__content">
+      {% block content %}
+        <div class="view__row" style="border: var(--border-size-1) dashed var(--gray-300); color: var(--gray-600); padding: 1rem; max-inline-size: 100%; margin: 0; aspect-ratio: var(----ratio-landscape);">Item One</div>
+        <div class="view__row" style="border: var(--border-size-1) dashed var(--gray-300); color: var(--gray-600); padding: 1rem; max-inline-size: 100%; margin: 0; aspect-ratio: var(----ratio-landscape);">Item Two</div>
+        <div class="view__row" style="border: var(--border-size-1) dashed var(--gray-300); color: var(--gray-600); padding: 1rem; max-inline-size: 100%; margin: 0; aspect-ratio: var(----ratio-landscape);">Item Three</div>
+        <div class="view__row" style="border: var(--border-size-1) dashed var(--gray-300); color: var(--gray-600); padding: 1rem; max-inline-size: 100%; margin: 0; aspect-ratio: var(----ratio-landscape);">Item Four</div>
+        <div class="view__row" style="border: var(--border-size-1) dashed var(--gray-300); color: var(--gray-600); padding: 1rem; max-inline-size: 100%; margin: 0; aspect-ratio: var(----ratio-landscape);">Item Five</div>
+        <div class="view__row" style="border: var(--border-size-1) dashed var(--gray-300); color: var(--gray-600); padding: 1rem; max-inline-size: 100%; margin: 0; aspect-ratio: var(----ratio-landscape);">Item Six</div>
+        <div class="view__row" style="border: var(--border-size-1) dashed var(--gray-300); color: var(--gray-600); padding: 1rem; max-inline-size: 100%; margin: 0; aspect-ratio: var(----ratio-landscape);">Item Seven</div>
+        <div class="view__row" style="border: var(--border-size-1) dashed var(--gray-300); color: var(--gray-600); padding: 1rem; max-inline-size: 100%; margin: 0; aspect-ratio: var(----ratio-landscape);">Item Eight</div>
+        <div class="view__row" style="border: var(--border-size-1) dashed var(--gray-300); color: var(--gray-600); padding: 1rem; max-inline-size: 100%; margin: 0; aspect-ratio: var(----ratio-landscape);">Item Nine</div>
+      {% endblock %}
+    </div>
+  </div>
+
+  {% if 'labs-dynamic' in theme %}
+    <svg class="gallery__bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4000 454.58">
+      <polygon class="fill-ucla-blue" points="2214.42 213.35 4000 328.78 4000 20.12 2214.42 213.35"/>
+      <polygon class="fill-avocado-toast" points="4000 20.58 0 454.58 0 0 4000 .08 4000 20.58"/>
+    </svg>
+  {% endif %}
+</section>

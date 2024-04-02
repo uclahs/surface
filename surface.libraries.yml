@@ -173,6 +173,11 @@ fontawesome:
     - core/drupal
     - core/drupalSettings
 
+gallery:
+  css:
+    theme:
+      dist/css/gallery.css: {}
+
 glide:
   css:
     component:
