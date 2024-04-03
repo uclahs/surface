@@ -30,7 +30,8 @@
           {% embed '@layouts/nav/nav.twig' %}
             {% block content %}
               {% include '@components/menu-footer/menu-footer.twig' with {
-                'items': items
+                'menu_name': 'footer',
+                'items': items,
               } %}
             {% endblock %}
           {% endembed %}
