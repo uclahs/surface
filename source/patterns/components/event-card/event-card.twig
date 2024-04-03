@@ -1,6 +1,6 @@
 {{ attach_library('surface/event-card') }}
 
-<article class="event-card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+<div class="event-card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="event-card__content">
     {% if event_type %}
       {% include "@elements/eyebrow/eyebrow.twig" with {
@@ -58,4 +58,4 @@
       </div>
     </div>
   </div>
-</article>
+</div>

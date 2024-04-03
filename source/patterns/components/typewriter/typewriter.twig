@@ -1,6 +1,6 @@
 {{ attach_library('surface/typewriter') }}
 
-<article class="typewriter-cta{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+<div class="typewriter-cta{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="container">
     <div class="visually-hidden">
       {% for item in words %}

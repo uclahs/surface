@@ -1,12 +1,5 @@
 {{ attach_library('surface/messages') }}
 
-{% set classes = [
-  'messages',
-  type ? 'messages--' ~ type,
-  'fade',
-  pattern_lab  ? 'no-fade',
-]|join(' ')|trim %}
-
 <div class="messages fade{{ type ? ' messages--' ~ type }}{{- attributes ? ' ' ~ attributes.class -}}" data-drupal-selector="messages" role="contentinfo" aria-label="{{ heading }}" {{- attributes ? attributes|without(class) -}}>
   <div class="messages__container" data-drupal-selector="messages-container"{% if type == 'error' %} role="alert"{% endif %}>
     {% if heading %}

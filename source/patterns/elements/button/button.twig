@@ -1,6 +1,10 @@
 {% if button.url %}
   <a href="{{ button.url }}" class="button{{ ' ' ~ button.modifier|default('button--link') }}">
+{% else %}
+  <button class="button{{ ' ' ~ button.modifier }}">
+{% endif %}
     {{ button.text }}
+
     {# A placeholder for adding an icon to a button.
     TODO: Implement a twig macro that can allows us to add icons. #}
     {% block button_icon %}
@@ -8,14 +12,9 @@
         <span class="fa-solid fa-arrow-right"></span>
       {% endif %}
     {% endblock %}
+
+{% if button.url %}
   </a>
 {% else %}
-  <button class="button{{ ' ' ~ button.modifier }}">
-    {{ button.text }}
-    {% block button_icon %}
-      {% if button.icon %}
-        <span class="fa-solid fa-arrow-right"></span>
-      {% endif %}
-    {% endblock %}
   </button>
 {% endif %}

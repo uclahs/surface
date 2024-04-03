@@ -1,6 +1,6 @@
 {{ attach_library('surface/featured-card') }}
 
-<article class="featured-card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+<div class="featured-card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="featured-card__image">
     {{ image }}
   </div>
@@ -58,4 +58,4 @@
       'button': cta,
     } only %}
   </div>
-</article>
+</div>

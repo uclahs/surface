@@ -1,6 +1,6 @@
 {{ attach_library('surface/alert') }}
 
-<article class="alert container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+<div class="alert container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="alert__container">
     <div class="alert__header">
       <h2 class="visually-hidden">Alert</h2>
@@ -10,4 +10,4 @@
       {{ text }}
     </div>
   </div>
-</article>
+</div>

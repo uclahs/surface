@@ -1,5 +1,4 @@
 /* eslint-disable */
-import Drupal from 'drupal';
 
 Drupal.behaviors.surfaceTypewriter = {
   attach(context) {

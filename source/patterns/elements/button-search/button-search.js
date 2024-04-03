@@ -1,5 +1,4 @@
 /* eslint-disable */
-import Drupal from 'drupal';
 
 const searchContainer = document.querySelector('[data-drupal-selector="site-search"]');
 

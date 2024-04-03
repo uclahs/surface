@@ -1,6 +1,6 @@
 {{ attach_library('surface/card') }}
 
-<article class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+<div class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {% if image %}
     <div class="card__image">
       {{ image }}
@@ -13,7 +13,6 @@
           'day': date_short.day,
         } only %}
       {% endif %}
-
     </div>
   {% endif %}
 
@@ -66,4 +65,4 @@
       } only %}
     {% endif %}
   </div>
-</article>
+</div>

@@ -1,6 +1,4 @@
 /* eslint-disable */
-import Drupal from 'drupal';
-import once from 'once';
 
 const translateContainer = document.querySelector('[data-drupal-selector="translate-container"]');
 

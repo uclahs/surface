@@ -1,7 +1,8 @@
 {{ attach_library('surface/icon') }}
 
 <div class="icon{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
-  <span class="icon--image fa-solid fa-{{ icon|lower|trim }}" aria-hidden="true"></span>
+  {# <span class="icon--image fa-solid fa-{{ icon|lower|trim }}" aria-hidden="true"></span> #}
+  <span class="icon--image material-symbols-outlined" aria-hidden="true">{{ icon }}</span>
 
   {% if url %}
     <a class="icon__link" href="{{ url }}">{{ title }}</a>
