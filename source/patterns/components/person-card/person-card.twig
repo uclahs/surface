@@ -1,6 +1,6 @@
 {{ attach_library('surface/person-card') }}
 
-<article class="person-card{{ modifier ? ' ' ~ modifier }}"{{ attributes ? attributes|without('class') }}>
+<div class="person-card{{ modifier ? ' ' ~ modifier }}"{{ attributes ? attributes|without('class') }}>
   <div class="person-card__image">
     {{ image }}
   </div>
@@ -10,4 +10,4 @@
     } only %}
     <div class="person-card__title">{{ title }}</div>
   </div>
-</article>
+</div>

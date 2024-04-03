@@ -16,7 +16,8 @@
             'instagram_url': '#',
             'youtube_url': '#',
             'linkedin_url': '#',
-          } only %}
+          } only
+          %}
 
           {% include '@elements/site-credit/site-credit.twig' with {
             'site_credit': '<p>Geffen Hall<br>885 Tiverton Drive<br>Los Angeles, CA 90095</p>'
@@ -29,7 +30,6 @@
           {% embed '@layouts/nav/nav.twig' %}
             {% block content %}
               {% include '@components/menu-footer/menu-footer.twig' with {
-                'is_demo': true,
                 'items': items
               } %}
             {% endblock %}

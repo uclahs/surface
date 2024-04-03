@@ -4,8 +4,7 @@
   {% if title %}
     {% include "@elements/title/title.twig" with {
       'title': title,
-      } only
-    %}
+    } only %}
   {% endif %}
 
   <div class="person-directory__items">
@@ -17,13 +16,12 @@
     {% block person %}
       {% for item in items %}
         {% include "@components/person-card/person-card.twig" with {
-            'modifier': item.modifier,
-            'url': item.url,
-            'image': item.image,
-            'name': item.name,
-            'title': item.title,
-          } only
-        %}
+          'modifier': item.modifier,
+          'url': item.url,
+          'image': item.image,
+          'name': item.name,
+          'title': item.title,
+        } only %}
       {% endfor %}
     {% endblock %}
   </div>

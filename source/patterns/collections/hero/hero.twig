@@ -1,6 +1,6 @@
 {{ attach_library('surface/hero') }}
 
-<article class="hero{{- modifier ? ' ' ~ modifier -}}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+<div class="hero{{- modifier ? ' ' ~ modifier -}}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   <div class="hero__container">
     <div class="hero__media">
       {% if 'hero--video' in attributes.class or 'hero--video' in modifier %}
@@ -37,4 +37,4 @@
       </div>
     </div>
   </div>
-</article>
+</div>

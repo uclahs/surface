@@ -1,6 +1,4 @@
 /* eslint-disable */
-import Drupal from 'drupal';
-import once from 'once';
 
 // Capture google map url to use on another <a> element.
 Drupal.behaviors.mapUrl = {

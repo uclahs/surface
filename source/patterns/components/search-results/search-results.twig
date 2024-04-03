@@ -9,7 +9,7 @@
 {% endif %}
 
 {% if snippet %}
-<div class="search-results__snippet prose" {{- content_attributes ? content_attributes|without(class) -}}>
-  {{ snippet }}
-</div>
+  <div class="search-results__snippet prose" {{- content_attributes ? content_attributes|without(class) -}}>
+    {{ snippet }}
+  </div>
 {% endif %}

@@ -3,7 +3,7 @@
 <section class="flockler-embed prose container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {% if title %}
     {% include "@elements/title/title.twig" with {
-        'title': title,
+      'title': title,
     } only %}
   {% endif %}
 

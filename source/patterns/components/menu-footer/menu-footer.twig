@@ -1,46 +1,16 @@
-{#
-/**
- * @file
- * Surface's theme implementation for the menus in the primary_menu region.
- *
- * Available variables:
- * - items: A nested list of menu items. Each menu item contains:
- *   - attributes: HTML attributes for the menu item.
- *   - below: The menu item child items.
- *   - title: The menu link title.
- *   - url: The menu link url, instance of \Drupal\Core\Url
- *   - localized_options: Menu link localized options.
- *   - is_expanded: TRUE if the link has visible children within the current
- *     menu tree.
- *   - is_collapsed: TRUE if the link has children within the current menu tree
- *     that are not currently visible.
- *   - in_active_trail: TRUE if the link is in the active trail.
- *
- * @ingroup themeable
- */
-#}
-{% if is_demo %}
-  {# For Storybook, render a hard-coded menu as Storybook does not
-  understand the menu macro. #}
-  {% include "@components/menu-footer/menu.twig" %}
+{% macro menu_links(items, attributes, menu_level) %}
+  {% if menu_level == 0%}
+    {% set menu_modifier = 'menu-footer'  %}
+  {% else %}
+    {% set menu_modifier = 'menu__subnav'  %}
+  {% endif %}
 
-{% else %}
-
-  {# For Drupal, render the regular menu using the logic in the menu macro. #}
   {% import _self as menus %}
-  {{ menus.menu_links(items, attributes, 0) }}
-
-  {% macro menu_links(items, attributes, menu_level) %}
-    {% import _self as menus %}
-    {% if items %}
-      {{ items }}
-      {% if menu_level == 0 %}
-        <div class="menu menu-footer{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
-      {% else %}
-        <ul class="menu__subnav">
-      {% endif %}
-
+  {% if items %}
+    <ul {{ attributes.addClass('menu', menu_modifier) }}>
+      {% set attributes = attributes.removeClass(menu_modifier) %}
       {% for item in items %}
+
         {% if item.url.isRouted and item.url.routeName == '<nolink>' %}
           {% set menu_item_type = 'nolink' %}
         {% elseif item.url.isRouted and item.url.routeName == '<button>' %}
@@ -61,33 +31,23 @@
           item.in_active_trail ? 'menu__link--active-trail',
         ] %}
 
-        {% set item_classes = item_classes|join(' ')|trim %}
-        {% set link_classes = link_classes|join(' ')|trim %}
-
-        <li class="{{ item_classes }}">
+        <li{{ item.attributes.addClass(item_classes) }}>
           {% if menu_item_type == 'nolink' %}
-            <h4 class="{{ link_classes }}">{{ item.title }}</h4>
+            <h4>{{ item.title }}</h4>
           {% elseif menu_item_type == 'button' %}
-            {% if is_demo %}
-              <button class="{{ link_classes }}" type="button">{{ item.title }}</button>
-            {% else %}
-              {{ link(item.title, item.url, { 'class': link_classes }) }}
-            {% endif %}
+            {{ link(item.title, item.url, { 'class': link_classes }) }}
           {% else %}
-            {% if is_demo %}
-              <a class="{{ link_classes }}" href="{{ item.url }}" >{{ item.title }}</a>
-            {% else %}
-              {{ link(item.title, item.url, { 'class': link_classes }) }}
-            {% endif %}
+            {{ link(item.title, item.url, { 'class': link_classes }) }}
           {% endif %}
 
           {% if menu_level < 1 %}
-            {{ menus.menu_links(item.below, attributes, menu_level + 1, is_demo) }}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
           {% endif %}
         </li>
       {% endfor %}
-      </ul>
-    {% endif %}
-  {% endmacro %}
+    </ul>
+  {% endif %}
+{% endmacro %}
 
-{% endif %}
+{% import _self as menus %}
+{{ menus.menu_links(items, attributes, 0) }}
