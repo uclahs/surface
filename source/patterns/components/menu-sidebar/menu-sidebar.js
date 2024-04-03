@@ -1,6 +1,4 @@
 /* eslint-disable */
-import Drupal from 'drupal';
-import once from 'once';
 
 Drupal.behaviors.surfaceSidebar = {
   attach(context) {

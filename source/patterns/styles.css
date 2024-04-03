@@ -3,3 +3,4 @@
 @import-glob 'components/**/*.css';
 @import-glob 'collections/**/*.css';
 @import-glob 'layouts/**/*.css';
+@import-glob 'theme/**/*.css';

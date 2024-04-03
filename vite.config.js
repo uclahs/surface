@@ -6,15 +6,9 @@ import checker from 'vite-plugin-checker';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import fg from 'fast-glob';
 import { watchAndRun } from 'vite-plugin-watch-and-run';
-import { viteExternalsPlugin } from 'vite-plugin-externals';
 
 export default defineConfig({
   plugins: [
-    viteExternalsPlugin({
-      drupal: 'Drupal',
-      drupalSettings: 'drupalSettings',
-      once: 'once',
-    }),
     // Linting for js and css.
     checker({
       eslint: {
