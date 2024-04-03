@@ -6,7 +6,7 @@ import { SantaBarbaraSandBg, VeniceCanalBg } from '../../../../.storybook/decora
 import hero from './hero.twig';
 import data from './hero.yml';
 import video from './hero-video.yml';
-import '../../theme/glightbox/glightbox';
+// import '../../theme/glightbox/glightbox';
 
 const settings = {
   title: 'Collections/Hero',
