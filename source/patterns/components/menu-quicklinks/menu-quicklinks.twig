@@ -1,9 +1,9 @@
 {{ attach_library('surface/menu-quicklinks') }}
 
-{% macro menu_links(items, attributes, menu_level) %}
+{% macro menu_links(items, attributes, menu_level, menu_name) %}
   {% import _self as menus %}
   {% if items %}
-    <ul class="menu menu-quicklinks{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+    <ul class="menu menu--{{ menu_name }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
       {% for item in items %}
         {% if item.url.isRouted and item.url.routeName == '<nolink>' %}
           {% set menu_item_type = 'nolink' %}
@@ -48,4 +48,4 @@
 {% endmacro %}
 
 {% import _self as menus %}
-{{ menus.menu_links(items, attributes, 0) }}
+{{ menus.menu_links(items, attributes, 0, menu_name) }}

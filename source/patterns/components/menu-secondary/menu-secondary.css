@@ -1,9 +1,9 @@
 /**
  * @file
- * Main menu styling.
+ * Secondary menu styling.
  */
 
-.menu-secondary {
+.menu--secondary {
   display: none;
   list-style: none;
   margin-block: 0;

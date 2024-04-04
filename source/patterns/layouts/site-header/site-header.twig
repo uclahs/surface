@@ -10,7 +10,8 @@
       <div class="site-secondary__content">
         {% block secondary %}
           {% include '@components/menu-secondary/menu-secondary.twig' with {
-            'items': items
+            'menu_name': 'secondary',
+            'items': secondary_menu
           } %}
         {% endblock %}
 
@@ -39,7 +40,7 @@
           {% embed '@layouts/site-navigation/site-navigation.twig' %}
             {% block menu %}
               {% include '@components/menu-main/menu-main.twig' with {
-                'data_menu': data_menu,
+                'data_menu': 'default',
                 'items': main_menu
               } only %}
             {% endblock %}

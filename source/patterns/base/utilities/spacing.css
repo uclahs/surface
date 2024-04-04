@@ -26,3 +26,11 @@
 .mb-15 {
   margin-block-end: 3.75rem; /* 60px */
 }
+
+.p-5 {
+  padding: 1.25rem; /* 20px */
+}
+
+.p-10 {
+  padding: 2.5rem; /* 40px */
+}

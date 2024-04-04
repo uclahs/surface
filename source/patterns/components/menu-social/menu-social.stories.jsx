@@ -7,7 +7,7 @@ import social from './menu-social.twig';
 import data from './menu-social.yml';
 
 const settings = {
-  title: 'Components/Menu Social',
+  title: 'Components/Menu social',
 };
 
 export const Social = {

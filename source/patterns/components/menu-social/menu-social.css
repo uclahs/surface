@@ -12,7 +12,7 @@
   --site-secondary-bg-color: var(--midnight-joshua-tree);
 }
 
-.menu-social {
+.menu--social {
   align-items: center;
   display: flex;
   gap: var(--size-5);

@@ -3,7 +3,7 @@
  * Utility menu styling.
  */
 
-.menu-utility {
+.menu--utility {
   grid-column: 1 / 7;
   margin-block-end: var(--size-4);
 
