@@ -18,10 +18,12 @@ export const ArticleCard = {
   name: 'Article card',
   args: {
     ...data,
+    date: 'October 31, 2024',
     event_type: '',
     more_dates: false,
     short_date_month: '',
     organization: '',
+    readtime: '5 min read'
   },
 };
 
