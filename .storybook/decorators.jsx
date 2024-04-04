@@ -13,13 +13,13 @@ const withBackground = (Story) => (
 );
 
 const SantaBarbaraSandBg = (Story) => (
-  <div className="bg-santa-barbara-sand layout--onecol p-10">
+  <div className="bg-santa-barbara-sand layout--onecol p-10" style={{ background: 'var(--santa-barbara-sand)' }}>
     <Story />
   </div>
 );
 
 const VeniceCanalBg = (Story) => (
-  <div className="bg-venice-canal layout--onecol p-10">
+  <div className="bg-venice-canal layout--onecol p-10"  style={{ background: 'var(--venice-canal)' }}>
     <Story />
   </div>
 );
