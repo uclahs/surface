@@ -10,17 +10,11 @@ import './drupal/once';
 // Imports FontAwesome icons from a specific kit.
 import 'https://kit.fontawesome.com/a0eb0bad75.js';
 
-// Imports all global props most of which are css custom properties.
-import '../dist/css/global.css';
-
-// Imports all custom CSS utilities.
-import '../dist/css/utilities.css';
+// Imports the CSS for all components combined into a single stylesheet.
+import '../dist/css/styles.css';
 
 // Imports all Storybook CSS for display.
 import '../dist/css/storybook.css';
-
-// Imports the CSS for all components combined into a single stylesheet.
-import '../dist/css/styles.css';
 
 function setupTwig(twig) {
   twig.cache();

@@ -1,5 +1,5 @@
 ---
-is_demo: true
+menu_name: 'secondary'
 items:
   - title: 'UCLA Health'
     url: '#'

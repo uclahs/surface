@@ -7,19 +7,19 @@ const withGlobalWrapper = (Story) => (
 );
 
 const withBackground = (Story) => (
-  <div style={{ background: '#2874af', padding: '40px' }}>
+  <div className="bg-ucla-blue p-5">
     <Story />
   </div>
 );
 
 const SantaBarbaraSandBg = (Story) => (
-  <div className="bg-santa-barbara-sand layout--onecol" style={{ background: '#F6F4EE', padding: '40px' }}>
+  <div className="bg-santa-barbara-sand layout--onecol p-10">
     <Story />
   </div>
 );
 
 const VeniceCanalBg = (Story) => (
-  <div className="bg-venice-canal layout--onecol"  style={{ background: '#1A7E89', padding: '40px' }}>
+  <div className="bg-venice-canal layout--onecol p-10">
     <Story />
   </div>
 );

@@ -1,6 +1,5 @@
 ---
-menu: 'columns'
-is_demo: true
+menu_name: 'footer'
 items:
   - title: 'Learn and Train'
     url:
