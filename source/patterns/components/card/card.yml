@@ -11,7 +11,7 @@ title:
 
 date:
   modifier: 'date--small'
-  date: 'October 31, 2024'
+  date: 'October 31, 2024 | 1:30 pm - 2:30 pm'
 
 date_short:
   modifier: 'date-badge--small'
@@ -25,4 +25,4 @@ more_dates_url: '#'
 
 organization: 'Davig Geffen School of Medicine'
 event_type: 'Virtual'
-readtime: 5 min read
+readtime: ''
