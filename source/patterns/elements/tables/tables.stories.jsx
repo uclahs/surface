@@ -4,7 +4,7 @@ import tables from './tables.twig';
 import data from './tables.yml';
 
 const settings = {
-  title: 'Base/Tables',
+  title: 'Elements/Tables',
 };
 
 export const Base = {
