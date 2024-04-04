@@ -25,7 +25,7 @@ export default defineConfig({
         dest: 'js',
       },
       {
-        src: 'source/patterns/**/*.{png,jpg,jpeg,svg,webp}',
+        src: 'source/patterns/**/*.{png,jpg,jpeg,svg,webp,mp4}',
         dest: 'images',
       }],
     }),
