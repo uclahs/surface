@@ -2,6 +2,7 @@ import parse from 'html-react-parser';
 
 import hero from './video-hero.twig';
 import data from './video-hero.yml';
+import './video-hero';
 
 const settings = {
   title: 'Components/Video Hero',

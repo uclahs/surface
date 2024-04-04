@@ -3,6 +3,6 @@ modifier: ''
   # Using the full video tag to be able to grab the full video entity when
   # this component is integrated with Drupal.
 video: |-
-  <video id-"my_video" class="surface-video" autoplay="" muted="" loop="">
+  <video class="surface-video" autoplay="" muted="" loop="">
     <source src="../../../dist/images/video.mp4" type="video/mp4">
   </video>
