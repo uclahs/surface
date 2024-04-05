@@ -211,3 +211,21 @@
     font-weight: var(--font-weight-500);
   }
 }
+
+/* Styles for demo form elements in Storybook. */
+.form-elements-demo {
+  padding: var(--size-5) !important;
+
+  .form-elements-demo__item {
+    margin-block-end: var(--size-6);
+  }
+
+  .demo-label {
+    font-size: var(--font-size-1);
+    margin-block-end: var(--size-1);
+  }
+
+  > input {
+    margin-block-end: var(--size-5) !important;
+  }
+}

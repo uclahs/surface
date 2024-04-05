@@ -4,7 +4,6 @@ global:
     base:
       dist/css/global.css: {}
       dist/css/utilities.css: {}
-      dist/css/field.css: {}
     component:
       dist/css/button.css: {}
       dist/css/embedded-media.css: {}
