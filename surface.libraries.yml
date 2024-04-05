@@ -416,6 +416,13 @@ typewriter:
   dependencies:
     - surface/typewriter-effect
 
+video-hero:
+  css:
+    component:
+      dist/css/video-hero.css: {}
+  js:
+    dist/js/video-hero.js: {}
+
 view-event:
   css:
     layout:
