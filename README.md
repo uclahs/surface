@@ -12,14 +12,14 @@ There are several custom npm commands that allows developers to build and run di
 tasks during and after development. These commands can be found in `package.json`.
 The most common ones to use include:
 
-* `npm run start`: This will run both `vite build --watch` and `stroybook dev -p 6006`.  This is the most common command to run while using Surface for development.  Among the task you will find ran are configured in the `vite.config.js` file and perform tasks such as:
+* `npm run watch`: This will run both `vite build --watch` and `stroybook dev -p 6006`.  This is the most common command to run while using Surface for development.  Among the task you will find ran are configured in the `vite.config.js` file and perform tasks such as:
   - Cleaning out the `dist` folder to ensure a there are fresh files each time.
   - Linting (CSS and JS) files to ensure code standards are met.
   - Copying static assets such as images to the `dist` folder.
   - Watching for changes to CSS, JS and Images and compiling them if needed.
   - Recrusively globbing through all CSS and JS files within the source directory.
 
-* `npm run build-storybook`: This is the command that runs `vite build` and `storybook build -o storybook` which compiles the theme and generates a static version of Storybook for prodcution release.
+* `npm run release`: This is the command that runs `vite build` and `storybook build -o storybook` which compiles the theme and generates a static version of Storybook for prodcution release.
 
 ## Building the theme inside Docker containers
 

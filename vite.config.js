@@ -2,9 +2,10 @@ import { defineConfig } from 'vite';
 import twig from 'vite-plugin-twig-drupal';
 import yml from '@modyfi/vite-plugin-yaml';
 import { join } from 'node:path';
+import path from 'path';
+import { glob } from "glob"
 import checker from 'vite-plugin-checker';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-import fg from 'fast-glob';
 import { watchAndRun } from 'vite-plugin-watch-and-run';
 
 export default defineConfig({
@@ -34,22 +35,22 @@ export default defineConfig({
       {
         name: 'css',
         watchKind: ['add', 'change', 'unlink'],
-        watch: fg.sync('source/patterns/**/*.css', { absolute: true }),
-        run: 'npm run build',
+        watch: path.resolve('source/patterns/**/*.css'),
+        run: 'npm run vite:build',
         delay: 300,
       },
       {
         name: 'js',
         watchKind: ['add', 'change', 'unlink'],
-        watch: fg.sync('source/patterns/**/*.js', { absolute: true }),
-        run: 'npm run build',
+        watch: path.resolve('source/patterns/**/*.js'),
+        run: 'npm run vite:build',
         delay: 300,
       },
       {
         name: 'images',
         watchKind: ['add', 'change', 'unlink'],
-        watch: fg.sync('source/patterns/**/images/*.{png,jpg,jpeg,svg,webp}', { absolute: true }),
-        run: 'npm run build',
+        watch: path.resolve('source/patterns/**/*.{png,jpg,jpeg,svg,webp,mp4}'),
+        run: 'npm run vite:build',
         delay: 300,
       },
     ]),
@@ -73,7 +74,7 @@ export default defineConfig({
     minify: false,
     outDir: 'dist',
     rollupOptions: {
-      input: fg.sync('source/patterns/**/*.css', { absolute: true }),
+      input: glob.sync(path.resolve(__dirname,'source/patterns/**/*.css')),
       output: {
         assetFileNames: 'css/[name].css',
       },
