@@ -12,20 +12,20 @@ export default defineConfig({
     // Linting for js and css.
     checker({
       eslint: {
-        lintCommand: 'eslint "source/patterns/**/*.{js,jsx}"',
+        lintCommand: 'eslint "source/patterns/**/**/*.{js,jsx}"',
       },
       stylelint: {
-        lintCommand: 'stylelint "source/patterns/**/*.css"',
+        lintCommand: 'stylelint "source/patterns/**/**/*.css"',
       },
     }),
     // Copy js and images from source to dist
     viteStaticCopy({
       targets: [{
-        src: 'source/patterns/**/*.js',
+        src: 'source/patterns/**/**/*.js',
         dest: 'js',
       },
       {
-        src: 'source/patterns/**/*.{png,jpg,jpeg,svg,webp,mp4}',
+        src: 'source/patterns/**/**/*.{png,jpg,jpeg,svg,webp,mp4}',
         dest: 'images',
       }],
     }),
