@@ -35,21 +35,21 @@ export default defineConfig({
         name: 'css',
         watchKind: ['add', 'change', 'unlink'],
         watch: fg.sync('source/patterns/**/**/*.css', { absolute: true }),
-        run: 'npm run build',
+        run: 'npm run vite:build',
         delay: 300,
       },
       {
         name: 'js',
         watchKind: ['add', 'change', 'unlink'],
         watch: fg.sync('source/patterns/**/**/*.js', { absolute: true }),
-        run: 'npm run build',
+        run: 'npm run vite:build',
         delay: 300,
       },
       {
         name: 'images',
         watchKind: ['add', 'change', 'unlink'],
         watch: fg.sync('source/patterns/**/**/*.{png,jpg,jpeg,svg,webp,mp4}', { absolute: true }),
-        run: 'npm run build',
+        run: 'npm run vite:build',
         delay: 300,
       },
     ]),
@@ -73,7 +73,7 @@ export default defineConfig({
     minify: false,
     outDir: 'dist',
     rollupOptions: {
-      input: fg.sync('source/patterns/**/*.css', { absolute: true }),
+      input: fg.sync('source/patterns/**/**/*.css', { absolute: true }),
       output: {
         assetFileNames: 'css/[name].css',
       },
