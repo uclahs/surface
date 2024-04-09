@@ -200,9 +200,9 @@ glide:
 glightbox:
   css:
     theme:
-      'https//cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css': { type: external, minified: true }
+      'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css': { type: external, minified: true }
   js:
-    'https//cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js': { type: external, minified: true, attributes: { defer: true } }
+    'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js': { type: external, minified: true, attributes: { defer: true } }
     dist/js/glightbox.js: {}
   dependencies:
     - core/drupal
@@ -230,6 +230,15 @@ layout-views-grid-vertical:
   css:
     layout:
       dist/css/layout-views-grid-vertical.css: {}
+
+media-callout:
+  css:
+    component:
+      dist/css/media-callout.css: {}
+  js:
+    dist/js/glightbox.js: {}
+  dependencies:
+    - surface/glightbox
 
 media-quote:
   css:

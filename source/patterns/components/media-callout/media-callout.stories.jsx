@@ -1,43 +1,46 @@
 import parse from 'html-react-parser';
 
+/* eslint-disable */
+
 // Imports decorators for background colors.
 import { SantaBarbaraSandBg, VeniceCanalBg } from '../../../../.storybook/decorators';
 
-/* eslint-disable */
-
-import hero from './hero.twig';
-import data from './hero.yml';
-import video from './hero-video.yml';
+import media from './media-callout.twig';
+import data from './media-callout.yml';
 // Importing the custom JS to initiate glightbox.
 import '../../../patterns/theme/glightbox/glightbox.js';
 
+
 const settings = {
-  title: 'Collections/Hero',
+  title: 'Components/Media callout',
 };
 
-export const HeroDefault = {
-  name: 'Hero',
-  render: (args) => parse(hero(args)),
-  args: { ...data },
-};
-
-export const HeroWithVideo = {
-  ...HeroDefault,
-  name: 'Hero with video',
+export const MediaCallout = {
+  name: 'Media callout',
+  render: (args) => parse(media(args)),
   args: {
-    ...video,
-    modifier: 'hero--video',
+    ...data,
+    video_url: ''
+  },
+};
+
+export const MediaCalloutVideo = {
+  ...MediaCallout,
+  name: 'Media callout with video',
+  args: {
+    ...data,
+    video_url: 'https://youtu.be/GJVwbyAY4Sk',
   },
 };
 
 export const SantaBarbaraSand = {
-  ...HeroDefault,
+  ...MediaCallout,
   name: 'With Santa Barbara Sand background',
   decorators: [SantaBarbaraSandBg],
 };
 
 export const VeniceCanal = {
-  ...HeroDefault,
+  ...MediaCallout,
   name: 'With Venice Canal background',
   decorators: [VeniceCanalBg],
 };
