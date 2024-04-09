@@ -3,12 +3,11 @@
  * Flockler embed styles.
  */
 
-.flockler-embed {
+.bg-venice-canal.layout--onecol {
   /* If Venice Canal background color is present, change text color to white. */
-  .bg-venice-canal.layout--onecol & {
-    color: var(--white);
-
-    .heading {
+  .flockler-embed {
+    p,
+    h2 {
       color: var(--white);
     }
   }

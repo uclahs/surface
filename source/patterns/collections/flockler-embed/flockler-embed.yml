@@ -3,7 +3,7 @@ modifier: ''
 title:
   level: 2
   modifier: ''
-  text: 'This is my awesome Flockler feed'
+  text: 'This is my awesome Flockler feed (Hard reload the browser)'
   url: ''
 description: 'Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor.'
 flockler_id: 'flockler-embed-171f6b689460b8d457eaf44e46bb40b8'
