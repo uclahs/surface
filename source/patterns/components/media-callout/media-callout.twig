@@ -1,0 +1,25 @@
+{{ attach_library('surface/media-callout') }}
+
+<section class="media-callout container{{ video_provider ? ' media-callout--video' }}{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+  <div class="media-callout__wrapper container">
+    <div class="media-callout__title">
+      {{ title }}
+    </div>
+  </div>
+
+  <div class="media-callout__image">
+    {% if video_provider %}
+      <a href="{{ video_provider }}" target="_blank" class="media-callout__button glightbox">
+        {{ image }}
+      </a>
+    {% else %}
+      {{ image }}
+    {% endif %}
+  </div>
+
+  <div class="media-callout__wrapper container">
+    <div class="media-callout__teaser">
+      {{ teaser }}
+    </div>
+  </div>
+</section>
