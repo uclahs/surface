@@ -17,7 +17,7 @@
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build -o storybook",
     "storybook:test": "test-storybook",
-    "release": "npm run vite:build && npm run storybook:build",
+    "build": "npm run vite:build && npm run storybook:build",
     "start": "npm run watch",
     "watch": "npm run vite:watch & npm run storybook:dev",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx .",
