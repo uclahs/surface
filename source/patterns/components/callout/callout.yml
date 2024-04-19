@@ -1,7 +1,6 @@
 ---
 modifier: ''
-image: |-
-  <img src="images/3-2.svg" alt="Placeholder image" width="768" height="512" />
+image: '<img src="../../dist/images/3-2.svg" alt="Placeholder image" width="768" height="512" />'
 title:
   modifier: 'callout__title'
   level: 3
@@ -12,3 +11,6 @@ cta:
   modifier: 'button button--primary'
   text: 'View our programs'
   url: '#'
+  action: 'tracking'
+  category: 'content'
+  label: 'Siteimprove tracking'

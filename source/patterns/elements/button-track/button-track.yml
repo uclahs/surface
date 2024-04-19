@@ -1,0 +1,7 @@
+---
+modifier: 'button button--secondary'
+text: 'Siteimprove tracking'
+url: '#'
+action: 'tracking'
+category: 'content'
+label: 'Hi'

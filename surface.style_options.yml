@@ -1,0 +1,403 @@
+# The "options" section defines all available options.
+options:
+  alert_type:
+    plugin: css_class
+    label: 'Alert type'
+    multiple: false
+    options:
+      -
+        label: None
+      -
+        label: Error
+        class: alert--error
+      -
+        label: Warning
+        class: alert--warning
+      -
+        label: Success
+        class: alert--success
+  aspect:
+    plugin: css_class
+    label: 'Select an image size'
+    multiple: false
+    options:
+      -
+        label: Default
+        class: medium-rectangular
+      -
+        label: Small portrait (250x375)
+        class: small-portrait
+      -
+        label: Small rectangular (240x160)
+        class: small-rectangular
+      -
+        label: Small rectangular tall (480x360)
+        class: small-rectangular-tall
+      -
+        label: Small square (250px)
+        class: small-square
+      -
+        label: Medium portrait (360x540)
+        class: medium-portrait
+      -
+        label: Medium rectangular (480x320)
+        class: medium-rectangular
+      -
+        label: Medium rectangular tall (720x540)
+        class: medium-rectangular-tall
+      -
+        label: Medium rectangular wide (720x405)
+        class: medium-rectangular-wide
+      -
+        label: Medium square (500px)
+        class: medium-square
+      -
+        label: Large rectangular (720x480)
+        class: large-rectangular
+      -
+        label: Large rectangular tall (960x720)
+        class: large-rectangular-tall
+      -
+        label: Large square (720px)
+        class: large-square
+      -
+        label: Extra large rectangular (960x640)
+        class: extra-large-rectangular
+      -
+        label: Extra large rectangular wide (960x540)
+        class: extra-large-rectangular-wide
+      -
+        label: Extra large square (960px)
+        class: extra-large-square
+      -
+        label: Super large full width (1376px)
+        class: super-large
+  banner_width:
+    plugin: css_class
+    label: 'Are you adding the banner in a narrow column?'
+    multiple: false
+    options:
+      -
+        label: No
+      -
+        label: Yes
+        class: is-narrow
+  border_color:
+    plugin: css_class
+    label: 'Border color'
+    multiple: false
+    options:
+      -
+        label: UCLA Blue
+        class: border-ucla-blue
+      -
+        label: Midnight at Joshua Tree
+        class: border-midnight-joshua-tree
+      -
+        label: Silver Lake Reservoir
+        class: border-silver-lake-reservoir
+      -
+        label: South Bay Waves
+        class: border-southbay-waves
+      -
+        label: Venice Canal
+        class: border-venice-canal
+      -
+        label: Midnight at the Observatory
+        class: border-midnight-observatory
+      -
+        label: Malibu Dolphin
+        class: border-malibu-dolphin
+  border_radius:
+    plugin: css_class
+    label: 'Border radius'
+    multiple: false
+    options:
+      -
+        label: None
+        class: rounded-none
+      -
+        label: Square
+        class: radius-square
+      -
+        label: Round
+        class: radius-round
+  callout_type:
+    plugin: css_class
+    label: 'Callout style'
+    multiple: false
+    options:
+      -
+        label: Normal
+      -
+        label: Quote
+        class: is-quote
+  direction:
+    plugin: css_class
+    label: 'Direction'
+    multiple: false
+    options:
+      -
+        label: Normal
+      -
+        label: Reversed
+        class: is-reversed
+  display:
+    plugin: css_class
+    label: 'Display as'
+    multiple: false
+    options:
+      -
+        label: Grid
+        class: is-grid
+      -
+        label: List
+        class: is-list
+  hero_type:
+    plugin: css_class
+    label: 'Hero style'
+    multiple: false
+    options:
+      -
+        label: Default
+      -
+        label: Banner
+        class: hero--banner
+      -
+        label: Video
+        class: hero--video
+  link_type:
+    plugin: css_class
+    label: 'Link style'
+    multiple: false
+    options:
+      -
+        label: Unstyled
+      -
+        label: Call to action
+        class: is-cta
+  orientation:
+    plugin: css_class
+    label: 'Orientation'
+    multiple: false
+    options:
+      -
+        label: Stacked
+        class: is-stacked
+      -
+        label: Horizontal
+        class: is-horizontal
+  overlay:
+    plugin: css_class
+    label: 'Overlay'
+    multiple: false
+    options:
+      -
+        label: No
+      -
+        label: Yes
+        class: has-overlay
+  placement:
+    plugin: css_class
+    label: 'Placement'
+    multiple: false
+    options:
+      -
+        label: None
+      -
+        label: Top
+        class: is-top
+      -
+        label: Bottom
+        class: is-bottom
+  spacer_top:
+    plugin: css_class
+    label: 'Select the top margin'
+    multiple: false
+    options:
+      -
+        label: None
+      -
+        label: Small top (Top margin 20px)
+        class: mt-5
+      -
+        label: Medium top (Top margin 40px)
+        class: mt-10
+      -
+        label: Large top (Top margin 60px)
+        class: mt-15
+  spacer_bottom:
+    plugin: css_class
+    label: 'Select the bottom margin'
+    multiple: false
+    options:
+      -
+        label: None
+      -
+        label: Small bottom (Bottom margin 20px)
+        class: mb-5
+      -
+        label: Medium bottom (Bottom margin 40px)
+        class: mb-10
+      -
+        label: Large bottom (Bottom margin 60px)
+        class: mb-15
+  table_type:
+    plugin: css_class
+    label: 'Table type'
+    multiple: false
+    options:
+      -
+        label: Default
+        class: table--default
+      -
+        label: No Border
+        class: table--no-border
+      -
+        label: Hover
+        class: table--hover
+      -
+        label: Striped
+        class: table--striped
+      -
+        label: Primary
+        class: table--primary
+      -
+        label: Primary hover
+        class: table--primary table--hover
+      -
+        label: Primary striped
+        class: table--primary table--striped
+contexts:
+  paragraphs:
+    event_calendar:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    flockler_embed:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_form_embed:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_accordion:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_alert:
+      options:
+        alert_type: true
+        spacer_top: true
+        spacer_bottom: true
+    sf_article_highlight:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_call_to_action:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_callout:
+      options:
+        callout_type: true
+        orientation: true
+        direction: true
+        spacer_top: true
+        spacer_bottom: true
+    sf_carousel:
+      options:
+        overlay: true
+        placement: true
+        spacer_top: true
+        spacer_bottom: true
+    sf_cta_banner:
+      options:
+        banner_width: true
+        spacer_top: true
+        spacer_bottom: true
+    sf_event_highlight:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_gallery:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_hero:
+      options:
+        hero_type: true
+        spacer_top: true
+        spacer_bottom: true
+    sf_highlight:
+      options:
+        orientation: true
+        direction: true
+        spacer_top: true
+        spacer_bottom: true
+    sf_icon:
+      options:
+        border_color: true
+        border_radius: true
+        spacer_top: true
+        spacer_bottom: true
+    sf_image:
+      options:
+        aspect: true
+        spacer_top: true
+        spacer_bottom: true
+    sf_media_callout:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_media_quote:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_metric:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_person_listing:
+      options:
+        display: true
+        spacer_top: true
+        spacer_bottom: true
+    sf_quote:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_slider:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_table:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+        table_type: true
+    sf_tabs:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_text:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    typewriter_cta:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_video:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    sf_view_embed:
+      options:
+        spacer_top: true
+        spacer_bottom: true
+    video_hero:
+      options:
+        spacer_top: true
+        spacer_bottom: true

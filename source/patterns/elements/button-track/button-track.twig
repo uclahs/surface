@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Button component to track Siteimprove events.
+ *
+ * Available variables:
+ * - modifier: Optional placeholder to pass css classes like button--primary.
+ * - text: Required value for the button's text/label.
+ * - url: Required value when used for Siteimprove tracking.
+ *
+ * Next variables are Siteimprove specific:
+ * - action: Required value provided by content editors.
+ * - category: Required value provided by content editors.
+ * - label: Optional value.
+ *
+ * Source of Siteimprove tracking:
+ * https://help.siteimprove.com/support/solutions/articles/80000863895-getting-started-with-event-tracking
+ *
+ */
+#}
+
+<a href="{{ url }}"
+  class="{{ modifier|default('button--link') }}"
+  {% if action or category %}onclick="_sz.push(['event', '{{ category }}', {% if label %}'{{ label }}', {% endif %}'{{ action }}']);"{% endif %}>
+  {{ text }}
+</a>
