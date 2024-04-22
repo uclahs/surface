@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Navigation-related hook implementations.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-task templates.
+ */
+function surface_preprocess_menu_local_task(&$variables) {
+  // Ensure is-active class is set when the tab is active. The generic active
+  // link handler applies stricter comparison rules than necessary for tabs.
+  if (isset($variables['is_active']) && $variables['is_active'] === TRUE) {
+    $variables['link']['#options']['attributes']['class'][] = 'is-active';
+  }
+
+  if (isset($variables['element']['#level'])) {
+    $variables['level'] = $variables['element']['#level'];
+  }
+}

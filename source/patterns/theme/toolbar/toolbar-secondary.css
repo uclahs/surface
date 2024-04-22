@@ -1,0 +1,23 @@
+/**
+ * @file
+ * Secondary Toolbar.
+ */
+
+.gin-secondary-toolbar__layout-container {
+  margin-inline: auto;
+  max-inline-size: var(--size-container);
+  padding-inline: var(--size-4);
+
+  @media (--tablet) {
+    max-inline-size: var(--size-tablet);
+  }
+
+  @media (--laptop) {
+    max-inline-size: var(--size-laptop);
+  }
+
+  @media (--desktop) {
+    max-inline-size: var(--size-container);
+    padding-inline: var(--size-8);
+  }
+}

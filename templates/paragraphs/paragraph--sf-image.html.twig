@@ -1,0 +1,7 @@
+{# Set variable to trigger rendering of content array. #}
+{% set rendered_content = content|render %}
+
+{% include '@components/image-embed/image-embed.twig' with {
+  'attributes': attributes,
+  'mid': content.field_sf_image.0['#media'].mid.value,
+} only %}

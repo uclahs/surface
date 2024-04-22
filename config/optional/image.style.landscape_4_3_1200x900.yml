@@ -1,0 +1,16 @@
+uuid: 1beb0259-5f08-45b8-8fff-2a652ca4b233
+langcode: en
+status: true
+dependencies: {  }
+name: landscape_4_3_1200x900
+label: 'Landscape 4:3 (1200x900)'
+effects:
+  791b29c4-5e45-46d5-a071-2cb7706fb109:
+    uuid: 791b29c4-5e45-46d5-a071-2cb7706fb109
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 900
+      anchor: center-center
+pipeline: __default__

@@ -1,0 +1,7 @@
+{# Set variable to trigger rendering of content array. #}
+{% set rendered_content = content|render %}
+
+{% include '@components/accordion-tabs/accordion-tabs.twig' with {
+  'attributes': attributes,
+  'items': content.field_sf_tab['#items'],
+} only %}

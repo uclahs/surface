@@ -1,0 +1,204 @@
+# One column.
+one_column:
+  label: 'One Column [1]'
+  path: templates/layout
+  template: layout--onecol
+  library: surface/layout
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: 'Columns: 1'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content
+
+# Two column 50/50.
+two_column:
+  label: 'Two Column [1:1]'
+  path: templates/layout
+  template: layout--twocol
+  library: surface/layout
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: 'Columns: 2'
+  default_region: first
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+
+# Two column 30/70 with Menu.
+two_column_30_70_menu:
+  label: 'Two Column Menu [1:2]'
+  path: templates/layout
+  template: layout--twocol-30-70-menu
+  library: surface/layout
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: 'Columns: 2'
+  default_region: second
+  icon_map:
+    - [first, second, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+
+# Two column 30/70.
+two_column_30_70:
+  label: 'Two Column [1:2]'
+  path: templates/layout
+  template: layout--twocol-30-70
+  library: surface/layout
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: 'Columns: 2'
+  default_region: second
+  icon_map:
+    - [first, second, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+
+# Two column 70/30.
+two_column_70_30:
+  label: 'Two Column [2:1]'
+  path: templates/layout
+  template: layout--twocol-70-30
+  library: surface/layout
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: 'Columns: 2'
+  default_region: first
+  icon_map:
+    - [first, first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+
+# Three column 33/33/33.
+three_column:
+  label: 'Three Column [1:1:1]'
+  path: templates/layout
+  template: layout--threecol
+  library: surface/layout
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: 'Columns: 3'
+  default_region: first
+  icon_map:
+    - [first, second, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+
+# Three column 25/50/25.
+three_column_25_50_25:
+  label: 'Three Column [1:2:1]'
+  path: templates/layout
+  template: layout--threecol-25-50-25
+  library: surface/layout
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: 'Columns: 3'
+  default_region: second
+  icon_map:
+    - [first, second, second, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+
+# Three column 25/25/50.
+three_column_25_25_50:
+  label: 'Three Column [1:1:2]'
+  path: templates/layout
+  template: layout--threecol-25-25-50
+  library: surface/layout
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: 'Columns: 3'
+  default_region: third
+  icon_map:
+    - [first, second, third, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+
+# Three column 50/25/20.
+three_column_50_25_25:
+  label: 'Three Column [2:1:1]'
+  path: templates/layout
+  template: layout--threecol-50-25-25
+  library: surface/layout
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: 'Columns: 3'
+  default_region: third
+  icon_map:
+    - [first, first, second, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+
+# Four column.
+four_column:
+  label: 'Four Column [1:1:1:1]'
+  path: templates/layout
+  template: layout--fourcol
+  library: surface/layout
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: 'Columns: 4'
+  default_region: first
+  icon_map:
+    - [first, second, third, fourth]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth
+
+# Six column.
+six_column:
+  label: 'Six Column [1:1:1:1:1:1]'
+  path: templates/layout
+  template: layout--sixcol
+  library: surface/layout
+  category: 'Columns: 6'
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  default_region: first
+  icon_map:
+    - [first, second, third, fourth, fifth, sixth]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth
+    fifth:
+      label: Fifth
+    sixth:
+      label: Sixth

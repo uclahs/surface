@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Surface's theme override to display the header region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+
+{% if content %}
+  {% embed '@layouts/site-header/site-header.twig' %}
+    {% block alert %}
+      {% if site_alert %}
+        {% include '@elements/site-alert/site-alert.twig' with {
+          'text': site_alert
+        } %}
+      {% endif %}
+    {% endblock %}
+
+    {% block secondary %}
+      {{ drupal_menu('secondary') }}
+    {% endblock %}
+
+    {% block buttons %}
+      {% if give_url %}
+        {% include '@elements/button-give/button-give.twig' with {
+          'url': give_url,
+          'text': 'Giving'
+        } only %}
+      {% endif %}
+
+      {% include '@elements/translate/translate.twig' only %}
+      {% include '@elements/button-search/button-search.twig' only %}
+    {% endblock %}
+
+    {% block branding %}
+      {% include '@elements/site-branding/site-branding.twig' with {
+        'site_name': site_name,
+        'logo': header_logo,
+        'modifier': logo_style
+      } only %}
+    {% endblock %}
+
+    {% block primary %}
+      {% embed '@layouts/site-navigation/site-navigation.twig' %}
+        {% block menu %}
+          {{ drupal_menu('main', expand=true) }}
+          {{ drupal_menu('secondary') }}
+        {% endblock %}
+      {% endembed %}
+      {% include '@elements/mobile-button/mobile-button.twig' %}
+    {% endblock %}
+
+    {% block search %}
+      {% embed '@layouts/site-search/site-search.twig' with {
+        'data_search': data_search,
+        'has_quicklinks': drupal_menu('quick-links')|render is not empty
+      } %}
+        {% block quicklinks %}
+          {{ drupal_menu('quick-links') }}
+        {% endblock %}
+      {% endembed %}
+    {% endblock %}
+  {% endembed %}
+{% endif %}

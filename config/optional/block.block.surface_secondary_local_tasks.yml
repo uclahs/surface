@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - surface
+id: surface_secondary_local_tasks
+theme: surface
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/user\r\n/user/*\r\n<front>"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      sf_event: sf_event
+      sf_paragraph_page: sf_paragraph_page
+      sf_person: sf_person

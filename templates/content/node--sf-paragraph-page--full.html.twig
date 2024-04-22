@@ -1,0 +1,49 @@
+{{ attach_library('surface/page') }}
+
+{% set classes = [
+  'page',
+  'page--' ~ view_mode|clean_class,
+]|join(' ')|trim %}
+
+{% set content_classes = [
+  'page__main',
+  content_attributes ? content_attributes.class
+]|join(' ')|trim %}
+
+<article class="{{ classes }}" {{ attributes ? attributes|without('class', 'id') }}>
+  <header class="page-header {{ content.field_sf_banner_image|field_value is not empty ? 'page-header--banner' }}">
+    <div class="container">
+      <div class="page-header__content">
+        {{ content.content_moderation_control }}
+        {{ drupal_breadcrumb() }}
+
+        <div class="page-header__text">
+          {{ title_prefix }}
+          {% if label %}
+            <h1{{ title_attributes }}>
+              {{ label }}
+            </h1>
+          {% endif %}
+          {{ title_suffix }}
+
+          {% if content.field_sf_subtitle|field_value is not empty %}
+            <p>{{ content.field_sf_subtitle|field_value }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if content.field_sf_banner_image|field_value is not empty %}
+        <div class="page-header__media">
+          {{ content.field_sf_banner_image|field_value }}
+        </div>
+        <div class="page-header__overlay"></div>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="{{ content_classes }}" {{ content_attributes ? content_attributes|without('class') }}>
+    <div class="container">
+      {{ content.field_sf_content }}
+    </div>
+  </div>
+</article>

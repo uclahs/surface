@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+/**
+ * Load include files which contain additional theming logic.
+ */
+foreach (glob(\Drupal::service('extension.list.theme')->getPath('surface') . '/includes/*.theme') as $file) {
+  include $file;
+}

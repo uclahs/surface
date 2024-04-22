@@ -1,0 +1,14 @@
+/**
+ * @file
+ * Horizontal Toolbar.
+ */
+
+.gin-secondary-toolbar--frontend {
+  .gin--horizontal-toolbar.toolbar-horizontal & {
+    top: 53px;
+  }
+
+  .gin--horizontal-toolbar.toolbar-vertical & {
+    top: 39px;
+  }
+}

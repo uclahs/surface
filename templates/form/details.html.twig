@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Theme override for a details element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the details element.
+ * - errors: (optional) Any errors for this details element, may not be set.
+ * - title: (optional) The title of the element, may not be set.
+ * - summary_attributes: A list of HTML attributes for the summary element.
+ * - description: (optional) The description of the element, may not be set.
+ * - children: (optional) The children of the element, may not be set.
+ * - value: (optional) The value of the element, may not be set.
+ *
+ * @see template_preprocess_details()
+ * @see surface_preprocess_details()
+ */
+#}
+{#
+  Prefix 'details' class to avoid collision with Modernizr.
+
+  @todo Remove prefix after https://www.drupal.org/node/2981732 has been solved.
+#}
+
+{% include '@components/details/details.twig' with {
+  'attributes': attributes,
+  'summary_attributes': summary_attributes,
+  'content_attributes': content_attributes,
+  'required': required,
+  'title': title,
+  'errors': errors,
+  'description': description,
+  'children': children,
+  'value': value
+} %}

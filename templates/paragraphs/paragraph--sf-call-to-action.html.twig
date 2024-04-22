@@ -1,0 +1,9 @@
+{# Set variable to trigger rendering of content array. #}
+{% set rendered_content = content|render %}
+
+{% include '@components/call-to-action/call-to-action.twig' with {
+  'attributes': attributes,
+  'title': content.field_sf_title|field_value,
+  'url': content.field_sf_link.0['#url_title'],
+  'url_title': content.field_sf_link.0['#title'],
+} only %}

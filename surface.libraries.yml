@@ -2,33 +2,41 @@ global:
   version: VERSION
   css:
     base:
+      //use.typekit.net/gqr2ulm.css: { type: external, minified: true }
       dist/css/global.css: {}
       dist/css/utilities.css: {}
+    layout:
+      dist/css/layout.css: {}
+      dist/css/block.css: {}
+      dist/css/page.css: {}
+      dist/css/view.css: {}
     component:
       dist/css/button.css: {}
-      dist/css/embedded-media.css: {}
       dist/css/field.css: {}
-      dist/css/fieldset.css: {}
       dist/css/forms.css: {}
-      dist/css/form-boolean.css: {}
-      dist/css/form-item-label.css: {}
-      dist/css/form-item-upload.css: {}
       dist/css/form-item.css: {}
-      dist/css/form-select.css: {}
+      dist/css/form-item-label.css: {}
+      dist/css/form-boolean.css: {}
+      dist/css/form-item-upload.css: {}
       dist/css/form-text.css: {}
+      dist/css/form-select.css: {}
       dist/css/links.css: {}
+      dist/css/page-header.css: {}
       dist/css/page-title.css: {}
       dist/css/skip-link.css: {}
+      dist/css/pager.css: {}
+      dist/css/tables.css: {}
       dist/css/views-exposed-form.css: {}
-    layout:
-      dist/css/block.css: {}
-      dist/css/container-inline.css: {}
-      dist/css/layout.css: {}
-      dist/css/main.css: {}
-      dist/css/page-header.css: {}
-      dist/css/view.css: {}
+    theme:
+      dist/css/fullcalendar.css: {}
+      dist/css/toolbar.css: {}
+      dist/css/toolbar-secondary.css: {}
+      dist/css/horizontal-toolbar.css: {}
+  js:
+    //kit.fontawesome.com/a0eb0bad75.js: { type: external, minified: true }
+    dist/js/animations.js: {}
   dependencies:
-    - surface/fontawesome
+    - core/drupal
 
 accordion:
   css:
@@ -44,7 +52,7 @@ accordion-tabs:
     component:
       dist/css/accordion-tabs.css: {}
   js:
-    https://cdn.jsdelivr.net/npm/a11y-accordion-tabs@1.0.2/a11y-accordion-tabs.min.js : { type: external, minified: true, attributes: { defer: true } }
+    //cdn.jsdelivr.net/npm/a11y-accordion-tabs@1.0.2/a11y-accordion-tabs.min.js : { type: external, minified: true, attributes: { defer: true } }
   dependencies:
     - core/jquery
     - core/drupal
@@ -55,40 +63,30 @@ alert:
     component:
       dist/css/alert.css: {}
 
-article-teaser:
-  css:
-    component:
-      dist/css/article-teaser.css: {}
-
 breadcrumb:
   css:
     component:
       dist/css/breadcrumb.css: {}
-
-button-group:
-  css:
-    component:
-      dist/css/button-group.css: {}
 
 byline:
   css:
     component:
       dist/css/byline.css: {}
 
-callout:
+button-group:
   css:
     component:
-      dist/css/callout.css: {}
+      dist/css/button-group.css: {}
 
 call-to-action:
   css:
     component:
       dist/css/call-to-action.css: {}
 
-card:
+callout:
   css:
     component:
-      dist/css/card.css: {}
+      dist/css/callout.css: {}
 
 carousel:
   css:
@@ -99,15 +97,25 @@ carousel:
   dependencies:
     - surface/glide
 
-content-highlight:
+card:
   css:
     component:
-      dist/css/content-highlight.css: {}
+      dist/css/card.css: {}
 
 cta-banner:
   css:
     component:
       dist/css/cta-banner.css: {}
+
+content-card:
+  css:
+    component:
+      dist/css/content-card.css: {}
+
+content-highlight:
+  css:
+    component:
+      dist/css/content-highlight.css: {}
 
 date:
   css:
@@ -121,93 +129,28 @@ date-badge:
 
 details:
   css:
-    component:
+    theme:
       dist/css/details.css: {}
-
-event:
-  css:
-    component:
-      dist/css/event.css: {}
-  js:
-    dist/js/event.js: {}
-  dependencies:
-    - core/drupal
-    - core/drupalSettings
-    - core/once
-
-event-card:
-  css:
-    component:
-      dist/css/event-card.css: {}
-
-event-calendar:
-  css:
-    component:
-      dist/css/event-calendar.css: {}
-
-event-listing:
-  css:
-    component:
-      dist/css/event-listing.css: {}
 
 eyebrow:
   css:
     component:
       dist/css/eyebrow.css: {}
 
-facet-block:
-  css:
-    layout:
-      dist/css/facet-block.css: {}
-
-featured-card:
+featured-content:
   css:
     component:
-      dist/css/featured-card.css: {}
-
-feed-icon:
-  css:
-    theme:
-      dist/css/feed-icon.css: {}
+      dist/css/featured-content.css: {}
 
 flockler-embed:
   css:
     component:
       dist/css/flockler-embed.css: {}
 
-fontawesome:
-  js:
-    'https://kit.fontawesome.com/a0eb0bad75.js': { type: external, minified: true, attributes: { defer: true, crossorigin: anonymous } }
-  dependencies:
-    - core/drupal
-    - core/drupalSettings
-
 gallery:
   css:
     theme:
       dist/css/gallery.css: {}
-
-glide:
-  css:
-    component:
-      "https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.css": { type: external, minified: true }
-      dist/css/glide.css: {}
-  js:
-    "https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js": { type: external, minified: true, attributes: { defer: true } }
-  dependencies:
-    - core/drupal
-
-glightbox:
-  css:
-    theme:
-      'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css': { type: external, minified: true }
-  js:
-    'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js': { type: external, minified: true, attributes: { defer: true } }
-    dist/js/glightbox.js: {}
-  dependencies:
-    - core/drupal
-    - core/drupalSettings
-    - core/once
 
 hero:
   css:
@@ -218,49 +161,49 @@ hero:
 
 icon:
   css:
-    theme:
+    component:
+      https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined: { type: external }
       dist/css/icon.css: {}
 
-layout-views-grid-horizontal:
+layout:
   css:
     layout:
-      dist/css/layout-views-grid-horizontal.css: {}
+      dist/css/layout.css: {}
 
-layout-views-grid-vertical:
-  css:
-    layout:
-      dist/css/layout-views-grid-vertical.css: {}
-
-media-callout:
+maintenance-page:
   css:
     component:
-      dist/css/media-callout.css: {}
-  js:
-    dist/js/glightbox.js: {}
-  dependencies:
-    - surface/glightbox
-
-media-quote:
-  css:
-    component:
-      dist/css/media-quote.css: {}
+      dist/css/maintenance-page.css: {}
 
 media:
   css:
     component:
       dist/css/media.css: {}
 
+media-quote:
+  css:
+    component:
+      dist/css/media-quote.css: {}
+
+media-callout:
+  css:
+    component:
+      dist/css/media-callout.css: {}
+  dependencies:
+    - surface/glightbox
+
 menu-quicklinks:
   css:
     component:
       dist/css/menu-quicklinks.css: {}
 
-messages:
+menu-sidebar:
   css:
     component:
-      dist/css/messages.css: {}
+      dist/css/menu-sidebar.css: {}
+      dist/css/sidebar-toggle.css: {}
   js:
-    dist/js/message.js: {}
+    dist/js/menu-sidebar.js: {}
 
 metric:
   css:
@@ -277,31 +220,6 @@ page:
     component:
       dist/css/page.css: {}
 
-pager:
-  css:
-    component:
-      dist/css/pager.css: {}
-
-page-listing:
-  css:
-    component:
-      dist/css/page-listing.css: {}
-
-person-card:
-  css:
-    component:
-      dist/css/person-card.css: {}
-
-person-directory:
-  css:
-    component:
-      dist/css/person-directory.css: {}
-
-person-header:
-  css:
-    component:
-      dist/css/person-header.css: {}
-
 quote:
   css:
     component:
@@ -312,38 +230,30 @@ readtime:
     component:
       dist/css/readtime.css: {}
 
-search-results:
+related-content:
   css:
     component:
-      dist/css/search-results.css: {}
-
-share:
-  css:
-    component:
-      dist/css/share.css: {}
-
-menu-sidebar:
-  css:
-    component:
-      dist/css/menu-sidebar.css: {}
-      dist/css/menu-sidebar-toggle.css: {}
-  js:
-    dist/js/menu-sidebar.js: {}
+      dist/css/related-content.css: {}
 
 search-block-form:
   css:
     component:
       dist/css/search-block-form.css: {}
 
+settings:
+  css:
+    theme:
+      dist/css/global.css: {}
+      dist/css/settings.css: {}
+
 site-footer:
   css:
     component:
-      dist/css/copyright.css: {}
-      dist/css/menu-footer.css: {}
-      dist/css/menu-social.css: {}
-      dist/css/menu-utility.css: {}
-      dist/css/site-credit.css: {}
       dist/css/site-footer.css: {}
+      dist/css/menu-social.css: {}
+      dist/css/menu-footer.css: {}
+      dist/css/copyright.css: {}
+      dist/css/menu-utility.css: {}
 
 site-header:
   css:
@@ -353,7 +263,7 @@ site-header:
       dist/css/site-secondary.css: {}
       dist/css/menu-secondary.css: {}
       dist/css/site-primary.css: {}
-      dist/css/site-logo.css: {}
+      dist/css/site-branding.css: {}
       dist/css/site-navigation.css: {}
       dist/css/mobile-button.css: {}
       dist/css/menu-main.css: {}
@@ -363,11 +273,19 @@ site-header:
     dist/js/menu-main.js: {}
     dist/js/menu-main-second-level.js: {}
     dist/js/button-search.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
 
 site-search:
   css:
     component:
       dist/css/site-search.css: {}
+
+share:
+  css:
+    component:
+      dist/css/share.css: {}
 
 slider:
   js:
@@ -395,11 +313,6 @@ tabs:
     - core/drupal
     - core/once
 
-tags:
-  css:
-    theme:
-      dist/css/tags.css: {}
-
 text:
   css:
     component:
@@ -407,13 +320,10 @@ text:
 
 translate:
   css:
-    component:
+    theme:
       dist/css/translate.css: {}
   js:
     dist/js/translate.js: {}
-  dependencies:
-    - core/drupal
-    - core/once
 
 typewriter:
   css:
@@ -424,29 +334,41 @@ typewriter:
   dependencies:
     - surface/typewriter-effect
 
-video-hero:
-  css:
-    component:
-      dist/css/video-hero.css: {}
+a11y-accordion-tabs:
   js:
-    dist/js/video-hero.js: {}
+    "//cdn.jsdelivr.net/npm/a11y-accordion-tabs@1.0.2/a11y-accordion-tabs.min.js" : { type: external, minified: true, attributes: { defer: true } }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once
 
-view-event:
+glightbox:
   css:
-    layout:
-      dist/css/view-event.css: {}
+    theme:
+      '//cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css': { type: external, minified: true, attributes: { defer: true } }
+  js:
+    '//cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js': { type: external, minified: true, attributes: { defer: true } }
+    dist/js/glightbox.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once
 
-view-grid:
+glide:
   css:
-    layout:
-      dist/css/view-grid.css: {}
+    theme:
+      "//cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css": { type: external, minified: true, attributes: { defer: true } }
+      dist/css/glide.css: {}
+  js:
+    "//cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js": { type: external, minified: true, attributes: { defer: true } }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once
 
-view-listing:
-  css:
-    layout:
-      dist/css/view-listing.css: {}
-
-view-listing-form:
-  css:
-    component:
-      dist/css/view-listing-form.css: {}
+typewriter-effect:
+  js:
+    "https://unpkg.com/typewriter-effect@latest/dist/core.js": { type: external, minified: true, attributes: { defer: true } }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings

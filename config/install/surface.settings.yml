@@ -1,0 +1,29 @@
+favicon:
+  use_default: true
+features:
+  comment_user_picture: false
+  comment_user_verification: false
+  favicon: false
+  node_user_picture: false
+logo:
+  use_default: true
+site_theme: default
+site_alert:
+  value: ''
+  format: sf_restricted_html
+site_give: ''
+site_search: default
+site_improve: 'no'
+header_logo:
+  - '29'
+site_menu: default
+footer_logo:
+  - '31'
+site_credit:
+  value: ''
+  format: sf_restricted_html
+facebook_url: 'https://www.facebook.com/DavidGeffenSchoolofMedicineUCLA'
+twitter_url: 'https://www.twitter.com/dgsomucla'
+instagram_url: 'https://www.instagram.com/dgsomucla'
+youtube_url: 'https://www.youtube.com/c/DavidGeffenSchoolofMedicineatUCLA'
+linkedin_url: 'https://www.linkedin.com/school/david-geffen-school-of-medicine-at-ucla/'

@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Surface's theme override to display the footer region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+
+{% if content %}
+  {% embed '@layouts/site-footer/site-footer.twig' with {
+    'site_extra': site_extra is not empty ? site_extra : false,
+  } %}
+    {% block branding %}
+      {% include '@elements/site-branding/site-branding.twig' with {
+        'site_name': site_name,
+        'modifier': 'site-branding--footer ' ~ logo_style,
+        'logo': footer_logo,
+      } only %}
+
+      {% include '@components/menu-social/menu-social.twig' with {
+        'facebook_url': facebook_url ? facebook_url,
+        'x_url': twitter_url ? twitter_url,
+        'instagram_url': instagram_url ? instagram_url,
+        'youtube_url': youtube_url ? youtube_url,
+        'linkedin_url': linkedin_url ? linkedin_url
+      } only %}
+
+      {% if site_credit %}
+        {% include '@elements/site-credit/site-credit.twig' with {
+          'site_credit': site_credit
+        } only %}
+      {% endif %}
+    {% endblock %}
+
+    {% block menu %}
+      {{ drupal_menu('footer', expand=true) }}
+    {% endblock %}
+  {% endembed %}
+{% endif %}

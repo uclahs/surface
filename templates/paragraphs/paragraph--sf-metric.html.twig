@@ -1,0 +1,9 @@
+{# Set variable to trigger rendering of content array. #}
+{% set rendered_content = content|render %}
+
+{% include '@components/metric/metric.twig' with {
+  'attributes': attributes,
+  'title': content.field_sf_title|field_value,
+  'subtitle': content.field_sf_subtitle|field_value,
+  'text': content.field_sf_wysiwyg|field_value,
+} %}

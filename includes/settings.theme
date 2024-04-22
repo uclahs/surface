@@ -1,0 +1,257 @@
+<?php
+
+/**
+ * @file
+ * Functions to support Surface theme settings.
+ */
+
+use Drupal\file\Entity\File;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter() for system_theme_settings.
+ */
+function surface_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+
+  // Move default theme settings to bottom.
+  $form['logo']['#open'] = FALSE;
+  $form['logo']['#weight'] = 97;
+  $form['favicon']['#open'] = FALSE;
+  $form['favicon']['#weight'] = 98;
+  $form['theme_settings']['#open'] = FALSE;
+  $form['theme_settings']['#weight'] = 99;
+  $form['#attached']['library'][] = 'surface/settings';
+  $form['#submit'][] = 'surface_form_system_theme_settings_submit';
+
+  // General settings.
+  $form['surface_settings'] = [
+    '#type' => 'fieldset',
+    '#open' => TRUE,
+    '#title' => t('Settings'),
+  ];
+
+  // General settings.
+  $form['surface_settings']['settings'] = [
+    '#type' => 'details',
+    '#open' => TRUE,
+    '#title' => t('Branding'),
+  ];
+
+  $form['surface_settings']['settings']['site_theme'] = [
+    '#type' => 'radios',
+    '#title' => t('Appearance'),
+    '#description' => t('Choose the branding you want applied to your site.'),
+    '#default_value' => theme_get_setting('site_theme'),
+    '#options' => [
+      'default' => t('Surface'),
+      'dgsom' => t('DGSOM'),
+      'labs' => t('Labs'),
+      'labs-dynamic' => t('Labs Dynamic'),
+    ],
+  ];
+
+  // Header settings.
+  $form['surface_settings']['header'] = [
+    '#type' => 'details',
+    '#open' => TRUE,
+    '#title' => t('Header'),
+  ];
+
+  // Theme settings for enabling/disabling siteimprove.
+  $form['surface_settings']['header']['site_improve'] = [
+    '#type' => 'radios',
+    '#title' => t('Enable Siteimprove'),
+    '#default_value' => theme_get_setting('site_improve'),
+    '#access' => in_array('administrator', \Drupal::currentUser()->getRoles()) || in_array('platform_admin', \Drupal::currentUser()->getRoles()),
+    '#options' => [
+      'yes' => t('Yes'),
+      'no' => t('No (Default)'),
+    ],
+  ];
+
+  $form['surface_settings']['header']['site_alert'] = [
+    '#type' => 'text_format',
+    '#format' => 'sf_restricted_html',
+    '#title' => t('Alert'),
+    '#description' => t("Add alert content that will be displayed globally."),
+    '#default_value' => theme_get_setting('site_alert')['value'],
+  ];
+
+  $form['surface_settings']['header']['site_give'] = [
+    '#type' => 'url',
+    '#title' => t('Give Url'),
+    '#description' => t("Enter Give url. Leave the url field blank to hide this button."),
+    '#default_value' => theme_get_setting('site_give'),
+  ];
+
+  $form['surface_settings']['header']['site_search'] = [
+    '#type' => 'radios',
+    '#title' => t('Search (display)'),
+    '#default_value' => theme_get_setting('site_search'),
+    '#options' => [
+      'default' => t('Normal (Default)'),
+      'modal' => t('Modal'),
+    ],
+  ];
+
+  $form['surface_settings']['header']['header_logo'] = [
+    '#type' => 'managed_file',
+    '#title' => t('Header logo'),
+    '#description' => t('Choose the logo you want to display in your sites header.'),
+    '#default_value'  => theme_get_setting('header_logo'),
+    '#upload_location' => 'public://logos',
+    '#upload_validators' => [
+      'file_validate_extensions' => [
+        'svg',
+      ],
+    ],
+  ];
+
+  $form['surface_settings']['header']['logo_style'] = [
+    '#type' => 'select',
+    '#title' => t('Logo style'),
+    '#default_value' => theme_get_setting('logo_style'),
+    '#options' => [
+      'site-branding--horizontal' => t('Horizontal (Default)'),
+      'site-branding--stacked' => t('Stacked'),
+      'site-branding--extended' => t('Extended'),
+    ],
+  ];
+
+  $form['surface_settings']['header']['site_menu'] = [
+    '#type' => 'radios',
+    '#title' => t('Navigation (Main menu)'),
+    '#default_value' => theme_get_setting('site_menu'),
+    '#options' => [
+      'default' => t('Normal (Default)'),
+      'dropdown' => t('Dropdown'),
+      'mega' => t('Megamenu'),
+    ],
+  ];
+
+  // Footer settings.
+  $form['surface_settings']['footer'] = [
+    '#type' => 'details',
+    '#open' => TRUE,
+    '#title' => t('Footer'),
+  ];
+
+  $form['surface_settings']['footer']['footer_logo'] = [
+    '#type' => 'managed_file',
+    '#title' => t('Footer logo'),
+    '#description' => t('Choose the logo you want to display in your sites footer.  Generally this is the inverse of the header logo.'),
+    '#default_value'  => theme_get_setting('footer_logo'),
+    '#upload_location' => 'public://logos',
+    '#upload_validators' => [
+      'file_validate_extensions' => [
+        'svg',
+      ],
+    ],
+  ];
+
+  $form['surface_settings']['footer']['site_credit'] = [
+    '#type' => 'text_format',
+    '#format' => 'sf_restricted_html',
+    '#title' => t('Site credit'),
+    '#description' => t("Add site credit content that will be displayed in footer."),
+    '#default_value' => theme_get_setting('site_credit')['value'],
+  ];
+
+  $form['surface_settings']['footer']['facebook_url'] = [
+    '#type' => 'url',
+    '#title' => t('Facebook Url'),
+    '#description' => t("Enter Facebook url. Leave the url field blank to hide this icon."),
+    '#default_value' => theme_get_setting('facebook_url'),
+  ];
+
+  $form['surface_settings']['footer']['twitter_url'] = [
+    '#type' => 'url',
+    '#title' => t('Twitter Url'),
+    '#description' => t("Enter Twitter url. Leave the url field blank to hide this icon."),
+    '#default_value' => theme_get_setting('twitter_url'),
+  ];
+
+  $form['surface_settings']['footer']['instagram_url'] = [
+    '#type' => 'url',
+    '#title' => t('Instagram Url'),
+    '#description' => t("Enter Instagram url. Leave the url field blank to hide this icon."),
+    '#default_value' => theme_get_setting('instagram_url'),
+  ];
+
+  $form['surface_settings']['footer']['youtube_url'] = [
+    '#type' => 'url',
+    '#title' => t('Youtube Url'),
+    '#description' => t("Enter Youtube url. Leave the url field blank to hide this icon."),
+    '#default_value' => theme_get_setting('youtube_url'),
+  ];
+
+  $form['surface_settings']['footer']['linkedin_url'] = [
+    '#type' => 'url',
+    '#title' => t('LinkedIn Url'),
+    '#description' => t("Enter LinkedIn url. Leave the url field blank to hide this icon."),
+    '#default_value' => theme_get_setting('linkedin_url'),
+  ];
+
+  // Subfooter settings.
+  $form['surface_settings']['subfooter'] = [
+    '#type' => 'details',
+    '#open' => FALSE,
+    '#title' => t('Subfooter'),
+  ];
+
+  $form['surface_settings']['subfooter']['site_extra'] = [
+    '#type' => 'text_format',
+    '#format' => 'sf_restricted_html',
+    '#title' => t('Site extra'),
+    '#description' => t("Add additional content that will be displayed globally below the footer."),
+    '#default_value' => theme_get_setting('site_extra')['value'] ?? '',
+  ];
+}
+
+/**
+ * Submit handler for system_theme_settings.
+ */
+function surface_form_system_theme_settings_submit(&$form, FormStateInterface $form_state) {
+  $surface_settings = $form['surface_settings']['settings'];
+  $values = $form_state->getValues();
+
+  // Process header logo.
+  if (!empty($values['header_logo'])) {
+    $file = File::load($values['header_logo'][0]);
+    if ($file->isTemporary()) {
+      $file->setPermanent();
+      $file->save();
+    }
+  }
+  else {
+    if (!empty($surface_settings['header_logo']['#default_value'][0])) {
+      $file = File::load($surface_settings['header_logo']['#default_value'][0]);
+      if (!is_null($file) && $file->isPermanent()) {
+        $file->setTemporary();
+        $file->save();
+      }
+    }
+  }
+
+  // Process footer logo.
+  if (!empty($values['footer_logo'])) {
+    $file = File::load($values['footer_logo'][0]);
+    if ($file->isTemporary()) {
+      $file->setPermanent();
+      $file->save();
+    }
+  }
+  else {
+    if (!empty($surface_settings['footer_logo']['#default_value'][0])) {
+      $file = File::load($surface_settings['footer_logo']['#default_value'][0]);
+      if (!is_null($file) && $file->isPermanent()) {
+        $file->setTemporary();
+        $file->save();
+      }
+    }
+  }
+}
