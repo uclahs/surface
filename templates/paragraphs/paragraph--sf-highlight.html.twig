@@ -21,7 +21,7 @@
   component. Highlight has been retired but existing content remains active and editable. #}
   {% block cta %}
     {% if content.field_sf_link|render|trim is not empty %}
-      {% include "@components/button/button.twig" with {
+      {% include "@elements/button/button.twig" with {
         'button': {
           'modifier': 'button button--primary',
           'text': content.field_sf_link|render|trim is not empty ? content.field_sf_link.0['#title'],
