@@ -1,0 +1,7 @@
+{% include '@components/media-callout/media-callout.twig' with {
+  'attributes': attributes,
+  'title': content.field_sf_title|field_value,
+  'video_provider': content.field_sf_video.0['#media'].field_media_oembed_video.value,
+  'image': content.field_sf_image|field_value,
+  'teaser': content.field_sf_teaser|field_value,
+} only %}

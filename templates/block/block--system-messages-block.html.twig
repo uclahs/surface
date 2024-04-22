@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the messages block.
+ *
+ * Removes wrapper elements from block so that empty block does not appear when
+ * there are no messages.
+ *
+ * Available variables:
+ * - content: The content of this block.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set classes = [
+  'block-' ~ plugin_id|clean_class,
+] %}
+
+{% set attributes = attributes.addClass(classes) %}
+
+{% embed '@layouts/block/block.twig' with {
+  'attributes': attributes,
+  'block_wrapper': true,
+  'title_prefix': title_prefix,
+  'title_suffix': title_suffix,
+  'label': label is not empty ? label : false,
+} %}
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+
+{% endembed %}

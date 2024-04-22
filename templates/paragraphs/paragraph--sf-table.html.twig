@@ -1,0 +1,10 @@
+{{ attach_library('surface/table') }}
+
+{% set classes = [
+  'table',
+  'container',
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ content.field_sf_table|field_value }}
+</div>

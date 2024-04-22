@@ -1,0 +1,9 @@
+# Schema for the configuration files of the Surface theme.
+
+surface.settings:
+  type: theme_settings
+  label: 'surface settings'
+  mapping:
+    site_branding:
+      type: string
+      label: "Site branding"

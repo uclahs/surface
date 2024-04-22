@@ -5,9 +5,93 @@ alt text: 'Screenshot of Surface, Drupal front-end theme.'
 package: Core
 core_version_requirement: ^8.9 || ^9 || ^10
 base theme: false
+dependencies:
+  - components
+  - twig_tweak
+  - twig_field_value
 
 libraries:
   - surface/global
+
+# libraries-override:
+  # system/base:
+  #   css:
+  #     component:
+  #       css/components/align.module.css: false
+  #       css/components/clearfix.module.css: false
+  #       css/components/hidden.module.css: false
+
+#   core/drupal.dialog:
+#     css:
+#       component:
+#         assets/vendor/jquery.ui/themes/base/dialog.css: dist/css/ui-dialog.css
+#         assets/vendor/jquery.ui/themes/base/button.css: dist/css/ui-button.css
+
+#   core/drupal.autocomplete:
+#     css:
+#       component:
+#         assets/vendor/jquery.ui/themes/base/autocomplete.css: dist/css/ui-autocomplete.css
+#         assets/vendor/jquery.ui/themes/base/menu.css: dist/css/ui-menu.css
+
+#   core/internal.jquery_ui:
+#     css:
+#       component:
+#         assets/vendor/jquery.ui/themes/base/core.css: dist/css/ui-core.css
+#       theme:
+#         assets/vendor/jquery.ui/themes/base/theme.css: false
+
+#   content_moderation/content_moderation: surface/content-moderation
+#   contextual/drupal.contextual-links: false
+
+#   media_library_edit/admin:
+#     css:
+#       component:
+#         css/media_library_edit.admin.css: dist/css/media-library.css
+
+#   layout_paragraphs/component_list:
+#     css:
+#       layout:
+#         css/component-list.css: dist/css/component-list.css
+
+#   layout_paragraphs/builder:
+#     css:
+#       layout:
+#         css/builder.css: dist/css/builder.css
+
+#   layout_paragraphs/builder_form:
+#     css:
+#       layout:
+#         css/builder-form.css: dist/css/builder-form.css
+
+#   layout_paragraphs/layout_select:
+#     css:
+#       layout:
+#         css/layout-select.css: dist/css/layout-select.css
+
+#   claro/claro.drupal.dialog: false
+
+#   claro/media_library.theme:
+#     css:
+#       theme:
+#         css/theme/media-library.css: dist/css/media-library.css
+
+#   claro/media_library.ui:
+#     css:
+#       component:
+#         css/components/media-library.ui.css: false
+
+#   gin/ajax: false
+#   gin/dialog: false
+#   gin/media_library: false
+#   gin/node_preview: false
+
+# libraries-extend:
+  # core/drupal.message:
+  #   - surface/messages
+  # node/drupal.node.preview:
+  #   - surface/node-preview
+  # paragraphs/drupal.paragraphs.widget:
+  #   - surface/paragraphs-widget
 
 regions:
   header: Header
@@ -18,3 +102,21 @@ regions:
   content_below: Content Below
   footer: Footer
   theme: Theme
+
+ckeditor5-stylesheets:
+  - dist/css/global.css
+  - dist/css/button.css
+  # - dist/css/embedded-media.css
+  # - dist/css/media-library.css
+  # - dist/css/ckeditor5.css
+
+components:
+  namespaces:
+    surface: templates/custom
+    images: dist/images
+    base: source/patterns/base
+    elements: source/patterns/elements
+    layouts: source/patterns/layouts
+    components: source/patterns/components
+    collections: source/patterns/collections
+    theme: source/patterns/theme

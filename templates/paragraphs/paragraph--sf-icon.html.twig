@@ -1,0 +1,10 @@
+{# Set variable to trigger rendering of content array. #}
+{% set rendered_content = content|render %}
+
+{% include '@components/icon/icon.twig' with {
+  'attributes': attributes,
+  'icon': content.field_sf_icon|field_value,
+  'url': content.field_sf_link|field_value is not empty ? content.field_sf_link.0['#url_title'],
+  'title': content.field_sf_link|field_value is not empty ? content.field_sf_link.0['#title'],
+  'teaser': content.field_sf_teaser|field_value is not empty ? content.field_sf_teaser|field_value,
+} only %}

@@ -1,0 +1,8 @@
+{# Set variable to trigger rendering of content array. #}
+{% set rendered_content = content|render %}
+
+{% include '@components/typewriter/typewriter.twig' with {
+  'modifier': modifier,
+  'attributes': attributes,
+  'words': content.field_text|field_value,
+} only %}

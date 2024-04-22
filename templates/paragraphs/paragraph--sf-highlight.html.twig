@@ -1,0 +1,33 @@
+{# Set variable to trigger rendering of content array. #}
+{% set rendered_content = content|render %}
+
+{# Set variable for title field so it matches structure of heading component. #}
+{% set article_title = {
+  'modifier': 'callout__title',
+  'heading_level': 3,
+  'text': content.field_sf_title|render|trim is not empty ? content.field_sf_title,
+  'url': '',
+} %}
+
+{% embed '@components/callout/callout.twig' with {
+  'modifier': modifier,
+  'attributes': attributes,
+  'image': content.field_sf_image,
+  'title': article_title,
+  'teaser': content.field_sf_teaser|render|trim is not empty ? content.field_sf_teaser|field_value,
+} %}
+
+  {# Highlight uses the Callout component but the CTA uses the Button component rather than the Button-track
+  component. Highlight has been retired but existing content remains active and editable. #}
+  {% block cta %}
+    {% if content.field_sf_link|render|trim is not empty %}
+      {% include "@components/button/button.twig" with {
+        'button': {
+          'modifier': 'button button--primary',
+          'text': content.field_sf_link|render|trim is not empty ? content.field_sf_link.0['#title'],
+          'url': content.field_sf_link|render|trim is not empty ? content.field_sf_link.0['#url_title'],
+        }
+      } %}
+    {% endif %}
+  {% endblock %}
+{% endembed %}

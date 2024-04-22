@@ -1,0 +1,7 @@
+{# Set variable to trigger rendering of content array. #}
+{% set rendered_content = content|render %}
+
+{% include '@elements/text/text.twig' with {
+  'attributes': attributes,
+  'wysiwyg': content.field_sf_wysiwyg|field_value,
+} only %}

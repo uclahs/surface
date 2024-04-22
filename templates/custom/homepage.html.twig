@@ -1,0 +1,30 @@
+{{ attach_library('surface/page') }}
+
+{% set classes = [
+  'page',
+  'page--' ~ view_mode|clean_class,
+]|join(' ')|trim %}
+
+{% set content_classes = [
+  'page__main',
+  content_attributes ? content_attributes.class
+]|join(' ')|trim %}
+
+{% if view_mode == 'listing' %}
+  {% include '@layouts/page-listing/page-listing.twig' with {
+    'attributes': attributes,
+    'url': url,
+    'type': 'Page',
+    'title': label|field_value,
+    'subtitle': content.field_sf_subtitle|field_value is not empty ? content.field_sf_subtitle|field_value,
+    'teaser': content.field_sf_meta_description|field_value is not empty ? content.field_sf_meta_description|field_value,
+  } only %}
+{% else %}
+  <article class="{{ classes }}" {{ attributes ? attributes|without('class', 'id') }}>
+    <div class="{{ content_classes }}" {{ content_attributes ? content_attributes|without('class') }}>
+      <div class="container">
+        {{ content.field_sf_content }}
+      </div>
+    </div>
+  </article>
+{% endif %}

@@ -1,0 +1,57 @@
+layout_option_definitions:
+  spacer:
+    title: 'Spacer'
+    description: ''
+    default: ''
+    multi: false
+    plugin: layout_options_class_select
+    inline: true
+    options:
+      mb-0: None
+      mb-5: small (Bottom margin 20px)
+      mb-10: medium (Bottom margin 40px)
+      mb-15: large (Bottom margin 60px)
+    layout: true
+    regions: false
+  contraints:
+    title: 'Constraints'
+    description: ''
+    default: ''
+    plugin: layout_options_class_checkboxes
+    inline: true
+    options:
+      is-full-width: 'Full Width'
+    layout: true
+    regions: false
+  display:
+    title: 'Display'
+    description: ''
+    default: ''
+    plugin: layout_options_class_checkboxes
+    inline: true
+    options:
+      display-as-columns: 'Columns'
+    layout: false
+    regions: true
+  background:
+    title: 'Background color'
+    description: ''
+    default: ''
+    multi: false
+    plugin: layout_options_class_radios
+    inline: true
+    options:
+      bg-none: 'None'
+      bg-santa-barbara-sand: 'Santa Barbara Sand'
+      bg-venice-canal: 'Venice Canal'
+    layout: true
+    regions: false
+
+# Assign the layout options to a layout.
+layout_options:
+  global:
+    spacer: {}
+  one_column:
+    background: {}
+    contraints: {}
+    display: {}
