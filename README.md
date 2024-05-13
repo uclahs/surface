@@ -25,25 +25,16 @@ The most common ones to use include:
   - Watching for changes to CSS, JS and Images and compiling them if needed.
   - Recrusively globbing through all CSS and JS files within the source directory.
 
-* `npm run release`: This is the command that runs `vite build` and `storybook build -o storybook` which compiles the theme and generates a static version of Storybook for prodcution release.
-
-## Building the theme inside Docker containers
-
-One of the latest features of th project is the ability to run and build the theme inside Docker containers.
-This presents many advantages over running commands in the host machine one of them being consistency
-in environments amongs developers.
-
-**A quick word of warning**:  Performance may be impacted when running these commands in containers.
-
-* `ddev surface-release`: This command will run `npm run build-storybook`` in the docker container.
-* `ddev surface-watch`: This command will run `npm run start`` in the docker container.
+* `npm run build`: This is the command that runs `vite build` and `storybook build -o storybook` which compiles the theme and generates a static version of Storybook for prodcution release.
 
 ## Design system
+
 Surface uses [Storybook](https://storybook.js.org/) as its design system and that's where all components
 on the sites are originally built and maintained.  Storybook can be accessed on its own by running `npm run storybook`
 and navigating to `http://localhost:6006`.  It can also be accessed through Drupal's URL for example `https://uclahs.ddev.site:6006`.
 
 ## Development approach
+
 Surface is built using the latest development practices for CSS, JS, Twig, and React.  Within Surface's Storybook,
 all components are built using BEM methodology for selector classes and ES6 for Javascript.
 Components are built using the Atomic Design methodology but not necessarily using the same naming convention
@@ -51,5 +42,6 @@ like atoms, molecules, organisms, etc.  Instead, it uses more friendly names lik
 layouts, and pages.
 
 ## About Drupal Theming
+
 For more information, see Drupal.org [theming guide](
 https://www.drupal.org/docs/develop/theming-drupal).
