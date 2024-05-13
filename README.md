@@ -6,6 +6,12 @@ default front-end theme for UCLA Health Sciences School of Medicine.
 Surface is built using [Storybook](https://storybook.js.org/) and [Vite](https://vitejs.dev/)
 with the help of many NodeJS packages to improve automation and make use of the latest Front-End tooling.
 
+## Modules you need to download and enable
+
+* [Components](https://www.drupal.org/project/components) (required)
+* [Twig field value](https://www.drupal.org/project/twig_field_value) (optional)
+* [Twig tweak](https://www.drupal.org/project/https://www.drupal.org/project/twig_tweak) (optional)
+
 ## Useful commands
 
 There are several custom npm commands that allows developers to build and run different
