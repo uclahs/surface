@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: quick-links
-label: 'Quick links'
-description: 'Quick section links'
-locked: false
