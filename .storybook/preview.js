@@ -7,9 +7,6 @@ import twigDrupal from 'twig-drupal-filters';
 import './drupal/drupal';
 import './drupal/once';
 
-// Imports FontAwesome icons from a specific kit.
-import 'https://kit.fontawesome.com/a0eb0bad75.js';
-
 // Imports the CSS for all components combined into a single stylesheet.
 import '../dist/css/styles.css';
 
@@ -28,9 +25,8 @@ export const decorators = [
   withThemeByDataAttribute({
     themes: {
       Surface: 'surface',
-      DGSOM: 'dgsom',
-      Labs: 'labs',
-      'Labs Dynamic': 'labs-dynamic',
+      Theme2: 'theme2',
+      Theme3: 'theme3',
     },
     defaultTheme: 'Surface',
     attributeName: 'data-theme',
