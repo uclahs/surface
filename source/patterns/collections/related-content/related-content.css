@@ -10,8 +10,8 @@
 }
 
 :where([data-theme="dgsom"]) {
-  --related-content-bg-color: var(--ucla-blue);
-  --date-badge-bg-color: var(--ucla-blue);
+  --related-content-bg-color: var(--surface-blue);
+  --date-badge-bg-color: var(--surface-blue);
 
   /* Using about 200px of margin at the bottom to compensate for almost the same
   amount of negative margin in the footer to allow for the curved image. */
@@ -19,12 +19,12 @@
 }
 
 :where([data-theme="labs-dynamic"]) {
-  --related-content-bg-color: var(--ucla-blue);
+  --related-content-bg-color: var(--surface-blue);
   --related-content-padding-bottom: var(--size-50); /* 200px */
 }
 
 .related-content {
-  background-color: var(--related-content-bg-color, var(--ucla-blue));
+  background-color: var(--related-content-bg-color, var(--surface-blue));
   padding: var(--size-10);
   padding-block-end: var(--related-content-padding-bottom);
 

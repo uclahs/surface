@@ -24,9 +24,9 @@
   }
 
   blockquote {
-    border-left-color: var(--ucla-blue);
+    border-left-color: var(--surface-blue);
     border-left-width: var(--size-2);
-    color: var(--ucla-blue);
+    color: var(--surface-blue);
     font-size: var(--font-size-4);
     font-style: italic;
     font-weight: var(--font-weight-400);

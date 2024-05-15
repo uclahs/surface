@@ -42,7 +42,7 @@
   line-height: var(--leading-tight);
 
   a {
-    color: var(--ucla-blue);
+    color: var(--surface-blue);
 
     &:hover {
       color: var(--silver-lake-reservoir);

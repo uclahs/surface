@@ -18,7 +18,7 @@
     box-shadow: var(--shadow-3);
 
     .person-card__name {
-      color: var(--ucla-blue);
+      color: var(--surface-blue);
     }
   }
 }

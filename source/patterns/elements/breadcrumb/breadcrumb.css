@@ -14,7 +14,7 @@
 
 .breadcrumb__list {
   align-items: center;
-  color: var(--ucla-blue);
+  color: var(--surface-blue);
   display: flex;
   flex-wrap: wrap;
   gap: var(--size-2);
@@ -22,7 +22,7 @@
 
 .breadcrumb__item {
   align-items: center;
-  color: var(--ucla-blue);
+  color: var(--surface-blue);
   display: inline-flex;
 
   svg {

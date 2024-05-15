@@ -17,7 +17,7 @@
 }
 
 .event-card__title {
-  color: var(--ucla-blue);
+  color: var(--surface-blue);
   font-family: var(--font-heading);
   font-size: var(--font-size-5);
   padding-block: var(--size-2);
@@ -35,12 +35,12 @@
   margin-block-end: var(--size-2);
 
   a {
-    color: var(--ucla-blue);
+    color: var(--surface-blue);
     display: flex;
   }
 
   svg {
-    color: var(--ucla-blue);
+    color: var(--surface-blue);
     display: inline-block;
     font-size: inherit;
     height: 1em;
@@ -50,7 +50,7 @@
   }
 
   span {
-    color: var(--ucla-blue);
+    color: var(--surface-blue);
     display: inline-block;
     font-size: inherit;
     line-height: var(--leading-tight);
@@ -71,7 +71,7 @@
     margin-inline-start: var(--size-3);
 
     &:hover {
-      color: var(--ucla-blue);
+      color: var(--surface-blue);
     }
   }
 

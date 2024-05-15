@@ -12,7 +12,7 @@
 }
 
 .view-listing__exposed {
-  background-image: linear-gradient(0deg, var(--white) 4rem, var(--view-listing-exposed-bg, var(--ucla-blue)) 4rem);
+  background-image: linear-gradient(0deg, var(--white) 4rem, var(--view-listing-exposed-bg, var(--surface-blue)) 4rem);
   padding-block: var(--size-8);
 
   .view-listing-form {

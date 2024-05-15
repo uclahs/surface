@@ -42,4 +42,4 @@ layouts, and pages.
 For more information, see Drupal.org [theming guide](
 https://www.drupal.org/docs/develop/theming-drupal).
 
-Surface was built by the good folks of **UCLA Health**.
+Surface was built with 🩵 by the good folks at [UCLA Health](https://it.uclahealth.org/about/dgit/teams/web-development).

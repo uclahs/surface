@@ -1,6 +1,6 @@
 ---
 attributes: ''
-modifier: 'bg-gradient-linear-ucla-blue cta-banner--matterport'
+modifier: 'bg-gradient-linear-surface-blue cta-banner--matterport'
 title:
   modifier: 'cta-banner__title'
   level: 2

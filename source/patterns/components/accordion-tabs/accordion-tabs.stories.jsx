@@ -5,7 +5,6 @@ import { SantaBarbaraSandBg, VeniceCanalBg } from '../../../../.storybook/decora
 
 import tabs from './accordion-tabs.twig';
 import data from './accordion-tabs.yml';
-import './accordion-tabs';
 
 const settings = {
   title: 'Components/Accordion tabs',

@@ -83,7 +83,7 @@
 }
 
 .carousel__bottom {
-  background-color: var(--ucla-blue);
+  background-color: var(--surface-blue);
   color: var(--white);
   margin-inline: auto;
   padding-block: var(--size-8);
@@ -125,13 +125,13 @@
   margin-block-end: var(--size-5);
 
   span {
-    color: var(--ucla-blue);
+    color: var(--surface-blue);
     font-size: var(--font-size-6);
     font-weight: var(--font-weight-600);
     text-transform: uppercase;
 
     @media (--tablet) {
-      background-color: var(--ucla-blue);
+      background-color: var(--surface-blue);
       box-decoration-break: clone;
       color: var(--white);
       display: inline;

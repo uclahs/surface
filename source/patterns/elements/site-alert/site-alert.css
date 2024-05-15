@@ -4,11 +4,11 @@
 */
 
 :where([data-theme="dgsom"]) {
-  --site-alert-bg-color: var(--ucla-blue);
+  --site-alert-bg-color: var(--surface-blue);
 }
 
 :where([data-theme="labs-dynamic"]) {
-  --site-alert-bg-color: var(--ucla-blue);
+  --site-alert-bg-color: var(--surface-blue);
 }
 
 .site-alert {

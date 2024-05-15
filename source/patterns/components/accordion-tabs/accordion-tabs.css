@@ -40,7 +40,7 @@
   }
 
   &[aria-selected="true"] {
-    border-block-end-color: var(--ucla-blue);
+    border-block-end-color: var(--surface-blue);
     color: var(--gray-900);
     font-weight: var(--font-weight-600);
 

@@ -117,8 +117,8 @@
   .bg-venice-canal.layout--onecol &,
   .bg-santa-barbara-sand.layout--onecol & {
     .button {
-      background-color: var(--ucla-yellow);
-      border-color: var(--ucla-yellow);
+      background-color: var(--surface-yellow);
+      border-color: var(--surface-yellow);
       color: var(--midnight-joshua-tree);
     }
   }

@@ -4,7 +4,7 @@
  */
 
 .media-quote {
-  background-color: var(--ucla-blue);
+  background-color: var(--surface-blue);
   color: var(--white);
   width: 100%;
 }
@@ -57,7 +57,7 @@
   }
 
   blockquote {
-    border-left-color: var(--ucla-yellow);
+    border-left-color: var(--surface-yellow);
     border-left-width: var(--size-1);
     color: var(--white);
     font-size: var(--font-size-3);

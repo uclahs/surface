@@ -1,8 +1,6 @@
 /* Utility styles - Do not sort. */
-@import "container";
 @import "grid";
 @import "layouts";
-@import "prose";
 @import "backgrounds";
 @import "list";
 @import "spacing";
@@ -10,6 +8,3 @@
 @import "svg";
 @import "typography";
 @import "visibility";
-
-/* Deprecated styles */
-@import "deprecated";

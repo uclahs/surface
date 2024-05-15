@@ -4,7 +4,7 @@
  */
 
 .date-badge {
-  background-color: var(--ucla-blue);
+  background-color: var(--surface-blue);
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
 
   &.date-badge--light {
     background-color: var(--white);
-    color: var(--ucla-blue);
+    color: var(--surface-blue);
   }
 
   time {

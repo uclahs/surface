@@ -7,7 +7,7 @@ const withGlobalWrapper = (Story) => (
 );
 
 const withBackground = (Story) => (
-  <div className="bg-ucla-blue p-5">
+  <div className="bg-surface-blue p-5">
     <Story />
   </div>
 );

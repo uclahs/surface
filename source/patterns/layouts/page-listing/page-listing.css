@@ -17,7 +17,7 @@
   line-height: var(--leading-tight);
 
   a {
-    color: var(--ucla-blue);
+    color: var(--surface-blue);
     transition-duration: 0.2s;
     transition-property: color;
 

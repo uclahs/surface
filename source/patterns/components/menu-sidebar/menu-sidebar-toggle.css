@@ -34,7 +34,7 @@
 
     &::before,
     &::after {
-      border-top: solid 3px var(--ucla-blue);
+      border-top: solid 3px var(--surface-blue);
       content: "";
       height: 0;
       left: 50%;
@@ -44,7 +44,7 @@
       width: var(--size-4);
 
       .menu-sidebar--level-2 & {
-        border-top: solid 3px var(--ucla-blue);
+        border-top: solid 3px var(--surface-blue);
       }
 
       .menu-sidebar--level-3 & {

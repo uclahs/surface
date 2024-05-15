@@ -18,7 +18,7 @@ export const CTABannerQualtrics = {
   name: 'Qualtrics CTA Banner',
   args: {
     ...data,
-    modifier: 'bg-gradient-linear-ucla-blue cta-banner--qualtrics',
+    modifier: 'bg-gradient-linear-surface-blue cta-banner--qualtrics',
     image: './images/cta-qualtrics.png',
   },
 };

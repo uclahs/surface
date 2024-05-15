@@ -6,25 +6,25 @@
 
 /* Data attributes to change component's background based on theme. */
 :where([data-theme='surface']) {
-  --content-highlight-bg: var(--ucla-blue);
+  --content-highlight-bg: var(--surface-blue);
   --date-badge-bg-color: var(--midnight-joshua-tree);
 }
 
 :where([data-theme='dgsom']) {
   --content-highlight-bg: var(--midnight-joshua-tree);
-  --date-badge-bg-color: var(--ucla-blue);
+  --date-badge-bg-color: var(--surface-blue);
 }
 
 :where([data-theme='labs']) {
   --content-highlight-bg: var(--malibu-dolphin);
-  --button-bg: var(--ucla-blue);
+  --button-bg: var(--surface-blue);
   --button-color: var(--white);
   --button-bg-hover: var(--silver-lake-reservoir);
 }
 
 :where([data-theme='labs-dynamic']) {
   --content-highlight-bg: var(--malibu-dolphin);
-  --button-bg: var(--ucla-blue);
+  --button-bg: var(--surface-blue);
   --button-color: var(--white);
   --button-bg-hover: var(--silver-lake-reservoir);
 }
@@ -42,7 +42,7 @@
 
   /* If component is added in a one column layout, add blue background. */
   .layout--onecol & {
-    background-color: var(--content-highlight-bg, var(--ucla-blue));
+    background-color: var(--content-highlight-bg, var(--surface-blue));
   }
 }
 
@@ -72,7 +72,7 @@
 }
 
 .content-highlight__link {
-  color: var(--ucla-blue);
+  color: var(--surface-blue);
   font-size: var(--font-size-3);
 
   /* If a highlight title is not provided, we still want the link to display

@@ -5,27 +5,27 @@
  */
 
 :where([data-theme="surface"]) {
-  --page-header-overlay: linear-gradient(90deg, var(--ucla-blue), rgba(40, 116, 175, 90%) 5%, rgba(40, 116, 175, 60%) 35%, rgba(40, 116, 175, 20%) 50%, rgba(40, 116, 175, 20%) 70%, rgba(40, 116, 175, 90%) 95%, var(--ucla-blue));
+  --page-header-overlay: linear-gradient(90deg, var(--surface-blue), rgba(40, 116, 175, 90%) 5%, rgba(40, 116, 175, 60%) 35%, rgba(40, 116, 175, 20%) 50%, rgba(40, 116, 175, 20%) 70%, rgba(40, 116, 175, 90%) 95%, var(--surface-blue));
 }
 
 :where([data-theme="dgsom"]) {
   --page-header-bg-color: var(--midnight-joshua-tree);
-  --page-header-text-shadow: var(--ucla-blue);
+  --page-header-text-shadow: var(--surface-blue);
   --page-header-overlay: linear-gradient(90deg, var(--midnight-joshua-tree), rgba(0, 58, 92, 90%) 5%, rgba(0, 58, 92, 60%) 35%, rgba(0, 58, 92, 20%) 50%, rgba(0, 58, 92, 20%) 70%, rgba(0, 58, 92, 90%) 95%, var(--midnight-joshua-tree));
 }
 
 :where([data-theme="labs"]) {
-  --page-header-overlay: linear-gradient(90deg, var(--ucla-blue), rgba(40, 116, 175, 90%) 5%, rgba(40, 116, 175, 60%) 35%, rgba(40, 116, 175, 20%) 50%, rgba(40, 116, 175, 20%) 70%, rgba(40, 116, 175, 90%) 95%, var(--ucla-blue));
+  --page-header-overlay: linear-gradient(90deg, var(--surface-blue), rgba(40, 116, 175, 90%) 5%, rgba(40, 116, 175, 60%) 35%, rgba(40, 116, 175, 20%) 50%, rgba(40, 116, 175, 20%) 70%, rgba(40, 116, 175, 90%) 95%, var(--surface-blue));
 }
 
 :where([data-theme="labs-dynamic"]) {
   --page-header-bg-color: var(--midnight-joshua-tree);
-  --page-header-text-shadow: var(--ucla-blue);
+  --page-header-text-shadow: var(--surface-blue);
   --page-header-overlay: linear-gradient(90deg, var(--midnight-joshua-tree), rgba(0, 58, 92, 90%) 5%, rgba(0, 58, 92, 60%) 35%, rgba(0, 58, 92, 20%) 50%, rgba(0, 58, 92, 20%) 70%, rgba(0, 58, 92, 90%) 95%, var(--midnight-joshua-tree));
 }
 
 .page-header {
-  background-color: var(--page-header-bg-color, var(--ucla-blue));
+  background-color: var(--page-header-bg-color, var(--surface-blue));
   color: var(--white);
 
   .container {

@@ -33,7 +33,7 @@
 
     svg {
       block-size: 1em;
-      color: var(--ucla-blue);
+      color: var(--surface-blue);
       display: inline-block;
       font-size: var(--font-size-5);
       inline-size: 1em;

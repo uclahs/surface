@@ -20,7 +20,7 @@
   }
 
   .menu__link {
-    color: var(--ucla-blue);
+    color: var(--surface-blue);
     display: flex;
     flex-basis: calc(100% - 32px);
     font-size: var(--font-size-2);

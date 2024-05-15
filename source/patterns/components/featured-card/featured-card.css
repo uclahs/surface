@@ -62,7 +62,7 @@
     margin-inline-start: var(--size-3);
 
     &:hover {
-      color: var(--ucla-blue);
+      color: var(--surface-blue);
     }
 
     .layout--onecol & {
@@ -90,12 +90,12 @@
 /* Styles organization name by setting text and icon clor to yellow. */
 .featured-card__organization-name {
   align-items: center;
-  color: var(--ucla-blue);
+  color: var(--surface-blue);
   display: flex;
   font-weight: var(--font-weight-600);
 
   .layout--onecol & {
-    color: var(--ucla-yellow);
+    color: var(--surface-yellow);
   }
 
   a,
