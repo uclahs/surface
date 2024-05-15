@@ -12,7 +12,7 @@ accordion-tabs:
     component:
       dist/css/accordion-tabs.css: {}
   js:
-    //cdn.jsdelivr.net/npm/a11y-accordion-tabs@1.0.2/a11y-accordion-tabs.min.js : { type: external, minified: true, attributes: { defer: true } }
+    'https://cdn.jsdelivr.net/npm/a11y-accordion-tabs@1.0.2/a11y-accordion-tabs.min.js' : { type: external, minified: true, attributes: { defer: true } }
   dependencies:
     - core/jquery
     - core/drupal
@@ -144,7 +144,7 @@ tabs:
 
 a11y-accordion-tabs:
   js:
-    "//cdn.jsdelivr.net/npm/a11y-accordion-tabs@1.0.2/a11y-accordion-tabs.min.js" : { type: external, minified: true, attributes: { defer: true } }
+    'https://cdn.jsdelivr.net/npm/a11y-accordion-tabs@1.0.2/a11y-accordion-tabs.min.js' : { type: external, minified: true, attributes: { defer: true } }
   dependencies:
     - core/drupal
     - core/drupalSettings
@@ -153,9 +153,9 @@ a11y-accordion-tabs:
 glightbox:
   css:
     theme:
-      '//cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css': { type: external, minified: true, attributes: { defer: true } }
+      'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css': { type: external, minified: true, attributes: { defer: true } }
   js:
-    '//cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js': { type: external, minified: true, attributes: { defer: true } }
+    'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js': { type: external, minified: true, attributes: { defer: true } }
     dist/js/glightbox.js: {}
   dependencies:
     - core/drupal
@@ -165,10 +165,10 @@ glightbox:
 glide:
   css:
     theme:
-      "//cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css": { type: external, minified: true, attributes: { defer: true } }
+      'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css': { type: external, minified: true, attributes: { defer: true } }
       dist/css/glide.css: {}
   js:
-    "//cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js": { type: external, minified: true, attributes: { defer: true } }
+    'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js': { type: external, minified: true, attributes: { defer: true } }
   dependencies:
     - core/drupal
     - core/drupalSettings
