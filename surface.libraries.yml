@@ -49,11 +49,6 @@ content-highlight:
     component:
       dist/css/content-highlight.css: {}
 
-date:
-  css:
-    component:
-      dist/css/date.css: {}
-
 
 eyebrow:
   css:
@@ -64,13 +59,6 @@ featured-content:
   css:
     component:
       dist/css/featured-content.css: {}
-
-hero:
-  css:
-    component:
-      dist/css/hero.css: {}
-  dependencies:
-    - surface/glightbox
 
 
 media-quote:
@@ -86,33 +74,10 @@ menu-sidebar:
   js:
     dist/js/menu-sidebar.js: {}
 
-
 quote:
   css:
     component:
       dist/css/quote.css: {}
-
-site-header:
-  css:
-    component:
-      dist/css/site-header.css: {}
-      dist/css/site-alert.css: {}
-      dist/css/site-secondary.css: {}
-      dist/css/menu-secondary.css: {}
-      dist/css/site-primary.css: {}
-      dist/css/site-branding.css: {}
-      dist/css/site-navigation.css: {}
-      dist/css/mobile-button.css: {}
-      dist/css/menu-main.css: {}
-      dist/css/menu-toggle.css: {}
-  js:
-    dist/js/menu-utils.js: {}
-    dist/js/menu-main.js: {}
-    dist/js/menu-main-second-level.js: {}
-    dist/js/button-search.js: {}
-  dependencies:
-    - core/drupal
-    - core/once
 
 
 slider:
@@ -125,11 +90,6 @@ slider-item:
   css:
     theme:
       dist/css/slider-item.css: {}
-
-slider-item-preview:
-  css:
-    theme:
-      dist/css/slider-item-preview.css: {}
 
 tabs:
   css:
@@ -145,18 +105,6 @@ tabs:
 a11y-accordion-tabs:
   js:
     'https://cdn.jsdelivr.net/npm/a11y-accordion-tabs@1.0.2/a11y-accordion-tabs.min.js' : { type: external, minified: true, attributes: { defer: true } }
-  dependencies:
-    - core/drupal
-    - core/drupalSettings
-    - core/once
-
-glightbox:
-  css:
-    theme:
-      'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css': { type: external, minified: true, attributes: { defer: true } }
-  js:
-    'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js': { type: external, minified: true, attributes: { defer: true } }
-    dist/js/glightbox.js: {}
   dependencies:
     - core/drupal
     - core/drupalSettings
