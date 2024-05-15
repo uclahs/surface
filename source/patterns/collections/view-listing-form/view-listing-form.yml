@@ -1,6 +1,0 @@
----
-action: '/articles-listing'
-aria_label: 'Filter the contents of the Recent Articles view'
-name: 'articles-listing'
-keys: ''
-placeholder: 'Search by keyword'
