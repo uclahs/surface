@@ -2,50 +2,10 @@ global:
   version: VERSION
   css:
     base:
-      //use.typekit.net/gqr2ulm.css: { type: external, minified: true }
       dist/css/global.css: {}
       dist/css/utilities.css: {}
-    layout:
-      dist/css/layout.css: {}
-      dist/css/block.css: {}
-      dist/css/page.css: {}
-      dist/css/view.css: {}
     component:
       dist/css/button.css: {}
-      dist/css/field.css: {}
-      dist/css/forms.css: {}
-      dist/css/form-item.css: {}
-      dist/css/form-item-label.css: {}
-      dist/css/form-boolean.css: {}
-      dist/css/form-item-upload.css: {}
-      dist/css/form-text.css: {}
-      dist/css/form-select.css: {}
-      dist/css/links.css: {}
-      dist/css/page-header.css: {}
-      dist/css/page-title.css: {}
-      dist/css/skip-link.css: {}
-      dist/css/pager.css: {}
-      dist/css/tables.css: {}
-      dist/css/views-exposed-form.css: {}
-    theme:
-      dist/css/fullcalendar.css: {}
-      dist/css/toolbar.css: {}
-      dist/css/toolbar-secondary.css: {}
-      dist/css/horizontal-toolbar.css: {}
-  js:
-    //kit.fontawesome.com/a0eb0bad75.js: { type: external, minified: true }
-    dist/js/animations.js: {}
-  dependencies:
-    - core/drupal
-
-accordion:
-  css:
-    component:
-      dist/css/accordion.css: {}
-  js:
-    dist/js/accordion.js: {}
-  dependencies:
-    - core/drupal
 
 accordion-tabs:
   css:
@@ -68,44 +28,16 @@ breadcrumb:
     component:
       dist/css/breadcrumb.css: {}
 
-byline:
-  css:
-    component:
-      dist/css/byline.css: {}
-
-button-group:
-  css:
-    component:
-      dist/css/button-group.css: {}
-
-call-to-action:
-  css:
-    component:
-      dist/css/call-to-action.css: {}
 
 callout:
   css:
     component:
       dist/css/callout.css: {}
 
-carousel:
-  css:
-    theme:
-      dist/css/carousel.css: {}
-  js:
-    dist/js/carousel.js: {}
-  dependencies:
-    - surface/glide
-
 card:
   css:
     component:
       dist/css/card.css: {}
-
-cta-banner:
-  css:
-    component:
-      dist/css/cta-banner.css: {}
 
 content-card:
   css:
@@ -122,15 +54,6 @@ date:
     component:
       dist/css/date.css: {}
 
-date-badge:
-  css:
-    component:
-      dist/css/date-badge.css: {}
-
-details:
-  css:
-    theme:
-      dist/css/details.css: {}
 
 eyebrow:
   css:
@@ -142,16 +65,6 @@ featured-content:
     component:
       dist/css/featured-content.css: {}
 
-flockler-embed:
-  css:
-    component:
-      dist/css/flockler-embed.css: {}
-
-gallery:
-  css:
-    theme:
-      dist/css/gallery.css: {}
-
 hero:
   css:
     component:
@@ -159,43 +72,11 @@ hero:
   dependencies:
     - surface/glightbox
 
-icon:
-  css:
-    component:
-      https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined: { type: external }
-      dist/css/icon.css: {}
-
-layout:
-  css:
-    layout:
-      dist/css/layout.css: {}
-
-maintenance-page:
-  css:
-    component:
-      dist/css/maintenance-page.css: {}
-
-media:
-  css:
-    component:
-      dist/css/media.css: {}
 
 media-quote:
   css:
     component:
       dist/css/media-quote.css: {}
-
-media-callout:
-  css:
-    component:
-      dist/css/media-callout.css: {}
-  dependencies:
-    - surface/glightbox
-
-menu-quicklinks:
-  css:
-    component:
-      dist/css/menu-quicklinks.css: {}
 
 menu-sidebar:
   css:
@@ -205,55 +86,11 @@ menu-sidebar:
   js:
     dist/js/menu-sidebar.js: {}
 
-metric:
-  css:
-    component:
-      dist/css/metric.css: {}
-
-nav:
-  css:
-    layout:
-      dist/css/nav.css: {}
-
-page:
-  css:
-    component:
-      dist/css/page.css: {}
 
 quote:
   css:
     component:
       dist/css/quote.css: {}
-
-readtime:
-  css:
-    component:
-      dist/css/readtime.css: {}
-
-related-content:
-  css:
-    component:
-      dist/css/related-content.css: {}
-
-search-block-form:
-  css:
-    component:
-      dist/css/search-block-form.css: {}
-
-settings:
-  css:
-    theme:
-      dist/css/global.css: {}
-      dist/css/settings.css: {}
-
-site-footer:
-  css:
-    component:
-      dist/css/site-footer.css: {}
-      dist/css/menu-social.css: {}
-      dist/css/menu-footer.css: {}
-      dist/css/copyright.css: {}
-      dist/css/menu-utility.css: {}
 
 site-header:
   css:
@@ -277,15 +114,6 @@ site-header:
     - core/drupal
     - core/once
 
-site-search:
-  css:
-    component:
-      dist/css/site-search.css: {}
-
-share:
-  css:
-    component:
-      dist/css/share.css: {}
 
 slider:
   js:
@@ -313,26 +141,6 @@ tabs:
     - core/drupal
     - core/once
 
-text:
-  css:
-    component:
-      dist/css/text.css: {}
-
-translate:
-  css:
-    theme:
-      dist/css/translate.css: {}
-  js:
-    dist/js/translate.js: {}
-
-typewriter:
-  css:
-    component:
-      dist/css/typewriter.css: {}
-  js:
-    dist/js/typewriter.js: {}
-  dependencies:
-    - surface/typewriter-effect
 
 a11y-accordion-tabs:
   js:
@@ -365,10 +173,3 @@ glide:
     - core/drupal
     - core/drupalSettings
     - core/once
-
-typewriter-effect:
-  js:
-    "https://unpkg.com/typewriter-effect@latest/dist/core.js": { type: external, minified: true, attributes: { defer: true } }
-  dependencies:
-    - core/drupal
-    - core/drupalSettings
