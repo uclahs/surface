@@ -4,7 +4,7 @@
  */
 
 .metric__container {
-  border-bottom-color: var(--ucla-blue);
+  border-bottom-color: var(--surface-blue);
   border-bottom-width: var(--size-1);
   max-width: 65ch;
   padding-block-end: var(--size-3);

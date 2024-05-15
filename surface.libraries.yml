@@ -18,11 +18,6 @@ accordion-tabs:
     - core/drupal
     - core/jquery.once
 
-alert:
-  css:
-    component:
-      dist/css/alert.css: {}
-
 breadcrumb:
   css:
     component:

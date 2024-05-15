@@ -12,7 +12,7 @@
 }
 
 .site-secondary {
-  background-color: var(--site-secondary-bg-color, var(--ucla-blue));
+  background-color: var(--site-secondary-bg-color, var(--surface-blue));
   color: var(--white);
   width: 100%;
 }

@@ -19,20 +19,11 @@
         </div>
       {% endif %}
 
-      {# Since this component serves the Callout and Highlight paragraph types,
-      adding a Twig block here allows us to change which Button component we use
-      during integration. At the moment the Button-track is only used on components
-      where Siteimprove tracking is implemented. #}
-      {% block cta %}
-        {% include "@elements/button-track/button-track.twig" with {
-          'action': cta.action,
-          'category': cta.category,
-          'label': cta.label,
-          'modifier': cta.modifier,
-          'text': cta.text,
-          'url': cta.url,
-        } only %}
-      {% endblock %}
+      {% include "@elements/button/button.twig" with {
+        'modifier': cta.modifier,
+        'text': cta.text,
+        'url': cta.url,
+      } only %}
 		</div>
 	</div>
 </article>

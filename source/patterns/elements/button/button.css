@@ -81,13 +81,13 @@
 
 /* Button primary */
 .button--primary {
-  background-color: var(--ucla-blue);
-  border-color: var(--ucla-blue);
+  background-color: var(--surface-blue);
+  border-color: var(--surface-blue);
   color: var(--white);
   font-family: var(--font-body);
 
   &:visited {
-    background-color: var(--ucla-blue);
+    background-color: var(--surface-blue);
     color: var(--white);
   }
 
@@ -99,7 +99,7 @@
   &:focus {
     box-shadow:
       0 0 var(--white),
-      0 0 0 2px var(--ucla-blue),
+      0 0 0 2px var(--surface-blue),
       0 0 var(--white);
   }
 
@@ -111,13 +111,13 @@
 
 /* Button secondary */
 .button--secondary {
-  background-color: var(--ucla-yellow);
-  border-color: var(--ucla-yellow);
+  background-color: var(--surface-yellow);
+  border-color: var(--surface-yellow);
   color: var(--midnight-joshua-tree);
   font-family: var(--font-body);
 
   &:visited {
-    background-color: var(--ucla-yellow);
+    background-color: var(--surface-yellow);
     color: var(--midnight-joshua-tree);
   }
 
@@ -130,7 +130,7 @@
   &:focus {
     box-shadow:
       0 0 var(--white),
-      0 0 0 2px var(--ucla-yellow),
+      0 0 0 2px var(--surface-yellow),
       0 0 var(--white);
   }
 

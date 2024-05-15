@@ -30,7 +30,7 @@
   transition: background-color 0.2s;
 
   &:focus {
-    outline: 3px solid var(--ucla-blue);
+    outline: 3px solid var(--surface-blue);
     outline-offset: -3px;
   }
 
@@ -45,7 +45,7 @@
     position: relative;
 
     &::after {
-      border-block-start: 6px solid var(--ucla-blue);
+      border-block-start: 6px solid var(--surface-blue);
       content: "";
       height: auto;
       inset-block-end: -1px;

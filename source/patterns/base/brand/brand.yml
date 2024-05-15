@@ -1,11 +1,11 @@
 ---
 brands:
   Primary Brand Colors:
-    - name: 'UCLA Blue'
-      var: '--ucla-blue'
+    - name: 'Surface Blue'
+      var: '--surface-blue'
       value: 'hsl(206 63% 42%)'
-    - name: 'UCLA Yellow'
-      var: '--ucla-yellow'
+    - name: 'Surface Yellow'
+      var: '--surface-yellow'
       value: 'hsl(49 100% 50%)'
   Secondary Brand Colors:
     - name: 'Midnight at Joshua Tree'

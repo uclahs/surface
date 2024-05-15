@@ -72,7 +72,7 @@
   a,
   a:hover {
     align-items: center;
-    color: var(--ucla-yellow);
+    color: var(--surface-yellow);
     display: flex;
     font-weight: var(--font-weight-600);
   }
@@ -117,7 +117,7 @@
 
   .event__type {
     align-items: center;
-    background-color: var(--ucla-blue);
+    background-color: var(--surface-blue);
     color: var(--white);
     display: flex;
     height: var(--size-10);

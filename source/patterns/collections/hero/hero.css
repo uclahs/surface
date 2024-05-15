@@ -9,9 +9,9 @@
 
 :where([data-theme="labs"]) {
   --button-bg-hover: var(--silver-lake-reservoir);
-  --button-bg: var(--ucla-blue);
+  --button-bg: var(--surface-blue);
   --button-color: var(--white);
-  --hero-bg: var(--ucla-yellow);
+  --hero-bg: var(--surface-yellow);
   --hero-padding: var(--size-10);
   --title-bg: var(--white);
   --title-color: var(--midnight-joshua-tree);
@@ -19,9 +19,9 @@
 
 :where([data-theme="labs-dynamic"]) {
   --button-bg-hover: var(--silver-lake-reservoir);
-  --button-bg: var(--ucla-blue);
+  --button-bg: var(--surface-blue);
   --button-color: var(--white);
-  --hero-bg: var(--ucla-yellow);
+  --hero-bg: var(--surface-yellow);
   --hero-padding: var(--size-10);
   --padding-block-start: 0;
   --title-bg: var(--white);
@@ -54,14 +54,14 @@
   max-width: var(--size-content-3);
 
   span {
-    color: var(--title-color, var(--ucla-blue));
+    color: var(--title-color, var(--surface-blue));
     font-family: var(--font-heading);
     font-size: var(--font-size-6);
     font-weight: var(--font-weight-600);
     text-transform: uppercase;
 
     @media (--tablet) {
-      background-color: var(--title-bg, var(--ucla-blue));
+      background-color: var(--title-bg, var(--surface-blue));
       box-decoration-break: clone;
       color: var(--title-color, var(--white));
       display: inline;
@@ -100,13 +100,13 @@
 
 .hero__buttons {
   .button--secondary {
-    background-color: var(--button-bg, var(--ucla-yellow));
-    border-color: var(--button-bg, var(--ucla-yellow));
+    background-color: var(--button-bg, var(--surface-yellow));
+    border-color: var(--button-bg, var(--surface-yellow));
     color: var(--button-color, var(--black));
     margin-block-start: var(--size-5);
 
     &:visited {
-      background-color: var(--button-bg, var(--ucla-yellow));
+      background-color: var(--button-bg, var(--surface-yellow));
       color: var(--button-color, var(--black));
     }
 
@@ -117,7 +117,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 var(--white), 0 0 0 2px var(--button-bg, var(--ucla-yellow)), 0 0 var(--white);
+      box-shadow: 0 0 var(--white), 0 0 0 2px var(--button-bg, var(--surface-yellow)), 0 0 var(--white);
     }
   }
 }

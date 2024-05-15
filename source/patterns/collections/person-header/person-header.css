@@ -23,7 +23,7 @@
   }
 
   .pl & {
-    background-color: var(--ucla-blue);
+    background-color: var(--surface-blue);
     padding: var(--size-5);
   }
 }
@@ -88,7 +88,7 @@
   }
 
   a {
-    color: var(--ucla-yellow);
+    color: var(--surface-yellow);
     font-weight: var(--font-weight-700);
     white-space: nowrap;
   }

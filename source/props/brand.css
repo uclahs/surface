@@ -1,7 +1,7 @@
 :where(html) {
   /* Primary Brand Colors */
-  --ucla-blue: hsl(206, 63%, 42%);
-  --ucla-yellow: hsl(49 100% 50%);
+  --surface-blue: hsl(206, 63%, 42%);
+  --surface-yellow: hsl(49 100% 50%);
 
   /* Secondary Brand Colors */
   --midnight-joshua-tree: hsl(202 100% 18%);

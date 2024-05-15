@@ -11,8 +11,8 @@
 
   .icon--image {
     aspect-ratio: var(--ratio-box);
-    border-color: var(--ucla-blue);
-    color: var(--ucla-blue);
+    border-color: var(--surface-blue);
+    color: var(--surface-blue);
     display: grid;
     font-size: var(--font-size-10);
     inline-size: 96px;
@@ -23,7 +23,7 @@
 
 .icon__link {
   border-bottom: 2px solid transparent;
-  color: var(--ucla-blue);
+  color: var(--surface-blue);
   font-family: var(--font-heading);
   font-size: var(--font-size-4);
   font-weight: var(--font-weight-500);
@@ -35,7 +35,7 @@
   }
 
   &:focus {
-    box-shadow: 0 0 var(--white), 0 0 0 2px var(--ucla-blue), 0 0 var(--white);
+    box-shadow: 0 0 var(--white), 0 0 0 2px var(--surface-blue), 0 0 var(--white);
     outline: 2px solid transparent;
     outline-offset: 2px;
   }
@@ -87,8 +87,8 @@
   }
 
   .border-ucla-blue & {
-    border-color: var(--ucla-blue);
-    color: var(--ucla-blue);
+    border-color: var(--surface-blue);
+    color: var(--surface-blue);
   }
 
   .border-midnight-joshua-tree & {
