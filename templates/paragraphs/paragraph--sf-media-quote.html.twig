@@ -1,9 +1,0 @@
-{# Set variable to trigger rendering of content array. #}
-{% set rendered_content = content|render %}
-
-{% include '@components/media-quote/media-quote.twig' with {
-  'attributes': attributes,
-  'quote': content.field_sf_wysiwyg|field_value,
-  'author': content.field_sf_author|field_value,
-  'image': content.field_sf_image|field_value,
-} only %}
