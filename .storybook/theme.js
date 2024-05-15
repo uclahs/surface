@@ -1,13 +1,13 @@
 import { create } from '@storybook/theming/create';
-import logo from '../logo.svg';
+// import logo from '../logo.svg';
 
 export default create({
   base: 'light',
 
   // Branding
-  brandTitle: 'UCLA Health',
-  brandUrl: 'https://medschool.ucla.edu/',
-  brandImage: logo,
+  brandTitle: 'Surface',
+  brandUrl: 'https://github.com/uclahs/surface',
+  // brandImage: logo,
   brandTarget: '_self',
   fontBase: '"Helvetica", sans-serif',
   fontCode: 'monospace',
