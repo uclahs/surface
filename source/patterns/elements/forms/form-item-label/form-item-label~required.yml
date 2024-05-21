@@ -1,7 +1,0 @@
----
-title_display: 'before'
-required: true
-is_disabled: false
-title: 'Form item label'
-attributes:
-  'for="edit-name"'
