@@ -1,0 +1,241 @@
+/* stylelint-disable -- This is a third party library. */
+/**
+ * @file
+ * Glide styles.
+ */
+
+.glide {
+  margin-inline: auto;
+  max-inline-size: var(--size-container);
+  width: 100%;
+}
+
+.is-full-width .glide {
+    max-inline-size: 100%;
+  }
+
+.glide__arrow {
+  display: none;
+}
+
+@media (min-width: 768px) {
+
+.glide__arrow {
+    --size: 50px;
+    --top: 25%;
+    background-color: var(--surface-blue);
+    color: var(--white);
+    cursor: pointer;
+    display: grid;
+    height: var(--size);
+    align-content: center;
+    justify-content: center;
+    place-content: center;
+    position: absolute;
+    top: var(--top);
+    transform: translateY(calc(var(--top) * -1));
+    width: var(--size);
+    z-index: 1
+}
+
+    .glide__arrow svg {
+      height: 2em;
+      width: 2em;
+    }
+  }
+
+@media (min-width: 768px) {
+
+.glide__arrow {
+    --size: 50px;
+    --top: 25%;
+    background-color: var(--surface-blue);
+    color: var(--white);
+    cursor: pointer;
+    display: grid;
+    height: var(--size);
+    align-content: center;
+    justify-content: center;
+    align-content: center;
+    justify-content: center;
+    place-content: center;
+    position: absolute;
+    top: var(--top);
+    transform: translateY(calc(var(--top) * -1));
+    width: var(--size);
+    z-index: 1
+}
+
+    .glide__arrow svg {
+      height: 2em;
+      width: 2em;
+    }
+  }
+
+@media (--tablet) {
+
+.glide__arrow {
+    --size: 50px;
+    --top: 25%;
+    background-color: var(--surface-blue);
+    color: var(--white);
+    cursor: pointer;
+    display: grid;
+    height: var(--size);
+    align-content: center;
+    justify-content: center;
+    place-content: center;
+    position: absolute;
+    top: var(--top);
+    transform: translateY(calc(var(--top) * -1));
+    width: var(--size);
+    z-index: 1
+}
+
+    .glide__arrow svg {
+      height: 2em;
+      width: 2em;
+    }
+  }
+
+@media (min-width: 1024px) {
+
+.glide__arrow {
+    --size: 70px;
+    --top: 25%
+}
+
+    .glide__arrow:visited {
+      background-color: var(--surface-blue);
+    }
+
+    .glide__arrow:hover {
+      background-color: var(--silver-lake-reservoir);
+    }
+  }
+
+@media (--laptop) {
+
+.glide__arrow {
+    --size: 70px;
+    --top: 25%
+}
+
+    .glide__arrow:visited {
+      background-color: var(--surface-blue);
+    }
+
+    .glide__arrow:hover {
+      background-color: var(--silver-lake-reservoir);
+    }
+  }
+
+@media (min-width: 1280px) {
+
+.glide__arrow {
+    --top: 34%
+}
+  }
+
+@media (--desktop) {
+
+.glide__arrow {
+    --top: 34%
+}
+  }
+
+.glide__arrow--left {
+  left: 0;
+}
+
+.glide__arrow--right {
+  right: 0;
+}
+
+.glide__bullets {
+  bottom: 0;
+  display: inline-flex;
+  height: 16px;
+  justify-content: center;
+  margin-inline: auto;
+  position: absolute;
+  top: 22%;
+  transform: translateY(-22%);
+  width: 100%;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+
+.glide__bullets {
+    top: 38%;
+    transform: translateY(-38%)
+}
+  }
+
+@media (--tablet) {
+
+.glide__bullets {
+    top: 38%;
+    transform: translateY(-38%)
+}
+  }
+
+@media (min-width: 1024px) {
+
+.glide__bullets {
+    top: 48%;
+    transform: translateY(-48%)
+}
+  }
+
+@media (--laptop) {
+
+.glide__bullets {
+    top: 48%;
+    transform: translateY(-48%)
+}
+  }
+
+@media (min-width: 1280px) {
+
+.glide__bullets {
+    top: 60%;
+    transform: translateY(-60%)
+}
+  }
+
+@media (--desktop) {
+
+.glide__bullets {
+    top: 60%;
+    transform: translateY(-60%)
+}
+  }
+
+.glide__bullet {
+  background-color: var(--silver-screen);
+  border-radius: var(--radius-round);
+  display: inline-block;
+  height: 16px;
+  margin-inline: 4px;
+  transition: width 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  width: 16px;
+}
+
+.glide__bullet:hover {
+  background-color: var(--surface-blue);
+}
+
+.glide__bullet--active {
+  background-color: var(--surface-yellow);
+  width: 32px;
+}
+
+.glide--swipeable {
+  cursor: grab;
+}
+
+.glide--dragging {
+  cursor: grabbing;
+}
