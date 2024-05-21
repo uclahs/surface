@@ -6,8 +6,8 @@ image: |-
 title:
   level: 1
   modifier: 'content-card__title'
-  text: 'Leaders in the Field Seminar featuring Dr. Marcel van den Brink'
-  url: 'https://medschool.ucla.edu'
+  text: 'Leaders in the Field Seminar featuring surprise speaker'
+  url: 'https://drupal.org'
 
 date:
   modifier: 'date--small'
@@ -23,6 +23,6 @@ date_short:
 more_dates: true
 more_dates_url: '#'
 
-organization: 'Davig Geffen School of Medicine'
+organization: 'The Drupal Association'
 event_type: 'Virtual'
 readtime: ''

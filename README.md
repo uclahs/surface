@@ -65,7 +65,7 @@ layouts, and pages.
 
 ## About Drupal Theming
 
-For demo purposes, we have included Drupal template suggestions inside `templates/`, which also include examples of how a particular Drupal entity (i.e. Paragraph type) is integrated with a Storybook component.
+For demo purposes, we have included Drupal template suggestions inside `templates/`, which also include examples of how a particular Drupal entity (i.e. content type) is integrated with a Storybook component.
 
 For more information, see Drupal.org [theming guide](
 https://www.drupal.org/docs/develop/theming-drupal).
