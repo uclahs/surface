@@ -1,6 +1,6 @@
 {{ attach_library('surface/card') }}
 
-<div class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+<article class="card{{ modifier ? ' ' ~ modifier : '' }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
   {% if image %}
     <div class="card__image">
       {{ image }}
@@ -65,4 +65,4 @@
       } only %}
     {% endif %}
   </div>
-</div>
+</article>
