@@ -14,7 +14,7 @@ There are several custom npm commands that allows developers to build and run di
 tasks during and after development. These commands can be found in `package.json`.
 The most common ones to use include:
 
-* `npm run watch`: This will run both `vite build --watch` and `stroybook dev -p 6006`.  This is the most common command to run while using Surface for development.  Among the task you will find ran are configured in the `vite.config.js` file and perform tasks such as:
+* `npm run watch`: This will run both `vite build --watch` and `stroybook dev -p 6006`.  This is the most common command to run while using Surface for development.  Among the task configured in `vite.config.js`, you will find:
   * Cleaning out the `dist` folder to ensure a there are fresh files each time.
   * Linting (CSS and JS) files to ensure code standards are met.
   * Copying static assets such as images to the `dist` folder.
@@ -29,6 +29,32 @@ Surface uses [Storybook](https://storybook.js.org/) as its design system and tha
 on the sites are originally built and maintained.  Storybook can be accessed on its own by running `npm run storybook`
 and navigating to `http://localhost:6006`.  It can also be accessed through Drupal's URL for example `https://your-site.ddev.site:6006`.
 
+## Atomic Design Methodology
+
+Although Surface adheres to the Atomic Design methodology, it does not use the same naming conventions for naming its patterns.  Our naming convention for the top level categories are:
+
+* **Elements** - equivalent to Atoms
+* **Components** - equivalent to Molecules
+* **Collections** - equivalent to Organisms
+* **Layouts** - equivalent to templates
+* **Pages** - same
+
+## Available components
+
+For a simple demonstration of how to build components in Storybook and integrate them with Drupal, we are sharing a couple of components we use on our projects. These components are:
+
+### Elements
+
+* Breadcrum, Button, Date, Date badge, Eyebrow, Images, Readtime, Title
+
+### Components
+
+* Card and Featured card
+
+### Collections
+
+* Slider
+
 ## Development approach
 
 Surface is built using the latest development practices for CSS, JS, Twig, and React.  Within Surface's Storybook,
@@ -38,6 +64,8 @@ like atoms, molecules, organisms, etc.  Instead, it uses more friendly names lik
 layouts, and pages.
 
 ## About Drupal Theming
+
+For demo purposes, we have included Drupal template suggestions inside `templates/`, which also include examples of how a particular Drupal entity (i.e. Paragraph type) is integrated with a Storybook component.
 
 For more information, see Drupal.org [theming guide](
 https://www.drupal.org/docs/develop/theming-drupal).
