@@ -1,0 +1,25 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as DateBadgeStories from './date-badge.stories';
+
+<Meta of={DateBadgeStories} />
+
+# Date badge
+
+The date badge component and a neat element which is used to display event dates in a special style. It is used in Event cards as well as in full nodes of type Event. It comes in two styles, a regular version within a blue square and white text, and the other which is the reverse in colors. It also comes in two sizes, regular size and small size. The small size is used in Event cards, and the regular size is used in full event nodes. See below.
+
+## Date badge technical specs
+
+* `modifier` lets you pass a modifier CSS class when needed.
+* `month` Print the month name abbreviated in the first 3 letters.
+* `day` prints the day of the month in numeric format.
+
+## Date badge
+
+<Story of={DateBadgeStories.Badge} />
+
+## Date badge small
+
+<Story of={DateBadgeStories.BadgeSmall} />
+
+## Date badge light
+<Story of={DateBadgeStories.BadgeLight} />

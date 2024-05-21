@@ -1,0 +1,23 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as EyebrowStories from './eyebrow.stories';
+
+<Meta of={EyebrowStories} />
+
+# Eyebrow
+
+The Eyebrow element usually prints a string of text that typically represents a category for the given content.
+
+## Eyebrow technical specs
+
+* `eyebrow[]` is an object with the following properties:
+  * `modifier` to pass a CSS class.
+  * `text` is the actual text string for the label.
+  * `url` if available, the label becomes a link.
+
+_Example_:
+
+<Story of={EyebrowStories.Eyebrow} />
+
+_Linked eyebrow_:
+
+<Story of={EyebrowStories.Linked} />

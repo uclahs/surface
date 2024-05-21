@@ -16,9 +16,18 @@ export const Badge = {
   args: { ...data },
 };
 
+export const BadgeSmall = {
+  ...Badge,
+  name: 'Date badge small',
+  args: {
+    ...data,
+    modifier: 'date-badge--small',
+  },
+};
+
 export const BadgeLight = {
   ...Badge,
-  name: 'Light date badge',
+  name: 'Date badge light',
   args: {
     ...data,
     modifier: 'date-badge--light',
