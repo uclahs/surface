@@ -13,7 +13,7 @@ export const Eyebrow = {
   args: {
     ...data,
     eyebrow: {
-      modifier: '',
+      modifier: 'prose',
       text: 'This is a plain text label',
       url: '',
     },
@@ -26,7 +26,7 @@ export const Linked = {
   args: {
     ...data,
     eyebrow: {
-      modifier: 'some-class',
+      modifier: 'some-class prose',
       text: 'This is a label as a link',
       url: 'https://medschool.ucla.edu',
     },

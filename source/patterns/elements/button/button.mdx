@@ -1,0 +1,51 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as ButtonStories from './button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+The button component is widely used and provides several variations.
+
+## Button technical specs
+
+* `icon` is an optional property allowing us to attach an icon as needed.
+* `modifier` makes it possible to pass a CSS modifier class which in turn can change the button's appearance as you see the examples below.
+* `text` is the label of the button.
+* `url` is also an optional property which determines if we use a `<button>` or an `<a>` element based on the presence of the `url`.
+
+### Default button
+
+The default variation of the button is mostly used to perform secondary tasks such as **Cancel**, **Reset**, and others.
+
+<Story of={ButtonStories.Button} />
+
+### Button primary
+
+The primary button follows UCLA's branding guidelines and it's mostly use to perform important or primary tasks such as **Submit**, **Add**, **Save**, and others.
+
+<Story of={ButtonStories.Primary} />
+
+### Button secondary
+
+Seimilar to the Primary button, the Secondary button is used for the same type of tasks where the color needs to vary for various reasons.
+
+<Story of={ButtonStories.Secondary} />
+
+### Button outlined
+
+For subtle actions or tasks, the outlined button is the one to use.
+
+<Story of={ButtonStories.Outlined} />
+
+### Button with icon
+
+If we need to add an icon to a button, we can do so by passing the icon value based on our list of icons.
+
+<Story of={ButtonStories.withIcon} />
+
+### Button as a link
+
+Sometimes we want the button to not look like a button, but rather a link. The Link button is great for adding buttons that don't stand out as much as the other buttons.
+
+<Story of={ButtonStories.Link} />
