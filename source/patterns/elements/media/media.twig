@@ -1,8 +1,0 @@
-{{ attach_library('surface/media') }}
-
-<div class="media{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
-  {{ title_suffix.contextual_links }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-</div>

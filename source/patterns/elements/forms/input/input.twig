@@ -1,5 +1,0 @@
-{% set classes = [
-  attributes ? attributes.class,
-]|join(' ')|trim %}
-
-<input class="{{ classes }}" {{ attributes ? attributes|without('class') }}>{{ children }}

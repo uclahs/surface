@@ -15,7 +15,7 @@ export const Title = {
     ...data,
     title: {
       level: 1,
-      modifier: '',
+      modifier: 'prose',
       text: 'A vibrant, supportive culture is essential to advancing our mission to heal humankind.',
     },
   },
@@ -29,7 +29,7 @@ export const Linked = {
     ...data,
     title: {
       level: 1,
-      modifier: '',
+      modifier: 'prose',
       text: 'A vibrant, supportive culture is essential to advancing our mission to heal humankind.',
       url: 'https://medschool.ucla.edu',
     },
