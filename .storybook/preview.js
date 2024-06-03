@@ -8,10 +8,10 @@ import './drupal/drupal';
 import './drupal/once';
 
 // Imports the CSS for all components combined into a single stylesheet.
-import '../dist/css/styles.css';
+import '../source/patterns/styles.css';
 
 // Imports all Storybook CSS for display.
-import '../dist/css/storybook.css';
+import '../source/patterns/storybook.css';
 
 function setupTwig(twig) {
   twig.cache();
