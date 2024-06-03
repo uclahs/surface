@@ -9,14 +9,13 @@ const config = {
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
     '@storybook/addon-themes',
+    '@storybook/addon-mdx-gfm'
   ],
   framework: {
     name: '@storybook/react-vite',
     options: {},
   },
-  docs: {
-    autodocs: false,
-  },
+  docs: {},
   staticDirs: ['../dist'],
 };
 
