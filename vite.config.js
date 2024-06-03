@@ -6,7 +6,6 @@ import path from 'path';
 import { glob } from "glob"
 import checker from 'vite-plugin-checker';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-import { watchAndRun } from 'vite-plugin-watch-and-run';
 
 export default defineConfig({
   plugins: [
@@ -30,30 +29,6 @@ export default defineConfig({
         dest: 'images',
       }],
     }),
-    // Watch for css, js and image changes.
-    watchAndRun([
-      {
-        name: 'css',
-        watchKind: ['add', 'change', 'unlink'],
-        watch: path.resolve('source/patterns/**/*.css'),
-        run: 'npm run vite:build',
-        delay: 300,
-      },
-      {
-        name: 'js',
-        watchKind: ['add', 'change', 'unlink'],
-        watch: path.resolve('source/patterns/**/*.js'),
-        run: 'npm run vite:build',
-        delay: 300,
-      },
-      {
-        name: 'images',
-        watchKind: ['add', 'change', 'unlink'],
-        watch: path.resolve('source/patterns/**/*.{png,jpg,jpeg,svg,webp,mp4}'),
-        run: 'npm run vite:build',
-        delay: 300,
-      },
-    ]),
     // Twig namespaces for including components.
     twig({
       namespaces: {
@@ -71,7 +46,6 @@ export default defineConfig({
   ],
   build: {
     emptyOutDir: true,
-    minify: false,
     outDir: 'dist',
     rollupOptions: {
       input: glob.sync(path.resolve(__dirname,'source/patterns/**/*.css')),
