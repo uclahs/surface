@@ -23,10 +23,6 @@ export default defineConfig({
       targets: [{
         src: 'source/patterns/**/*.js',
         dest: 'js',
-      },
-      {
-        src: 'source/patterns/**/*.{png,jpg,jpeg,svg,webp,mp4}',
-        dest: 'images',
       }],
     }),
     // Twig namespaces for including components.
@@ -56,6 +52,7 @@ export default defineConfig({
     sourcemap: true,
     manifest: false,
   },
+  publicDir: 'source/assets',
   css: {
     devSourcemap: true,
   },
