@@ -59,4 +59,10 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
+  // Excluding chunk_react from pre-bundling. This solves warning messages in
+  // command line which prevented components docs from displaying.
+  // https://vitejs.dev/config/dep-optimization-options
+  optimizeDeps: {
+    exclude: ["chunk_react"],
+  },
 });
