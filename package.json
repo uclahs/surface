@@ -24,7 +24,7 @@
     "stylelint": "stylelint './source/patterns/**/*.css'"
   },
   "devDependencies": {
-    "@csstools/postcss-global-data": "^2.1.1",
+    "@csstools/postcss-global-data": "^3.0.0",
     "@drupal/once": "^1.0.1",
     "@modyfi/vite-plugin-yaml": "^1.1.0",
     "@storybook/addon-essentials": "^8.2.4",
@@ -47,14 +47,14 @@
     "postcss-import": "^16.1.0",
     "postcss-import-ext-glob": "^2.1.1",
     "postcss-nested": "^6.0.1",
-    "postcss-preset-env": "^9.6.0",
+    "postcss-preset-env": "^10.0.5",
     "prettier": "^3.3.3",
     "stylelint": "^16.7.0",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-order": "^6.0.4",
     "stylelint-selector-pseudo-class-lvhfa": "^3.1.1",
     "twig-drupal-filters": "^3.2.0",
-    "vite-plugin-checker": "^0.7.2",
+    "vite-plugin-checker": "^0.8.0",
     "vite-plugin-static-copy": "^1.0.6",
     "vite-plugin-twig-drupal": "^1.3.0"
   },
