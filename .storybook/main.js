@@ -1,5 +1,4 @@
 import remarkGfm from 'remark-gfm';
-import { StorybookConfig } from '@storybook/react-vite';
 
 const config = {
   stories: [
