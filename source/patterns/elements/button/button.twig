@@ -1,20 +1,17 @@
+{# Buttons can be rendered using the <a> or <button> html elements. If a URL exists,
+we use the <a> element, otherwise we use the <button> element. #}
 {% if button.url %}
-  <a href="{{ button.url }}" class="button{{ ' ' ~ button.modifier|default('button--link') }}">
-{% else %}
-  <button class="button{{ ' ' ~ button.modifier }}">
-{% endif %}
+  <a href="{{ button.url }}" class="button{{ button.modifier ? ' ' ~ button.modifier : '' }}">
     {{ button.text }}
-
-    {# A placeholder for adding an icon to a button.
-    TODO: Implement a twig macro that can allows us to add icons. #}
-    {% block button_icon %}
-      {% if button.icon %}
-        <span class="fa-solid fa-arrow-right"></span>
-      {% endif %}
-    {% endblock %}
-
-{% if button.url %}
+    {% if button.icon %}
+      <span class="{{ button.icon }}"></span>
+    {% endif %}
   </a>
 {% else %}
+  <button class="button{{ button.modifier ? ' ' ~ button.modifier : '' }}">
+    {{ button.text }}
+    {% if button.icon %}
+      <span class="{{ button.icon }}"></span>
+    {% endif %}
   </button>
 {% endif %}
