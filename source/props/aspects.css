@@ -1,0 +1,9 @@
+:where(html) {
+  --ratio-box: 1;
+  --ratio-photo: 3/2;
+  --ratio-portrait: 3/4;
+  --ratio-landscape: 4/3;
+  --ratio-widescreen: 16/9;
+  --ratio-cinemascope: 21/9;
+  --ratio-golden: 1.618/1;
+}

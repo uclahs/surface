@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Theme override for Article node with card view mode.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label: The title for the article node.
+ * - url: The url to the full article node.
+ * - image: The Article image using the Card view mode.
+ * - date: The date the article was published/written.
+ * - readtime: Text string indicating how long it takes to read this article.
+ *
+ */
+#}
+
+{# Set variable for content array to make drupal aware. #}
+{% set render_content = content|render %}
+
+{# Set variable for event title to conform with heading component structure. #}
+{% set article_title = {
+  'modifier': 'card__title',
+  'text': label|field_value,
+  'url': url,
+  'level': 3
+} %}
+
+{# Set variable article date. #}
+{% set article_date = {
+  'modifier': 'date--small',
+  'date': content.field_sf_article_date|field_value,
+} %}
+
+{% include '@components/card/card.twig' with {
+  'attributes': attributes,
+  'modifier': 'card--article',
+  'image': content.field_sf_featured_media|field_value,
+  'title': article_title,
+  'meta_description': content.field_sf_meta_description|render|trim is not empty ? content.field_sf_meta_description|field_value,
+  'date': article_date,
+  'readtime': content.field_estimated_read|field_value,
+} only %}

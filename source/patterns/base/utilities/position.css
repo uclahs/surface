@@ -1,0 +1,8 @@
+/**
+ * @file
+ * Positon utility classes.
+ */
+
+.fixed {
+  position: fixed !important;
+}

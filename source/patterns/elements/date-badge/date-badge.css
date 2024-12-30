@@ -1,0 +1,44 @@
+/**
+ * @file
+ * Date badge styles.
+ */
+
+.date-badge {
+  background-color: var(--ucla-blue);
+  block-size: var(--size-20);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-8);
+  inline-size: var(--size-20);
+  justify-content: center;
+  padding: var(--size-3);
+  text-align: center;
+  text-transform: uppercase;
+
+  &.date-badge--light {
+    background-color: var(--white);
+    color: var(--ucla-blue);
+  }
+
+  time {
+    font-weight: var(--font-weight-900);
+    line-height: var(--leading-none);
+  }
+
+  .date-badge__month {
+    font-size: var(--font-size-1);
+  }
+
+  /* Smaller version as seeing in Content card for events. */
+  &.date-badge--small {
+    block-size: var(--size-14);
+    font-size: var(--font-size-4);
+    inline-size: var(--size-14);
+    padding: var(--size-2);
+
+    .date-badge__month {
+      font-size: var(--font-size-sm);
+    }
+  }
+}

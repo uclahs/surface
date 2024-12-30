@@ -1,0 +1,36 @@
+{{ attach_library('surface/breadcrumb') }}
+
+{% set classes = [
+  'breadcrumb',
+  attributes ? attributes.class,
+]|join(' ')|trim %}
+
+<nav class="{{ classes }}" {{ attributes ? attributes|without('class','id') }} aria-labelledby="system-breadcrumb" role="navigation">
+  <div id="surface-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</div>
+  <ol class="breadcrumb__list">
+    {% for item in breadcrumb %}
+      <li class="breadcrumb__item">
+        {% if item.url %}
+          <a href="{{ item.url }}" class="breadcrumb__link">
+            {% if loop.first %}
+              <span class="fa-solid fa-house"></span>
+              <span class="visually-hidden">{{ item.text }}</span>
+            {% else %}
+              {{ item.text }}
+            {% endif %}
+          </a>
+          {# Do not add a trailing arrow icon after the last item in the breadcrumb trail.  #}
+          {% if not loop.last %}
+            <svg class="svg-inline" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
+              <path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path>
+            </svg>
+          {% endif %}
+        {% else %}
+          <span aria-current="page">
+            {{ item.text }}
+          </span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+</nav>

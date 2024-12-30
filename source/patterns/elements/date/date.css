@@ -1,0 +1,36 @@
+/**
+ * @file
+ * Date styles.
+ */
+
+.date {
+  align-items: flex-start;
+  color: var(--gray-500);
+  display: flex;
+  font-size: var(--font-size-0);
+
+  /* Date text color variations. */
+  &.date--light {
+    color: var(--white);
+  }
+
+  &.date--dark {
+    color: var(--black);
+  }
+
+  svg {
+    block-size: 1em;
+    color: inherit;
+    display: inline-block;
+    inline-size: 1em;
+    margin-inline-end: var(--size-1);
+    vertical-align: -0.125em;
+  }
+
+  span {
+    color: inherit;
+    display: inline-block;
+    line-height: var(--leading-tight);
+    margin-inline-start: 0;
+  }
+}

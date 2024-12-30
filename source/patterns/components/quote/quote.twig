@@ -1,0 +1,17 @@
+{{ attach_library('surface/quote') }}
+
+<div class="quote{{ modifier ? ' ' ~ modifier : '' }}{{- attributes ? ' ' ~ attributes.class : '' -}}" {{- attributes ? attributes|without(class) -}}>
+  <div class="quote__content container">
+    <div class="quote__text">
+      <blockquote class="quote__wrapper">
+        {{ quote }}
+        <span class="quote__author">{{ author }}</span>
+      </blockquote>
+    </div>
+    {% if image %}
+      <div class="quote__image">
+        {{ image }}
+      </div>
+    {% endif %}
+  </div>
+</div>

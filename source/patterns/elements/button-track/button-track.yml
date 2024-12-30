@@ -1,0 +1,8 @@
+---
+action: 'Download'
+category: 'Video'
+label: 'Download a video'
+icon: ''
+modifier: 'button--primary'
+text: 'Tracking button'
+url: '#'

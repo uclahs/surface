@@ -1,0 +1,173 @@
+/**
+ * @file
+ * Featured content component styles.
+ * This component is shared by Article and Event content types.
+ */
+
+.featured-card {
+  display: grid;
+  gap: var(--size-10);
+  margin-block-start: var(--size-8);
+
+  @media (--tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* In Articles, the readtime field needs a little spacing. */
+  .readtime {
+    margin-block-start: var(--size-2);
+
+    .layout--onecol & {
+      color: var(--white);
+    }
+
+    .bg-santa-barbara-sand & {
+      color: var(--midnight-joshua-tree);
+    }
+  }
+}
+
+.featured-card__image {
+  overflow: hidden;
+
+  img {
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-2);
+  }
+}
+
+.featured-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-inline-size: var(--size-mobile);
+
+  .button--secondary {
+    margin-block-start: var(--size-4);
+  }
+
+  .eyebrow {
+    .layout--onecol & {
+      color: var(--white);
+    }
+
+    .bg-santa-barbara-sand & {
+      color: var(--midnight-joshua-tree);
+    }
+  }
+}
+
+.featured-card__date--wrapper {
+  align-items: center;
+  color: inherit;
+  display: flex;
+
+  /* Show the label '+ more dates' when an event is recurring and
+  looking at the card component. */
+  .featured-card__more-dates {
+    color: var(--gray-500);
+    font-weight: normal;
+    margin-inline-start: var(--size-3);
+
+    &:hover {
+      color: var(--ucla-blue);
+    }
+
+    .layout--onecol & {
+      color: var(--white);
+    }
+
+    .bg-santa-barbara-sand & {
+      color: var(--midnight-joshua-tree);
+    }
+  }
+
+  .date {
+    .layout--onecol & {
+      color: var(--white);
+    }
+
+    .bg-santa-barbara-sand & {
+      color: var(--midnight-joshua-tree)
+    }
+  }
+
+  /* Hide upcoming dates <details> tag so only the next event instance date
+  shows up on cards.  We need to know if there are upcoming dates to be
+  able to show the '+ more dates' link/label on cards where there are
+  upcoming dates, however, we don't need to display them. */
+  .recurring-output--wrapper {
+    details {
+      display: none;
+    }
+  }
+}
+
+/* Styles organization name by setting text and icon clor to yellow. */
+.featured-card__organization-name {
+  align-items: center;
+  color: var(--ucla-blue);
+  display: flex;
+  font-weight: var(--font-weight-600);
+
+  .layout--onecol & {
+    color: var(--white);
+  }
+
+  .bg-santa-barbara-sand & {
+    color: var(--midnight-joshua-tree);
+  }
+
+  a,
+  a:hover {
+    align-items: center;
+    display: flex;
+  }
+
+  svg {
+    inline-size: var(--size-3);
+    margin-inline-end: var(--size-2);
+  }
+}
+
+.featured-card__title {
+  color: var(--gray-900);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-400);
+  line-height: var(--leading-snug);
+  margin-block-end: var(--size-2);
+
+  /* If component is within a one column layout, change text color to white. */
+  .layout--onecol & {
+    color: var(--white);
+  }
+
+  .bg-santa-barbara-sand & {
+    color: var(--midnight-joshua-tree);
+  }
+
+  @media (--laptop) {
+    font-size: var(--font-size-8);
+  }
+}
+
+.featured-card__subtitle {
+  color: var(--gray-900);
+  font-family: var(--font-body);
+  font-size: var(--font-size-4);
+  margin-block-end: var(--size-3);
+
+  /* If component is within a one column layout, change text color to white. */
+  .layout--onecol & {
+    color: var(--white);
+  }
+
+  .bg-santa-barbara-sand & {
+    color: var(--midnight-joshua-tree);
+  }
+
+  @media (--laptop) {
+    font-size: var(--font-size-5);
+  }
+}

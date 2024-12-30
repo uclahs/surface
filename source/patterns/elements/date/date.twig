@@ -1,0 +1,6 @@
+{{ attach_library('surface/date') }}
+
+<div class="date{{ modifier ? ' ' ~ modifier }}">
+  <span class="fa-solid fa-calendar-days"></span>
+  <span>{{ date|default(now|date('F d, Y')) }}</span>
+</div>

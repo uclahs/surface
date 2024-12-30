@@ -5,8 +5,6 @@ alt text: 'Screenshot of Surface, Drupal front-end theme.'
 package: Core
 core_version_requirement: ^8.9 || ^9 || ^10
 base theme: false
-dependencies:
-  - components
 
 libraries:
   - surface/global

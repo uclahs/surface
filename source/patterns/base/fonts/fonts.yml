@@ -1,0 +1,47 @@
+---
+fonts:
+  Georgia:
+    - family: 'Georgia, Times New Roman, serif'
+      style: 'normal'
+      weight: '400'
+    - family: 'Georgia, Times New Roman, serif'
+      style: 'normal'
+      weight: '700'
+  Helvetica:
+    - family: 'Helvetica, sans-serif'
+      style: 'normal'
+      weight: '300'
+    - family: 'Helvetica, sans-serif'
+      style: 'normal'
+      weight: '400'
+    - family: 'Helvetica, sans-serif'
+      style: 'normal'
+      weight: '700'
+  Trade Gothic Next:
+    - family: 'trade-gothic-next, sans-serif'
+      style: 'normal'
+      weight: '400'
+    - family: 'trade-gothic-next, sans-serif'
+      style: 'normal'
+      weight: '700'
+  p22Mackinac:
+    - family: 'p22-mackinac-pro, serif'
+      style: 'normal'
+      weight: '400'
+    - family: 'p22-mackinac-pro, serif'
+      style: 'normal'
+      weight: '500'
+    - family: 'p22-mackinac-pro, serif'
+      style: 'normal'
+      weight: '700'
+    - family: 'p22-mackinac-pro, serif'
+      style: 'normal'
+      weight: '800'
+  system:
+    - family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Oxygen-Sans', Ubuntu, Cantarell, 'Fira Sans', Droid Sans, sans-serif"
+      style: 'normal'
+      weight: '400'
+  mono:
+    - family: "Menlo, Consolas, 'Lucida Console', 'Liberation Mono', 'Courier New', monospace, sans-serif"
+      style: 'normal'
+      weight: '400'

@@ -1,0 +1,238 @@
+/* These are styles to override some core Storybook styles. */
+
+/* Aspect Ratio Demos */
+.demo-aspect-ratio {
+  display: grid;
+  gap: var(--size-8);
+  justify-items: flex-start;
+  padding-block: var(--size-12);
+
+  .aspect-demo {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--size-6);
+
+    > div {
+      block-size: var(--size-40);
+      border-color: var(--gray-300);
+      border-width: var(--border-size-1);
+      box-shadow: var(--shadow-3);
+      display: grid;
+      max-inline-size: calc(100vw - (var(--size-16) * 2));
+      place-content: center;
+    }
+  }
+}
+
+/* Border Demos */
+.demo-borders {
+  display: grid;
+  gap: var(--size-8);
+  justify-items: flex-start;
+  padding-block: var(--size-12);
+
+  .border-demo {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--size-6);
+
+    > div {
+      aspect-ratio: var(--ratio-box);
+      border-color: var(--gray-300);
+      border-style: solid;
+      border-width: var(--border-size-1);
+      display: grid;
+      font-size: var(--font-size-4);
+      inline-size: var(--size-40);
+      place-content: center;
+    }
+  }
+}
+
+/* Brand & Color Demo */
+.demo-brands,
+.demo-colors {
+  display: grid;
+  gap: var(--size-8);
+  justify-items: flex-start;
+  padding-block: var(--size-12);
+
+  .brand-demo,
+  .color-demo {
+    display: grid;
+    gap: var(--size-4);
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--size-40), 10rem), 1fr));
+  }
+
+  .brand-demo__swatch,
+  .color-demo__swatch {
+    .swatch {
+      aspect-ratio: var(--ratio-box);
+      border-color: var(--gray-300);
+      border-radius: var(--radius-1);
+      border-width: var(--border-size-1);
+      display: grid;
+      inline-size: var(--size-40);
+    }
+
+    .meta {
+      padding-block: var(--size-2);
+      padding-inline: var(--size-2);
+    }
+
+    span {
+      color: var(--black);
+      display: block;
+      font-size: var(--font-size-sm);
+
+      &.name {
+        font-size: var(--font-size-0);
+        font-weight: var(--font-weight-700);
+      }
+    }
+  }
+}
+
+/* Font Demo */
+.demo-fonts {
+  display: grid;
+  gap: var(--size-8);
+  justify-items: flex-start;
+  padding-block: var(--size-12);
+
+  .font-demo {
+    @media (width >= 768px) {
+      display: grid;
+      gap: var(--size-6);
+      grid-template-columns: 35% 65%;
+    }
+
+    .font-preview {
+      flex-shrink: 0;
+      font-size: var(--font-size-13);
+      font-weight: var(--font-weight-400);
+      inline-size: 100%;
+      line-height: var(--line-height-1);
+    }
+
+    .font-meta {
+      inline-size: 100%;
+
+      @media (width >= 768px) {
+        display: grid;
+        grid-template-columns: 35% 65%;
+      }
+    }
+
+    .font-meta__alpha {
+      color: var(--gray-700);
+      inline-size: 100%;
+    }
+
+    .font-meta__label {
+      color: var(--gray-600);
+    }
+
+    .font-meta__preview {
+      border-block-start: var(--border-size-1) solid var(--gray-300);
+      inline-size: fit-content;
+      margin: var(--size-4) 0 0;
+      padding: var(--size-4) 0 0;
+
+      @media (width >= 768px) {
+        border-block-start: 0;
+        border-inline-start: var(--border-size-1) solid var(--gray-300);
+        margin: 0 0 0 var(--size-4);
+        padding: 0 0 0 var(--size-4);
+      }
+
+      > div {
+        font-size: var(--font-size-0);
+        line-height: var(--line-height-4);
+      }
+    }
+  }
+}
+
+/* Shadow Demo */
+.demo-shadows {
+  display: grid;
+  gap: var(--size-8);
+  justify-items: flex-start;
+  padding-block: var(--size-12);
+
+  .shadow-demo {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--size-6);
+
+    > div {
+      aspect-ratio: var(--ratio-box);
+      border-color: var(--gray-300);
+      border-radius: var(--radius-3);
+      border-width: var(--border-size-1);
+      display: grid;
+      inline-size: var(--size-40);
+      place-content: center;
+    }
+  }
+}
+
+/* Sizes Demo */
+.demo-sizes {
+  .size-demo {
+    display: flex;
+    flex-wrap: wrap;
+    padding-block-start: var(--size-12);
+
+    > div {
+      flex-grow: 1;
+      font-weight: var(--font-weight-300);
+      inline-size: calc(25% - 1px);
+      outline: 1px solid var(--gray-100);
+      overflow: hidden;
+      padding: 0.8em 1.2em;
+    }
+
+    h4 {
+      margin: 0;
+    }
+  }
+}
+
+/* General formatting */
+.just-for-gap {
+  display: grid;
+  gap: var(--size-8);
+  inline-size: 100%;
+  margin-block-end: var(--size-4);
+
+  .heading {
+    font-family: var(--font-system);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-500);
+  }
+}
+
+/* Styles for demo form elements in Storybook. */
+.form-elements-demo {
+  padding: var(--size-5) !important;
+
+  .form-elements-demo__item {
+    margin-block-end: var(--size-6);
+  }
+
+  .demo-label {
+    font-size: var(--font-size-1);
+    margin-block-end: var(--size-1);
+  }
+
+  > input {
+    margin-block-end: var(--size-5) !important;
+  }
+}
+
+/* Styles for various elements in stories docs pages. */
+.sb-story + h2 {
+  margin-block-start: var(--size-10) !important;
+}

@@ -1,0 +1,29 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Getting started/Intro" />
+
+# UCLA Health Web Platform
+
+## An enterprise content management system for the Health Sciences at UCLA.
+
+## Development approach
+At the core of the platform are the best practices and standards of today's development ecosystem.
+The platform makes heavy use of the [Atomic Design](https://atomicdesign.bradfrost.com/table-of-contents/) methodology however it does not use the naming convention of such methodology. Instead, we have organized our patterns as follows:
+
+### Patterns organization
+
+* **Base**: These are the global pieces used across the project which include things like typography, colors, sizes, borders and more.
+* **Elements**: These are the smallest patterns on any project and act as the foundation to larger patterns.
+* **Components**: A component is made up from two or more Elements.
+* **Collections**: A collection is made up from two or more Components.
+* **Layouts**: Can combine two or more Collections and you can think of them as regions of a website.
+* **Pages**: Intended to create prototypes of pages such as Medschool's homepage and others.
+
+## Tooling
+The tooling for the platform has been carefully vetted and selected so only the absolute necessary is included. These tools include:
+
+* [Vite 5](https://vite.dev/)
+* [Storybook 8](https://storybook.js.org/)
+* Vanilla JavaScript
+* Twig
+* PostCSS
