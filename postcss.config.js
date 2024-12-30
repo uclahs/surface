@@ -1,17 +1,19 @@
+import postcssGlobalData from '@csstools/postcss-global-data';
 import postcssImport from 'postcss-import';
 import postcssImportExtGlob from 'postcss-import-ext-glob';
-import postcssGlobalData from '@csstools/postcss-global-data';
 import postcssNested from 'postcss-nested';
 import postcssPresetEnv from 'postcss-preset-env';
+import autoprefixer from 'autoprefixer';
 
 export default {
   plugins: [
+    autoprefixer(),
     postcssImportExtGlob(),
     postcssImport(),
+    postcssNested(),
     postcssGlobalData({
       files: ['./source/props/media.css'],
     }),
-    postcssNested(),
     postcssPresetEnv({
       stage: 4,
       features: {

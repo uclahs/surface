@@ -1,0 +1,95 @@
+---
+spacing:
+  - size: --size-px
+    px: 1px
+    rem: 0.0625rem
+  - size: --size-05
+    px: 2px
+    rem: 0.125rem
+  - size: --size-1
+    px: 4px
+    rem: 0.25rem
+  - size: --size-2
+    px: 8px
+    rem: 0.5rem
+  - size: --size-3
+    px: 12px
+    rem: 0.75rem
+  - size: --size-4
+    px: 16px
+    rem: 1rem
+  - size: --size-5
+    px: 20px
+    rem: 1.25rem
+  - size: --size-6
+    px: 24px
+    rem: 1.5rem
+  - size: --size-7
+    px: 28px
+    rem: 1.75rem
+  - size: --size-8
+    px: 32px
+    rem: 2rem
+  - size: --size-9
+    px: 36px
+    rem: 2.25rem
+  - size: --size-10
+    px: 40px
+    rem: 2.5rem
+  - size: --size-11
+    px: 44px
+    rem: 2.75rem
+  - size: --size-12
+    px: 48px
+    rem: 3rem
+  - size: --size-14
+    px: 56px
+    rem: 3.5rem
+  - size: --size-16
+    px: 64px
+    rem: 4rem
+  - size: --size-20
+    px: 80px
+    rem: 5rem
+  - size: --size-24
+    px: 96px
+    rem: 6rem
+  - size: --size-28
+    px: 112px
+    rem: 7rem
+  - size: --size-32
+    px: 128px
+    rem: 8rem
+  - size: --size-36
+    px: 144px
+    rem: 9rem
+  - size: --size-40
+    px: 160px
+    rem: 10rem
+  - size: --size-44
+    px: 176px
+    rem: 11rem
+  - size: --size-48
+    px: 192px
+    rem: 12rem
+  - size: --size-52
+    px: 208px
+    rem: 13rem
+  - size: --size-56
+    px: 224px
+    rem: 14rem
+  - size: --size-60
+    px: 240px
+    rem: 15rem
+  - size: --size-64
+    px: 256px
+    rem: 16rem
+  - size: --size-72
+    px: 288px
+    rem: 18rem
+  - size: --size-80
+    px: 320px
+    rem: 20rem
+  - size: --size-96
+    px: 384px
+    rem: 24rem

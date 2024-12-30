@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Readtime styles.
+ */
+
+.readtime {
+  color: var(--gray-500);
+  display: inline-block;
+  font-size: var(--font-size-0);
+
+  svg {
+    block-size: 1em;
+    color: inherit;
+    display: inline-block;
+    font-size: inherit;
+    inline-size: 1em;
+    vertical-align: -0.125em;
+  }
+
+  span {
+    color: inherit;
+    display: inline-block;
+    font-size: inherit;
+    line-height: var(--leading-tight);
+  }
+}

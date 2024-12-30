@@ -1,0 +1,10 @@
+/* Device breakpoints */
+@custom-media --mobile-sm (width >= 400px);
+@custom-media --mobile (width >= 640px);
+@custom-media --tablet (width >= 768px);
+@custom-media --laptop (width >= 1024px);
+@custom-media --desktop (width >= 1280px);
+@custom-media --desktop-large (width >= 1440px);
+
+/* Drupal toolbar breakpoints */
+@custom-media --toolbar (width >= 976px);

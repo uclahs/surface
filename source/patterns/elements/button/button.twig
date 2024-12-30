@@ -1,0 +1,17 @@
+{# Buttons can be rendered using the <a> or <button> html elements. If a URL exists,
+we use the <a> element, otherwise we use the <button> element. #}
+{% if button.url %}
+  <a href="{{ button.url }}" class="button{{ button.modifier ? ' ' ~ button.modifier : '' }}">
+    {{ button.text }}
+    {% if button.icon %}
+      <span class="{{ button.icon }}"></span>
+    {% endif %}
+  </a>
+{% else %}
+  <button class="button{{ button.modifier ? ' ' ~ button.modifier : '' }}">
+    {{ button.text }}
+    {% if button.icon %}
+      <span class="{{ button.icon }}"></span>
+    {% endif %}
+  </button>
+{% endif %}

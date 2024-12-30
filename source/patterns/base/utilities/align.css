@@ -1,0 +1,27 @@
+/**
+ * @file
+ * Alignment utility classes.
+ */
+
+.align-center {
+  display: block;
+  margin-inline: auto;
+
+  /* Center-aligns images when inside the `.text` wrapper coming from wysiwyg. */
+  .text & {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.align-left {
+  float: inline-start;
+  margin-inline-end: var(--size-8);
+  max-inline-size: fit-content;
+}
+
+.align-right {
+  float: inline-end;
+  margin-inline-start: var(--size-8);
+  max-inline-size: fit-content;
+}

@@ -1,0 +1,11 @@
+:where(html) {
+  --layer-0: 0;
+  --layer-1: 1;
+  --layer-10: 10;
+  --layer-20: 20;
+  --layer-30: 30;
+  --layer-40: 40;
+  --layer-50: 50;
+  --layer-auto: auto;
+  --layer-important: 2147483647;
+}

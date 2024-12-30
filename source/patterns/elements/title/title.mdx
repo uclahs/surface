@@ -1,0 +1,23 @@
+import {Canvas, Meta} from '@storybook/blocks';
+
+import * as titleStories from "./title.stories";
+
+<Meta of={titleStories}/>
+
+# Title
+The Title component is a widely used component which is flexible and can be customized on demand. See specs for more info.
+
+## Title technical specs
+
+* `modifier` lets you pass a modifier CSS class when needed.
+* `level` makes it possible to change the heading level (`h1`, `h2`, `h3`, etc.) as needed.
+* `text` prints the title text visible to readers.
+* `url` is available when the title needs to be a link.
+
+## Title as plain text
+
+<Canvas of={titleStories.Title}/>
+
+## Title as link
+
+<Canvas of={titleStories.Linked}/>

@@ -1,0 +1,181 @@
+/**
+ * @file
+ * Callout styles.
+ */
+
+.callout {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: var(--size-5);
+
+  /* Horizontal layout */
+  &.is-horizontal {
+    gap: var(--size-4);
+
+    @media (--laptop) {
+      flex-direction: row-reverse;
+      gap: var(--size-10);
+
+      .callout__image {
+        flex-shrink: 0;
+        inline-size: 50%;
+        margin-block-end: 0;
+      }
+    }
+
+    .callout__text {
+      inline-size: 100%;
+
+      @media (--laptop) {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        inline-size: 50%;
+        justify-content: center;
+      }
+    }
+  }
+
+  /* Horizontal in reversed order */
+  &.is-reversed {
+    @media (--laptop) {
+      flex-direction: row;
+    }
+  }
+
+  /* Quote version */
+  &.is-quote {
+    /* By rule, when the venice-canal background is present, text should be white,
+    however, in the case of callout quotes, since text is wrapped in a white container,
+    text should be reset to its original color or dark gray. */
+    .bg-venice-canal & {
+      .callout__title,
+      .callout__teaser {
+        color: var(--gray-900);
+      }
+    }
+
+    .callout__text {
+      @media (--laptop) {
+        inline-size: 90%;
+        margin-block-start: calc(var(--size-20) * -1);
+        margin-inline: auto;
+      }
+    }
+
+    .callout__wrapper {
+      background-color: var(--white);
+      max-inline-size: 70ch;
+      position: relative;
+      z-index: var(--layer-1);
+
+      @media (--laptop) {
+        padding: var(--size-6);
+      }
+    }
+
+    /* Quote horizontal. */
+    &.is-horizontal {
+      .callout__text {
+        inline-size: 100%;
+        margin-block-start: 0;
+      }
+
+      @media (--laptop) {
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+
+        .callout__image {
+          flex-shrink: 0;
+          inline-size: 50%;
+          margin-block-end: 0;
+        }
+
+        .callout__text {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          inline-size: 50%;
+          justify-content: center;
+          margin-block-start: 0;
+        }
+
+        /* Using min-width ensures the white text container is properly sized and
+        displayed even if only a little amount of text is provided. */
+        .callout__wrapper {
+          background-color: var(--white);
+          margin-inline-end: calc(40% * -1);
+          max-inline-size: 65ch;
+          min-inline-size: 60ch;
+          z-index: var(--layer-1);
+        }
+      }
+
+      /* Quote horizontal reversed */
+      &.is-reversed {
+        @media (--laptop) {
+          flex-direction: row;
+        }
+
+        .callout__wrapper {
+          @media (--laptop) {
+            margin-inline-end: 0;
+            margin-inline-start: calc(40% * -1);
+          }
+        }
+      }
+    }
+  }
+
+  /* If one-column has background-color `.bg-venice-canal` or `bg-santa-barbara-sand`,
+  change button color to be the same as button--secondary. */
+  .bg-venice-canal &,
+  .bg-santa-barbara-sand & {
+    .button {
+      background-color: var(--ucla-yellow);
+      border-color: var(--ucla-yellow);
+      color: var(--midnight-joshua-tree);
+    }
+  }
+}
+
+.callout__image {
+  margin-block-end: var(--size-10);
+}
+
+.callout__title {
+  color: var(--gray-900);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-400);
+  line-height: var(--leading-tight);
+  margin-block-end: var(--size-4);
+  max-inline-size: 35ch;
+
+  @media (--laptop) {
+    font-size: var(--font-size-8);
+  }
+
+  /* If one-column layout has background color `bg-venice-canal`,
+  change title text color to white. */
+  .bg-venice-canal & {
+    color: var(--white);
+  }
+}
+
+.callout__teaser {
+  font-size: var(--font-size-2);
+  margin-block-end: var(--size-4);
+  max-inline-size: 65ch;
+
+  @media (--laptop) {
+    font-size: var(--font-size-3);
+  }
+
+  /* If one-column layout has background color `bg-venice-canal`,
+  change text color to white. */
+  .bg-venice-canal & {
+    color: var(--white);
+  }
+}

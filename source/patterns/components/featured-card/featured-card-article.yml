@@ -1,0 +1,25 @@
+---
+modifier: ''
+image: |-
+  <img src="images/3-2.svg" alt="placeholder text" width="768" height="512" />
+title:
+  modifier: 'featured-card__title'
+  level: 3
+  text: 'UCLA Health HIMS Forum'
+  url: '#'
+subtitle:
+  modifier: 'featured-card__subtitle'
+  level: 4
+  text: 'Join the HIMS Director and Management Team for updates on patient record integrity.'
+  url: ''
+date:
+  modifier: ''
+  date: 'October 31, 2023 | 12:30 PM – 1:30 PM'
+cta:
+  modifier: 'button--secondary'
+  text: 'Read the full article'
+  url: '#'
+event_type: ''
+more_dates: false
+organization: 'David Geffen School of Medicine'
+readtime: '5 min read'

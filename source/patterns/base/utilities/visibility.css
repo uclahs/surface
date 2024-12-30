@@ -1,0 +1,39 @@
+/**
+ * @file
+ * Visibility utility classes.
+ */
+
+.hidden,
+.js-hide {
+  display: none;
+}
+
+.visually-hidden {
+  block-size: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  word-wrap: normal;
+}
+
+.visually-hidden.focusable:focus,
+.visually-hidden.focusable:active {
+  block-size: auto;
+  clip: auto;
+  inline-size: auto;
+  overflow: visible;
+  position: static;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.collapse {
+  visibility: collapse;
+}

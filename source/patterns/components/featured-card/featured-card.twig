@@ -1,0 +1,61 @@
+{{ attach_library('surface/featured-card') }}
+
+<div class="featured-card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+  <div class="featured-card__image">
+    {{ image }}
+  </div>
+  <div class="featured-card__content">
+    {% if event_type %}
+      {% include "@elements/eyebrow/eyebrow.twig" with {
+        'eyebrow': event_type
+      } only %}
+    {% endif %}
+
+    {% include '@elements/title/title.twig' with {
+      'title': title,
+    } only %}
+
+    {% if subtitle %}
+      {% include '@elements/title/title.twig' with {
+        'title': subtitle,
+      } only %}
+    {% endif %}
+
+    {% if organization %}
+      <div class="featured-card__organization-name mb-2">
+        <span class="fa-solid fa-location-dot"></span>
+        {{ organization }}
+      </div>
+    {% endif %}
+
+    <div class="featured-card__date--wrapper">
+      {% include '@elements/date/date.twig' with {
+        'modifier': date.modifier,
+        'date': date.date,
+      } only %}
+
+      {# If there are upcoming instances of an event, display `+ more dates`
+      next to the event date to show users this is a recurring event. #}
+      {% if more_dates %}
+        {% include "@elements/button/button.twig" with {
+          'button': {
+            'modifier': 'button--link featured-card__more-dates',
+            'text': '+ more dates',
+            'url': cta.url
+          }
+        } only %}
+      {% endif %}
+    </div>
+
+    {% if readtime %}
+      {% include '@elements/readtime/readtime.twig' with {
+        'readtime': readtime
+      } %}
+    {% endif %}
+
+    {# Event cta. #}
+    {% include '@elements/button/button.twig' with {
+      'button': cta,
+    } only %}
+  </div>
+</div>

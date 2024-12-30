@@ -1,0 +1,54 @@
+/**
+ * @file
+ * Breadcrumb styles.
+ */
+
+:where([data-theme="dgsom"]) {
+  --svg-start: var(--size-1);
+}
+
+:where([data-theme="labs-dynamic"]) {
+  --svg-start: var(--size-1);
+}
+
+.breadcrumb__list {
+  align-items: center;
+  color: var(--ucla-blue);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-2);
+}
+
+.breadcrumb__item {
+  align-items: center;
+  color: var(--white);
+  display: inline-flex;
+
+  svg {
+    block-size: 1em;
+    color: inherit;
+    display: inline-block;
+    inline-size: 1em;
+    margin-block-start: var(--svg-start, 0);
+    margin-inline-start: var(--size-4);
+  }
+}
+
+.breadcrumb__link {
+  color: var(--white);
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-400);
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  svg {
+    block-size: 1em;
+    color: inherit;
+    display: inline-block;
+    inline-size: 1em;
+    margin-inline-start: 0;
+    vertical-align: -0.125em;
+  }
+}

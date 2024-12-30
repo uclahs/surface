@@ -1,33 +1,18 @@
-import { defineConfig } from 'vite';
-import twig from 'vite-plugin-twig-drupal';
+/* eslint-disable */
+import { defineConfig } from "vite"
 import yml from '@modyfi/vite-plugin-yaml';
-import { join } from 'node:path';
+import twig from 'vite-plugin-twig-drupal';
+import { join } from "node:path";
 import path from 'path';
-import { glob } from "glob"
-import checker from 'vite-plugin-checker';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
+import { glob } from 'glob';
+import eslint from 'vite-plugin-eslint';
 
 export default defineConfig({
   plugins: [
-    // Linting for js and css.
-    checker({
-      eslint: {
-        lintCommand: 'eslint "source/patterns/**/*.{js,jsx}"',
-      },
-      stylelint: {
-        lintCommand: 'stylelint "source/patterns/**/*.css"',
-      },
-    }),
-    // Copy js and images from source to dist
-    viteStaticCopy({
-      targets: [{
-        src: 'source/patterns/**/*.js',
-        dest: 'js',
-      }],
-    }),
-    // Twig namespaces for including components.
+    // Twig namespaces for nesting components.
     twig({
       namespaces: {
+        assets: join(__dirname, './source/assets'),
         base: join(__dirname, './source/patterns/base'),
         elements: join(__dirname, './source/patterns/elements'),
         components: join(__dirname, './source/patterns/components'),
@@ -37,29 +22,24 @@ export default defineConfig({
         theme: join(__dirname, './source/patterns/theme'),
       },
     }),
-    // YML for including data.
+    // Allows Storybook to read data from YAML files.
     yml(),
+    // Run eslint during build.
+    eslint(),
   ],
   build: {
     emptyOutDir: true,
     outDir: 'dist',
     rollupOptions: {
-      input: glob.sync(path.resolve(__dirname,'source/patterns/**/*.css')),
+      input: glob.sync(path.resolve(__dirname,'./source/patterns/**/*.{css,js}')),
       output: {
         assetFileNames: 'css/[name].css',
+        entryFileNames: 'js/[name].js',
       },
     },
-    sourcemap: true,
-    manifest: false,
   },
   publicDir: 'source/assets',
   css: {
     devSourcemap: true,
   },
-  // Excluding chunk_react from pre-bundling. This solves warning messages in
-  // command line which prevented components docs from displaying.
-  // https://vitejs.dev/config/dep-optimization-options
-  optimizeDeps: {
-    exclude: ["chunk_react"],
-  },
-});
+})

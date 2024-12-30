@@ -1,0 +1,28 @@
+/**
+ * @file
+ * Eyebrow styles.
+ */
+
+.eyebrow {
+  color: var(--gray-500);
+  display: inline-block;
+  font-size: var(--font-size-0);
+
+  span,
+  .eyebrow__link {
+    display: inline-block;
+    font-size: inherit;
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    .eyebrow__link {
+      color: var(--ucla-blue);
+    }
+  }
+
+  &.eyebrow--light {
+    color: var(--white);
+  }
+}

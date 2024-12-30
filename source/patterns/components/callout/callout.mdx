@@ -1,0 +1,48 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as CalloutStories from './callout.stories';
+
+<Meta of={CalloutStories} />
+
+# Callout
+
+Most commonly used for FAQ format of content, the Accordion is a great way to present content while saving space on a page.
+
+### Default Callout
+
+<Canvas of={CalloutStories.Stacked} />
+
+### Horizontal Callout
+
+<Canvas of={CalloutStories.Horizontal} />
+
+### Horizontal Reversed Callout
+
+<Canvas of={CalloutStories.Reversed} />
+
+### Quote Callout
+
+<Canvas of={CalloutStories.Quote} />
+
+### Quote Horizontal Callout
+
+<Canvas of={CalloutStories.QuoteHorizontal} />
+
+### Quote Horizontal Reversed Callout
+
+<Canvas of={CalloutStories.HorizontalReversed} />
+
+### Callout with Santa Barbara Sand background
+
+<Canvas of={CalloutStories.SantaBarbaraSand} />
+
+### Callout with Venice Canal background
+
+<Canvas of={CalloutStories.VeniceCanal} />
+
+## Callout technical specs
+
+* `modifier` makes it possible to pass a CSS modifier class.
+* `image` is the featured image for the component with a 3:2 aspect ratio.
+* `title` is the title field for the component.
+* `teaser` free text with a limited number of characters.
+* `cta` is a button with specific link to a page or site.

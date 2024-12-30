@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 
+# Ignores storybook static assets.
+storybook
 storybook-static
 
 # Editor directories and files
@@ -24,6 +26,4 @@ storybook-static
 *.njsproj
 *.sln
 *.sw?
-
-# Storybook static site.
-storybook
+dependencyGraph.json

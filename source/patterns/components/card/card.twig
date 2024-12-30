@@ -1,0 +1,91 @@
+{{ attach_library('surface/card') }}
+
+<article class="card{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{- attributes ? attributes|without(class) -}}>
+  {% if image %}
+    <div class="card__image">
+      {{ image }}
+
+      {# Short date badge only displays if the content is an event. #}
+      {% if date_short and event_type %}
+        {% include "@elements/date-badge/date-badge.twig" with {
+          'modifier': 'date-badge--small',
+          'month': date_short.month,
+          'day': date_short.day,
+        } only %}
+      {% endif %}
+
+      {# Logic for printing the type of content this card belongs to. #}
+      {% if date_short %}
+        {% set content_type = 'Event' %}
+      {% elseif date is not empty and date_short is empty %}
+        {% set content_type = 'Article' %}
+      {% elseif date is empty and date_short is empty %}
+        {% set content_type = 'Page' %}
+      {% endif %}
+      <div class="card__content-type">
+        {{ content_type }}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="card__content">
+    {% if event_type %}
+      {% include "@elements/eyebrow/eyebrow.twig" with {
+        'eyebrow': {
+          'text': event_type,
+        }
+      } only %}
+    {% endif %}
+
+    {% if title %}
+      {% include "@elements/title/title.twig" with {
+        'title': title
+      } only %}
+    {% endif %}
+
+    {# For the page card and article card, we use the meta_description as subtitle text.
+    However, the article card only shows the meta_description when in
+    the curated content component. #}
+    {% if meta_description %}
+      <p class="card__subtitle">{{ meta_description }}</p>
+    {% endif %}
+
+    {% if organization %}
+      <div class="card__organization">
+        <span class="fa-solid fa-location-dot"></span>
+        {{ organization }}
+      </div>
+    {% endif %}
+
+    {% if date or readtime %}
+      <div class="card__date--wrapper">
+        {% if date %}
+          {% include '@elements/date/date.twig' with {
+            'modifier': date.modifier,
+            'date': date.date,
+          } only %}
+        {% endif %}
+
+        {# For articles, display the readtime field. #}
+        {% if readtime %}
+          {% include '@elements/readtime/readtime.twig' with {
+            'readtime': readtime
+          } %}
+        {% endif %}
+      </div>
+    {% endif %}
+
+
+    {# If there are upcoming instances of an event, display `+ more dates`
+    next to the event date to show users this is a recurring event. #}
+    {% if more_dates %}
+      {% include "@elements/button/button.twig" with {
+        'button': {
+          'modifier': 'button--link card__more-dates',
+          'text': '+ more dates',
+          'url': title.url
+        }
+      } only %}
+    {% endif %}
+  </div>
+</article>

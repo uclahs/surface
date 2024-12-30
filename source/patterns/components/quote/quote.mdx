@@ -1,0 +1,44 @@
+import { Meta, Story } from '@storybook/blocks';
+import * as QuoteStories from './quote.stories';
+
+<Meta of={QuoteStories} />
+
+# Quote
+
+The Quote component provides the ability to present a person's quote or passage. There are two types of quotes content creators can choose from:
+
+## 1. Media Quote
+It proves the option to include an optional image which displays to the right of the quote text. By default comes with a UCLA Blue background color which can be changed by users to other custom background colors.
+
+<Story of={QuoteStories.MediaQuote} />
+
+## 2. Quote
+Similar to the Media quote but without the image or default background color. However, users can opt to add background color when creating content.
+<Story of={QuoteStories.Quote} />
+
+## Quote technical specs
+
+* `modifier` to pass a custom CSS class.
+* `quote`: A limited character paragraph of text which was given as a quote by someone.
+* `author`: The person whose quote we are displaying.
+* `image`: A full media entity. This is optional
+
+## Quote without an image
+
+<Story of={QuoteStories.Quote} />
+
+## Quote with Santa Barbara Sand background color
+
+<Story of={QuoteStories.QuoteSantaBarbaraSand} />
+
+## Quote with Venice Canal background color
+
+<Story of={QuoteStories.QuoteVeniceCanal} />
+
+## Media Quote with Santa Barbara Sand background color
+
+<Story of={QuoteStories.SantaBarbaraSand} />
+
+## Media Quote with Venice Canal background color
+
+<Story of={QuoteStories.VeniceCanal} />

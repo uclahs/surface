@@ -1,0 +1,32 @@
+---
+modifier: ''
+image: |-
+  <img src="images/3-2.svg" alt="placeholder text" />
+
+title:
+  level: 3
+  modifier: 'card__title'
+  text: 'Leaders in the Field Seminar featuring Dr. Marcel van den Brink'
+  url: 'https://medschool.ucla.edu'
+
+date:
+  modifier: 'date--small'
+  date: 'October 31, 2024 | 1:30 pm - 2:30 pm'
+
+date_short:
+  modifier: 'date-badge--small'
+  month: 'Oct'
+  day: '31'
+
+# The 'more_dates' key is used in Storybook as a way to add conditional for
+# displaying the '+ more dates' text on cards that are recuring.
+more_dates: true
+more_dates_url: '#'
+
+organization: '<a href="#">Davig Geffen School of Medicine</a>'
+event_type: 'Virtual'
+readtime: ''
+
+# The meta_description fields is only used in the page and article card variations,
+# and only for the curated content component.
+meta_description: ''

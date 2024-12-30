@@ -1,0 +1,49 @@
+/**
+ * @file
+ * Spacing utility classes.
+ */
+
+.space-x-0 > * + * {
+  margin-inline-start: 0;
+}
+
+.mb-0 {
+  margin-block-end: 0;
+}
+
+.mb-2 {
+  margin-block-end: 0.5rem; /* 8px */
+}
+
+.mb-5 {
+  margin-block-end: 1.25rem; /* 20px */
+}
+
+.mb-10 {
+  margin-block-end: 2.5rem; /* 40px */
+}
+
+.mb-15 {
+  margin-block-end: 3.75rem; /* 60px */
+}
+
+/* Margin top spacing. */
+.mt-5 {
+  margin-block-start: 1.25rem; /* 20px */
+}
+
+.mt-10 {
+  margin-block-start: 2.5rem; /* 40px */
+}
+
+.mt-15 {
+  margin-block-start: 3.75rem; /* 60px */
+}
+
+.p-5 {
+  padding: 1.25rem; /* 20px */
+}
+
+.p-10 {
+  padding: 2.5rem; /* 40px */
+}

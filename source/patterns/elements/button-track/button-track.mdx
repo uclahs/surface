@@ -1,0 +1,37 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as ButtonTrackStories from './button-track.stories';
+
+<Meta of={ButtonTrackStories} />
+
+# Button track
+
+The Button track component is used to track users actions or events when interacting with the buttons. This button is visually and structurally the same as the regular button but it contain extra properties.  See below.
+
+<Canvas of={ButtonTrackStories.ButtonTrack} />
+
+## Button with icon
+
+<Canvas of={ButtonTrackStories.ButtonTrackIcon} />
+
+## IMPORTANT
+_As of May 2024, For some unknown reason, Storybook removes the `onclick` attribute from the button. However, Drupal displays the `onclick` attribute as expected. Currently we have not looked into this bug_.
+
+
+## Button technical specs
+
+* `modifier` makes it possible to pass a CSS modifier class which in turn can change the button's appearance as you see the examples below.
+* `text` is the label of the button.
+* `url` is also an optional property which determines if we use a `<button>` or an `<a>` element based on the presence of the `url`.
+
+_Extra properties_:
+
+* `action` tracks various actions such as download, play, etc.
+* `category` tracks things like video, media, etc.
+* `label` provides an optional label tot he tracking button but it's not visible.
+
+
+In code all properties above are used as follows:
+
+```html
+<a href="{{ url }}" class="{{ modifier }}" onclick="_sz.push(['event', 'CATEGORY', 'ACTION', 'LABEL']);">{{ text }}</a>
+```
