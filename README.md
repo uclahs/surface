@@ -3,12 +3,7 @@
 Surface is a custom Drupal theme which is compatible with Drupal 9 and 10. Surface is the
 default front-end theme for UCLA Health Sciences School of Medicine.
 
-Surface is built using [Storybook](https://storybook.js.org/) (HTML version) and [Vite](https://vitejs.dev/) (Vanilla JS version), with the help of many NodeJS packages to improve automation and make use of the latest Front-End tooling.
-
-## Modules you need to run the theme
-
-* [Components](https://www.drupal.org/project/components): This module is needed when interacting
-with Drupal to create theme namespaces to include/nest components in Drupal.
+Surface is built using [Storybook](https://storybook.js.org/) (HTML edition), and [Vite](https://vitejs.dev/) (Vanilla JS edition), with the help of many NodeJS packages to improve automation and make use of the latest Front-End tooling. See `package.json` for specifics about packages being used.
 
 ## Running the project
 
@@ -44,11 +39,7 @@ Although Surface adheres to the Atomic Design methodology, it does not use the s
 
 ## Development approach
 
-Surface is built using the latest development practices for CSS, JS, and Twig.  Within Surface's Storybook,
-all components are built using BEM methodology for selector classes and ES6 for Javascript.
-Components are built using the Atomic Design methodology but not necessarily using the same naming convention
-like atoms, molecules, organisms, etc.  Instead, it uses more friendly names like elements, components, collections,
-layouts, and pages.
+Surface is built using the latest development practices for CSS, JS, and Twig.  Within Surface's Storybook, all components are built using BEM methodology for selector classes and ES6 for Javascript.
 
 ## Available components
 
@@ -60,11 +51,7 @@ For a simple demonstration of how to build components in Storybook and integrate
 
 ### Components
 
-* Card and Featured card
-
-### Collections
-
-* Slider
+* Callout, Card, Featured card, Quote
 
 ## Demo of static instance of Storybook
 
