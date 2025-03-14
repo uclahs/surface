@@ -2,5 +2,5 @@
 button:
   icon: ''
   modifier: ''
-  url: ''
+  url: 'https://medschool.ucla.edu'
   text: 'Hi, I am a button'

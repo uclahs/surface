@@ -1,6 +1,6 @@
 # About Surface
 
-Surface is a custom Drupal theme which is compatible with Drupal 9 and 10. Surface is the
+Surface is a custom Drupal theme which is compatible with Drupal 10 and 11. Surface is the
 default front-end theme for UCLA Health Sciences School of Medicine.
 
 Surface is built using [Storybook](https://storybook.js.org/) (HTML edition), and [Vite](https://vitejs.dev/) (Vanilla JS edition), with the help of many NodeJS packages to improve automation and make use of the latest Front-End tooling. See `package.json` for specifics about packages being used.
