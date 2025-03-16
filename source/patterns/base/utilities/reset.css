@@ -122,7 +122,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  appearance: button;
+  appearance: auto;
   background-color: transparent;
   background-image: none;
 }
@@ -154,7 +154,7 @@ progress {
 }
 
 ::-webkit-file-upload-button {
-  appearance: button;
+  appearance: auto;
   font: inherit;
 }
 

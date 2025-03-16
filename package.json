@@ -14,12 +14,10 @@
     "vite:build": "vite build",
     "vite:watch": "vite build --watch",
     "storybook:dev": "storybook dev -p 6006",
-    "storybook:pipeline": "storybook dev -p 9009",
     "storybook:build": "storybook build -o storybook",
     "storybook:test": "test-storybook",
     "build": "npm run vite:build",
     "watch": "npm run vite:watch & npm run storybook:dev",
-    "watch:pipeline": "npm run vite:watch & npm run storybook:pipeline",
     "eslint": "npx eslint --ignore-pattern storybook/",
     "stylelint": "stylelint './source/patterns/**/*.css'"
   },

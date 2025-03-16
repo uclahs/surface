@@ -12,9 +12,10 @@ const config = {
     '@storybook/addon-themes',
   ],
   framework: {
-    name: "@storybook/html-vite",
+    name: '@storybook/html-vite',
     options: {},
   },
   staticDirs: ['../dist'],
 };
+
 export default config;
