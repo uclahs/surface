@@ -11,35 +11,35 @@ There are several custom npm commands that allows developers to build and run di
 tasks during and after development. These commands can be found in `package.json`.
 The most common ones to use include:
 
-* `npm run build`: This is the command that builds all your local assets and builds your project. This should be the first command to be executed if you are building your project for the first time.
-<br/>
-* `npm run watch`: This will run both `npm run vite:watch` and `npm run storybook:dev`.  This is the most common command to run while working with Surface during development.  Among the tasks the watch command runs, are:
+- `npm run build`: This is the command that builds all your local assets and builds your project. This should be the first command to be executed if you are building your project for the first time.
+
+- `npm run watch`: This will run both `npm run vite:watch` and `npm run storybook:dev`. This is the most common command to run while working with Surface during development. Among the tasks the watch command runs, are:
   - Cleaning out the `dist` folder and compiling a fresh copy of all production code.
   - Linting (CSS and JS) files to ensure code standards are met.
-  - Watching for changes to CSS, JS and Images and compiling them if needed.
-  - Recrusively globbing through all CSS and JS files within the source directory.
-<br/>
-  >**NOTE**: Most tasks included in the watch command can be found in `vite.config.js`
-<br/>
-* `npm run storybook:build`: This command will build a local/static instance of Storybook for production in your theme's `/storybook` directory. The `npm run build` command should be executed prior to the `storybook:build` command to ensure all required assets are available prior to building storybook.
+  - Watching for changes to CSS, JS, and Images and compiling them if needed.
+  - Recursively globbing through all CSS and JS files within the source directory.
+
+> **NOTE**: Most tasks included in the watch command can be found in `vite.config.js`.
+
+- `npm run storybook:build`: This command will build a local/static instance of Storybook for production in your theme's `/storybook` directory. The `npm run build` command should be executed prior to the `storybook:build` command to ensure all required assets are available before building Storybook.
 
 ## Design system
 
-Surface uses [Storybook](https://storybook.js.org/) as its design system and that's where all components on the sites are originally built and maintained.  Storybook can be accessed on its own by running `npm run watch` and navigating to `http://localhost:6006`.
+Surface uses [Storybook](https://storybook.js.org/) as its design system and that's where all components on the sites are originally built and maintained. Storybook can be accessed on its own by running `npm run watch` and navigating to `http://localhost:6006`.
 
 ## Atomic Design Methodology
 
-Although Surface adheres to the Atomic Design methodology, it does not use the same naming conventions for naming its patterns.  Our naming convention for the top level categories are:
+Although Surface adheres to the Atomic Design methodology, it does not use the same naming conventions for naming its patterns. Our naming convention for the top level categories are:
 
-* **Elements** - equivalent to Atoms
-* **Components** - equivalent to Molecules
-* **Collections** - equivalent to Organisms
-* **Layouts** - equivalent to templates
-* **Pages** - same
+- **Elements** - equivalent to Atoms
+- **Components** - equivalent to Molecules
+- **Collections** - equivalent to Organisms
+- **Layouts** - equivalent to templates
+- **Pages** - same
 
 ## Development approach
 
-Surface is built using the latest development practices for CSS, JS, and Twig.  Within Surface's Storybook, all components are built using BEM methodology for selector classes and ES6 for Javascript.
+Surface is built using the latest development practices for CSS, JS, and Twig. Within Surface's Storybook, all components are built using BEM methodology for selector classes and ES6 for Javascript.
 
 ## Available components
 
@@ -47,11 +47,11 @@ For a simple demonstration of how to build components in Storybook and integrate
 
 ### Elements
 
-* Breadcrum, Button, Date, Date badge, Eyebrow, Images, Readtime, Title
+- Breadcrum, Button, Date, Date badge, Eyebrow, Images, Readtime, Title
 
 ### Components
 
-* Callout, Card, Featured card, Quote
+- Callout, Card, Featured card, Quote
 
 ## Demo of static instance of Storybook
 
@@ -61,8 +61,7 @@ For a simple demonstration of how to build components in Storybook and integrate
 
 For demo purposes, we have included Drupal template suggestions inside `templates/`, which also include examples of how a particular Drupal entity (i.e. content type) is integrated with a Storybook component.
 
-For more information, see Drupal.org [theming guide](
-https://www.drupal.org/docs/develop/theming-drupal).
+For more information, see Drupal.org [theming guide](https://www.drupal.org/docs/develop/theming-drupal).
 
 Surface was built with 🩵 by the good folks at [UCLA Health](https://it.uclahealth.org/about/dgit/teams/web-development).
 
