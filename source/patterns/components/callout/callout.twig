@@ -1,6 +1,8 @@
 {{ attach_library('surface/callout') }}
 
-<article class="callout container{{ modifier ? ' ' ~ modifier }}{{- attributes ? ' ' ~ attributes.class -}}" {{ attributes ? attributes|without('class') }}>
+<article class="callout container{{ modifier ? ' ' ~ modifier }}
+  {{- attributes ? ' ' ~ attributes.class -}}"
+  {{ attributes ? attributes|without('class') }}>
   <div class="callout__image">
     {{ image }}
 	</div>
@@ -19,23 +21,15 @@
         </div>
       {% endif %}
 
-      {# Since this component serves the Callout and Highlight paragraph types,
-      adding a Twig block here allows us to change which Button component we use
-      during integration. At the moment the Button-track is only used on components
-      where Siteimprove tracking is implemented. All other components use the
-      regular 'Button' component. #}
-      {# FYI: In Storybook, the 'onclick' attribute is removed. Test in Drupal
-      to ensure the tracking button is working as expected. #}
-      {% block cta %}
-        {% include "@elements/button-track/button-track.twig" with {
-          'action': cta.action,
-          'category': cta.category,
-          'label': cta.label,
-          'modifier': cta.modifier,
-          'text': cta.text,
-          'url': cta.url,
+      {% if cta %}
+        {% include "@elements/button/button.twig" with {
+          button: {
+            'modifier': cta.modifier,
+            'text': cta.text,
+            'url': cta.url,
+          }
         } only %}
-      {% endblock %}
+      {% endif %}
 		</div>
 	</div>
 </article>

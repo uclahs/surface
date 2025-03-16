@@ -8,9 +8,7 @@ title:
   url: ''
 teaser: 'Jelly-o carrot cake tootsie roll chocolate bar croissant macaroon pastry toffee apple pie.'
 cta:
-  action: 'tracking'
-  category: 'content'
-  label: 'Siteimprove tracking'
+  icon: ''
   modifier: 'button--primary'
-  text: 'View our programs'
-  url: '#'
+  url: 'https://uclahealth.org'
+  text: 'More about UCLA Health'

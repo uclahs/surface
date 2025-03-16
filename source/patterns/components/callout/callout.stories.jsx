@@ -59,16 +59,4 @@ export const HorizontalReversed = {
   },
 };
 
-export const SantaBarbaraSand = {
-  ...Stacked,
-  name: 'With Santa Barbara Sand background',
-  decorators: [SantaBarbaraSandBg],
-};
-
-export const VeniceCanal = {
-  ...Stacked,
-  name: 'With Venice Canal background',
-  decorators: [VeniceCanalBg],
-};
-
 export default settings;
