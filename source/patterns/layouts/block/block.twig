@@ -1,0 +1,42 @@
+{{ attach_library('surface/block') }}
+
+{% set classes = [
+  'block',
+  attributes ? attributes.class
+]|join(' ')|trim %}
+
+{% set title_classes = [
+  'block__title',
+  title_attributes ? title_attributes.class
+]|join(' ')|trim %}
+
+{% set content_classes = [
+  'block__content',
+  content_attributes ? content_attributes.class
+]|join(' ')|trim %}
+
+{% if block_wrapper %}
+  <div class="{{ classes }}" {{ attributes ? attributes|without('class', 'id') }}>
+{% endif %}
+
+  {{ title_prefix }}
+  {% if label %}
+    <div class="{{ title_classes }}" {{ title_attributes ? title_attributes|without('class') }}>{{ label }}</div>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if content_wrapper %}
+    <div class="{{ content_classes }}" {{ content_attributes ? content_attributes|without('class') }}>
+  {% endif %}
+
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+
+  {% if content_wrapper %}
+    </div>
+  {% endif %}
+
+{% if block_wrapper %}
+  </div>
+{% endif %}

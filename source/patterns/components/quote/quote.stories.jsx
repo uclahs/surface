@@ -1,6 +1,3 @@
-// Imports decorators for background colors.
-import { SantaBarbaraSandBg, VeniceCanalBg } from '../../../../.storybook/decorators';
-
 import quote from './quote.twig';
 import data from './quote.yml';
 

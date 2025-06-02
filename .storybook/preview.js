@@ -1,6 +1,6 @@
-/** @type { import('@storybook/html').Preview } */
+/** @type { import('@storybook/html-vite').Preview } */
 import Twig from 'twig';
-import { useEffect } from '@storybook/preview-api';
+import { useEffect } from 'storybook/preview-api';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import twigDrupal from 'twig-drupal-filters';
 
@@ -32,9 +32,7 @@ export const decorators = [
   withThemeByDataAttribute({
     themes: {
       Surface: 'surface',
-      DGSOM: 'dgsom',
-      Labs: 'labs',
-      'Labs Dynamic': 'labs-dynamic',
+      Other: 'other',
     },
     defaultTheme: 'Surface',
     attributeName: 'data-theme',
@@ -49,7 +47,18 @@ const preview = {
   parameters: {
     options: {
       storySort: {
-        order: [ 'Getting started',['Intro'], 'Base', 'Elements', 'Components', 'Collections', 'Layouts', 'Pages', 'Theme', '*' ],
+        order: [
+          'Getting started',
+          ['Intro'],
+          'Base',
+          'Elements',
+          'Components',
+          'Collections',
+          'Layouts',
+          'Pages',
+          'Theme',
+          '*',
+        ],
         includeName: true,
       },
     },
