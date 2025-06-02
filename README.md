@@ -53,6 +53,15 @@ For a simple demonstration of how to build components in Storybook and integrate
 
 - Callout, Card, Featured card, Quote
 
+### Layouts
+
+- Block
+
+### Theme
+
+- ckeditor
+
+
 ## Demo of static instance of Storybook
 
 [Static Surface theme built with Storybook](https://dev-ucla-surface-training.pantheonsite.io/themes/custom/surface/storybook/?path=/docs/getting-started-intro--docs)
