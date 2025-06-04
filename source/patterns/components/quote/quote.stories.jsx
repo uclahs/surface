@@ -6,14 +6,12 @@ const settings = {
 };
 
 export const MediaQuote = {
-  name: 'Media Quote',
   render: (args) => quote(args),
   args: { ...data },
 };
 
 export const Quote = {
   ...MediaQuote,
-  name: 'Quote',
   render: (args) => quote(args),
   args: {
     ...data,

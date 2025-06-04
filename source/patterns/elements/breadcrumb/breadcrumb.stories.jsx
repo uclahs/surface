@@ -12,7 +12,6 @@ const settings = {
 };
 
 export const Breadcrumb = {
-  name: 'Breadcrumb',
   render: (args) => breadcrumb(args),
   args: { ...data },
   decorators: [withBackground],
