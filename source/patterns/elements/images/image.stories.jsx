@@ -1,5 +1,3 @@
-
-
 import image from './image.twig';
 import data from './image.yml';
 

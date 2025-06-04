@@ -11,13 +11,11 @@ const settings = {
 };
 
 export const FeaturedArticle = {
-  name: 'Featured Article',
   render: (args) => featuredCard(args),
   args: { ...dataArticle },
 };
 
 export const FeaturedEvent = {
-  name: 'Featured Event',
   render: (args) => featuredCard(args),
   args: { ...dataEvent },
 };

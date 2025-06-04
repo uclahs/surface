@@ -7,7 +7,6 @@ const settings = {
 
 // Plain text title story.
 export const Title = {
-  name: 'Title',
   render: (args) => markup(args),
   args: {
     ...data,
