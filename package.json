@@ -16,13 +16,14 @@
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build -o storybook",
     "storybook:test": "test-storybook",
-    "build": "npm run stylelint:check && npm run vite:build",
-    "watch": "npm run stylelint:watch & npm run vite:watch & npm run storybook:dev",
+    "build": "npm run lint:check && npm run format:check && npm run stylelint:check && npm run vite:build",
+    "watch": "npm run vite:watch & npm run storybook:dev",
     "lint:check": "biome check source",
     "lint:fix": "biome check --write source",
     "format:check": "biome format source",
     "format:write": "biome format --write source",
     "stylelint:check": "stylelint './source/patterns/**/*.css'",
+    "stylelint:fix": "stylelint --fix './source/patterns/**/*.css'",
     "prepare": "husky"
   },
   "devDependencies": {
