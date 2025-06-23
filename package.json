@@ -59,7 +59,7 @@
   },
   "lint-staged": {
     "source/**/*.{js,ts,jsx,tsx}": [
-      "biome check --write --no-errors-on-unmatched"
+      "biome check --no-errors-on-unmatched"
     ],
     "source/**/*.css": [
       "stylelint --fix"
