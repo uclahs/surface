@@ -59,10 +59,11 @@
   },
   "lint-staged": {
     "source/**/*.{js,ts,jsx,tsx}": [
-      "biome check --no-errors-on-unmatched"
+      "npx biome check --formatter=pretty",
+      "npx biome format"
     ],
     "source/**/*.css": [
-      "stylelint --fix"
+      "stylelint"
     ]
   }
 }
