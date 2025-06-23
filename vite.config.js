@@ -1,11 +1,9 @@
-/* eslint-disable */
-import { defineConfig } from "vite"
+import { defineConfig } from 'vite';
 import yml from '@modyfi/vite-plugin-yaml';
 import twig from 'vite-plugin-twig-drupal';
-import { join } from "node:path";
-import path from 'path';
+import { join } from 'node:path';
+import path from 'node:path';
 import { glob } from 'glob';
-import eslint from 'vite-plugin-eslint';
 
 export default defineConfig({
   plugins: [
@@ -24,14 +22,12 @@ export default defineConfig({
     }),
     // Allows Storybook to read data from YAML files.
     yml(),
-    // Run eslint during build.
-    eslint(),
   ],
   build: {
     emptyOutDir: true,
     outDir: 'dist',
     rollupOptions: {
-      input: glob.sync(path.resolve(__dirname,'./source/patterns/**/*.{css,js}')),
+      input: glob.sync(path.resolve(__dirname, './source/patterns/**/*.{css,js}')),
       output: {
         assetFileNames: 'css/[name].css',
         entryFileNames: 'js/[name].js',
@@ -42,4 +38,4 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
-})
+});

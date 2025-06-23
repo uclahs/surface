@@ -1,5 +1,3 @@
-
-
 // Imports decorator to add background color to the light version of the badge.
 import { withBackground } from '../../../../.storybook/decorators';
 
@@ -11,8 +9,8 @@ const settings = {
   parameters: {
     controls: {
       include: ['month', 'day'],
-    }
-  }
+    },
+  },
 };
 
 export const Badge = {
