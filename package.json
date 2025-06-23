@@ -20,11 +20,9 @@
     "watch": "npm run stylelint:watch & npm run vite:watch & npm run storybook:dev",
     "lint:check": "biome check source",
     "lint:fix": "biome check --write source",
-    "format:write": "biome format --write source",
     "format:check": "biome format source",
-    "check": "biome check --write source && biome format --write source",
+    "format:write": "biome format --write source",
     "stylelint:check": "stylelint './source/patterns/**/*.css'",
-    "stylelint:watch": "stylelint --watch './source/patterns/**/*.css'",
     "prepare": "husky"
   },
   "devDependencies": {
