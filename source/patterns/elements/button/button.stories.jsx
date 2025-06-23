@@ -1,4 +1,4 @@
-import button from './button.twig'
+import button from './button.twig';
 import data from './button.yml';
 
 const settings = {

@@ -57,7 +57,7 @@
   },
   "lint-staged": {
     "source/**/*.{js,ts,jsx,tsx}": [
-      "npx biome check --formatter=pretty",
+      "npx biome check",
       "npx biome format"
     ],
     "source/**/*.css": [
