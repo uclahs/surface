@@ -1,5 +1,3 @@
-
-
 import button from './button.twig';
 import data from './button.yml';
 
@@ -34,7 +32,7 @@ export const Secondary = {
     button: {
       modifier: 'button--secondary',
       text: 'Secondary button',
-      url: 'https://medschool.ucla.edu'
+      url: 'https://medschool.ucla.edu',
     },
   },
 };

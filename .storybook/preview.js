@@ -1,7 +1,8 @@
 /** @type { import('@storybook/html-vite').Preview } */
-import Twig from 'twig';
-import { useEffect } from 'storybook/preview-api';
+
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
+import { useEffect } from 'storybook/preview-api';
+import Twig from 'twig';
 import twigDrupal from 'twig-drupal-filters';
 
 // Imports custom device viewports.

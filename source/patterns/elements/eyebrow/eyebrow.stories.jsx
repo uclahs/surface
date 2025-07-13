@@ -1,5 +1,3 @@
-
-
 import eyebrow from './eyebrow.twig';
 import data from './eyebrow.yml';
 
@@ -8,8 +6,8 @@ const settings = {
   parameters: {
     controls: {
       disable: true,
-    }
-  }
+    },
+  },
 };
 
 export const Eyebrow = {
